@@ -8,7 +8,7 @@ LANDING_BUTTON = "Click to steal some👆"
 # (Optional) Site description on landing page
 LANDING_DESCRIPTION = "I have nothing but notes."
 # (REQUIRED) The Markdown page linked to landing page button (e.g. put home for ./home.md)
-LANDING_PAGE = "https://sunhaloolearns.netlify.app/docs/data-view/"
+LANDING_PAGE = "./Data view.md"
 # (Optional) Site title on landing page
 LANDING_TITLE = "I love Obsidian! 💖"
 PYTHON_VERSION = "3.8"
