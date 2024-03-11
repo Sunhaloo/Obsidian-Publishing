@@ -41,9 +41,7 @@ But just remember that:
 
 # Simple Functions / Procedures in C
 
-## Simple Examples
-
-### Example 1: Output Welcome Screen with Function
+## Example: Output Welcome Screen with Function
 
 ```C
 
@@ -99,6 +97,78 @@ int main()
 
 >[!note]
 >In this case *nothing* is being passed as [[Functions and Procedures - Python#Parameters | Parameters]]
+
+# Parameters
+
+## Passing our Parameters
+
+### Example: Displaying Our Name / User's Name
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+// Our Function
+// FUNCTION output
+void ouptut(char name[25], char region[15], int age)
+
+{
+
+  printf("\nName: %s", name);
+  printf("\nRegion: %s", region);
+  printf("\nAge: %d", age);
+}
+
+// Main Function
+int main()
+
+{
+  // DECLARATION
+
+  // DECLARE name: STRING
+  char name[25];
+  int age;
+  char region[15];
+
+  // Ask the user to enter data
+  printf("Please Enter Your Name: ");
+  scanf("%s", name);
+
+  printf("Please Enter Your Region: ");
+  scanf("%s", region);
+
+  printf("Please Enter Your Age: ");
+  scanf("%d", &age);
+
+  // Calling our Function
+  ouptut(name, region, age);
+
+  return 0;
+}
+
+
+```
+
+In the code above $\uparrow$, we can see that our values that will be given / passed to the function `output` is written in the `main` *function*.
+
+To use the function, we need to **call** it in our *main* program and then pass the parameters / arguments `name`, `region` and `age` in the function `output`. Hence, we can use the function.
+
+>[!tip]
+>Remember *Visual Basic* ( *to be honest I do not remember because FUCK YOU VB* ).
+>C is similar to VB where we need to also enter our data types that will / are being passed through.
+
+# Return Statement
+
+Normally used to return something back to the main program.
+
+ - Could be an *integer*, *character* or *float*.
+
+```C
+
+
+
+```
 
 ---
 

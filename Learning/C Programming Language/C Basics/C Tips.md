@@ -27,7 +27,7 @@ To get rid of new line character in the code below $\downarrow$, use:
 
 
 // Getting Rid of `\n` ---> Newline Character
-scanf("c");
+scanf("%c");
 
 ```
 
@@ -57,7 +57,7 @@ int main()
   scanf("%d", &cols);
 
   // Getting Rid of `\n` ---> Newline Character
-  scanf("c");
+  scanf("%c");
 
   // Ask the user to enter symbol to print / output
   printf("Please Enter The Symbol To Be Used: ");

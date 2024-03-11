@@ -60,12 +60,24 @@ After downloading the *Installation Media*; plug in your USB drive and proceed t
 
 Depending on the system specification of the *computer* / *device* you are using; It might take a while. On my machine which has:
 
+- Laptop:
+
 ```
 
-Make | Model : Asus | ROG Strix GL-503VM
-CPU: i7-7700HQ CPU @ 2.80GHz
+Make | Model: Asus | ROG Strix GL-503VM
+CPU: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+GPU: Nvidia GTX 1060 ( 6GB GDDR5 )
 RAM: 16 GB
-GPU: GTX 1060
+
+```
+
+- Desktop:
+
+```
+
+CPU: Intel(R) Core(TM) i5-8500T CPU @ 2.10GHz
+GPU: Nvidia GTX 1650 ( 12GB GDDR5 )
+RAM: 16 GB
 
 ```
 
@@ -184,7 +196,7 @@ You can leave the other settings as it is.
 	2. Bibata Cursor
 	3. Adwaita Cursor
 
-	You can usually find these on DeviantArt and GitHub
+You can usually find these on DeviantArt and GitHub
 
 #### - Typing
 
@@ -272,13 +284,23 @@ Now you will have to do a very boring and repetitive task. After deleting all of
 
 Okay, so the toggle `Game Mode` depends... What I mean by "*depends*" it that not every machine is the same. Right now I have it turned on and more and more people are seeing improvement to performance while this toggle is switched to on. But I had a computer that did **not** perform well with this setting and it was an old, I mean *OLD* computer.
 
-Right now with the my laptop ( *see specifications down below $\downarrow$* ), I can use it.
+Right now with the my laptop and desktop computer ( *see specifications down below $\downarrow$* ), I can use it.
+
+- Laptop:
 
 ```
 
 Make | Model: Asus | ROG Strix GL-503VM
 CPU: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
 GPU: Nvidia GTX 1060 ( 6GB GDDR5 )
+RAM: 16 GB
+
+```
+
+```
+
+CPU: Intel(R) Core(TM) i5-8500T CPU @ 2.10GHz
+GPU: Nvidia GTX 1650 ( 12GB GDDR5 )
 RAM: 16 GB
 
 ```
@@ -417,7 +439,7 @@ Use the image below $\downarrow$ as a guide
 ## Utilities
 
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) - Because I am planning to switch to Linux and Linux people use Firefox
-- [Geek Uninstaller](https://geekuninstaller.com/download) - I do not use the uninstaller from the Windows Settings ( *Download the portable version* )
+- [Geek Uninstaller](https://geekuninstaller.com/download) - I do not use the uninstaller from the Windows Settings
 - Mouse Drivers:
 	- [Cooler MasterPlus](https://masterplus.coolermaster.com/)
 	For now I only have a Cooler Master MM710; If you have a mouse that can be configured using a software; go and download it.
@@ -499,39 +521,126 @@ Angle Snapping: OFF
 
 #### User Settings `.json` File
 
-Here is a look at my User Settings JSON File
-
 ```json
 
 {
+    // Allow opens unstrusted files
+    "security.workspace.trust.untrustedFiles": "open",
+    // Does not need to confirm when deleting
+    "explorer.confirmDelete": false,
+    // Font Size
+    "editor.fontSize": 16,
+    // Font Family
+    "editor.fontFamily": "JetBrainsMono Nerd Font, Hack Nerd Font",
+    // Theme / Appearance
+    "workbench.colorTheme": "One Dark Pro",
+    // Icon Theme / Appearance
+    "workbench.iconTheme": "material-icon-theme",
+    // Can change zoom level with `Ctrl + Scoll Wheel`
+    "editor.mouseWheelZoom": true,
+    // Editor Zoom Level
+    "window.zoomLevel": 1,
+    // Disable Font Ligatures ( does not change eqaul, greater or less than signs )
+    "editor.fontLigatures": false,
+    // Disables the Minimap to the Right
+    "editor.minimap.enabled": false,
 
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.colorCustomizations": {
-
-        // Cursor Colour = White
-        // "editorCursor.foreground": "#ffffff",
-        // Cursor Colour = Lime Green
-        "editorCursor.foreground": "#b1ee46",
-        // Cursor ( Terminal ) Colour = White
-        // "terminalCursor.foreground": "#ffffff",
-        // Cursor ( Terminal ) Colour = Lime Green
-        "terminalCursor.foreground": "#b1ee46",
-
-    },
-
-    "editor.fontSize": 16,
-    "editor.mouseWheelZoom": true,
-    "editor.minimap.enabled": false,
-    "workbench.startupEditor": "none",
-    "explorer.confirmDelete": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "Agave Nerd Font Mono, PlemolJP35 Console NF, Consolas, 'Courier New', monospace",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "window.zoomLevel": 1,
-    "explorer.confirmDragAndDrop": false,
-    "liveServer.settings.donotVerifyTags": true,
+    // VIM Things
+    "vim.leader": "<space>",
+    // Move around Folds properly
+    "vim.foldfix": true,
+    "vim.hlsearch": true,
+    // Use System Clipboard
+    "vim.useSystemClipboard": true,
+    // Enable highlight on yanking
+    "vim.highlightedyank.enable": true,
+    "vim.normalModeKeyBindings": [
+        // Select All with `Ctrl + A`
+        {
+            "before":["<c-a>"],
+            "after":["g", "g", "V", "G",]
+        },
+        // Use `Ctrl + S` to save
+        {
+            "before": ["<c-s>"],
+            "commands": [":w"]
+        },
+        // Toggle Boolean's keybindings
+        {
+            "before": ["leader", "i"],
+            "commands": ["extension.toggleBool"],
+        },
+    ],
+    "vim.insertModeKeyBindings": [
+        // Enter Normal Mode with `jk`
+        {
+            "before":["j", "k"],
+            "after":["<Esc>"]
+        },
+        {
+            "before":["<c-j>"],
+            "after":["<Down>"]
+        },
+        {
+            "before":["<c-k>"],
+            "after":["<Up>"]
+        },
+        {
+            "before":["<c-h>"],
+            "after":["<Left>"]
+        },
+        {
+            "before":["<c-l>"],
+            "after":["<Right>"]
+        },
+    ],
+    "editor.lineNumbers": "relative",
+    "workbench.startupEditor": "none",
+    "workbench.productIconTheme": "material-product-icons"
 
 }
+
+```
+
+#### Keybinds Settings `.json` File
+
+```json
+
+// Place your key bindings in this file to override the defaults
+[
+    // Use `Ctrl + E` to open up sidebar
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    // Opens Sidebar
+    {
+        "key": "ctrl+e",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "editorTextFocus"
+
+    },
+    // Creates new files when Sidebar is opened
+    {
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+
+    },
+    // Rename files when Sidebar is opened
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "filesExplorerFocus && !inputFocus"
+
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && !inputFocus"
+
+    },
+]
 
 ```
 
@@ -708,7 +817,7 @@ Here are some apps / program that I usually installed:
 3. 7zip - To Extract Folders / Files
 4. ffmpeg
 5. [yt-dlp](https://github.com/yt-dlp/yt-dlp) - Tool I used to convert YouTube videos to audio format
-6. gcc - Compile C / C++ programs
+6. gcc - C / C++ Compiler
 
 ##### List CLI Program
 
@@ -743,19 +852,15 @@ Now we are going to **move** the `nvim` folder found in the `dotfiles` folder to
 
 ## Obsidian
 
-Ahh yes, **THE** best note taking app for **me**. Remember the `dotfiles` folder? Yeah so there is my `.obsidian` folder in the `obsidian_dotfiles` folder.
+Ahh yes, **THE** best note taking app for **me**. Remember the `dotfiles` folder? Yeah so there is my `.obsidian` folder in the `dotfiles` folder.
 
-Copy that folder into the folder that you want to use as a vault. That's it.
+Copy that folder ( *i.e `.obsidian`* ) into the folder that you want to use as a vault. That's it.
 
 >Now I will be still configuring everything in the Settings Page
 
 ## OBS Studio
 
 ### General
-
-#### General
-
-- Theme: Dark
 
 #### Source Alignment Snapping
 

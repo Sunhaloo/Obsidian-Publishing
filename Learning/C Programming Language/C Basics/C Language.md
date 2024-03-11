@@ -140,9 +140,6 @@ What does `return 0` do?
 
 It is there to check for any errors and will *return* `0` if a program executed successfully else it will *return* `1`
 
->[!warning]
->You need to write `return 0;` at the end or it will not work.
-
 # Escape Sequence
 
 - It is a character **combination** consisting of a backslash `\` followed by a *letter* or *combination of digits*.
