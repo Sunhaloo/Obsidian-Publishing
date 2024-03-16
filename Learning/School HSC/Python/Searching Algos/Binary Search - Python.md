@@ -192,7 +192,7 @@ def binary_search_calc(array, lower, upper, user_find):
     while lower <= upper:
 
         # Calculating our mid value
-        mid = (lower + upper) //2
+        mid = (lower + upper) // 2
 
         # If value at index "mid" is equal to search value ( user_find )
         if array[mid] == user_find:

@@ -25,21 +25,31 @@ SORT Date ASC
 
 ## Linking C Files
 
-## Syntax
+### C Manual
+
+- [[gnu-c-manual.pdf]]
+
+### Syntax
 
 - [[C Language]]
 - [[Selection and Iteration - C]]
 
-## Functions and Procedures
+### Functions and Procedures
 
 - [[Functions and Procedures - C]]
 
-## Math Related
+### Math Related
 
 - [[C Math Function]]
 
 ---
 
-## Random Program Codes
+### C Language Random Tips
+
+- [[C Tips]]
+
+---
+
+### Random Program Codes
 
 - [[Random C Program Codes]]

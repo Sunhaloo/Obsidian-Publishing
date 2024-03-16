@@ -1401,6 +1401,101 @@ print()
 
 ```
 
+# Code 9
+
+This is something that I wanted to do. This is something similar to an Urban Terminal Parking thing.
+
+```python
+
+array_main = [1, 2, 3, 4, 5]
+array_unwanted = []
+
+# Make a function to print the arrays
+def output_arrays(array1, array2):
+
+    print("Main Array")
+    print()
+
+    for x in array1:
+        print(x)
+
+    print()
+
+    print("Unwanted Array")
+    print()
+
+    if not array2:
+
+        print()
+        print("Nothing In Array")
+        print()
+
+    else:
+
+        for y in array2:
+            print(y)
+
+        print()
+
+# Binary Search
+def binarysearch(array, userinput):
+    # calls the function that performs the calculation
+    return binarysearch_calc(array, 0, len(array) - 1, userinput)
+
+
+# Function that performs the binary search calcuation
+def binarysearch_calc(array, lower, upper, userinput):
+    while lower <= upper:
+        mid = (lower + upper) // 2
+
+        if array[mid] == userinput:
+            return mid
+
+        elif array[mid] < userinput:
+            lower = mid + 1
+
+        elif array[mid] > userinput:
+            upper = mid - 1
+
+    return -1
+
+
+# Main Function
+def main():
+
+    print()
+    # Ask the user to input a value
+    user_input = int(input("Please Enter A Value: "))
+
+    # Check if whether the the value entered by number already is in main array
+    result = binarysearch(array_main, user_input)
+
+    # if number does not exist in main array
+    if result == -1:
+
+        # Add user input to main array
+        array_main.append(user_input)
+        print()
+        print("Value Added")
+        print()
+
+    # if number exist in main array
+    else:
+
+        # will add this to the unwanted array
+        array_unwanted.append(user_input)
+        print()
+        print("Your Value Has Already Been Added")
+        print()
+
+# Calling Functions to test
+main()
+
+output_arrays(array_main, array_unwanted)
+
+
+```
+
 ---
 
 # Socials

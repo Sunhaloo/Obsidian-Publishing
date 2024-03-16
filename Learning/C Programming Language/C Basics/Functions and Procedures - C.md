@@ -9,6 +9,10 @@ Status: In-Progress
 
 ## List of Contents
 
+- [[Functions and Procedures - C#What is a Function / Procedure? | What is a Function / Procedure?]]
+- [[Functions and Procedures - C#Simple Functions / Procedures in C | Simple Functions / Procedures in C]]
+- [[Functions and Procedures - C#Parameters | Parameters]]
+- [[Functions and Procedures - C#Return Statement | Return Statement]]
 
 ---
 
@@ -37,6 +41,8 @@ But just remember that:
 >[!warning]
 >C is similar to Visual Basic; where our Functions and Procedures live at the **top** of our code.
 ><li style = "color:red;">Always place Functions on <span style= "color:green;">top</span></li>
+>>Compared to Python, where we can write our functions almost anywhere we want.
+
 ---
 
 # Simple Functions / Procedures in C
@@ -164,9 +170,93 @@ Normally used to return something back to the main program.
 
  - Could be an *integer*, *character* or *float*.
 
+## Example: Return the Square of a Number
+
+In this example below, we will create a function called `square`, in which we are going to write the *main* calculation ( *basically the function which is going to perform our calculation! duh!* ). Go ahead and check out the code below; pay attention to the *word* **before** the function's name ( *i.e `square`* )
+
 ```C
 
+// Include standart input / output header
+#include <stdio.h>
+// Include math library to be able to use comman math functions
+#include <math.h>
 
+// Function `square` which has an arguement passed into
+// FUNCTION square( DECLARE num: DOUBLE)
+double square(double num)
+
+{
+  double result = pow(num, 2);
+
+  return result;
+}
+
+// Main Function
+int main()
+
+{
+  // Declaration and Initialisation and Calling Function
+  // Basically Variable `answer` hold the "answer" to `sqaure(2)`
+  double answer = square(2);
+
+  printf("The Answer is: %lf", answer);
+
+  return 0;
+}
+
+
+```
+
+>[!note]
+>See how in our **main** function we have *int `main`* and for our function `square` that we have created *double `square`*. This is because we are **returning** a `double` ( *see `return result`* )
+>
+>In addition, we have in our main function `main`, we have `double result = square(2);`
+>For the moment you might not be familiar with the syntax, but remember when we used the power function from the `math.h` header? Yes, so you simply *declare* and basically *call* the function instantly ( refer to [[C Math Function | Math Functions]] for more clarification *I mean what do I know* ).
+>>[!warning] Need to clean up this part !!!
+
+## Another Example: Code is By Me!
+
+>This is why the reason the code is really shitty!
+
+```C
+
+// Include standart input / output header
+#include <stdio.h>
+
+// Function `character` which has an arguement passed into
+// FUNCTION character(DECLARE i: CHAR)
+char character(char i)
+
+{
+  char return_char = i;
+
+  return return_char;
+}
+
+// Function `integer` which has an arguement passed into
+// FUNCTION integer(DECLARE j: INTEGER)
+int integer(int j)
+
+{
+  int plus_2 = j + 2;
+
+  return plus_2;
+}
+
+// Main Function
+int main()
+
+{
+  // Calling the functions with variables
+  char answer_char = character('a');
+  int answer_int = integer(2);
+
+  // Output results to screen
+  printf("\nCharacter = %c", answer_char);
+  printf("\nInteger + 2 = %d\n", answer_int);
+
+  return 0;
+}
 
 ```
 
