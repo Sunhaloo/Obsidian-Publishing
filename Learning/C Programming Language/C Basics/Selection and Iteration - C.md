@@ -15,6 +15,7 @@ Status: In-Progress
 
 - [[Selection and Iteration - C#Conditional Statements | Conditional Statements]]
 	- [[Selection and Iteration - C#`if` Statements | IF Statements]]
+	- [[Selection and Iteration - C#Ternary Operator / Conditional Operator | Ternary Operator]]
 	- [[Selection and Iteration - C#`switch` / CASE Statements | CASE Statements]]
 
 ---
@@ -102,6 +103,85 @@ int main()
     return 0;
 
 }
+
+```
+
+## Ternary Operator / Conditional Operator
+
+So we normally have our [[Selection and Iteration - C#`if` Statements | IF Statements]], but we also have something called a *ternary operator* which is mind-blowing to me.
+
+>I have been basically living under a fucking rock!
+
+Below $\downarrow$ you will find an example photo
+
+![[C_Lang-tenary_operator-vs-if_else.png]]
+
+Normally we have a formula that look like this $\downarrow$:
+
+$$(condition) \ ? \ (value) \ if \ true \ : \ (value) \ if \ false$$
+
+### Example Code:
+
+```C
+
+// Include standart input / output header
+#include <stdio.h>
+
+// Function `maximum_if` which has 2 arguements passed into
+// FUNCTION maximum_if(DECLARE x: INTEGER, DECLARE y: INTEGER)
+int maximum_if(int x, int y)
+
+{
+  if (x > y) {
+    return x;
+  }
+  else {
+    return y;
+  }
+}
+
+// Function `maximum_ter` which has 2 arguements passed into
+// FUNCTION maximum_ter(DECLARE x: INTEGER, DECLARE y: INTEGER)
+int maximum_ter(int x, int y)
+
+{
+  // Basically
+  // If `x` is > than y; returns x
+  // If `y` is > than x; returns y
+  return (x > y) ? x : y;
+}
+
+// Main Function
+int main()
+
+{
+  // DECLARE num1: INTEGER
+  int num1;
+  // DECLARE num2: INTEGER
+  int num2;
+
+  // Ask the user to input numbers
+  printf("Please Enter Number 1: ");
+  scanf("%d", &num1);
+
+  printf("Please Enter Number 2: ");
+  scanf("%d", &num2);
+
+  // DECLARE max_num1: INTEGER
+  // Declaring and Calling Function
+  int max_num1 = maximum_if(num1, num2);
+  // Output result of `max_num1`
+  printf("\nThe Greater Number = %d", max_num1);
+
+  // DECLARE max_num2: INTEGER
+  // Declaring and Calling Function
+  int max_num2 = maximum_ter(num1, num2);
+  // Output result of `max_num2`
+  printf("\nThe Greater Number = %d", max_num2);
+
+  return 0;
+}
+
 
 ```
 

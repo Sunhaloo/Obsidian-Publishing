@@ -260,6 +260,82 @@ int main()
 
 ```
 
+# Function Prototypes
+
+So you know that how I have been saying that *C is similar to Visual Basic* $\Rightarrow$ Because we write our functions at the top first...
+
+>Insert "*so that was a fucking lie* here"
+
+I mean, not really, like the thing that I have been saying and *writing* / *coding* above definitely still apply. Nevertheless, for [[Functions and Procedures - C#Function Prototypes | this part]], I do not really know how to explain it. So I have gathered the help from [ChatGPT](chat.openai.com), in addition to [Bro Code's Video Explanation](https://www.youtube.com/watch?v=87SH2Cn0s9A&t=6083s)
+
+## Explanation on Function Prototypes
+
+A **function prototype** is a declaration of a function that tells the **compiler** about the function's *specifications*, like:
+
+- Function's name
+- Number of Parameters
+- Return Type
+
+This is done **before** ( *i.e at the top of the `main` function* ) the function's actual implementation.
+
+It serves as a way to **inform** the *compiler* about the existence and signature of functions that will be **later** defined in the program.
+
+>In some ways it tells the compiler that "*heh, there is $x$ amount of parameters in that function and you are missing one*"
+>Basically helping you ( *the programmer* ) in some ways.
+>Its more simple if I just show you the code, because notes $\neq$ understanding in coding $\rightarrow$ Check [BigBoxSWE's Video](https://www.youtube.com/watch?v=QMbx0dTWJIQ)
+
+### Example 1: Bro Code's Code 🙃
+
+```C
+
+
+
+```
+
+### Example 2: ChatGPT's Code 🙃
+
+```C
+
+// Include standart input / output header
+#include <stdio.h>
+
+// Function Prototype
+int addition(int x, int y);
+
+// Main Function
+int main()
+
+{
+  // Declaration
+  // DECLARE num1: INTEGER
+  int num1;
+  // DECLARE num2: INTEGER
+  int num2;
+
+  // Ask the user to input numbers
+  printf("\nPlease Enter Number 1: ");
+  scanf("%d", &num1);
+  printf("\nPlease Enter Number 2: ");
+  scanf("%d", &num2);
+
+  // Calling Function
+  int answer = addition(num1, num2);
+
+  // Output Addition
+  printf("\nAddition = %d\n", answer);
+}
+
+// Function `addition` which has 2 arguements passed into
+// FUNCTION addition(DECLARE x: INTEGER, DECLARE y: INTEGER)
+// NOTE: See how it also has the same name as its function prototype
+int addition(int x, int y)
+
+{
+  return x + y;
+}
+
+```
+
 ---
 
 # Socials
