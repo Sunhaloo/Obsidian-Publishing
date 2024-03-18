@@ -4,7 +4,7 @@ Tag: C, basics
 Author: S.Sunhaloo
 Type: Conditions / Statements
 Date: 2024-02-22
-Status: In-Progress
+Status: Completed
 ---
 
 ## List of Contents
@@ -124,7 +124,7 @@ $$(condition) \ ? \ (value) \ if \ true \ : \ (value) \ if \ false$$
 
 ```C
 
-// Include standart input / output header
+// Include standard input / output header
 #include <stdio.h>
 
 // Function `maximum_if` which has 2 arguements passed into
@@ -337,7 +337,7 @@ int main()
 
 ```C
 
-// Include standart input / output header
+// Include standard input / output header
 #include <stdio.h>
 
 int main()
@@ -368,7 +368,7 @@ So this is not like the `for` loop; where we have a *declaration*, *condition* a
 
 ```C
 
-// Include standart input / output header
+// Include standard input / output header
 #include <stdio.h>
 
 int main()

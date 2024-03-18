@@ -23,6 +23,14 @@ SORT Date ASC
 ```
 
 
+# Include Headers Folder
+
+```dataview
+TABLE Tag, Status, Type, Date
+FROM "Learning/C Programming Language/C Basics/Include Headers"
+SORT Date ASC
+```
+
 ## Linking C Files
 
 ### C Manual
@@ -38,9 +46,10 @@ SORT Date ASC
 
 - [[Functions and Procedures - C]]
 
-### Math Related
+### Include Headers Related
 
 - [[C Math Function]]
+- [[C String Functions]]
 
 ---
 

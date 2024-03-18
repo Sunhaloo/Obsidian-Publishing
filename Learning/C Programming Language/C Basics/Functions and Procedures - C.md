@@ -4,7 +4,7 @@ Tag: C, basics
 Author: S.Sunhaloo
 Type: Functions / Procedures
 Date: 2024-03-09
-Status: In-Progress
+Status: Completed
 ---
 
 ## List of Contents
@@ -13,6 +13,7 @@ Status: In-Progress
 - [[Functions and Procedures - C#Simple Functions / Procedures in C | Simple Functions / Procedures in C]]
 - [[Functions and Procedures - C#Parameters | Parameters]]
 - [[Functions and Procedures - C#Return Statement | Return Statement]]
+- [[Functions and Procedures - C#Function Prototypes | Function Prototypes]]
 
 ---
 
@@ -117,7 +118,7 @@ int main()
 
 // Our Function
 // FUNCTION output
-void ouptut(char name[25], char region[15], int age)
+void ouptut(char name[], char region[], int age)
 
 {
 
@@ -153,8 +154,17 @@ int main()
   return 0;
 }
 
-
 ```
+
+>[!tip]
+>No need to pass the size of "*array*" ( *our string variables* ) inside the Function Prototype and Function.
+>- As it has already been declared ( *i.e the size of array / string* ) in `main`.
+
+>[!note]
+>For now, just remember that `void` means that it has **no** specific *type*, *number of parameters*, etc.
+>- Like take a look, we are passing `char` and also `int` in the same function
+>>[!bug] Need to make Notes on `void`
+>>- Note to future me!
 
 In the code above $\uparrow$, we can see that our values that will be given / passed to the function `output` is written in the `main` *function*.
 
@@ -176,7 +186,7 @@ In this example below, we will create a function called `square`, in which we ar
 
 ```C
 
-// Include standart input / output header
+// Include standard input / output header
 #include <stdio.h>
 // Include math library to be able to use comman math functions
 #include <math.h>
@@ -220,7 +230,7 @@ int main()
 
 ```C
 
-// Include standart input / output header
+// Include standard input / output header
 #include <stdio.h>
 
 // Function `character` which has an arguement passed into
@@ -280,23 +290,84 @@ This is done **before** ( *i.e at the top of the `main` function* ) the function
 
 It serves as a way to **inform** the *compiler* about the existence and signature of functions that will be **later** defined in the program.
 
+#### Some Advantages of Function Prototypes
+
+1. Easier to navigate code base when `main` function is at the top of file
+2. Helps with debugging as compiler will flag an error if any arguments are missing
+3. Commonly used in [[C Language#What does ` include <stdio.h>` means? | header files]]
+
 >In some ways it tells the compiler that "*heh, there is $x$ amount of parameters in that function and you are missing one*"
 >Basically helping you ( *the programmer* ) in some ways.
 >Its more simple if I just show you the code, because notes $\neq$ understanding in coding $\rightarrow$ Check [BigBoxSWE's Video](https://www.youtube.com/watch?v=QMbx0dTWJIQ)
 
-### Example 1: Bro Code's Code 🙃
+### Example 1: Bro Code's Code
 
 ```C
 
+// Include standard input / output header
+#include <stdio.h>
 
+// Function Prototype
+void output(char name[], char proffession[], int age);
+
+// Main Function
+int main()
+
+{
+  // Declaration
+  // DECLARE user_name: STRING
+  char user_name[25];
+  // DECLARE user_proffession: STRING
+  char user_proffession[25];
+  // DECLARE user_age: INTEGER
+  int user_age;
+
+  // Ask the user to input data
+  printf("\nPlease Enter Your Name: ");
+  scanf("%s", user_name);
+  printf("Please Enter Your Proffession: ");
+  scanf("%s", user_proffession);
+
+  printf("Please Enter Your Age: ");
+  scanf("%d", &user_age);
+
+  // Calling Function
+  output(user_name, user_proffession, user_age);
+
+  return 0;
+
+}
+
+// Function `output` which has 3 arguements passed into
+// FUNCTION output(DECLARE name: STRING, DECLARE proffession: STRING, DECLARE age: INTEGER)
+// NOTE: See how it also has the same name as its function prototype
+void output(char name[], char proffession[], int age)
+
+{
+
+	printf("\nName: %s\n", name);
+	printf("Proffession: %s\n", proffession);
+	printf("Age: %d\n", age);
+
+}
 
 ```
 
-### Example 2: ChatGPT's Code 🙃
+>[!tip]
+>No need to pass the size of "*array*" ( *our string variables* ) inside the Function Prototype and Function.
+>- As it has already been declared ( *i.e the size of array / string* ) in `main`.
+
+>[!note]
+>For now, just remember that `void` means that it has **no** specific *type*, *number of parameters*, etc.
+>- Like take a look, we are passing `char` and also `int` in the same function
+>>[!bug] Need to make Notes on `void`
+>>- Note to future me!
+
+### Example 2: ChatGPT's Code
 
 ```C
 
-// Include standart input / output header
+// Include standard input / output header
 #include <stdio.h>
 
 // Function Prototype
