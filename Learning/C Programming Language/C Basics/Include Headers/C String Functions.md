@@ -4,7 +4,7 @@ Tag: C, basics, include_header
 Author: S.Sunhaloo
 Type: String Functions
 Date: 2024-03-18
-Status: In-Progress
+Status: Completed
 ---
 
 ## List of Contents
@@ -12,6 +12,18 @@ Status: In-Progress
 - [[C String Functions#What to Include? | What to Include?]]
 	- [[C String Functions#`strlwr()` Function | strlwr() Function]]
 	- [[C String Functions#`strupr` Function | strupr() Function]]
+	- [[C String Functions#`strcat` Function | strcat() Function]]
+		- [[C String Functions#`strncat` Function with Number of Character From the <em style="color yellow;">Second</em> String | strncat() Function]]
+	- [[C String Functions#`strcpy` Function | strcpy() Function]]
+		- [[C String Functions#`strncpy` Function with Number of Character From the <em style="color yellow;">Second</em> String | strncpy() Function]]
+	- [[C String Functions#`strset` Function | strset() Function]]
+		- [[C String Functions#`strnset` Function | strnset() Function]]
+	- [[C String Functions#`strrev` Function | strrev() Function]]
+	- [[C String Functions#`strlen` Function | strlen() Function]]
+	- [[C String Functions#`strcmp` Function | strcmp() Function]]
+		- [[C String Functions#`strncmp` Function | strncmp() Function]]
+	- [[C String Functions#`strcmpi` Function | strcmpi() Function]]
+		- [[C String Functions#`strnicmp` Function | strnicmp() Function]]
 
 ---
 
@@ -443,10 +455,10 @@ int main()
   // Output the original value of variable
   printf("\nPassword: %s", password);
   
-  // Concatenate only the word 'World'
+  // Replace password with character '*'
   strset(password, '*');
   
-  // Output the result of concatenation
+  // Output the result of "censoring"
   printf("\nWTF Happened: %s", password);
 
   return 0;
@@ -478,10 +490,10 @@ int main()
   // Output the original value of variable
   printf("\nOriginal: %s", shit);
   
-  // Concatenate only the word 'World'
+  // Replace Fuck with character '*'
   strnset(shit, '*', 4);
   
-  // Output the result of concatenation
+  // Output the result of censoring
   printf("\nCensored: %s", shit);
 
   return 0;
@@ -529,10 +541,10 @@ int main()
   // Output the original value of variable
   printf("\nOriginal: %s", name);
   
-  // Concatenate only the word 'World'
+  // Reversing the user's name
   strrev(name);
   
-  // Output the result of concatenation
+  // Output the result of reversing
   printf("\nActual Name: %s", name);
   
   return 0;
@@ -540,6 +552,269 @@ int main()
 }
 
 ```
+
+>[!note]
+>All the functions below will be of type **Integer**
+
+## `strlen` Function
+
+This function will return the **length** of the string, just like in [[String Manipulation - Python#Length Function | Python's Length Function]]
+
+Here is the code below $\downarrow$:
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+// Include string library / header
+#include <string.h>
+
+int main()
+
+{
+
+  // Declaration
+
+  // DECLARE name: STRING ( size = 11 )
+  char name[] = "S.Sunhaloo";
+  // DECLARE car_make: STRING ( size = 6 )
+  char car_make[] = "Mazda";
+
+  // Find the length of the variables
+  // NOTE: We need to make another variable to hold the length
+    // This is because the length is of type INTEGER, Duh!?!
+  // DECLARE len_name: INTEGER
+  int len_name = strlen(name);
+  // DECLARE len_car_make: INTEGER
+  int len_car_make = strlen(car_make);
+
+  // Output the result of strlen() function
+  printf("\nLength of Name: %d", len_name);
+  printf("\nLength of Car Make: %d\n", len_car_make);
+
+  return 0;
+
+}
+
+```
+
+## `strcmp` Function
+
+What does this do now? You ask, well this will **compare** 2 strings; let me show / explain.
+
+Suppose we have 4 strings:
+
+- `string1` = "S.Sunhaloo"
+- `string2` = "S.Sunhaloo"
+- `string3` = "The Same?"
+- `string4` = "Yeah, NOT the same!"
+
+If you apply the compare function like so:
+
+```C
+
+int result_same = strcmp(string1, string2);
+
+```
+
+The result ( *ha the result* ) of `result_name` will be **0**!
+
+Now, If you have use it with `string3` and `string4`, then we will have a different story, here we go:
+
+```C
+
+int result_diff = strcmp(string3, string4);
+
+```
+
+This would output some number ( *normally that number should be 1 or -1 - don't ask me why it changes, I tested the code, and it does seem to change the number* ) and **not** 0!
+
+Hence we have:
+
+<p align="center">Same Contents in String => Return Value = 0</p>
+<p align="center">Different Contents in String => Return Value != 0</p>
+
+Here is an example with `if` statements
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+// Include string library / header
+#include <string.h>
+
+int main()
+
+{
+
+  // Declaration
+
+  // DECLARE name1: STRING ( size = 11 )
+  char name1[] = "S.Sunhaloo";
+  // DECLARE name2: STRING ( size = 11 )
+  char name2[] = "S.Sunhaloo";
+  // DECLARE not_same1: STRING ( size = 6 )
+  char not_same1[] = "Same?";
+  // DECLARE not_same2: STRING ( size = 9 )
+  char not_same2[] = "Not Same";
+
+  // Comparing all characters in string
+  int result1 = strcmp(name1, name2);
+  int result2 = strcmp(not_same1, not_same2);
+
+  // If result1 is the same
+  if(result1 == 0){
+    printf("\nThe Variables Have The Same Value!");
+  }
+  else{
+    printf("\nThe Variables Does NOT Have The Same Value!");
+  }
+  // If result2
+  if(result2 == 0){
+    printf("\nThe Variables Have The Same Value!");
+  }
+  else{
+    printf("\nThe Variables Does NOT Have The Same Value!");
+  }
+
+  return 0;
+
+}
+
+```
+
+## `strncmp` Function
+
+Do I need to write things here, I think you get the idea that this will compare a set amount of character / letters in the string ( *provided by the programmer* )
+
+>For real, amma not waste too much time and just change the above code so that we have use it here.
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+// Include string library / header
+#include <string.h>
+
+int main()
+
+{
+
+  // Declaration
+
+  // DECLARE name1: STRING ( size = 11 )
+  char name1[] = "S.Sunhaloo";
+  // DECLARE name2: STRING ( size = 11 )
+  char name2[] = "S.Sunhaloo";
+  // DECLARE not_same1: STRING ( size = 6 )
+  char not_same1[] = "Same?";
+  // DECLARE not_same2: STRING ( size = 9 )
+  char not_same2[] = "Not Same";
+
+  // Comparing only 4 characters in string
+  int result1 = strncmp(name1, name2, 4);
+  int result2 = strncmp(not_same1, not_same2, 4);
+
+  // If result1 is the same
+  if(result1 == 0){
+    printf("\nThe Variables Have The Same Value!");
+  }
+  else{
+    printf("\nThe Variables Does NOT Have The Same Value!");
+  }
+  // If result2
+  if(result2 == 0){
+    printf("\nThe Variables Have The Same Value!");
+  }
+  else{
+    printf("\nThe Variables Does NOT Have The Same Value!");
+  }
+
+  return 0;
+
+}
+
+```
+
+## `strcmpi` Function
+
+This is similar to `strcmp()` Function, but this time; it will **ignore** all cases.
+
+Take a look at the code below $\downarrow$
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+// Include string library / header
+#include <string.h>
+
+int main()
+
+{
+
+  // Declaration
+
+  // DECLARE object1: STRING ( size = 4 )
+  char object1[] = "Sun";
+  // DECLARE object2: STRING ( size = 4 )
+  char object2[] = "sun";
+
+  // Comparing all characters in string
+    // Compare character with `strcmp` Function ( Does NOT Ignore Case )
+  int result_case = strcmp(object1, object2);
+    // Compare character with `strcmpi` Function ( DOES Ignore Case )
+  int result_ignore_case = strcmpi(object1, object2);
+
+  // Output the results
+  printf("\nResult Without Ignore Case: %d", result_case);
+  printf("\nResult With Ignoring Case: %d\n", result_ignore_case);
+
+  return 0;
+
+}
+
+```
+
+## `strnicmp` Function
+
+Like what do you want me to do, shove some code down your throat and do not explain anything? Okay if that's what you want then...
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+// Include string library / header
+#include <string.h>
+
+int main()
+
+{
+
+  // Declaration
+
+  // DECLARE object1: STRING ( size = 4 )
+  char object1[] = "Sun";
+  // DECLARE object2: STRING ( size = 4 )
+  char object2[] = "sun";
+
+  // Comparing only 2 characters in string
+    // Compare character with `strncmp` Function ( Does NOT Ignore Case )
+  int result_case = strncmp(object1, object2, 2);
+    // Compare character with `strnicmp` Function ( DOES Ignore Case )
+  int result_ignore_case = strnicmp(object1, object2, 2);
+
+  // Output the results
+  printf("\nResult Without Ignore Case: %d", result_case);
+  printf("\nResult With Ignoring Case: %d\n", result_ignore_case);
+
+  return 0;
+
+}
+
+```
+
+
+>[!success] We are finally done with this!
 
 ---
 
