@@ -1,6 +1,6 @@
 ---
 Alias: Arrays In Python
-Tag: python, basics, 1D-Arrays, 2D-Array
+Tag: python, basics, 1D-Array, 2D-Array
 Author: S.Sunhaloo
 Type: Arrays ( 1D / 2D )
 Date: 2023-08-16

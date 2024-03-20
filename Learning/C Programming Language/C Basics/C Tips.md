@@ -9,7 +9,7 @@ Status: HOLD
 
 ## List of Contents
 
-
+- [[C Tips#Get Rid of ` n` ( Newline Character ) | Get Rid of New Line Character]]
 
 ---
 
@@ -72,6 +72,62 @@ int main()
   }
 
   return 1;
+}
+
+```
+
+# Calculate the Size of Arrays
+
+As you know everything has a size in / on computers; files, texts, games.
+
+We measure the size of files / games / etc in:
+
+- From Largest to Smallest ( *there are more, just including the size that we normally use* )
+	- Terabyte = 1000 Gigabytes
+	- Gigabyte = 1000 Megabytes
+	- Megabyte = 1000 Kilobytes
+	- Kilobyte = 1000 Bytes
+	- Byte = 8 Bits
+
+>Some of you may be asking "*is it not 1024 Bytes?*"
+>Yes, but no! The thing is <span style="color: green;">kilo</span>bytes and <span style="color: red;">kibi</span>bytes are 2 **different** things.
+>We can also use Google converter if you need to.
+
+>[!tip] Usage
+>```C
+>
+>// Use the function:
+>sizeof(insert array here)
+>
+>```
+>- Will return INTEGER
+
+### Example Code:
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+// Include string library / header
+#include <string.h>
+
+int main()
+
+{
+
+  // DECLARE ARRAY intials[5]: INTEGER
+  int initials[] = {'S', 'U', 'S', 'S', 'Y'};
+  // DECLARE ARRAY prices[4]: INTEGER
+  double prices[] = {12.50, 9.99, 449.99, 10.00};
+
+  // Display the size ( like actual size in Bytes ) each array
+
+  // Size of Array `initials` in Bytes
+  printf("\nSize of Array `initials` = %d Bytes", sizeof(initials));
+  printf("\nSize of Array `prices` = %d Bytes\n", sizeof(prices));
+
+  return 0;
+
 }
 
 ```
