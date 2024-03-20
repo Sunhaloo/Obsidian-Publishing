@@ -4,11 +4,11 @@ publish = "public"
 
 [build.environment]
 # (Optional) Text in landing page button
-LANDING_BUTTON = "Notes Here"
+LANDING_BUTTON = "Notes Here!"
 # (Optional) Site description on landing page
 LANDING_DESCRIPTION = "My Real Brain is Sleeping"
 # (REQUIRED) The Markdown page linked to landing page button (e.g. put home for ./home.md)
-LANDING_PAGE = "./Learning/"
+LANDING_PAGE = "./Home/"
 # (Optional) Site title on landing page
 LANDING_TITLE = "Obsidian Notes!"
 PYTHON_VERSION = "3.8"
