@@ -7,11 +7,15 @@ Date: 2024-03-19
 Status: In-Progress
 ---
 
-## List of Contents
+## list of contents
 
-[[Arrays - C#Little Introduction of Arrays | Little Introduction to Arrays]]
+- [[Arrays - C#Little Introduction of Arrays | Little Introduction to Arrays]]
 
 ## One Dimensional Array
+
+- [[Arrays - C#Creating A 1D-Array | Creating A 1D-Array]]
+- [[Arrays - C#Displaying 1D-Arrays | Displaying 1D-Arrays]]
+- [[Arrays - C#Adding Elements into 1D-Arrays | Adding Elements into 1D-Arrays]]
 
 ---
 
@@ -56,8 +60,6 @@ So the code below $\downarrow$ will show you how to create 1D-Arrays.
 
 // Include standard input / output header
 #include <stdio.h>
-// Include string library / header
-#include <string.h>
 
 int main()
 
@@ -110,8 +112,6 @@ So there are a few ways to display the an array in C
 
 // Include standard input / output header
 #include <stdio.h>
-// Include string library / header
-#include <string.h>
 
 int main()
 
@@ -143,8 +143,6 @@ This is normally used to print out single values from an array. As you can see f
 
 // Include standard input / output header
 #include <stdio.h>
-// Include string library / header
-#include <string.h>
 
 int main()
 
@@ -199,6 +197,161 @@ The first one is used to display the contents on **separate** lines, while the o
 In addition, You **cannot** use the same counter `i` for both.
 But you say yourself, you just did you dogshit little liar!.
 Brother take a look again; I *re-declared* the counter `i`
+
+### Method 3: Niche Way of Iterating through Array
+
+We are going to be using the `sizeof()` Function. If you do not know what this does, then head over to [[C Tips#Calculate the Size of Arrays ( Not Length of Array ) | How to Calculate the Size of Array - Not the Length]]
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+int main()
+
+{
+
+  // DECLARE ARRAY intials[5]: INTEGER
+  int initials[] = {'S', 'U', 'S', 'S', 'Y'};
+  // DECLARE ARRAY prices[4]: INTEGER
+  double prices[] = {12.50, 9.99, 449.99, 10.00};
+
+  // Display the size ( like actual size in Bytes ) each array
+
+  // Size of Array `initials` in Bytes
+  printf("\nSize of Array `initials` = %ld Bytes", sizeof(initials));
+  printf("\nSize of Array `prices` = %ld Bytes\n", sizeof(prices));
+
+  // Use `sizeof()` Function to Display Arrays `initials` and `prices`
+
+  for (int x = 0; x < sizeof(prices) / sizeof(prices[0]); x++) {
+    printf("\n%0.2lf", prices[x]);
+  }
+
+  return 0;
+}
+
+
+```
+
+I mean, there is not point to this. This is making the program slower ( *I think* ). Because we need to use the function `sizeof()`, when we **run** the program; it will need to like also run the function `sizeof()` instead of a simple number.
+
+Yeah, when you compile C program with GCC, it will also compile all of the function and other shit that comes with it. But I think you know what I am trying to say.
+
+## Adding Elements into 1D-Arrays
+
+### "*Appending*" Elements into 1D-Array
+
+This code $\downarrow$ will show you how to insert an element into an array at the **end** of an array.
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+// FUNCTION dis(DECLARE array[]: INTEGER, DECLARE size: INTEGER)
+void display(int array[], int size)
+
+{
+  // Displays any array
+  for(int i = 0; i < size; i++){
+    printf("\nIndex = %d | Value: %d", i , array[i]);
+  }
+}
+
+int main()
+
+{
+
+  // DECLARE size_array: INTEGER
+  int size_array;
+
+  // Ask the user to enter the size of array
+  printf("\nPlease Enter The Size of Array: ");
+  scanf("%d", &size_array);
+
+  // DECLARE ARRAY intials[]: INTEGER ( user will be ask the enter the size of array )
+  // NOTE: Declaring AFTER getting the `size_array` from the user.
+    // This is because C, Yeah C, Memory Management and stuff.
+    // This is big men / chad toy now, not Python, we need to be one with the computer.
+  int initials[size_array];
+
+  printf("\nSize of Array: %d", size_array);
+
+  printf("\n");
+
+  // Ask the user to enter the the elements in array
+  // DECLARE counter: INTEGER
+  for(int counter = 0; counter < size_array; counter++){
+    printf("\nPlease Enter Elements: ");
+    scanf("%d", &initials[counter]);
+  }
+
+  // Display the Array using Function `display`
+  display(initials, size_array);
+  
+  printf("\n");
+
+  return 0;
+}
+
+
+```
+
+Here are some explanation:
+1. The first thing that we ( *more like "I"* ) did, is create a function called `display` to display our ( *can also display any array* ) array. We need to pass the array name and the size of the array; which were both in this case `initials` and `size_array` respectively.
+
+2. Then we need to ask the user to enter:
+	- Size of Array
+	- The Elements ( *that will go inside the array* )
+
+3. After asking the Size and Elements that will go inside of our array, We then use the for loop to enter the elements given by the user into the array with each incrementing counter `counter` by 1 until the limit ( *here the limit is the size of array* ) is reached.
+
+#### Equivalent Python Code
+
+>To be honest, I much prefer to write Python Codes than C, but the **SPEED** of C is soooooooo much better than Python.
+
+I normally write the array in the very **first** line. This is because look at the above $\uparrow$ code, I declared the `size_array` first then asked the user to enter its value. Finally, we use the array as normally. 
+
+>But if I was actually writing Python Code; I would structure it like this:
+>- All declaration like
+>	- Globals
+>	- Arrays
+>	- Constants
+>- User input
+>But then again I have not written many code, just some algorithms like [[Binary Search - Python#Example 1 Complete Code for 1D-Array| binary search]] and other.
+
+```python
+
+print()
+# Ask the user to enter the size of array
+array_size = int(input("Please Enter The Size of Array: "))
+
+# DECLARE ARRAY array[array_size]: INTEGER ---> User Will Give The Size
+array = []
+
+print()
+
+# Loop to iterate through array
+for x in range(array_size):
+
+    # Ask the user to enter elements / values into array
+    # DECLARE user_input: INTEGER
+    user_input = int(input("Please Enter A Value: "))
+    
+    # Appends the user value to array
+        # Append ---> The value will added will always go to the last index of array
+    array.append(user_input)
+
+print()
+
+# Output Array
+for i, y in enumerate(array):
+
+    print(f"Index: {i} | Value: {y}")
+
+
+```
 
 ---
 

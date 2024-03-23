@@ -10,6 +10,7 @@ Status: HOLD
 ## List of Contents
 
 - [[C Tips#Get Rid of ` n` ( Newline Character ) | Get Rid of New Line Character]]
+- [[C Tips#Calculate the Size of Arrays ( Not Length of Array ) | Calculate the Size of Arrays in Bytes]]
 
 ---
 
@@ -76,7 +77,7 @@ int main()
 
 ```
 
-# Calculate the Size of Arrays
+# Calculate the Size of Arrays ( Not Length of Array )
 
 As you know everything has a size in / on computers; files, texts, games.
 

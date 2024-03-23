@@ -9,34 +9,34 @@ Status: Completed
 
 ## List of Contents
 
-- [[Text Files#What is a Text File? | What is a Text File?]]
-- [[Text Files#We need the OS Module | The Need For OS Module]]
-- [[Text Files#Path of File | Path of File]]
-	- [[Text Files#Example Path of a File | Example of Path]]
-- [[Text Files#Checking if File / Directory Exists | Checking if File / Directory Exists]]
-	- [[Text Files#Example | Example Code]]
-- [[Text Files#Checking if "*path*" is a File or Directory | Checking if path is a File or Directory]]
-	- [[Text Files#Example Checking if a *path* is a File | Checking if path is a File]]
-	- [[Text Files#Example Checking if a *path* is a Directory | Checking if path is a Directory]]
-- [[Text Files#Opening a Text File | Opening a Text File]]
-	- [[Text Files#Example Opening a Text File | Example of Opening a Text File]]
-- [[Text Files#Reading Contents of a Text File | Reading Contents of a Text File]]
-	- [[Text Files#Example Reading the Contents of the Text File | Example of Reading Contents of Text File]]
-- [[Text Files#Closing a Text File | Closing a Text File]]
-	- [[Text Files#Example Closing a Text File | Example of Closing a Text File]]
-	- [[Text Files#How to Check if a Text File is Open or Closed | How to Check if a Text File is Open or Closed]]
-		- [[Text Files#Example Checking if Text File has been Closed | Example on How to Check if File has been Closed]]
-- [[Text Files#Writing Data Into File | Writing Data Into File]]
-	- [[Text Files#Example Opening a Text File to Write Into | Example of Writing Data Into File]]
-- [[Text Files#Appending data into Text File | Appending data into Text File]]
-	- [[Text Files#Example Appending data into Text File | Example of Appending Data Into File]]
-- [[Text Files#Note | Note]]
+- [[Text Files - Python#What is a Text File?| What is a Text File?]]
+- [[Text Files - Python#We need the OS Module| The Need For OS Module]]
+- [[Text Files - Python#Path of File| Path of File]]
+	- [[Text Files - Python#Example Path of a File| Example of Path]]
+- [[Text Files - Python#Checking if File / Directory Exists| Checking if File / Directory Exists]]
+	- [[Text Files - Python#Example| Example Code]]
+- [[Text Files - Python#Checking if "*path*" is a File or Directory| Checking if path is a File or Directory]]
+	- [[Text Files - Python#Example Checking if a *path* is a File| Checking if path is a File]]
+	- [[Text Files - Python#Example Checking if a *path* is a Directory| Checking if path is a Directory]]
+- [[Text Files - Python#Opening a Text File| Opening a Text File]]
+	- [[Text Files - Python#Example Opening a Text File| Example of Opening a Text File]]
+- [[Text Files - Python#Reading Contents of a Text File| Reading Contents of a Text File]]
+	- [[Text Files - Python#Example Reading the Contents of the Text File| Example of Reading Contents of Text File]]
+- [[Text Files - Python#Closing a Text File| Closing a Text File]]
+	- [[Text Files - Python#Example Closing a Text File| Example of Closing a Text File]]
+	- [[Text Files - Python#How to Check if a Text File is Open or Closed| How to Check if a Text File is Open or Closed]]
+		- [[Text Files - Python#Example Checking if Text File has been Closed| Example on How to Check if File has been Closed]]
+- [[Text Files - Python#Writing Data Into File| Writing Data Into File]]
+	- [[Text Files - Python#Example Opening a Text File to Write Into| Example of Writing Data Into File]]
+- [[Text Files - Python#Appending data into Text File| Appending data into Text File]]
+	- [[Text Files - Python#Example Appending data into Text File| Example of Appending Data Into File]]
+- [[Text Files - Python#Note| Note]]
 
 ---
 
 My Links
 
-- [[Text Files#Socials | Link to Socials]]
+- [[Text Files - Python#Socials| Link to Socials]]
 
 ---
 

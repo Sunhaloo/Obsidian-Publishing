@@ -135,7 +135,7 @@ SORT file.name ASC
 
 ## Text Files
 
-- [[Text Files]]
+- [[Text Files - Python]]
 
 ## Computer Object Oriented Programming
 

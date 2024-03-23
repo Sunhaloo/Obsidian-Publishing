@@ -37,7 +37,7 @@ The random module ( part of the [[Modules - Python| module]] notes ); is used to
 >[!warning]
 >Here it is **necessary** to import the random module as we will be using it constantly
 
->Not like in [[Text Files]], where even though we imported the OS Module. We did not use it every time.
+>Not like in [[Text Files - Python]], where even though we imported the OS Module. We did not use it every time.
 
 # Displaying Random Numbers
 

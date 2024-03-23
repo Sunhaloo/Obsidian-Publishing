@@ -28,7 +28,7 @@ Status: Completed
 		- [[Arrays - Python#Displaying Non-Empty Arrays | Displaying Non-Empty 1D-Arrays]]
 	- [[Arrays - Python#Adding Elements into 1D-Array | Adding Elements into 1D-Array]]
 		- [[Arrays - Python#Inserting Elements in 1D-Array | Inserting Elements in 1D-Array]]
-		- [[Arrays - Python#Appending ( adding ) Elements into 1D-Array | Appending ( adding ) Elements into 1D-Array]]
+		- [[Arrays - Python#Appending Elements into 1D-Array | Appending Elements into 1D-Array]]
 	- [[Arrays - Python#Deleting Elements From 1D-Array | Deleting Elements From 1D-Array]]
 		- [[Arrays - Python#Popping Element From 1D-Array | Popping Element From 1D-Array]]
 		- [[Arrays - Python#Removing Element From 1D-Array | Removing Element From 1D-Array]]
@@ -349,7 +349,7 @@ print()
 
 ```
 
-## Appending ( adding ) Elements into 1D-Array
+## Appending Elements into 1D-Array
 
 >[!warning]
 >The ".append()" function will add elements at the **end** of an array
