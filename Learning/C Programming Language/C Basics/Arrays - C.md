@@ -240,6 +240,152 @@ Yeah, when you compile C program with GCC, it will also compile all of the funct
 
 ## Adding Elements into 1D-Arrays
 
+### "Inserting" Elements into 1D-Array
+
+Will add elements into a given position / index.
+
+But there are some extras in this code ( *insert meme add a little spice to it* ). So amma explain it like the good person that I am ( *am not* ).
+
+
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+int main()
+
+{ 
+
+  // DECLARE ARRAY array[100]: INTEGER
+  // Big Number; so that user can enter a lot of elements
+  int array[100];
+
+  // DECLARE array_size: INTEGER
+  int total_values;
+  // Ask the user to enter total amount of values that will be stored
+  printf("\nPlease Enter Size Of Array: ");
+  scanf("%d", &total_values);
+
+  // Ask the user to enter values into array
+  printf("\n\nEnter Values into Array Below\n");
+  // DECLARE i: INTEGER
+  for(int i = 0; i < total_values; i++){
+    printf("array[%d] = ", i);
+    scanf("%d", &array[i]);
+  }
+
+  // Display the Array
+  printf("\n\nDisplaying Array");
+  // DECLARE j: INTEGER
+  for(int j = 0; j < total_values; j++){
+    printf("\narray[%d]: %d", j, array[j]);
+  }
+  
+  // DECLARE insert_value: INTEGER
+  int insert_value;
+  // DECLARE insert_index: INTEGER
+  int insert_index;
+
+  // Allow the user to input another value at
+  printf("\n\nInsert Your Values\n");
+  // Ask user to enter index of value to insert
+  printf("Please Enter The Position To Insert Value: ");
+  scanf("%d", &insert_index);
+  // Ask user to enter value to insert
+  printf("Please Enter The Value To Insert: ");
+  scanf("%d", &insert_value);
+  
+  // Swap Values to make space for new value
+  // We have space at the end of last value, hence
+    // move all value to the right until desired index is found
+  for(int x = total_values; x > insert_index; x--){
+    // Swap Values
+    array[x] = array[x - 1];
+  }
+
+  // Add the value to the desired location
+  array[insert_index] = insert_value;
+
+  // Increase the total values in array
+  total_values++;
+
+  // Output Array Again
+  printf("\n\nDisplaying Array");
+  // DECLARE z: INTEGER
+  for(int z = 0; z < total_values; z++){
+    printf("\narray[%d]: %d", z, array[z]);
+  }
+
+  return 0;
+
+}
+
+```
+
+#### Equivalent Python Code
+
+I am going to write it as similar to the above code.
+
+> I have my ways of writing Python Code, but I am just showing you the difference. Thus, need to mimic the above code as similar as possible.
+
+```Python
+
+# DECLARE ARRAY array[100]: INTEGER
+array = []
+
+print()
+
+# DECLARE total_values: INTEGER
+# Ask the user to enter the number of elements in array
+total_values = int(input("Please Enter The Number of Elements to be Stored: "))
+
+print("Insert Values Into Array")
+print()
+# Insert Values
+for x in range(total_values):
+    user_values = int(input(f"array[{x}]: "))
+    array.append(user_values)
+
+print()
+print("Displaying Array")
+print()
+
+# Display Array
+# DECLARE i:INTEGER
+# DECLARE y:INTEGER
+for i, y in enumerate(array):
+    print(f"array[{i}]: {y}")
+
+print()
+
+# DECLARE insert_index: INTEGER
+# Ask the user to enter the position to insert value
+insert_index = int(input("Please Enter The Position To Enter Value: "))
+
+# DECLARE insert_value: INTEGER
+# Ask the user to enter value to add to array
+insert_value = int(input("Please Enter The Value to Insert: "))
+
+# Insert Value in Array
+# ONE FUCKING LINE
+# AGAIN ONE FUCKING LINE
+array.insert(insert_index, insert_value)
+
+print()
+
+# Display Array Again
+# DECLARE j:INTEGER
+# DECLARE z:INTEGER
+for j, z in enumerate(array):
+    print(f"array[{j}]: {z}")
+
+```
+
+>Even though we just used the `insert()` function to insert the *user's value* at the correct position.
+>There is not knowledge ( *say that like the meme* ) and we **just** use it without ever taking a guess how it works in the background.
+>Heck, even I do **not** know how it works!
+
 ### "*Appending*" Elements into 1D-Array
 
 This code $\downarrow$ will show you how to insert an element into an array at the **end** of an array.
