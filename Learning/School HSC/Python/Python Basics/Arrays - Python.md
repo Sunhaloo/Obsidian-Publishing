@@ -32,6 +32,7 @@ Status: Completed
 	- [[Arrays - Python#Deleting Elements From 1D-Array | Deleting Elements From 1D-Array]]
 		- [[Arrays - Python#Popping Element From 1D-Array | Popping Element From 1D-Array]]
 		- [[Arrays - Python#Removing Element From 1D-Array | Removing Element From 1D-Array]]
+		- [[Arrays - Python#Deleting Element Using `del` | Deleting Element Using `del`]]
 		- [[Arrays - Python#Clearing  A 1D-Array | Clearing An 1D-Array]]
 	- [[Arrays - Python#Copy Contents of One 1D-Array to Another 1D-Array | Copying contents of Arrays]]
 
@@ -672,6 +673,10 @@ print()
 
 ```
 
+>[!note] We can remove any element
+>We can simply add the **index** of an element inside the function `pop()` like so:
+>`pop(x)`, Where `x` is the **index**!
+
 ## Removing Element From 1D-Array
 
 >[!warning]
@@ -707,6 +712,54 @@ food.remove("Briani")
 # Displaying Array After Changes
 print(food)
 
+print()
+
+```
+
+## Deleting Element Using `del`
+
+We have another way to delete an element at a **specific** *index*. This is done by using the `del` 
+"*function*".
+
+>[!info]
+>To "del" an element from the array; we use:
+>```python
+>del array_name[index]
+
+>Its not really a function!
+
+Check out the code below $\downarrow$
+
+```python
+
+# Deleting Elements From Array
+
+# DECLARE ARRAY numbers: INTEGER
+numbers = [1, 2, 3, 4, 5]
+
+# Display Original Array
+print("Original Array")
+print()
+print(numbers)
+print()
+
+# Delete Some Elements
+
+# Delete Value At Index '0'
+del numbers[0]
+
+# Delete Value At Index '1'
+del numbers[1]
+
+# Delete Value At Index '4'
+# NOTE: This will result in error
+    # Because Size of Array has DECREASED
+del numbers[4]
+
+# Display Modified Array
+print("Modified Array")
+print()
+print(numbers)
 print()
 
 ```

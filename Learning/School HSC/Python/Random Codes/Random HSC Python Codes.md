@@ -18,6 +18,8 @@ Status: HOLD
 - [[Random HSC Python Codes#Code 7 | Code 7]]
 - [[Random HSC Python Codes#Code 8 | Code 8]]
 	- [[Random HSC Python Codes#Code 8 ( my shitty version ) | Code 8 My Version]]
+- [[Random HSC Python Codes#Code 9 | Code 9]]
+- [[Random HSC Python Codes#Code 9 | Code 9]]
 
 ---
 
@@ -1493,6 +1495,65 @@ main()
 
 output_arrays(array_main, array_unwanted)
 
+
+```
+
+# Code 10
+
+This is a simple code that will calculate the average of the numbers in an array.
+
+It will include 2 "*methods*":
+
+1. Finding the `total` manually
+2. Using the `sum()` function to find the *total*
+
+The YouTuber [The Coding Sloth](https://www.youtube.com/watch?v=SS19Q-_saCc) made a video about how coding is hard. He said to find the average of some numbers in an array without using the function `sum()`; so I did it ( *by myself $\rightarrow$ need to put that here because I am fool and cannot program* )
+
+>Today is the 27 of March of 2024 @ 13:56
+>The more I code in C, the more I lose Confidence.
+
+```Python
+
+# DECLARE ARRAY numbers: INTEGER
+numbers = [1, 2, 3, 4, 5]
+# DECLARE array_size: INTEGER
+array_size = len(numbers)
+# DECLARE total: INTEGER
+global total
+
+# FUNCTION avg1()
+def avg1():
+
+    total = 0
+    # Calculate the Total of the Numbers in Array
+    for x in range(array_size):
+
+        # DECLARE num: INTEGER
+        num = numbers[x]
+        total = total + num
+
+    # Calculate the Average
+    # DECLARE average1: INTEGER
+    average1 = total / array_size
+
+    # Output the Average
+    print(f"Average ( Method 1 ): {average1}")
+
+# FUNCTION avg2()
+def avg2():
+
+    # DECLARE average2: INTEGER
+        # Using `sum()` function
+    average2 = sum(numbers) / array_size
+
+    # Output the Average
+    print(f"Average ( Method 2 ): {average2}")
+
+print()
+# Calling Functions
+avg1()
+print()
+avg2()
 
 ```
 

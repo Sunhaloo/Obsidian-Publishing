@@ -12,6 +12,8 @@ Status: HOLD
 - [[Random C Program Codes#Code 1 | Code 1]]
 - [[Random C Program Codes#Code 2 | Code 2]]
 - [[Random C Program Codes#Code 3 | Code 3]]
+- [[Random C Program Codes#Code 4 | Code 4]]
+- [[Random C Program Codes#Code 5 | Code 5]]
 
 ---
 
@@ -343,6 +345,67 @@ int main()
 >[!note]
 >We have added `<stdlib.h>`;
 >This will also use the `exit()` function which is the same thing found in Python ( *I miss Python, where I do not need to include a fucking library to use basic functions* )
+
+# Code 5
+
+Simple Code that will remove the last value in an array.
+
+In this one, we have a `for` loop what will remove 2 of the last value.
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+// FUNCTION display(DECLARE ARRAY a[4]: INTEGER, DECLARE size: INTEGER)
+void display(int a[], int size)
+
+{
+
+  // Output The Array
+  // DECLARE i: INTEGER
+  for (int i = 0; i < size; i++) {
+    printf("\nIndex: %d | Value: %d", i, a[i]);
+  }
+
+  printf("\n");
+}
+
+int main()
+
+{
+
+  // DECLARE ARRAY array[4]: INTEGER
+  int array[] = {1, 2, 3, 4, 5};
+  // DECLARE array_size: INTEGER
+  int array_size = sizeof(array) / sizeof(array[0]);
+
+  // Call Function `display` to Display Array
+  printf("\nOriginal Array\n");
+  display(array, array_size);
+
+  // Remove the Last Value from Array
+  // DECLARE value_removed: INTEGER
+  int value_removed;
+
+  // Removing Last Value
+  for(int x = 0; x < 2; x++){
+	  value_removed = array[array_size - 1]; // Where (array_size - 1) is the INDEX of Last Value
+	  // Decrease size of array by 1
+	  array_size--;
+	  printf("\n\nRemoved Value: %d\n\n", value_removed);
+  }
+
+  printf("\n\nRemoved Value: %d\n\n", value_removed);
+
+  // Display the Array Again
+  printf("\nModified Array\n");
+  display(array, array_size);
+
+  return 0;
+}
+
+```
 
 ---
 

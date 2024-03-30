@@ -34,6 +34,7 @@ There are many websites that we can use to watch movies; like:
 
 # Racing
 
+- Cars 2
 - Fast and Furious ( Most of them; not the older ones, even though I am a car guy; need to watch them )
 	- The Fast and the Furious: Tokyo Drift
 - Need For Speed: No Limits

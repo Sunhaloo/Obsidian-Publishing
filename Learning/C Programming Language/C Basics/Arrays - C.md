@@ -13,15 +13,28 @@ Status: In-Progress
 
 ## One Dimensional Array
 
-- [[Arrays - C#Creating A 1D-Array | Creating A 1D-Array]]
+- [[Arrays - C#Creating 1D-Arrays | Creating 1D-Arrays]]
 - [[Arrays - C#Displaying 1D-Arrays | Displaying 1D-Arrays]]
 - [[Arrays - C#Adding Elements into 1D-Arrays | Adding Elements into 1D-Arrays]]
+- [[Arrays - C#Deleting Elements From 1D-Arrays | Deleting Elements From 1D-Arrays]]
+
+---
+
+## Two Dimensional Array
 
 ---
 
 ### My Links
 
 - [[Arrays - C#Socials | Links to Socials]]
+
+---
+
+>[!note] Python!
+>So I learned Python first because... *Fuck Off*! Don't @ me.
+>
+>I will also be writing the Equivalent Python Code.
+>The route that I took `Python` $\rightarrow$ `C` is common. Hence, that is why I will be also including Python Codes; so that someone who already have done Python can have a better understanding of the C Codes.
 
 ---
 
@@ -41,7 +54,7 @@ Yeah so lets get started with coding because I want to actually code some shit i
 
 # One Dimensional Arrays ( 1D-Arrays )
 
-## Creating A 1D-Array
+## Creating 1D-Arrays
 
 So the code below $\downarrow$ will show you how to create 1D-Arrays.
 
@@ -174,21 +187,21 @@ int main()
 
 ```
 
->[!note]- Equivalent Python Code
->The equivalent Python Code is:
->```python
->
->initials = ['S', 'U', 'S', 'S', 'Y']
->
-># Display on Separate Lines
->for x in intials:
->	print(x)
->
-># Display on Same Line
->for x in intials:
->	print(x, end="")
->
->```
+#### Equivalent Python Code
+
+```python
+
+initials = ['S', 'U', 'S', 'S', 'Y']
+
+# Display on Separate Lines
+for x in intials:
+	print(x)
+
+# Display on Same Line
+for x in intials:
+	print(x, end="")
+
+```
 
 This is the better way of displaying an array.
 In the code above $\uparrow$; you can see that there are 2 `for` loops.
@@ -246,7 +259,7 @@ Will add elements into a given position / index.
 
 But there are some extras in this code ( *insert meme add a little spice to it* ). So amma explain it like the good person that I am ( *am not* ).
 
-
+This code is taken from a [video](https://www.youtube.com/watch?v=nIJvKd5I1cY) by Portfolio Courses
 
 ```C
 
@@ -305,6 +318,7 @@ int main()
   }
 
   // Add the value to the desired location
+	  // This is how "Dynamic Memory Allocation" looks like
   array[insert_index] = insert_value;
 
   // Increase the total values in array
@@ -453,6 +467,10 @@ Here are some explanation:
 
 3. After asking the Size and Elements that will go inside of our array, We then use the for loop to enter the elements given by the user into the array with each incrementing counter `counter` by 1 until the limit ( *here the limit is the size of array* ) is reached.
 
+>[!note]-
+>If we already had values in the array; we could use the function [[C Tips#Calculate the Size of Arrays ( Not Length of Array ) | `sizeof()`]] to find the size of the array like so:
+>- `size_array = sizeof(initials) / sizeof(initials[0]`
+
 #### Equivalent Python Code
 
 >To be honest, I much prefer to write Python Codes than C, but the **SPEED** of C is soooooooo much better than Python.
@@ -498,6 +516,185 @@ for i, y in enumerate(array):
 
 
 ```
+
+## Deleting Elements From 1D-Arrays
+
+### "*Popping*" Element From 1D-Array
+
+The code below $\downarrow$ will remove the **last** element in the array ( *just like the [[Arrays - Python#Popping Element From 1D-Array | `pop()`]] Function* ).
+
+Little Explanation: because of *memory management*, and little to *no abstraction*, we need to remove the value ourselves.
+
+Hence, we create a variable that will hold the removed value and then **decrease** the size of the array by 1.
+
+Thus, we get this code below inspired by the the `pop()` function in Python.
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+// FUNCTION display(DECLARE ARRAY a[4]: INTEGER, DECLARE size: INTEGER)
+void display(int a[], int size)
+
+{
+
+	// Output The Array
+	// DECLARE i: INTEGER
+	for(int i = 0; i < size; i++){
+		printf("\nIndex: %d | Value: %d", i, a[i]);
+	}
+
+	printf("\n");
+
+}
+
+int main()
+
+{
+
+	// DECLARE ARRAY array[4]: INTEGER
+	int array[] = {1, 2, 3, 4, 5};
+	// DECLARE array_size: INTEGER
+	int array_size = sizeof(array) / sizeof(array[0]);
+
+	// Call Function `display` to Display Array
+	printf("\nOriginal Array\n");
+	display(array, array_size);
+
+	// Remove the Last Value from Array
+	// DECLARE value_removed: INTEGER
+	int value_removed;
+
+	// Removing Last Value
+	value_removed = array[array_size - 1]; // Where (array_size - 1) is the INDEX of Last Value
+	// Decrease size of array by 1
+	array_size--;
+	
+	// Display the Array Again
+	printf("\nModified Array\n");
+	display(array, array_size);
+
+	return 0;
+
+}
+
+```
+
+#### Equivalent Python Code
+
+```Python
+
+# FUNCTION display(DECLARE ARRAY a[4]: INTEGER)
+def display(a):
+
+    print()
+
+    # DECLARE x: INTEGER
+    # DECLARE index: INTEGER
+    for index, x in enumerate(a):
+        print(f"Index: {index} | Value: {x}")
+
+    print()
+
+# DECLARE array[4]: INTEGER
+array = [1, 2, 3, 4, 5]
+
+# Display Original Array
+print()
+print("Original Array")
+
+# Calling Function `display` to Display Array
+display(array)
+
+# Remove last value from array
+# Using `pop()` Function
+# Again ONE FUCKING LINE
+array.pop()
+
+# Display Array Again
+print("Modified Array")
+display(array)
+
+```
+
+### "*Removing*" Element From 1D-Array
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+// Array's Maximum Capacity
+#define max_size 100
+// FUNCTION display(DECLARE array[]: INTEGER, DECLARE array_size: INTEGER)
+void display(int array[], int array_size)
+
+{
+
+  // Output Array
+  // DECLARE i: INTEGER
+  for(int i = 0; i < array_size; i++){
+    printf("\nIndex: %d | Value: %d", i, array[i]);
+  }
+
+  printf("\n");
+
+}
+
+
+int main()
+
+{ 
+
+  // DECLARE ARRAY numbers[100]: INTEGER
+  int numbers[max_size];
+  // DECLARE total_values: INTEGER
+  // Use to keep track of numbers / "things" in the array
+  int total_values;
+
+  // Ask the user to enter the number of elements in array
+  printf("\nPlease Enter The Number of Elements To Be Added: ");
+  scanf("%d", &total_values);
+  
+  // Ask the user to input values into array in range of `total_values`
+  for(int j = 0; j < total_values; j++){
+    printf("\nPlease Enter Value To Add In Array: ");
+    scanf("%d", &numbers[j]);
+  }
+
+  // Display Original Array by Calling Function `display`
+  printf("\n\nOriginal Array");
+  display(numbers, total_values);
+
+  // DECLARE find_index_delete: INTEGER
+  int find_index_delete;
+
+  // Ask the user to enter the index / value to delete
+  printf("\n\nPlease Enter The Index To Delete: ");
+  scanf("%d", &find_index_delete);
+  
+  // DECLARE x: INTEGER
+  for(int x = find_index_delete; x < total_values; x++){
+    numbers[x] = numbers[x + 1];
+  }
+  // Decrease the size of array
+  total_values--;
+
+  // Display Modified Array by Calling Function `display`
+  printf("\n\nModified Array");
+  display(numbers, total_values);
+
+  return 0;
+
+}
+
+```
+
+As you can see, we are asking the user to enter the **index** of the value that we want to delete.
+Compared to [[Arrays - Python#Removing Element From 1D-Array | `remove()`]] Function in Python which will delete the **value** entered by the user.
+
+The rest is similar to the code above; like we have a Function `display` that will display our array... I do not think I need to say more.
 
 ---
 
