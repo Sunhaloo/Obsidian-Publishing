@@ -3,7 +3,7 @@ Alias: Git / GitHub dotfiles
 Tag: Git, GitHub
 Author: S.Sunhaloo, Nikola Balić
 Date: 2023-12-30
-Status: HOLD
+Status: Completed
 ---
 
 ## List of Contents

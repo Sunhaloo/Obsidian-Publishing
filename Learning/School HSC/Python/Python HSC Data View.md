@@ -1,5 +1,5 @@
 ---
-Alias: Python Programming Language HSC
+Alias: Python Programming Language
 Tag: python, dataview
 Author: S.Sunhaloo
 Date: 2023-10-24
@@ -139,7 +139,7 @@ SORT file.name ASC
 
 ## Computer Object Oriented Programming
 
-- [[Computer Object Oriented Programming]]
+- [[Object Oriented Programming - Python]]
 
 ---
 
@@ -155,4 +155,4 @@ SORT Date ASC
 
 ## Linking Files
 
-- [[Random HSC Python Codes]]
+- [[Random Python Codes]]

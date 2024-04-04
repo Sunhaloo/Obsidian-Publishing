@@ -11,6 +11,7 @@ Status: HOLD
 
 - [[C Tips#Get Rid of ` n` ( Newline Character ) | Get Rid of New Line Character]]
 - [[C Tips#Calculate the Size of Arrays ( Not Length of Array ) | Calculate the Size of Arrays in Bytes]]
+- [[C Tips#Swapping Values of Two Variables | Swapping Values of Two Variables]]
 
 ---
 
@@ -129,6 +130,129 @@ int main()
 
   return 0;
 
+}
+
+```
+
+
+# Swapping Values of Two Variables
+
+In the code below, we are going to learn on how to swap the values of 2 variables
+
+>Bubblesort algorithm will really like this one, because if you know, we are going to be using one of the greatest variable name to have ever existed: `temp`, Welcome to the party again Sir.
+
+## With Integers
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+// FUNCTION display_values(int var1, int var2, int temp)
+void display_values(int var1, int var2, int temp){
+
+  // Output the values of
+    // variable_1
+    // variable_2
+    // temp
+
+  printf("\nValues of Variables:\n");
+
+  printf("variable_1 = %d", var1);
+  printf("\ntemp = %d", temp);
+  printf("\nvariable_2 = %d\n", var2);
+
+}
+
+int main()
+
+{
+
+  // DECLARE variable_1: INTEGER
+  int variable_1 = 5;
+  // DECLARE variable_2: INTEGER
+  int variable_2 = 10;
+
+  // DECLARE temp: INTEGER
+  // Will be used as a temporary holder for swapping values
+    // Initialised with value '0'; else will be some random fucking number
+  int temp = 0;
+
+  // Call Function `display_values` to output the values of variables
+  display_values(variable_1, variable_2, temp);
+
+  // Swapping Values
+  temp = variable_1;
+  variable_1 = variable_2;
+  variable_2 = temp;
+
+  // Output values of variables after swapping
+  display_values(variable_1, variable_2, temp);
+
+  return 0;
+}
+
+```
+
+## With Arrays / Characters / Strings
+
+>[!note] Same principle as above $\uparrow$ but `temp` need to be assigned a size!
+
+In this case, the principle is similar; but the method we use to move / swap the values from one variable to the next is completely different.
+
+We are going to be using the `strcpu()` Function to copy values. This is done using the `<string.h>` library.
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+// Include string manipulation library
+#include <string.h>
+
+
+// FUNCTION display_values(char var1, char var2, char temp)
+void display_values(char var1[], char var2[], char temp[]){
+
+  // Output the values of
+    // variable_1
+    // variable_2
+    // temp
+
+  printf("\nValues of Variables:\n");
+
+  printf("variable_1 = %s", var1);
+  printf("\ntemp = %s", temp);
+  printf("\nvariable_2 = %s\n", var2);
+
+}
+
+int main()
+
+{
+
+  // DECLARE variable_1: STRING
+  char variable_1[25] = "Mazda";
+  // DECLARE variable_2: STRING
+  char variable_2[25] = "Nissan";
+
+  // DECLARE temp: STRING
+  // Will be used as a temporary holder for swapping values
+  char temp[20];
+
+  // Call Function `display_values` to output the values of variables
+    // `temp` variable should not have any value Initially
+  display_values(variable_1, variable_2, temp);
+
+  // Swapping Values
+    // Same Principle but Different Format
+  strcpy(temp, variable_1);
+  strcpy(variable_1, variable_2);
+  strcpy(variable_2, temp);
+
+  // Output values of variables after swapping
+  display_values(variable_1, variable_2, temp);
+
+  return 0;
 }
 
 ```

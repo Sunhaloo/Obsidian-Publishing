@@ -65,6 +65,14 @@ Status: HOLD
 - Terminal
   If you are in Linux / WSL; I don't think you need **Git Bash**
 
+---
+
+### My Links
+
+- [[Git Setup#Socials | Links to Socials]]
+
+---
+
 # First Time Setup
 
 ## View All Settings
@@ -851,3 +859,16 @@ git rm orginal_name
 git add new_name
 
 ```
+
+---
+
+# Socials
+
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**GitHub**](https://www.github.com/Sunhaloo)
+
+---
+
+S.Sunhaloo
+Thank You!

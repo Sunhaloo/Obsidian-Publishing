@@ -4,15 +4,16 @@ Tag: C, bascis, 1D-Array, 2D-Array
 Author: S.Sunhaloo
 Type: Arrays ( 1D / 2D )
 Date: 2024-03-19
-Status: In-Progress
+Status: HOLD
 ---
 
-## list of contents
+## List of Contents
 
 - [[Arrays - C#Little Introduction of Arrays | Little Introduction to Arrays]]
 
 ## One Dimensional Array
 
+- [[Arrays - C#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays ( 1D-Arrays )]]
 - [[Arrays - C#Creating 1D-Arrays | Creating 1D-Arrays]]
 - [[Arrays - C#Displaying 1D-Arrays | Displaying 1D-Arrays]]
 - [[Arrays - C#Adding Elements into 1D-Arrays | Adding Elements into 1D-Arrays]]
@@ -21,6 +22,10 @@ Status: In-Progress
 ---
 
 ## Two Dimensional Array
+
+- [[Arrays - C#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays ( 2D-Arrays )]]
+- [[Arrays - C#Creating 2D-Arrays | Creating 2D-Arrays]]
+- [[Arrays - C#Displaying 2D-Arrays | Displaying 2D-Arrays]]
 
 ---
 
@@ -695,6 +700,189 @@ As you can see, we are asking the user to enter the **index** of the value that 
 Compared to [[Arrays - Python#Removing Element From 1D-Array | `remove()`]] Function in Python which will delete the **value** entered by the user.
 
 The rest is similar to the code above; like we have a Function `display` that will display our array... I do not think I need to say more.
+
+# Two Dimensional Arrays ( 2D-Arrays )
+
+Now we are going to move onto 2 Dimensional Arrays.
+
+Here is a little analogy that I came up;
+
+- 1 Dimensional Arrays are like *ToDo* lists or a simple list of things or even a text file ( *that is why we call it **lists**; could also say that we only move in the x **or** y axis* ).
+- 2 Dimensional Arrays are like *Excel Sheets*, because we have a matrix / grid of "*things*" ( *in this case we can both move in x **and** y axis* )
+
+## Creating 2D-Arrays
+
+Below we are going to create some simple 2D-Arrays
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+int main()
+
+{
+
+  // First Method: Declare and Initialise 2D-Array
+  // DECLARE ARRAY numbers[2][5]: INTEGER
+  int numbers[2][5] = {{1, 2, 3, 4, 5}, {6, 7, 8}};
+  
+  // Second Method: Declare 2D-Array ONLY
+  // DECLARE ARRAY id[5][5]: STRING
+  char id[5][5];
+
+  // We can then later populate the array like so:
+    // In this case we only filled up the first Row
+  id[0][0] = 'F';
+  id[0][1] = 'U';
+  id[0][2] = 'U';
+  id[0][3] = 'C';
+  id[0][4] = 'K';
+  id[0][5] = 'S';
+
+  return 0;
+}
+
+```
+
+## Displaying 2D-Arrays
+
+This will require more work. As you know that we basically have arrays inside of arrays. But then again there are different ways of accessing those values inside 2D-Arrays.
+
+### Method 1: Displaying Values Individually
+
+I am going to take the array `id` from the example above $\uparrow$. Because I think that you will understand it better.
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+int main()
+
+{
+
+  // DECLARE ARRAY id[5][5]: STRING
+  char id[5][5];
+
+  // Inserting Values inside array at First Row ONLY
+  id[0][0] = 'F';
+  id[0][1] = 'U';
+  id[0][2] = 'U';
+  id[0][3] = 'C';
+  id[0][4] = 'K';
+
+  // Displaying Array `id`
+  printf("\nID Array\n");
+  printf("%c", id[0][0]);
+  printf("%c", id[0][1]);
+  printf("%c", id[0][2]);
+  printf("%c", id[0][3]);
+  printf("%c", id[0][4]);
+
+  // Output an index that is empty
+  printf("\nEmpty Index ( [0][5] ): %c <--- Should be Empty", id[0][5]);
+
+  return 0;
+}
+
+```
+
+### Method 2: Displaying with a Loop
+
+Now, this is the real deal. We are going to print out all the values in the array.
+
+>This is the one that we are going to be using the **most**! ( *I think ... No, I am sure* )
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+int main()
+
+{
+
+  // DECLARE ARRAY numbers[2][3]: INTEGER
+  int numbers[2][3] = {{1, 2, 3}, {5, 6, 7}};
+
+  printf("\n Values of Array numbers\n");
+
+  // Display Array with `for` Loop
+  // DECLARE i: INTEGER
+  for(int i = 0; i < 2; i++){
+	// DECLARE j: INTEGER
+    for(int j = 0; j < 3; j++){
+
+      // Output Values of Array
+      printf("\nRow: %d Column: %d Value: %d", i, j, numbers[i][j]);
+
+    }
+  };
+
+  printf("\n\n");
+
+  return 0;
+}
+
+```
+
+## Array of Strings ( 2D-Array )
+
+So as you already know by now if you have been following; C does **not** have `string` datatypes.
+
+Hence, we use array of characters `char`.
+
+Here is a little explanation of the code below $\downarrow$:
+
+First of all, we have a `cars` array with *incomplete* size, then, we add, some cars names in it ( *innit right* ).
+
+We then want to add the value `Toyota Supra` in the first index of the array; if you take a look at the comments, you will see that we need to use the `strcpy()` function from the `<string.h>` library.
+
+>Now, do not ask me why because I might break your face!
+>Obviously I don't fucking know!
+
+Then we simply display the array to the user ( *in a fashionable way 😉* ).
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+// Include string header
+#include <string.h>
+
+int main()
+
+{
+
+  // DECLARE ARRAY cars: STRING
+  // We have not yet really added a proper Array Size
+  char cars[][15] = {"Toyota Corolla", "Mazda RX-7 FD", "W11"};
+
+  // NOTE: We CANNOT Do this ( check line below )
+  // cars[0] = "Toyota Supra";
+
+  // To Perform this action
+    // i.e insert "Toyota Supra" at index '0', we need to use the `strcpy` function
+  strcpy(cars[0], "Toyota Supra");
+
+  // Displaying the Array
+  int size_array = sizeof(cars) / sizeof(cars[0]);
+
+  printf("\nContents of Array\n");
+
+  // DECLARE i: INTEGER
+  for(int i = 0; i < size_array; i++){
+
+    // Output Values of Array
+    printf("\nIndex: %d | Value: %s", i, cars[i]);
+
+  }
+
+  return 0;
+}
+
+```
 
 ---
 

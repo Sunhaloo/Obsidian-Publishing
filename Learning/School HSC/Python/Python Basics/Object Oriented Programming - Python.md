@@ -9,32 +9,32 @@ Status: Needs "super()" function
 
 ## List of Contents
 
-- [[Computer Object Oriented Programming#What is Computer Object Oriented Programming | What is Computer Object Oriented Programming]]
-	- [[Computer Object Oriented Programming#Structure of OOP | Structure of OOP]]
-	- [[Computer Object Oriented Programming#Principles of OOP | Principles of OOP]]
-		- [[Computer Object Oriented Programming#Encapsulation | Encapsulation]]
-		- [[Computer Object Oriented Programming#Abstraction  | Abstraction]]
-		- [[Computer Object Oriented Programming#Inheritance | Inheritance]]
-		- [[Computer Object Oriented Programming#Polymorphism | Polymorphism]]
-- [[Computer Object Oriented Programming#Computer Object Oriented Programming Codes | Start of Computer Object Oriented Programming]]
-	- [[Computer Object Oriented Programming#Creating a Class | Creating A Class]]
-		- [[Computer Object Oriented Programming#Example Create a class called "*Books*" | Example to Create Class]]
-	- [[Computer Object Oriented Programming#Defining A Class | Defining A Class]]
-		- [[Computer Object Oriented Programming#Constructor | Constructor Function]]
-			- [[Computer Object Oriented Programming#Example Passing Values in Constructor | Making Constructor Example]]
-		- [[Computer Object Oriented Programming#Attributes / Properties / Instance Variables| Attributes / Properties / Instance Variables]]
-			- [[Computer Object Oriented Programming#Example Adding the Attributes ( *properties* ) of class "*Books*" | Adding Attributes Example]]
-		- [[Computer Object Oriented Programming#Method / Getters ( Basically Functions and Procedures - Python Functions ) | Method / Getters / Functions]]
-			- [[Computer Object Oriented Programming#Example Getters / Methods / Functions | Example of Methods]]
-		- [[Computer Object Oriented Programming#Creating an Object | Creating an Object]]
-			- [[Computer Object Oriented Programming#Example: Creating Objects | Creating an Object Example]]
-		- [[Computer Object Oriented Programming#Calling Methods / Getters / Functions| Calling Functions]]
-		- [[Computer Object Oriented Programming#Class Variables | Class Variables]]
-			- [[Computer Object Oriented Programming#Example Creating a Class Variable | Creating Class Variable Example]]
-		- [[Computer Object Oriented Programming#Inheritance | Inheritance]]
-			- [[Computer Object Oriented Programming#Example Inheriting Functions From Another Class ( Child Class $ Rightarrow$ Moto )| Examples of Inheritance]]
-		- [[Computer Object Oriented Programming#Multilevel Inheritance | Multilevel Inheritance]]
-			- [[Computer Object Oriented Programming#Example Inheriting Functions From Another Class ( Derived Class $ Rightarrow$ Small_Car ) | Example of Multilevel Inheritance]]
+- [[Object Oriented Programming - Python#What is Computer Object Oriented Programming| What is Computer Object Oriented Programming]]
+	- [[Object Oriented Programming - Python#Structure of OOP| Structure of OOP]]
+	- [[Object Oriented Programming - Python#Principles of OOP| Principles of OOP]]
+		- [[Object Oriented Programming - Python#Encapsulation| Encapsulation]]
+		- [[Object Oriented Programming - Python#Abstraction| Abstraction]]
+		- [[Object Oriented Programming - Python#Inheritance| Inheritance]]
+		- [[Object Oriented Programming - Python#Polymorphism| Polymorphism]]
+- [[Object Oriented Programming - Python#Computer Object Oriented Programming Codes| Start of Computer Object Oriented Programming]]
+	- [[Object Oriented Programming - Python#Creating a Class| Creating A Class]]
+		- [[Object Oriented Programming - Python#Example Create a class called "*Books*"| Example to Create Class]]
+	- [[Object Oriented Programming - Python#Defining A Class| Defining A Class]]
+		- [[Object Oriented Programming - Python#Constructor| Constructor Function]]
+			- [[Object Oriented Programming - Python#Example Passing Values in Constructor| Making Constructor Example]]
+		- [[Object Oriented Programming - Python#Attributes / Properties / Instance Variables| Attributes / Properties / Instance Variables]]
+			- [[Object Oriented Programming - Python#Example Adding the Attributes ( *properties* ) of class "*Books*"| Adding Attributes Example]]
+		- [[Object Oriented Programming - Python#Method / Getters ( Basically Functions and Procedures - Python Functions )| Method / Getters / Functions]]
+			- [[Object Oriented Programming - Python#Example Getters / Methods / Functions| Example of Methods]]
+		- [[Object Oriented Programming - Python#Creating an Object| Creating an Object]]
+			- [[Object Oriented Programming - Python#Example: Creating Objects| Creating an Object Example]]
+		- [[Object Oriented Programming - Python#Calling Methods / Getters / Functions| Calling Functions]]
+		- [[Object Oriented Programming - Python#Class Variables| Class Variables]]
+			- [[Object Oriented Programming - Python#Example Creating a Class Variable| Creating Class Variable Example]]
+		- [[Object Oriented Programming - Python#Inheritance| Inheritance]]
+			- [[Object Oriented Programming - Python#Example Inheriting Functions From Another Class ( Child Class $ Rightarrow$ Moto )| Examples of Inheritance]]
+		- [[Object Oriented Programming - Python#Multilevel Inheritance| Multilevel Inheritance]]
+			- [[Object Oriented Programming - Python#Example Inheriting Functions From Another Class ( Derived Class $ Rightarrow$ Small_Car )| Example of Multilevel Inheritance]]
 
 ---
 
@@ -56,7 +56,7 @@ This is why we have *Computer **Object** Oriented Programming*
 	- These are **instances** of a class with *specifically* defined data types.
 	- When a class is defined initially, the *description* is the **only** object that is defined
 - Methods
-	- These are **[[Functions and Procedures - Python | functions]]** that are defined **inside** a class that describe the behaviour of an object. They are useful for re-usability or keeping functionality *[[Computer Object Oriented Programming#Encapsulation | encapsulated]]* inside one object at a time.
+	- These are **[[Functions and Procedures - Python | functions]]** that are defined **inside** a class that describe the behaviour of an object. They are useful for re-usability or keeping functionality *[[Object Oriented Programming - Python#Encapsulation| encapsulated]]* inside one object at a time.
 - Attributes
 	- These are *defined* in the **class template** and represent the **state** of an *object*
 	- Objects contain data stored in the attribute field
@@ -182,7 +182,7 @@ Attributes **represent** the *characteristics* / *properties* of **objects** in 
 >self.x = x
 >```
 >Where "*x*" is a:
->- *Parameter* ( Check [[Computer Object Oriented Programming#Constructor | constructor]] above ( $\uparrow$ ) )
+>- *Parameter* ( Check [[Object Oriented Programming - Python#Constructor| constructor]] above ( $\uparrow$ ) )
 
 ### Example: Adding the Attributes ( *properties* ) of class "*Books*"
 
@@ -441,7 +441,7 @@ print()
 ## Class Variables
 
 A **class variable**  is a variable that is shared among all instances ( *objects* ) of a class.
-Unlike **[[Computer Object Oriented Programming#Attributes / Properties / Instance Variables | instances variables]]** which are *unique* to all objects; **class variables** are associated with the class rather than the instances of the class.
+Unlike **[[Object Oriented Programming - Python#Attributes / Properties / Instance Variables| instances variables]]** which are *unique* to all objects; **class variables** are associated with the class rather than the instances of the class.
 
 ## Characteristics Includes:
 
@@ -550,7 +550,7 @@ print(f"car_1 has {car_1.wheels} wheels!")
 
 ## Inheritance
 
-We can make a class and create its [[Computer Object Oriented Programming#Method / Getters ( Basically Functions and Procedures - Python Functions ) | methods]]. Now, what if we want to create **another** class that is **similar** to the class before.
+We can make a class and create its [[Object Oriented Programming - Python#Method / Getters ( Basically Functions and Procedures - Python Functions )| methods]]. Now, what if we want to create **another** class that is **similar** to the class before.
 
 What do I mean by *similar* is... Its function ( "*actions*" ) are the same.
 

@@ -1,5 +1,5 @@
 ---
-Alias: Bubble Sort ( Efficient Sorting Algo )
+Alias: Bubble Sort Algorithm in Python
 Tag: python, sorting_algo
 Author: S.Sunhaloo
 Type: Sorting Algorithm
@@ -9,14 +9,17 @@ Status: Completed
 
 ## List of Contents
 
-## [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Array]]
+### Bubble Sort Explanation
+
+- [[Bubble Sort - Python#What is Bubble Sort? | What is Bubble Sort?]]
+
+## One Dimensional Array
 
 ### Bubble Sort ( OPTIMISED )
 
-- [[Bubble Sort - Python#What is Bubble Sort? | What is Bubble Sort?]]
 - [[Bubble Sort - Python#Bubble Sort Code - 1D Array | Bubble Sort Code - 1D Array]]
 	- [[Bubble Sort - Python#Template - 1D Array| Function Template]]
-	- [[Bubble Sort - Python#Examples 1D-Arrays | Examples]]
+	- [[Bubble Sort - Python#Complete Code ( 1D-Array ) | Complete Code ( 1D-Array )]]
 
 ### Bubble Sort ( UN-OPTIMISED )
 
@@ -25,21 +28,19 @@ Status: Completed
 
 ---
 
-## [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays]]
+## Two Dimensional Arrays
 
 - [[Bubble Sort - Python#Bubble Sort Code - 2D Array | Bubble Sort Code - 2D Array]]
 	- [[Bubble Sort - Python#Template - 2D Array| Function Template]]
-	- [[Bubble Sort - Python#Examples 2D-Arrays | Examples]]
+	- [[Bubble Sort - Python#Complete Code ( 2D-Array ) | Complete Code ( 2D-Array )]]
 
 ---
 
-My Links
+### My Links
 
 - [[Bubble Sort - Python#Socials | Links to Socials]]
 
 ---
-
-# [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Array]]
 
 # What is Bubble Sort?
 
@@ -78,6 +79,8 @@ The *calculation* of Bubble Sort is as follows:
 > For more advantages and disadvantages; just [Google](https://google.com) them. The thing is that you need to know is:
 > - Understand how it works
 > - The actually program code
+
+---
 
 # Bubble Sort Code - 1D Array
 
@@ -134,9 +137,8 @@ def bubblesort_optimised(array):
 
 ```
 
-## Examples: 1D-Arrays
 
-### Example 1: Complete Code ( 1D-Array )
+## Complete Code ( 1D-Array )
 
 ```python
 
@@ -428,9 +430,7 @@ def bubblesort_optimised_2D(array):
 
 ```
 
-## Examples: 2D-Arrays
-
-### Example 1: Complete Code ( 2D-Array )
+## Complete Code ( 2D-Array )
 
 ```python
 
@@ -534,8 +534,9 @@ for x in array:
 
 # Socials
 
-- [**Instagram:**](https://www.instagram.com/s.sunhaloo/)
-- [**YouTube:**](https://www.youtube.com/@s.sunhaloo539/streams)
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/@s.sunhaloo539/streams)
+- [**GitHub**](https://www.github.com/Sunhaloo)
 
 ---
 Thank You!

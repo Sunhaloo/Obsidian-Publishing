@@ -29,6 +29,7 @@ Status: Completed
 	- [[C Language#Multiplication $ times$ | Multiplication]]
 	- [[C Language#Division $ div$ and Remainder of Numbers $ %$ | Division and Remainder]]
 - [[C Language#User Inputs | User Inputs]]
+- [[C Language#Logical Operators | Logical Operators]]
 
 ---
 

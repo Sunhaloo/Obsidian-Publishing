@@ -9,23 +9,23 @@ Status: HOLD
 
 ## List of Contents
 
-- [[Random HSC Python Codes#Code 1| Code 1]]
-- [[Random HSC Python Codes#Code 2 | Code 2]]
-- [[Random HSC Python Codes#Code 3 | Code 3]]
-- [[Random HSC Python Codes#Code 4 | Code 4]]
-- [[Random HSC Python Codes#Code 5 | Code 5]]
-- [[Random HSC Python Codes#Code 6 | Code 6]]
-- [[Random HSC Python Codes#Code 7 | Code 7]]
-- [[Random HSC Python Codes#Code 8 | Code 8]]
-	- [[Random HSC Python Codes#Code 8 ( my shitty version ) | Code 8 My Version]]
-- [[Random HSC Python Codes#Code 9 | Code 9]]
-- [[Random HSC Python Codes#Code 9 | Code 9]]
+- [[Random Python Codes#Code 1| Code 1]]
+- [[Random Python Codes#Code 2| Code 2]]
+- [[Random Python Codes#Code 3| Code 3]]
+- [[Random Python Codes#Code 4| Code 4]]
+- [[Random Python Codes#Code 5| Code 5]]
+- [[Random Python Codes#Code 6| Code 6]]
+- [[Random Python Codes#Code 7| Code 7]]
+- [[Random Python Codes#Code 8| Code 8]]
+	- [[Random Python Codes#Code 8 ( my shitty version )| Code 8 My Version]]
+- [[Random Python Codes#Code 9| Code 9]]
+- [[Random Python Codes#Code 9| Code 9]]
 
 ---
 
 My Links
 
-- [[Random HSC Python Codes#Socials | Link to Socials]]
+- [[Random Python Codes#Socials| Link to Socials]]
 
 ---
 
@@ -1226,7 +1226,7 @@ main_calc()
 
 # Code 6
 
-Better Rock, Paper, Scissor game than [[Random HSC Python Codes#Code 4 | this crap]].
+Better Rock, Paper, Scissor game than [[Random Python Codes#Code 4| this crap]].
 
 ```python
 

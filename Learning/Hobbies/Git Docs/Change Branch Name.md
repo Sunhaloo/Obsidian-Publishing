@@ -1,9 +1,9 @@
 ---
-Alias: Change the branch name from CLI
+Alias: Change Branch Name from CLI
 Tag: Git, GitHub
 Author: S.Sunhaloo
 Date: 2024-02-28
-Status: In-Progress
+Status: Completed
 ---
 
 # Medium Article
@@ -84,3 +84,16 @@ git status
 >1. Because I do not really know what I am doing
 >2. I copied some random guy on the Internet
 >	- Like I did not even look at the **[GitHub](https://docs.github.com/en)** Documentation
+
+---
+
+# Socials
+
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**GitHub**](https://www.github.com/Sunhaloo)
+
+---
+
+S.Sunhaloo
+Thank You!

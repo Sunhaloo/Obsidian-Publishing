@@ -51,6 +51,14 @@ SORT Date ASC
 - [[C Math Function]]
 - [[C String Functions]]
 
+### Arrays
+
+- [[Arrays - C]]
+
+### "*Object Oriented Programming*"
+
+- [[Structs - C]]
+
 ---
 
 ### C Language Random Tips

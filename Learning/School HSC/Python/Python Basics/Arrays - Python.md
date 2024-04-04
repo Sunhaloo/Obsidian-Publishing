@@ -41,7 +41,7 @@ Status: Completed
 ## Two Dimensional Arrays
 
 - [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays ( 2D-Arrays )]]
-	- [[Arrays - Python#Creating A 2D-Array | Creating A 2D-Array]]
+	- [[Arrays - Python#Creating 2D-Arrays | Creating 2D-Arrays]]
 	- [[Arrays - Python#Displaying 2D-Arrays | Displaying 2D-Arrays]]
 		- [[Arrays - Python#Displaying Empty 2D-Arrays | Displaying Empty 2D-Arrays]]
 		- [[Arrays - Python#Displaying Non-Empty 2D-Array | Displaying Non-Empty 2D-Array]]
@@ -828,7 +828,7 @@ It is a collection of data elements arranged in a grid-like structure. The grid 
 
 What I am trying to say is that, we need to use a **coordinate system** ($x,y$) to find our element.
 
-# Creating A 2D-Array
+# Creating 2D-Arrays
 
 The code below will create arrays with the identifier name:
 
