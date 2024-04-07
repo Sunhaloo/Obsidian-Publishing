@@ -46,7 +46,7 @@ My Links
 
 # What is a Stack?
 
-It forms part of the [[Python HSC Data View#Abstract Data Types| abstract data types ]] family. It is a collection of elements with **2** main *operations* and **1** *pointer*.
+It forms part of the [[Python Data View#Abstract Data Types| abstract data types ]] family. It is a collection of elements with **2** main *operations* and **1** *pointer*.
 
 It is a **LIFO** data structure. What does "*LIFO*" stands for you ask; well it stands for:
 
@@ -79,7 +79,7 @@ That is why is called a **LIFO** structure $\rightarrow$ **LAST IN FIRST OUT**
 
 ## Pointer
 
-This [[Python HSC Data View#Abstract Data Types| abstract data types ]] has only **1** pointer, which points to the **last item** in the array
+This [[Python Data View#Abstract Data Types| abstract data types ]] has only **1** pointer, which points to the **last item** in the array
 
 ---
 
@@ -460,7 +460,7 @@ def insertion_sort():
 
 This function is a nice and **simple** one; like a good old friend that will help you to find your way.
 
-What else can I say, its just a [[Python HSC Data View#Searching Algorithms| search algorithm]]
+What else can I say, its just a [[Python Data View#Searching Algorithms| search algorithm]]
 
 ```python
 

@@ -4,7 +4,7 @@ Tag: python, basics
 Author: S.Sunhaloo
 Type: Computer OOP
 Date: 2023-10-16
-Status: Needs "super()" function
+Status: In-Progress
 ---
 
 ## List of Contents

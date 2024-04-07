@@ -45,7 +45,7 @@ Status: Completed
 
 # What is Binary Search?
 
-In simple terms it is just a [[Python HSC Data View#Searching Algorithms| searching algorithm]] that will **find** the required *data* in an **sorted** array.
+In simple terms it is just a [[Python Data View#Searching Algorithms| searching algorithm]] that will **find** the required *data* in an **sorted** array.
 
 The **calculation** part works like this:
 

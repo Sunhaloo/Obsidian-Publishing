@@ -57,7 +57,11 @@ SORT Date ASC
 
 ### "*Object Oriented Programming*"
 
-- [[Structs - C]]
+- [[Structs & Typedef - C]]
+
+### User-Defined Data Types
+
+- [[User-Defined Data Types - C]]
 
 ---
 

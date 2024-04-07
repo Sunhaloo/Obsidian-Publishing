@@ -38,7 +38,7 @@ My Links
 
 # What is Insertion Sort?
 
-This is another [[Python HSC Data View#Sorting Algorithms ( 2D and 1D Array )| sorting algorithm]] that is works well if programmer need to find a value quickly.
+This is another [[Python Data View#Sorting Algorithms ( 2D and 1D Array )| sorting algorithm]] that is works well if programmer need to find a value quickly.
 
 The *calculation* of Insertion Sort is as follow:
 

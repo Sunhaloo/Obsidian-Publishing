@@ -306,7 +306,7 @@ int main()
   int insert_index;
 
   // Allow the user to input another value at
-  printf("\n\nInsert Your Values\n");
+  printf("\n\nInsert Your Value\n");
   // Ask user to enter index of value to insert
   printf("Please Enter The Position To Insert Value: ");
   scanf("%d", &insert_index);
@@ -460,7 +460,6 @@ int main()
   return 0;
 }
 
-
 ```
 
 Here are some explanation:
@@ -518,7 +517,6 @@ print()
 for i, y in enumerate(array):
 
     print(f"Index: {i} | Value: {y}")
-
 
 ```
 

@@ -9,7 +9,7 @@ Date: 2023-10-24
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/School HSC/Python"
+FROM "Learning/Python-Old"
 WHERE file.name != "Python HSC Data View"
 SORT file.name ASC
 ```
@@ -20,7 +20,7 @@ SORT file.name ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/School HSC/Python/Python Basics"
+FROM "Learning/Python-Old/Python Basics"
 SORT Date ASC
 ```
 
@@ -30,7 +30,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/School HSC/Python/Python Basics/Python Modules"
+FROM "Learning/Python-Old/Python Basics/Python Modules"
 SORT Date ASC
 ```
 
@@ -40,7 +40,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/School HSC/Python/Sorting Algos"
+FROM "Learning/Python-Old/Sorting Algos - Python"
 SORT Date ASC
 ```
 
@@ -50,7 +50,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/School HSC/Python/Searching Algos"
+FROM "Learning/Python-Old/Searching Algos - Python"
 SORT Date ASC
 ```
 
@@ -62,7 +62,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/School HSC/Python/ADT ( 1D-Array )( Mine )"
+FROM "Learning/Python-Old/ADT ( 1D-Array )( Mine )"
 SORT Date ASC
 ```
 
@@ -73,7 +73,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/School HSC/Python/ADT ( 1D-Array )( Cambridge )"
+FROM "Learning/Python-Old/ADT ( 1D-Array )( Cambridge )"
 SORT Date ASC
 ```
 
@@ -85,7 +85,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/School HSC/Python/ADT ( 2D-Array )"
+FROM "Learning/Python-Old/ADT ( 2D-Array )"
 SORT Date ASC
 SORT file.name ASC
 ```

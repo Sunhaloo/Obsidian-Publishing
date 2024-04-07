@@ -42,7 +42,7 @@ My Links
 
 # What is a Linear Search?
 
-This is one of the simplest [[Python HSC Data View#Searching Algorithms| searching algorithm]]. This is because it searches the array **sequentially**. In fact, the another name for linear search is *sequential search*.
+This is one of the simplest [[Python Data View#Searching Algorithms| searching algorithm]]. This is because it searches the array **sequentially**. In fact, the another name for linear search is *sequential search*.
 
 In linear search the array **does not** need to be *sorted*.
 

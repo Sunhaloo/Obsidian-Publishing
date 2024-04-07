@@ -215,7 +215,7 @@ In **pseudocode**, to write a:
 
 ## Programming Languages
 
-### [[Python HSC Data View| Python]]
+### [[Python Data View| Python]]
 
 In python, to write a *function* **and / or** *procedure*; we start with the same "*syntax*"; i.e:
 
@@ -443,7 +443,7 @@ def display_anime():
 
 ## Example 2: Insertion Sort
 
-This [[Python HSC Data View#Sorting Algorithms| sorting algorithm]] will sort an array, it is a simple function.
+This [[Python Data View#Sorting Algorithms| sorting algorithm]] will sort an array, it is a simple function.
 
 ```python
 
@@ -482,7 +482,7 @@ def insertion_sort(array):
 
 ## Example 3: Bubble Sort
 
-This is another [[Python HSC Data View#Sorting Algorithms| sorting algorithm]], it is also simple, but *I* think it works better compared to [[Functions and Procedures - Python#Example 2 Insertion Sort | insertion sort]]
+This is another [[Python Data View#Sorting Algorithms| sorting algorithm]], it is also simple, but *I* think it works better compared to [[Functions and Procedures - Python#Example 2 Insertion Sort | insertion sort]]
 
 ```python
 
@@ -526,7 +526,7 @@ def bubblesort_optimised(array):
 
 ## Example 4: Linear Search
 
-[[Python HSC Data View#Searching Algorithms| Searching algorithm]] that does not need the array to be sorted to find the required values.
+[[Python Data View#Searching Algorithms| Searching algorithm]] that does not need the array to be sorted to find the required values.
 
 ```python
 
@@ -553,7 +553,7 @@ def linear_search(array, value_to_be_searched):
 
 ## Example 5: Binary Search
 
-This [[Python HSC Data View#Searching Algorithms| searching algorithm]] does need the array to be sorted before applying this function ( "*binary search*" ).
+This [[Python Data View#Searching Algorithms| searching algorithm]] does need the array to be sorted before applying this function ( "*binary search*" ).
 
 ```python
 

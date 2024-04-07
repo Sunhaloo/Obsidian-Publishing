@@ -44,7 +44,7 @@ Status: Completed
 
 # What is Bubble Sort?
 
-It is one of the simplest ( maybe the most simplest ) [[Python HSC Data View#Sorting Algorithms| sorting algorithm]] that is out there.
+It is one of the simplest ( maybe the most simplest ) [[Python Data View#Sorting Algorithms| sorting algorithm]] that is out there.
 
 It sorts the array by comparing the values. It will then swap the values as intended ( *ascending* / *descending* order )
 
@@ -66,7 +66,7 @@ The *calculation* of Bubble Sort is as follows:
 # Some Advantages
 
 - It is very easy to implement into code
-- It consumes less memory than other [[Python HSC Data View#Sorting Algorithms| sorting algorithms]]
+- It consumes less memory than other [[Python Data View#Sorting Algorithms| sorting algorithms]]
 - It can detect the array if it is already sorted
 	- Meaning does not have to enter loops
 		- Thus, making is faster

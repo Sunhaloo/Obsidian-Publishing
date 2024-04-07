@@ -2,8 +2,10 @@
 
 - Gigabyte Mother Board
 	- Accepts 15th Gen Intel Processors
+
 - CPU: Intel Core i5-8500T @2.10Ghz
-	>Some bottleneck with GPU but does everything that I throw at it.
+>Some bottleneck with GPU but does everything that I throw at it.
+
 - GPU: Nvidia GTX 1650 - 4.0GB
 - RAM: Random 16GB @3200 MHz with X.M.P Enabled on Profile 1 ( Gigabyte Mother Board )
 - PSU: Cooler Master 550Ws Silver
@@ -24,3 +26,5 @@
 >This includes sold items also!
 
 1. Asus GL-503VM Laptop
+	- It did serve me very well, learned and play many things on that Laptop
+	- Me and my father did also one day, opened it and cleaned it. Temps dropped from 89 to 56-60 Degrees Celcius!

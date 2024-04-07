@@ -46,7 +46,7 @@ My Links
 
 # What is a Queue?
 
-It forms part of the [[Python HSC Data View#Abstract Data Types| abstract data types ]] family. It is a collection of elements with **2** main *operations* and **2** *pointers*
+It forms part of the [[Python Data View#Abstract Data Types| abstract data types ]] family. It is a collection of elements with **2** main *operations* and **2** *pointers*
 
 Nevertheless, this is not like [[Stack ADT - 1D Array ( Mine )]]. Because we do not *move* data the same way as we do in **Stack**. The reason is that **Queue** is a "*FIFO*" data structure. Now you might think to yourself! What the heck is *FIFO*? Well Sir, you have come the right place to know. It stands for:
 
@@ -555,7 +555,7 @@ def insertion_sort():
 
 This function is a nice and **simple** one; like a good old friend that will help you to find your way.
 
-What else can I say, its just a [[Python HSC Data View#Searching Algorithms| search algorithm]]
+What else can I say, its just a [[Python Data View#Searching Algorithms| search algorithm]]
 
 ```python
 
