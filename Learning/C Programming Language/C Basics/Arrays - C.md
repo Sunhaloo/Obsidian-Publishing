@@ -9,15 +9,20 @@ Status: HOLD
 
 ## List of Contents
 
-- [[Arrays - C#Little Introduction of Arrays | Little Introduction to Arrays]]
+- [[Arrays - C#Little Introduction to Arrays | Little Introduction to Arrays]]
 
 ## One Dimensional Array
 
 - [[Arrays - C#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays ( 1D-Arrays )]]
 - [[Arrays - C#Creating 1D-Arrays | Creating 1D-Arrays]]
 - [[Arrays - C#Displaying 1D-Arrays | Displaying 1D-Arrays]]
+	- [[Arrays - C#Method 2 Displaying with a Loop | Displaying Array with Loops]]
 - [[Arrays - C#Adding Elements into 1D-Arrays | Adding Elements into 1D-Arrays]]
+	[[Arrays - C#"Inserting" Elements into 1D-Array | "Inserting" Elements into 1D-Array]]
+	[[Arrays - C#"*Appending*" Elements into 1D-Array | *Appending*" Elements into 1D-Array]]
 - [[Arrays - C#Deleting Elements From 1D-Arrays | Deleting Elements From 1D-Arrays]]
+	- [[Arrays - C#"*Popping*" Element From 1D-Array | *Popping*" Element From 1D-Array]]
+	- [[Arrays - C#"*Removing*" Element From 1D-Array | *Removing*" Element From 1D-Array]]
 
 ---
 
@@ -39,7 +44,8 @@ Status: HOLD
 >So I learned Python first because... *Fuck Off*! Don't @ me.
 >
 >I will also be writing the Equivalent Python Code.
->The route that I took `Python` $\rightarrow$ `C` is common. Hence, that is why I will be also including Python Codes; so that someone who already have done Python can have a better understanding of the C Codes.
+>The route that I took `Python` $\rightarrow$ `C` is common ( *I think* ). Hence, that is why I will be also including Python Codes; so that someone who already have done Python can have a better understanding of the C Codes.
+>>Also I like writing Python Codes!
 
 ---
 
@@ -50,8 +56,8 @@ Think about a single row **or** / **and** columns in an Excel Documents.
 
 For more information about Arrays head over to [[Arrays - Python#What is an Array/List?| Arrays in Python]] or Google, YouTube University or even ChatGPT.
 
->Remember Boys ( *and Girls* ), we use ChatGPT for information gathering and **not** *cheating*
->No for real, I hate fuckin cheaters, if there was a way to ban people like you ban them in games; I would gladly press the <button>Report</button> ( *$\leftarrow$ an actually button - like the HTML button tag ) Button.
+>Remember Boys ( *and Girls* ), we use ChatGPT for information gathering / learning and **not** *cheating*!
+>No for real, I hate fucking cheaters, if there was a way to ban people like you ban them in games; I would gladly press the <button>Report</button> Button ( *$\Leftarrow$ an actually button - like the HTML button tag ).
 
 Yeah so lets get started with coding because I want to actually code some shit instead of me typing this; I know I wasted a bunch of time saying this... GO FUCK YOURSELF!
 
@@ -70,7 +76,7 @@ So the code below $\downarrow$ will show you how to create 1D-Arrays.
 >
 >```
 
-### Example: 2 Ways of Making an Array
+### 2 Ways of Making an Array
 
 >Refer to **comments** inside the code for explanation!
 
@@ -192,6 +198,14 @@ int main()
 
 ```
 
+This is the better way of displaying an array.
+In the code above $\uparrow$; you can see that there are 2 `for` loops.
+The first one is used to display the contents on **separate** lines, while the other will display the contents on the **same** line.
+
+In addition, You **cannot** use the same counter `i` for both.
+But you say yourself, you just did you dogshit little liar!.
+Brother take a look again; I *re-declared* the counter `i`
+
 #### Equivalent Python Code
 
 ```python
@@ -208,15 +222,7 @@ for x in intials:
 
 ```
 
-This is the better way of displaying an array.
-In the code above $\uparrow$; you can see that there are 2 `for` loops.
-The first one is used to display the contents on **separate** lines, while the other will display the contents on the **same** line.
-
-In addition, You **cannot** use the same counter `i` for both.
-But you say yourself, you just did you dogshit little liar!.
-Brother take a look again; I *re-declared* the counter `i`
-
-### Method 3: Niche Way of Iterating through Array
+### Method 3: Using [[C Tips#Calculate the Size of Arrays ( Not Length of Array ) | sizeof()]] Function to Display Array
 
 We are going to be using the `sizeof()` Function. If you do not know what this does, then head over to [[C Tips#Calculate the Size of Arrays ( Not Length of Array ) | How to Calculate the Size of Array - Not the Length]]
 
@@ -252,9 +258,9 @@ int main()
 
 ```
 
-I mean, there is not point to this. This is making the program slower ( *I think* ). Because we need to use the function `sizeof()`, when we **run** the program; it will need to like also run the function `sizeof()` instead of a simple number.
-
-Yeah, when you compile C program with GCC, it will also compile all of the function and other shit that comes with it. But I think you know what I am trying to say.
+>[!info]-
+>Can use this method if you do **not** know the size of the array!
+>I like using this method!
 
 ## Adding Elements into 1D-Arrays
 
@@ -623,6 +629,10 @@ display(array)
 
 ### "*Removing*" Element From 1D-Array
 
+Remove a specific value at a specific location in the array.
+
+Again, this is inspired by the `remove()` Function in Python.
+
 ```C
 
 // Include standard input / output header
@@ -707,6 +717,8 @@ Here is a little analogy that I came up;
 
 - 1 Dimensional Arrays are like *ToDo* lists or a simple list of things or even a text file ( *that is why we call it **lists**; could also say that we only move in the x **or** y axis* ).
 - 2 Dimensional Arrays are like *Excel Sheets*, because we have a matrix / grid of "*things*" ( *in this case we can both move in x **and** y axis* )
+
+>I think the above $\uparrow$ explanation is shit; I mean really shit. But I understand it.
 
 ## Creating 2D-Arrays
 
@@ -833,7 +845,7 @@ Hence, we use array of characters `char`.
 
 Here is a little explanation of the code below $\downarrow$:
 
-First of all, we have a `cars` array with *incomplete* size, then, we add, some cars names in it ( *innit right* ).
+First of all, we have a `cars` array with *incomplete* size, then, we add, some cars names in it ( *innit right?* ).
 
 We then want to add the value `Toyota Supra` in the first index of the array; if you take a look at the comments, you will see that we need to use the `strcpy()` function from the `<string.h>` library.
 

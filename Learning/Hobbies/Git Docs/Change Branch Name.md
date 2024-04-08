@@ -51,11 +51,9 @@ git branch
 
 ```bash
 
-git branch --move master main
+git branch --move old_branch_name new_branch_name
 
 ```
-
->Where "*master*" was the **original** name and "*main*" is the **new** name.
 
 >[!warning]
 >This will only change a **local** change. Follow the next step to actually change the branch name on the *remote repository*.
@@ -80,7 +78,7 @@ git status
 ```
 
 >[!note]
->This *note* is note completed.
+>This *note* is not completed.
 >1. Because I do not really know what I am doing
 >2. I copied some random guy on the Internet
 >	- Like I did not even look at the **[GitHub](https://docs.github.com/en)** Documentation

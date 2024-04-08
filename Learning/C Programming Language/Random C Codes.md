@@ -9,17 +9,18 @@ Status: HOLD
 
 ## List of Contents
 
-- [[Random C Program Codes#Code 1 | Code 1]]
-- [[Random C Program Codes#Code 2 | Code 2]]
-- [[Random C Program Codes#Code 3 | Code 3]]
-- [[Random C Program Codes#Code 4 | Code 4]]
-- [[Random C Program Codes#Code 5 | Code 5]]
+- [[Random C Codes#Code 1| Code 1 - Circumference and Area Calculator]]
+- [[Random C Codes#Code 2| Code 2 - Simple Hypotenuse Calculator]]
+- [[Random C Codes#Code 3| Code 3 - Celsius to Fahrenheit Converter]]
+- [[Random C Codes#Code 4| Code 4 - Simple Calculator known to Mankind]]
+- [[Random C Codes#Code 5| Code 5 - Remove Last Value in Array]]
+- [[Random C Codes#Code 6| Code 6 - Number Guessing Game]]
 
 ---
 
 ## My Links
 
-- [[Random C Program Codes#Socials | Links to Socials]]
+- [[Random C Codes#Socials| Links to Socials]]
 
 ---
 

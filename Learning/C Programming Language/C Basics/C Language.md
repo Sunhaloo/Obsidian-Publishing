@@ -165,6 +165,9 @@ Here are some **Escape Sequence** characters:
 | \xhh | Hexadecimal Number |
 | \0 | Null |
 
+>[!info]-
+>The *most* ( *in simple programming* ) used Escape Sequence is `\n`.
+
 # Data Types, Constants and Variables
 
 ## What Data Types are Available?
@@ -330,9 +333,9 @@ unsigned char max_char = 255;
 ### String
 
 >[!bug] Big NOTE
->We do **not** have the *string* data type in C!!! ( *insert shocking face here* )
->- This is because it is not a Computer Object Oriented Programming Language.
->	- Hence we have a substitute for *string* data types $\downarrow$
+>We do **not** have the *string* data type in C!!! ( 🤯 )
+>- This is because *string* data types are not a low level reflection of how data is manipulated at the hardware level.
+>	- Hence we have a substitute for *string* data types $\downarrow$ which are [[Arrays - C | Arrays]]!
 
 - Use `%s` to print *strings*.
 
@@ -422,6 +425,10 @@ printf("x = %d", x);
 
 ```
 
+>[!success]- What Type of Declaration and Initialisation I Like!
+>I think I like the **second** one better 😎! Because we only need one line.
+>>Going forward; I will be using this one!
+
 #### Floating Pointer Number ( *basically decimal numbers* ) Data Type
 
 ```C
@@ -433,9 +440,6 @@ float price = 403.75;
 printf("Price = %f", price);
 
 ```
-
->[!success]-
->I think I like the **second** one better 😎! Because we only need one `;`
 
 #### Char Data Type
 
@@ -492,9 +496,9 @@ If you try to change it to a different value like `PI = 69` ( *hehe* ). It will 
 # Arithmetic Operations
 
 >[!note]-
->I think you will be able to understand the answers
+>I think you will be able to understand the answers.
 
-## Addition $+$
+## Addition $\Rightarrow \ +$
 
 Okay, I hope you know that is addition. Because if you do not, then what the fuck are you doing here.
 
@@ -540,7 +544,7 @@ Okay, I hope you know that is addition. Because if you do not, then what the fuc
 
 ```
 
-## Subtraction $-$
+## Subtraction $\Rightarrow \ -$
 
 This is the *negative* ( *fuck off this is my notes I can write whatever the fuck I want* ) of addition.
 
@@ -592,7 +596,7 @@ This is the *negative* ( *fuck off this is my notes I can write whatever the fuc
 
 ```
 
-## Multiplication $\times$
+## Multiplication $\Rightarrow \ \times$
 
 This is multiplication, what is multiplication you ask? Again go fuck yourself because you are either too young for this or a complete and utter idiot ( *some might even say "sussy baka"* ).
 
@@ -638,7 +642,7 @@ This is multiplication, what is multiplication you ask? Again go fuck yourself b
 
 ```
 
-## Division $\div$ and Remainder of Numbers $\%$
+## Division $\Rightarrow \ \div$ and Remainder of Numbers $\Rightarrow \ \%$
 
 This is the *inverse* ( *again I can write whatever the fuck I want* ) of multiplication.
 
@@ -898,7 +902,7 @@ Thus, we use the `getchar()` function, when switching input's datatype.
 
 Basically, **AND**, **OR** and **NOT** are called *logical operators*. Because they involves logical things.
 
-AND Operator
+AND `&` Operator
 
 | A | B | X |
 | - | - | - |
@@ -907,7 +911,7 @@ AND Operator
 | 1 | 0 | 0 |
 | 1 | 1 | 1 |
 
-OR Operator
+OR `|` Operator
 
 | A | B | X |
 | - | - | - |
@@ -916,7 +920,7 @@ OR Operator
 | 1 | 0 | 1 |
 | 1 | 1 | 1 |
 
-XOR Operator
+XOR `^` Operator
 
 | A | B | X |
 | - | - | - |
@@ -924,6 +928,10 @@ XOR Operator
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
+
+>[!warning]
+>This is not **BITWISE** Logical Operation!
+>In addition, Python's BITWISE Logical Operators are the **same** as C!
 
 ## Python Logical Operators
 
@@ -1113,12 +1121,13 @@ int main()
 ```
 
 >[!note]-
->Do not worry about the `<string.h>` for the moment, but I think you get the point of the program
+>Do not worry about the `<string.h>` for the moment, but I think you get the point of the program above $\uparrow$.
 >- Allows the user to enter his username
 >	- Checks whether the username is equal to "*Deez_Nuts*"
 >		- If so, outputs the message "*Welcome Deez_Nuts*"
 >	- If username is **not** equal to "*Deez_Nuts*"
 >		- Outputs the message "*Access Denied! Wrong Person*"
+>- Notes on [[C String Functions#`strcmp` Function | `strcmp()` Function]]
 
 ---
 

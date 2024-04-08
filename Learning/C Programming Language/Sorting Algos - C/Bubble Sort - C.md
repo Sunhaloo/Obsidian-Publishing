@@ -29,7 +29,7 @@ Status: In-Progress
 
 >[!note]
 >If you want to learn more about Bubble Sort Algorithm
->I have made a simple note [[Bubble Sort - Python#What is Bubble Sort? | here]]. If you want to learn more about time complexity and stuff; just use Google / YouTube University!
+>I have made a simple note [[Bubble Sort - Python#What is Bubble Sort? | here]]. If you want to learn more about time complexity and stuff; just use Google / use YouTube University!
 
 # Bubble Sort Code - 1D Array
 
@@ -72,6 +72,7 @@ void bubble_sort(int array[], int array_length){
           temp = array[y];
           array[y] = array[y + 1];
           array[y + 1] = temp;
+          swap++;
 
         }
       }
@@ -121,6 +122,7 @@ void bubble_sort(int array[], int array_length){
           temp = array[y];
           array[y] = array[y + 1];
           array[y + 1] = temp;
+          swap++;
 
         }
       }

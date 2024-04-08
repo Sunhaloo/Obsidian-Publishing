@@ -59,7 +59,7 @@ If you want to learn more about selections and iterations; please refer to the <
 
 # Conditional Statements
 
->We are about to eat some delicious things!
+>We are about to *eat* some delicious things!
 
 ## `if` Statements
 
@@ -185,9 +185,6 @@ int main()
 
 ```
 
->[!note]
->The symbol `&&` means the **AND** operator in C!
-
 ## `switch` / CASE Statements
 
 So in most ( *if not all of them* ) languages we do not use "*CASE*" per se. We rather use the `switch` function to be able to use `CASE` functions
@@ -268,9 +265,6 @@ for( initialisation, condition, update ){
 
 ### Example 1: Writing User's Name 5 Times
 
->[!bug]
-># NOT WORKING $\downarrow$
-
 ```C
 
 // Include standard input / output header
@@ -284,8 +278,8 @@ int main() {
   char user[25];
 
   // Ask user to enter his username
-  printf("Please Enter Your UserName: ");
-  scanf("%s", user);
+  printf("Please Enter Your Username: ");
+  fgets(user, 25, stdin);
 
   // Output his username 5 times
   for( int x = 0; x <= 5; x++ ){
@@ -293,10 +287,10 @@ int main() {
   }
 
   // Adds space after writing last user's username
-  printf("\n");
-  printf("\n");
+  printf("\n\n");
 
   return 0;
+
 }
 
 

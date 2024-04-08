@@ -211,7 +211,7 @@ void display_array(struct Book array[], int size)
 
 You see, we do not write `char array[]`; because it is an "*array of struct*". We need to pass an "*array of struct*".
 
->[!bug] We cannot simply pass `char array[]`
+>[!warning] We cannot simply pass `char array[]`
 
 >[!note]-
 >In addition, we can access the values using `array[i].something`
@@ -328,7 +328,7 @@ typedef struct
   // DECLARE age: INTEGER
   INTEGER age;
 
-
+// Here is where we put the Class Name
 }User;
 
 // FUNCTION display_user(CLASS User user)
@@ -373,7 +373,7 @@ int main()
 
 ```
 
->[!warning] Might have over complicated this a bit!
+>[!warning] Might have over complicated this $\uparrow$ a bit!
 
 ### Explanation on `typedef`
 
@@ -440,7 +440,7 @@ struct User user_person2;
 
 >[!tip]- But check how we did it above $\uparrow$
 >Line `243`, `245`, `247` in [[Structs & Typedef - C#With `structs`| With classes / structs]]
->>Also found another way to **add** "*values*" to objects
+>>Also found another way to **add** "*values*" to objects $\Rightarrow$ Like we are initialising an [[Array - C | Array]].
 
 ---
 

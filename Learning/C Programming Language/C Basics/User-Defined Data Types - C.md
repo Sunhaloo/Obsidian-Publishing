@@ -160,7 +160,7 @@ int main()
 
 **Take A Look At the `CASE`**!
 
-We are passing a parameter of type **INTEGER**, but as we have made an *enumeration*. We can use that "*enumeration*" instead of numbers.
+We are passing a parameter of type **INTEGER**, but as we have made an *enumeration*. We can use that / our "*enumeration*" ( *which are coffee names* ) instead of numbers.
 
 It will still work if you put numbers in the `case`; but now its much much more readable.
 

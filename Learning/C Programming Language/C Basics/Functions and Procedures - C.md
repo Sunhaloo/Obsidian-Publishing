@@ -13,7 +13,7 @@ Status: Completed
 - [[Functions and Procedures - C#Simple Functions / Procedures in C | Simple Functions / Procedures in C]]
 - [[Functions and Procedures - C#Parameters | Parameters]]
 - [[Functions and Procedures - C#Return Statement | Return Statement]]
-- [[Functions and Procedures - C#Function Prototypes | Function Prototypes]]
+- [[Functions and Procedures - C#Function Prototypes / `void`| Function Prototypes / `void`]]
 
 ---
 
@@ -25,7 +25,7 @@ Status: Completed
 
 # What is a Function / Procedure?
 
-Again, I am not going to write things that I have already written in the past ( *this is why I used Obsidian!* ). Here is the link to [[Functions and Procedures - Python#What is a Function / Procedure? | Python's Function and Procedures]]
+Again, I am not going to fucking write things that I have already written in the past ( *this is why I used Obsidian!* ). Here is the link to [[Functions and Procedures - Python#What is a Function / Procedure? | Python's Function and Procedures]]
 
 But just remember that:
 
@@ -35,13 +35,16 @@ But just remember that:
 		- Check [[Linear Search - Python | Linear Search]]
 - **Procedures**
 	- Might return a value, multiple values or nothing
-		- Check [[Bubble Sort - Python | Bubblesort]]
-- They are can be small or really big
+		- Check [[Bubble Sort - Python | Bubblesort - Python]] or [[Bubble Sort - C | Bubblesort - C]]
+- They are can be small or really big ( *because `clean code` = **Horrible Performance** and I care about performance* )
 - Part of the **main** program
 
 >[!warning]
 >C is similar to Visual Basic; where our Functions and Procedures live at the **top** of our code.
-><li style = "color:red;">Always place Functions on <span style= "color:green;">top</span></li>
+><li style = "color:white;"><span style = "color: red;">Always place Functions on</span> <span style= "color:green;">top</span></li>
+>
+>$\Rightarrow$ Because of memory, it need to *read* / compile the functions first to be able to use it!
+>
 >>Compared to Python, where we can write our functions almost anywhere we want.
 
 ---
@@ -148,7 +151,7 @@ int main()
   printf("Please Enter Your Age: ");
   scanf("%d", &age);
 
-  // Calling our Function
+  // Calling our Function and passin in our Parameters
   ouptut(name, region, age);
 
   return 0;
@@ -163,15 +166,13 @@ int main()
 >[!note]
 >For now, just remember that `void` means that it has **no** specific *type*, *number of parameters*, etc.
 >- Like take a look, we are passing `char` and also `int` in the same function
->>[!bug] Need to make Notes on `void`
->>- Note to future me!
 
-In the code above $\uparrow$, we can see that our values that will be given / passed to the function `output` is written in the `main` *function*.
+In the code above $\uparrow$, we can see that our values that will be passed to the function `output` is written in the `main` *function*.
 
 To use the function, we need to **call** it in our *main* program and then pass the parameters / arguments `name`, `region` and `age` in the function `output`. Hence, we can use the function.
 
 >[!tip]
->Remember *Visual Basic* ( *to be honest I do not remember because FUCK YOU VB* ).
+>Remember *Visual Basic* ( *to be honest I do not remember because FUCK YOU VB and Lan $\rightarrow$ If you know you know* ).
 >C is similar to VB where we need to also enter our data types that will / are being passed through.
 
 # Return Statement
@@ -222,11 +223,10 @@ int main()
 >
 >In addition, we have in our main function `main`, we have `double result = square(2);`
 >For the moment you might not be familiar with the syntax, but remember when we used the power function from the `math.h` header? Yes, so you simply *declare* and basically *call* the function instantly ( refer to [[C Math Function | Math Functions]] for more clarification *I mean what do I know* ).
->>[!warning] Need to clean up this part !!!
 
 ## Another Example: Code is By Me!
 
->This is why the reason the code is really shitty!
+>This is the reason why the code is so shitty!
 
 ```C
 
@@ -270,11 +270,11 @@ int main()
 
 ```
 
-# Function Prototypes
+# Function Prototypes / `void`
 
 So you know that how I have been saying that *C is similar to Visual Basic* $\Rightarrow$ Because we write our functions at the top first...
 
->Insert "*so that was a fucking lie* here"
+>Insert "*so that was a fucking lie* meme here"
 
 I mean, not really, like the thing that I have been saying and *writing* / *coding* above definitely still apply. Nevertheless, for [[Functions and Procedures - C#Function Prototypes | this part]], I do not really know how to explain it. So I have gathered the help from [ChatGPT](chat.openai.com), in addition to [Bro Code's Video Explanation](https://www.youtube.com/watch?v=87SH2Cn0s9A&t=6083s)
 
@@ -360,8 +360,6 @@ void output(char name[], char proffession[], int age)
 >[!note]
 >For now, just remember that `void` means that it has **no** specific *type*, *number of parameters*, etc.
 >- Like take a look, we are passing `char` and also `int` in the same function
->>[!bug] Need to make Notes on `void`
->>- Note to future me!
 
 ### Example 2: ChatGPT's Code
 

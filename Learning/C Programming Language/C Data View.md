@@ -73,4 +73,4 @@ SORT Date ASC
 
 ### Random Program Codes
 
-- [[Random C Program Codes]]
+- [[Random C Codes]]

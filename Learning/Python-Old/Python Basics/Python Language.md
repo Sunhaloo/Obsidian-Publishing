@@ -68,7 +68,7 @@ Example includes:
 
 - Build Websites
 - Automation of Tasks
-- Data Analysis
+- Data Analysis / Data Science
 - Hacking
 	- Crack Passwords
 	- Key logging

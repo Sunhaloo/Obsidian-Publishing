@@ -268,7 +268,7 @@ double_log = log(-1);
 
 # Trigonometry
 
-Okay who da fuck does not know *trigonometry*; even my grandmother know this ( *she doesn't* )
+Okay who da fuck does not know *trigonometry*; even my grandmother know this ( *she doesn't* ).
 
 >[!note]
 >I recommend using the **float** or **double** *data types*.
@@ -305,7 +305,7 @@ double_tan = tan(45);
 
 # [[Python Math Function | Math Functions in Python]]
 
-We know that Python is was made using **C**. This means that most of the things that we said here applies also for Python.
+We know that Python is was made using **C**. This means that *most* of the things that we said here applies also for Python.
 
 ---
 
