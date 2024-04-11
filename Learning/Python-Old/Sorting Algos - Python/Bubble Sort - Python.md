@@ -21,11 +21,6 @@ Status: Completed
 	- [[Bubble Sort - Python#Template - 1D Array| Function Template]]
 	- [[Bubble Sort - Python#Complete Code ( 1D-Array ) | Complete Code ( 1D-Array )]]
 
-### Bubble Sort ( UN-OPTIMISED )
-
-- [[Bubble Sort - Python#Bubble Sort ( UN-OPTIMISED ) Code | Bubble Sort ( UN-OPTIMISED ) Code]]
-	- [[Bubble Sort - Python#Template - Unoptimised| Function Template]]
-
 ---
 
 ## Two Dimensional Arrays
@@ -73,10 +68,12 @@ The *calculation* of Bubble Sort is as follows:
 
 # Some Disadvantages
 
-- The time complexity is O ( $n2$ )
+- The time complexity is O ( $n^2$ )
 - Slow for large data sets ( arrays )
 
-> For more advantages and disadvantages; just [Google](https://google.com) them. The thing is that you need to know is:
+> For more advantages and disadvantages; just [Google](https://google.com) them.
+>
+> The thing is that you need to know is:
 > - Understand how it works
 > - The actually program code
 
@@ -90,19 +87,15 @@ This is only the [[Functions and Procedures - Python#Example 3 Bubble Sort| func
 
 ```python
 
-# Bubble Sort Function - 1D Array
-
-# Function with identifier name "bubblesort_optimised"
-
-# In this function we need to pass:
-# array
+# FUNCTION bubblesort_optimised(DECLARE ARRAY array: INTEGER)
 def bubblesort_optimised(array):
 
+    # DECLARE update: BOOLEAN
     # Variable "update" will check if swapping has occured
     update = True
 
-    # Variable "swap" will hold the number of times
-    # Algorithm has swapped a value
+    # DECLARE swap: INTEGER
+    # Variable "swap" will hold the number of times algorithm has swapped a value
     swap = 0
 
     # Condition to enter "while" loop
@@ -112,15 +105,18 @@ def bubblesort_optimised(array):
         # So that if value has been swapped, it will become "True"
         update = False
 
+        # DECLARE x: INTEGER
         # Number of times it will sort the array
         for x in range(0, len(array) - 1):
 
+            # DECLARE y: INTEGER
             # Checks every value in array
             for y in range(0, len(array) - 1):
 
                 # Sorting in Ascending Order
                 if array[y] > array[y +1]:
 
+                    # DECLARE temp: INTEGER
                     # Swapping Part
                     temp = array[y]
                     array[y] = array[y + 1]
@@ -133,6 +129,7 @@ def bubblesort_optimised(array):
                     update =True
 
         # Return the array and number of times "swapped"
+        # Even if you do not return, will still sort the array
         return array, swap
 
 ```
@@ -142,10 +139,53 @@ def bubblesort_optimised(array):
 
 ```python
 
-# Bubble Sort
-
-# Array with identifer name "array" with size = infinite
+# DECALRE ARRAY array: INTEGER
 array = []
+
+# FUNCTION bubblesort_optimised(DECLARE ARRAY array: INTEGER)
+def bubblesort_optimised(array):
+
+    # DECLARE update: BOOLEAN
+    # Variable "update" will check if swapping has occured
+    update = True
+
+    # DECLARE swap: INTEGER
+    # Variable "swap" will hold the number of times algorithm has swapped a value
+    swap = 0
+
+    # Condition to enter "while" loop
+    while update == True and len(array) > 1:
+
+        # Immediately "update" becomes "False"
+        # So that if value has been swapped, it will become "True"
+        update = False
+
+        # DECLARE x: INTEGER
+        # Number of times it will sort the array
+        for x in range(0, len(array) - 1):
+
+            # DECLARE y: INTEGER
+            # Checks every value in array
+            for y in range(0, len(array) - 1):
+
+                # Sorting in Ascending Order
+                if array[y] > array[y +1]:
+
+                    # DECLARE temp: INTEGER
+                    # Swapping Part
+                    temp = array[y]
+                    array[y] = array[y + 1]
+                    array[y + 1] = temp
+
+                    # "swap" increases by one
+                    swap += 1
+
+                    # "update" becomes "True"
+                    update =True
+
+        # Return the array and number of times "swapped"
+        # Even if you do not return, will still sort the array
+        return array, swap
 
 print()
 
@@ -153,6 +193,7 @@ print()
 try:
 
     # Asking the user to input the size of the array
+    # DECLARE array_size: INTEGER
     array_size = int(input("Please Enter Size Of Array: "))
 
 # If user inputs a character other than an Integer
@@ -168,11 +209,12 @@ print()
 # Exception Handling
 try:
 
+    # DECLARE count: INTEGER
     # Enter "for" loop in the range "array_size"
     for count in range(array_size):
 
-        # Asking the user to enter a value
-        user_input = int(input("Please Enter A Value: "))
+        # DECLARE user_input: INTEGER
+        # Asking the user to enter a value user_input = int(input("Please Enter A Value: "))
 
         # Appending data that user entered into the array
         array.append(user_input)
@@ -190,104 +232,18 @@ print()
 print("Array Before Bubblesort: ")
 print()
 
+# DECLARE index: INTEGER
 # Displaying arrays
 for index in array:
 
     # Display values of array on separate lines
     print(index)
 
-# Function with identifier name "bubblesort_optimised"
-
-# In this function we need to pass:
-# array
-def bubblesort_optimised(array):
-
-    # Variable "update" will check if swapping has occured
-    update = True
-
-    # Variable "swap" will hold the number of times
-    # Algorithm has swapped a value
-    swap = 0
-
-    # Condition to enter "while" loop
-    while update == True and len(array) > 1:
-
-        # Immediately update becomes "False"
-        # So that if value has been swapped, it will become "True"
-        update = False
-
-        # Number of time it will sort the array
-        for x in range(0, len(array) - 1):
-
-            # Checks every value in array
-            for y in range(0, len(array) - 1):
-
-                # Sorting in Ascending Order
-                if array[y] > array[y +1]:
-
-                    # Swapping Part
-                    temp = array[y]
-                    array[y] = array[y + 1]
-                    array[y + 1] = temp
-
-                    # "swap" increases by one
-                    swap += 1
-
-                    # "update" becomes "True"
-                    update =True
-
-        # Return the array and number of times "swapped"
-        return array, swap
-
-# Calling Function
+# Calling Function `bubblesort_optimised`
 result = bubblesort_optimised(array)
 
+# Output "results"
 print(result)
-
-```
-
->[!info]
->The keen eyes of your could have notice that the function name is:
->```python
->def bubbsort_optimised(array):
->...
->```
->Meaning there is a much more simpler way of writing the function
->
->I liked using the **un-optimised** one; but the optimised one is far better with only some 4 to 6 more lines of code
-
----
-
-# Bubble Sort ( UN-OPTIMISED ) Code
-
->[!warning]
-> I do not recommend using this one
-
-## Template - Unoptimised
-
-```python
-
-# Binary Search Function ( UN-OPTIMISED )
-
-# Function with identifer name "bubble_sort"
-
-# In this function we need to pass:
-# array
-def bubble_sort(array):
-
-    # Number of times it will sort the array
-    for x in range(0, len(array) - 1):
-
-        # Checks every value in array
-        for y in range(0, len(array) - 1):
-
-            # Sorting in Ascending Order
-            if array[y] > array[y + 1]:
-
-                # Swapping Part
-                temp = array[y]
-                array[y] = array[y + 1]
-                array[y + 1] = temp
 
 ```
 
@@ -313,19 +269,18 @@ def bubble_sort(array):
 
 ```python
 
-# Bubble Sort Function - 2D Array
-
-# Function with identifier name "bubblesort_optimised_2D"
-# In this function we need to pas:
-# array
+# DECLARE bubblesort_optimised_2D(DECLARE ARRAY array: INTEGER)
 def bubblesort_optimised_2D(array):
 
+    # DECLARE array_length: INTEGER
     # Variable "array_length" will take the length of array
     array_length = len(array)
 
+    # DECLARE update: BOOLEAN
     # Variable "update" will check if swapping has occured
     update = True
 
+    # DECLARE swap: INTEGER
     # Variable "swap" will hold the number of times
     swap = 0
 
@@ -337,14 +292,17 @@ def bubblesort_optimised_2D(array):
         update = False
 
         # Number of times it will sort the array
+        # DECLARE x: INTEGER
         for x in range(0, array_length - 1):
 
             # Checks every value in array
+            # DECLARE y: INTEGER
             for y in range(0, array_length - x - 1):
 
                 # Sorting in Ascending Order
                 if array[y][0] > array[y + 1][0]:
 
+                    # DECLARE temp: INTEGER
                     # Swapping Part
                     temp = array[y]
                     array[y] = array[y + 1]
@@ -362,61 +320,64 @@ def bubblesort_optimised_2D(array):
 
 ```python
 
-# Bubble Sort Function - 2D Array
-
-# Function with identifier name "bubblesort_optimised_2D"
-# In this function we need to pas:
-# array
+# DECLARE bubblesort_optimised_2D(DECLARE ARRAY array: INTEGER)
 def bubblesort_optimised_2D(array):
 
+    # DECLARE array_length_rows: INTEGER
     # Variable "array_length_rows" will take the length of rows
     array_length_rows = len(array)
 
+    # DECLARE array_length_cols: INTEGER
     # Variable "array_length_col" will take the length columns
     array_length_cols = len(array[0])
 
-  
     # Bubble Sort ROWS
 
-  
+    # DECLARE x: INTEGER
     # Number of times it will sort the array
     for x in range(array_length_rows):
 
+        # DECLARE y: INTEGER
         # Checks every value in rows
         for y in range(0, array_length_cols - 1):
 
+            # DECLARE i: INTEGER
             # Will check every value
             for i in range(0, array_length_cols - y - 1):
 
                 # Sorting in Ascending Order
                 if array[x][i] > array[x][i + 1]:
 
+                    # DECLARE temp: INTEGER
                     # Swapping Part
                     temp = array[x][i]
                     array[x][i] = array[x][i + 1]
                     array[x][i + 1] = temp
 
+    # DECLARE transposed_array: INTEGER
+
     # "Transpose" the array
     # This means that we will make another array
     # to hold the new values for the rows
-
     transposed_array = [[array[y][x] for y in range(array_length_rows)] for x in range(array_length_cols)]
 
-  
     # Bubble Sort COLUMNS
-
   
+    # DECLARE x: INTEGER
     # Number of times it will sort the array
     for x in range(array_length_cols):
 
+        # DECLARE y: INTEGER
         # Checks every value in rows
         for y in range(0, array_length_rows - 1):
 
+            # DECLARE i: INTEGER
             # Will check every value
             for i in range(0, array_length_rows - y - 1):
 
                 if transposed_array[x][i] > transposed_array[x][i + 1]:
 
+                    # DECLARE temp: INTEGER
                     # Swapping Part
                     temp = transposed_array[x][i]
                     transposed_array[x][i] = transposed_array[x][i + 1]
@@ -434,9 +395,7 @@ def bubblesort_optimised_2D(array):
 
 ```python
 
-# Bubble Sort
-
-# Array with identifier name "array" with infinite size
+# DECLARE ARRAY array[2, 2]: INTEGER
 array = [
 
     [3, 6, 1],
@@ -448,6 +407,7 @@ array = [
 
 print()
 
+# DECLARE x: INTEGER
 # Displaying "array" before Sorting
 for x in array:
 
@@ -455,61 +415,64 @@ for x in array:
 
 print()
 
-# Bubble Sort Function - 2D Array
-
-# Function with identifier name "bubblesort_optimised_2D"
-# In this function we need to pas:
-# array
+# DECLARE bubblesort_optimised_2D(DECLARE ARRAY array: INTEGER)
 def bubblesort_optimised_2D(array):
 
+    # DECLARE array_length_rows: INTEGER
     # Variable "array_length_rows" will take the length of rows
     array_length_rows = len(array)
 
+    # DECLARE array_length_cols: INTEGER
     # Variable "array_length_col" will take the length columns
     array_length_cols = len(array[0])
 
-
     # Bubble Sort ROWS
 
-  
+    # DECLARE x: INTEGER
     # Number of times it will sort the array
     for x in range(array_length_rows):
 
+        # DECLARE y: INTEGER
         # Checks every value in rows
         for y in range(0, array_length_cols - 1):
 
+            # DECLARE i: INTEGER
             # Will check every value
             for i in range(0, array_length_cols - y - 1):
 
                 # Sorting in Ascending Order
                 if array[x][i] > array[x][i + 1]:
 
+                    # DECLARE temp: INTEGER
                     # Swapping Part
                     temp = array[x][i]
                     array[x][i] = array[x][i + 1]
                     array[x][i + 1] = temp
 
+    # DECLARE transposed_array: INTEGER
+
     # "Transpose" the array
     # This means that we will make another array
     # to hold the new values for the rows
-
     transposed_array = [[array[y][x] for y in range(array_length_rows)] for x in range(array_length_cols)]
 
-  
     # Bubble Sort COLUMNS
-
   
+    # DECLARE x: INTEGER
     # Number of times it will sort the array
     for x in range(array_length_cols):
 
+        # DECLARE y: INTEGER
         # Checks every value in rows
         for y in range(0, array_length_rows - 1):
 
+            # DECLARE i: INTEGER
             # Will check every value
             for i in range(0, array_length_rows - y - 1):
 
                 if transposed_array[x][i] > transposed_array[x][i + 1]:
 
+                    # DECLARE temp: INTEGER
                     # Swapping Part
                     temp = transposed_array[x][i]
                     transposed_array[x][i] = transposed_array[x][i + 1]
@@ -518,11 +481,13 @@ def bubblesort_optimised_2D(array):
     # "Transpose" the array
     # In this part, we will take all the new values
     # and input it into the original array
+
     array[:] = [[transposed_array[y][x] for y in range(array_length_cols)] for x in range(array_length_rows)]
 
-# Calling Function
+# Calling Function `bubblesort_optimised`
 bubblesort_optimised_2D(array)
 
+# DECLARE x: INTEGER
 # Displaying "array" after sorting
 for x in array:
 
@@ -539,4 +504,5 @@ for x in array:
 - [**GitHub**](https://www.github.com/Sunhaloo)
 
 ---
+S.Sunhaloo
 Thank You!

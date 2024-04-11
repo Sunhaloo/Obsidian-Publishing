@@ -1,6 +1,5 @@
 ---
-Alias:
-  - Python Language/Basics
+Alias: Python Language / Basics
 Tag: python, basics
 Author: S.Sunhaloo
 Type: Basics
@@ -16,22 +15,18 @@ Status: Completed
 
 ---
 
-- [[Python Language#How to Use Python for Simple Programming? | How to Use Python for Simple Programming?]]
-	- [[Python Language#How to comment in Python | How to comment in Python]]
-	- [[Python Language#Type Cast | Type Cast]]
-	- [[Python Language#Displaying Things on the Screen | Display / Printing]]
-		- [[Python Language#Strings | Strings]]
-		- [[Python Language#Integers | Integers]]
-		- [[Python Language#Floating Numbers / Decimal Numbers | Floating Numbers / Decimal Numbers]]
-		- [[Python Language#Displaying All Data Types Together | Displaying All Data Types Together]]
-	- [[Python Language#Constants | Constants]]
-		- [[Python Language#Constants that are *strings* | Strings]]
-		- [[Python Language#Constants that are *integers* | Integers]]
-		- [[Python Language#Constants that are *floating point numbers* | Floating Point Numbers]]
-		- [[Python Language#Constants that are *boolean* | Boolean]]
-	- [[Python Language#Variables | Variables]]
-		- [[Python Language#User Entered Variables | User Entered Variables]]
-	- [[Python Language#Finding the Data Type of an Item ( Constant / Variable ) | Finding the Data Type of an Item ( Constant / Variable )]]
+- [[Python Language#How to comment in Python | How to comment in Python]]
+- [[Python Language#Type Cast | Type Cast]]
+- [[Python Language#Displaying Things on the Screen | Display / Printing]]
+	- [[Python Language#Strings | Strings]]
+	- [[Python Language#Integers | Integers]]
+	- [[Python Language#Floating Numbers / Decimal Numbers | Floating Numbers / Decimal Numbers]]
+	- [[Python Language#Displaying All Data Types Together | Displaying All Data Types Together]]
+- [[Python Language#Constants | Constants]]
+- [[Python Language#Variables | Variables]]
+- [[Python Language#Multiple Assignments | Multiple Assignments]]
+- [[Python Language#Type Function | Type Function]]
+- [[Python Language#User Inputs | User Inputs]]
 
 ---
 
@@ -77,30 +72,25 @@ Example includes:
 
 ---
 
-# How to Use Python for Simple Programming?
-
 # How to comment in Python
 
-To comment a line in python, we need to use the symbol
+To comment a line in Python, we need to use the symbol
 
 >[!tip] Usage
 >```python
->"#"
+># This is a comment!
+>```
 
-## Example:
+To comment multiple lines in Python, we will use:
 
-```python
-
-# This is a commented line
-# This is another commented line
-# Today we are definitely try to finish this PDF Documents
-# Ohh God; Please Help Me!
-
-```
-
->[!tip]- Remember
->A commented line ( Line that starts with "#" ) will not be compile; i.e,
->Will not doing anything when running/compiling the code.
+>[!tip] Usage
+>```python
+>'''
+>This is a multi-line comment
+>'''
+>```
+>>[!note]
+>>Python does **not** really have multi-line comments.
 
 # Type Cast
 
@@ -137,12 +127,6 @@ To display "*things*" on the screen; its very simple look; you just need to pres
 >```python
 >print()
 
->[!note]-
->To display "*nothing*" or an **empty line**
->Just need to use the function by itself, i.e;
->```python
->print()
-
 ## Example:
 
 ### Strings
@@ -153,17 +137,11 @@ To outputs "*strings*" ( you naughty naughty 🤣 ). We need to place them in be
 
 # Display Strings
 
-# Examples
-
-# Display "Your Mom"
 print("Your Mom")
 
-# Display "Kawasaki-H2/H2R"
 print("Kawasaki-H2/H2R")
 
-# Display the following message
-# "Please Enter A Name: "
-print("Please Enter A Name: ")
+print("Mazda RX-7 Rotary / Dorito Goodness!")
 
 ```
 
@@ -175,18 +153,12 @@ To display integers on the screen, we do **not** need to put them in between quo
 
 # Display Integers
 
-# Examples
-
-# Display "1234"
 print(1234)
 
-#Display "55"
 print(55)
 
-# Display "1000000"
 print(1000000)
 
-# Display "0"
 print(0)
 
 ```
@@ -216,37 +188,24 @@ print(1.2200901267)
 
 ### Method 1: Using **[[Python Language#Type Cast | Type Cast]]**
 
->[!tip] To display something like
->"Age: 55"
->Where "55" is of *type* integer
-
-We **need** to convert the data types!
-
 ```python
 
-# Displaying "things" of different data types
+# Displaying "things" with different data types
 
-# Diplay "Age: 55"
 print("Age: " + str(55))
 
-# Display "Country Code is: MU255"
-print("Country Code is: " + str(MU255))
+print("Lucky Number = " + str(666))
 
-# Display "I am 18 years of age!"
 print("I am " + str(18) + " of age!")
 
 ```
 
 >[!note]
->```python
->"+" # or
-> ","
->```
->This is used to **concatenate** the 2 *data types* together.
+>The symbol `+` and `,` are used to **concatenate** 2 data types together.
 
 ### Method 2: Using the "*f*" function
 
-Here, we do **not** need to convert those data types
+Here, we do **not** need to convert those data types, but we need to use `{}` and place the *other* data type inside.
 
 ```python
 
@@ -261,7 +220,9 @@ Boolean = True
 # DECLARE num: OF REAL
 num = 6.2
 
-# Displaying Variables
+# Displaying To Screen
+print(f"Your Number is {5}")
+
 print(f"Age: {Age}")
 
 print(f"I am bad at talking to people: {Boolean}")
@@ -272,106 +233,77 @@ print(f"Research has shown that crime rate has decreased by {num} %")
 
 # Constants
 
-In short a
-
-- **Constant** is something / value / item that does **not** change during the execution of the program
-
-## Constants that are *strings*
+>[!warning] 
+>Python does not have Declaration!
+>Instead we use *CAPTIAL* Letters to indicate that something is a **constant**
 
 ```python
 
 # Constants
 
-# Constant "Name" will hold the value "What is my name?"
-Name = "What is my name?"
+# Strings
 
-# Constant "Fav_Car" will hold the value "RX-7 FD"
-Fav_Car = "RX-7 FD"
+# DECLARE NAME: STRING
+NAME = "What is my name?"
+# DECLARE FAV_CAR: STRING
+FAV_CAR = "RX-7 FD"
 
-```
+# Integers
 
-## Constants that are *integers*
+# DECLARE AGE: INTEGER
+AGE = 100
+# DECLARE FIVE: INTEGER
+FIVE = 5
 
-```python
+# Floating Points / Decimal Numbers
 
-# Constants
+# DECLARE PI: REAL
+PI = 3.142
+# DECLARE NUM: REAL
+NUM = 6.69
 
-# Constant "age" will hold the value "100"
-age = 100
+# Booleans
 
-# Constant "Five" will hold the value "5"
-five = 5
-
-```
-
-## Constants that are *floating point numbers*
-
-```python
-
-# Constants
-
-# Constant "pi" will hold the value "3.142"
-pi = 3.142
-
-# Constant "num" will hold the value "6.69"
-num = 6.69
-
-```
-
-## Constants that are *boolean*
-
-```python
-
-# Constants
-
-# Constant "Purchased_Car" will hold the booalean value "Flase"
-Purchased_Car = False
-
-# Constant "caught" will hold the boolean value "True"
-caught = True
+# DECLARE PURCHASED_CAR: BOOLEAN
+PURCHASED_CAR = False
+# DECLARE CAUGHT: BOOLEAN
+CAUGHT = True
 
 ```
 
 # Variables
-
- A **Variable** is something / value / item that **does** change during the execution of the program
-
-## User Entered Variables
-
->[!note]
->In Python, we can ask the user to enter data into the program.
->For this, use can you this function below ( $\downarrow$ )
->```python
->input()
-
-### Examples
-
-```python
-
-# Variables
-
-# Variable "array_size" will hold the size of array ( ENTERED by user )
-array_size = int(input("Please Enter Size Of Array: "))
-
-# Variable "Name" will hold the name of the user ( ENTERED by user )
-Name = input("Please Enter Your Name: ")
-
-# Variable "find_item" will hold the value to be found ( ENTERED by user )
-find_item = int(input("Please Enter An Item To Find: "))
-
-```
 
 >[!warning]
->This build-in function will take the user input as "**strings**".
->Meaning that if we need to enter integer values, we need to **convert** it to integer using [[Python Language#Type Cast | type cast]] methods
+>Again, we know that we cannot ( *do not* ) have Declaration in Python.
+>But we do not need to write in caps for variables. It can be anything.
+>But beware; your variables needs to be self-explanatory.
+>>You will thank yourself if you use self-explanatory variables / constants names.
+
+```python
+
+# Variables
+
+# DECLARE name: STRING
+name = "Lewis GOAT Hamilton"
+
+# DECLARE number: INTEGER
+number = 44
+
+# DECLARE activated: BOOLEAN
+activated = True
+
+# DECLARE temp: DOUBLE
+temp = 30.2
+
+```
 
 # Multiple Assignments
 
 This is basically assigning multiple values all at once in a single line instead of writing it on different lines.
 
-> I personally like to write it on different lines because of something called compulsion :)
+> I personally like to write it on different lines because of something called *OCD* :)
 
-# Usage / Example (  because I do not know how to call it )
+# Usage / Example
 
 ```python
 
@@ -385,69 +317,67 @@ pi, number_five, Boolean, text = 3.142, 5, True, "Hello"
 
 ```
 
-# Finding the Data Type of an Item ( Constant / Variable )
-
-As you already know; in Python, we do **not** *declare* our constants or variables.
-
-Think of it this way, if you give someone your code to fix or to check and you are not there. And you did not use meaningful ( self-explanatory ) variables. That person could then use this function ( please let me finish this before I show you, okay ) to find what "*type*" the variable is of.
+# Type Function
 
 >[!tip] Usage
 >To find the data type of a "*thing*" ( -_- )
 >```python
 >type()
 >```
->You  then place the constant / variable in the brackets
 
-See your patience was *definitely not  worth it*
-
-## Example
+## Example: Find the Data Type of Variable / Constant
 
 ```python
 
 # Type Function
 
-# Lets say we have constant "number" which has a value of "44"
-number = 5
+# DECLARE num: INTEGER
+num = 5
 
-# This "code" will then show the "type" of "number"
-print(type(number))
+# Shows the "type" of variable `num`
+print(type(num))
 
-#Variable "name" will hold the value entered by user
+# DECLARE name: STRING
 name = str(input("Please Enter Your Name: "))
 
-# Therefore,
+# Shows the "type" of variable `name`
 print(type(name))
 
 ```
 
-# Data Types ( String, Integers, Floating Point Numbers, Boolean )
+# User Inputs
 
-In my old notes, I showed you ( myself - I do not have any friends; xD - I do ). I wrote ways how to **write** and *print* these data types.
+>[!note]
+>In Python, we can ask the user to enter data into the program.
+>For this, you can use the function below $\downarrow$:
+>```python
+>input()
 
-But I think that, when you use Python, you will know how to write and use them ( ***obviously*** )
+```python
 
-But there is a few things that I want to mention.
+# User Inputs
+
+# DECLARE array_size: INTEGER
+array_size = int(input("Please Enter Size Of Array: "))
+
+# DECLARE Name: STRING
+Name = input("Please Enter Your Name: ")
+
+# DECLARE find_item: INTEGER
+find_item = int(input("Please Enter An Item To Find: "))
+
+```
 
 >[!warning]
->You cannot perform addition with **strings**
->```python
->one = "1"
->two = "2"
->total = one + two
->print(total)
->```
->**This will not output 3!**
->Instead it will output
->```python
->12 # Not 3
-
+>This built-in function will take the user input as "**strings**".
+>Meaning that if we need to enter integer values, we need to **convert** it to integer using [[Python Language#Type Cast | type cast]] methods. Like we did with `array_size` and `find_item` $\uparrow$.
 ---
 
 # Socials
 
-- [**Instagram:**](https://www.instagram.com/s.sunhaloo/)
-- [**YouTube:**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
-- [**GitHub:**](https://www.github.com/Sunhaloo)
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**GitHub**](https://www.github.com/Sunhaloo)
 
 ---
 

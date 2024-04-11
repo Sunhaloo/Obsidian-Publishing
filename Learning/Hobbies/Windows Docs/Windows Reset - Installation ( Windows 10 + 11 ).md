@@ -14,19 +14,19 @@ Status: Completed
 
 ## List of Contents
 
-- [[Windows Reset - Installation#Video Recommendations | Video Recommendations]]
-- [[Windows Reset - Installation#Installation Media | Installation Media]]
-- [[Windows Reset - Installation#Installing Windows | Installing Windows]]
-- [[Windows Reset - Installation#Windows Debloat and Setup | Windows Debloat and Setup]]
-- [[Windows Reset - Installation#Windows Settings | Windows Settings]]
-- [[Windows Reset - Installation#File Explorer | File Explorer]]
-- [[Windows Reset - Installation#Services | Services]]
-- [[Windows Reset - Installation#Chris Titus Tech Windows Utility | Chris Titus Tech Windows Utility ( win util )]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Video Recommendations| Video Recommendations]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Installation Media| Installation Media]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Installing Windows| Installing Windows]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Windows Debloat and Setup| Windows Debloat and Setup]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Windows Settings| Windows Settings]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#File Explorer| File Explorer]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Services| Services]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Chris Titus Tech Windows Utility| Chris Titus Tech Windows Utility ( win util )]]
 
 ---
 
-- [[Windows Reset - Installation#Programs / Applications / Softwares to Download | Programs / Applications / Softwares to Download]]
-- [[Windows Reset - Installation#Settings Up Programs and Games | Settings Up Programs and Games]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Programs / Applications / Softwares to Download| Programs / Applications / Softwares to Download]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Settings Up Programs and Games| Settings Up Programs and Games]]
 
 ---
 
@@ -39,7 +39,7 @@ Status: Completed
 
 ### Where You Can Find Me
 
-- [[Windows Reset - Installation#Socials | Socials]]
+- [[Windows Reset - Installation ( Windows 10 + 11 )#Socials| Socials]]
 
 ---
 
@@ -132,13 +132,13 @@ Now, let me get this straight ( *xD* ):
 
 Yeah some people will say, yeah if you are a "*gamer gamer*", check the `High Performance` mode even on **Laptops** ( *especially on gaming laptops* ). I do <span style="color: red"><strong>not</strong></span> recommend this. As an aspiring programmer / software developer. I think that, yes; *performance* over everything, but I realised this 3 years ago ( *today is the 3rd of January 2024* ) that **reliability over everything**. I mean it, over **everything**.
 
-<p align="center">You can't play games without a computer; if its fucking broken</p>
+<p align="center">You can't play games without a computer; if its fucking broken 🤣!</p>
 
-The above quote I think is common sense but people if the ( *mostly* ) gaming community will do everything to get better FPS; little do they know that some things are not what they seem to be.
+The above quote I think is common sense but people in the ( *mostly* ) gaming community will do everything to get better FPS; little do they know that some things are not what they seem to be.
 
 >[!note]
 >You can continue to edit the individual settings of each power plan.
->**Future Me**, remember to edit these settings!
+>**Note to Future Me**, remember to edit these settings!
 
 ##### Define power buttons and turn on password protection
 
@@ -193,8 +193,8 @@ You can leave the other settings as it is.
 - I like to use Custom Pointers like:
 
 	1. Numix Cursor
-	2. Bibata Cursor
-	3. Adwaita Cursor
+	2. Adwaita Cursor
+	3. Bibata Cursor
 
 You can usually find these on DeviantArt and GitHub
 
@@ -235,7 +235,7 @@ Click on `Change adapter options` and the legacy control panel will open up.
 >I have never tested this; but I think that if you perform all the steps that I have mention and then you update. I think that it might revert back to the original settings.
 >Again, I never tested this, but just go online and update it manually.
 
-Remember the Khorvie Tech guy from the [[Windows Reset - Installation#Video Recommendations | Video Recommendations]] from above. Instead of me explaining this part; better that he shows you how to configure them in this video right [here](https://www.youtube.com/watch?v=kIftrmT-PmM&t=1103s)
+Remember the Khorvie Tech guy from the [[Windows Reset - Installation ( Windows 10 + 11 )#Video Recommendations| Video Recommendations]] from above. Instead of me explaining this part; better that he shows you how to configure them in this video right [here](https://www.youtube.com/watch?v=kIftrmT-PmM&t=1103s)
 
 >Good I do not need to type much them. Thank *YouTube University*
 
@@ -474,19 +474,9 @@ Use the image below $\downarrow$ as a guide
 - BattleBit Remastered
 - HudSight
 
-#### Epic Games
-
-- Fortnite
-
 #### Minecraft Launcher
 
 - Minecraft
-
-#### Other
-
-- Roblox ( with [RobloxFPS Unlocker](https://github.com/axstin/rbxfpsunlocker/releases) )
-- Live For Speed
-- Need For Speed
 
 # Settings Up Programs and Games
 
@@ -643,6 +633,8 @@ Angle Snapping: OFF
 ]
 
 ```
+
+>Or just clone by [dotfiles](https://www.github.com/Sunhaloo/dotfiles) repository and then move the `settings.json` and `keybindings.json` into `C:\Users\Azmaan\AppData\Roaming\Code\User`.
 
 #### Extensions
 

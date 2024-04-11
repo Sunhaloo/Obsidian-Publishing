@@ -11,22 +11,23 @@ Status: Completed
 
 - [[Binary Search - Python#What is Binary Search? | What is Binary Search?]]
 
-## Binary Search
+## Binary Search - 1D Arrays
 
  ## [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays]]
 
 - [[Binary Search - Python#Binary Search Code - 1D Array| Binary Search Code - 1D Array]]
 	- [[Binary Search - Python#Template - 1D Array ( Non-Recursive )| Function Template ( Non-Recursive )]]
-	- [[Binary Search - Python#Examples: 1D-Array ( Non-Recursive ) | Examples]]
+	- [[Binary Search - Python#Example: 1D-Array ( Non-Recursive ) | Example]]
 
 ## Binary Search Recursive
 
 - [[Binary Search - Python#Binary Search Recursive Code - 1D Array| Binary Search Recursive Code]]
 	- [[Binary Search - Python#Template - 1D Array ( Recursive )| Function Template ( Recursive )]]
 	- [[Binary Search - Python#Examples:1D-Array ( Recursive ) | Examples]]
-	- 
 
 ---
+
+## Binary Search - 2D Arrays
 
 ## [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays]]
 
@@ -80,8 +81,8 @@ This means that **binary search** is really *efficient* and *fast*, as it always
 > - The actually program code
 
 >[!warning]
->The array needs to be **SORTED** for it to work
->Never forget this.
+>The array needs to be **SORTED** for it to work.
+>>Never forget this!
 
 # Binary Search Code - 1D Array
 
@@ -91,35 +92,19 @@ This is only the [[Functions and Procedures - Python#Example 5 Binary Search| fu
 
 ```python
 
-# Binary Search Function Non-Recursive 1D-Array
-
-# We need to pass 2 arguments inside the function
-
-# We need to pass the array - In this case our array is called "array"
-# We need to pass our search value - In this case our array is called "user_find"
+# FUNCTION binary_search(DECLARE ARRAY array: INTEGER, DECLARE user_find: INTEGER)
 def binary_search(array, user_find):
 
     # Another function what will perform the calculations for the binary search
-    
-    # In this function we need to pass the:
-    # array
-    # Mininum size of array = 0
-    # length of array - 1
-    # search value ( user_find )
     return binary_search_calc(array, 0, len(array) - 1, user_find)
-  
-# Our function "binary_search_calc()" will perform the calculations
 
-# In this function we need to pass some values for;
-# array
-# Minimum siz of array = 0 --> "lower" 
-# length of array - 1 --> "upper"
-# search value ( user_find )
+# FUNCTION binary_search_calc(DECLARE ARRAY array: INTEGER, DECLARE lower: INTEGER, DECLARE upper: INTEGER, DECLARE user_find: INTEGER)
 def binary_search_calc(array, lower, upper, user_find):
 
     # Condition to enter loop ( need to learn theory to understand why )
     while lower <= upper:
 
+        # DECLARE mid: INTEGER
         # Calculating our mid value
         mid = (lower + upper) // 2
 
@@ -148,49 +133,34 @@ def binary_search_calc(array, lower, upper, user_find):
 
 ```
 
-## Examples: 1D-Array ( Non-Recursive )
+## Example: 1D-Array ( Non-Recursive )
 
 ### Example 1: Complete Code for 1D-Array
 
 ```python
 
-# Binary Search Non-Recursive 1D-Array
-
 print()
 
-# Array with name "array" and values has already been added
+# DECLARE ARRAY array[5]: INTEGER
 array = [786, 23, 0, 25, 8, 17]
 
+# DECLARE user_find: INTEGER
 # Ask the user to input a value to find
 user_find = int(input("Please Enter A Number To Find: "))
 
-# We need to pass 2 arguments inside the function
-
-# We need to pass the array - In this case our array is called "array"
-# We need to pass our search value - In this case our array is called "user_find"
+# FUNCTION binary_search(DECLARE ARRAY array: INTEGER, DECLARE user_find: INTEGER)
 def binary_search(array, user_find):
 
     # Another function what will perform the calculations for the binary search
-    
-    # In this function we need to pass the;
-    # array
-    # Mininum size of array = 0
-    # length of array - 1
-    # search value ( user_find )
     return binary_search_calc(array, 0, len(array) - 1, user_find)
 
-# Our function "binary_search_calc()" will perform the calculation
-
-# In this function we need to pass some values for;
-# array
-# Minimum size of array = 0 --> "lower"
-# length of array - 1 --> "upper"
-# search value ( user_find )
+# FUNCTION binary_search_calc(DECLARE ARRAY array: INTEGER, DECLARE lower: INTEGER, DECLARE upper: INTEGER, DECLARE user_find: INTEGER)
 def binary_search_calc(array, lower, upper, user_find):
 
     # Condition to enter loop ( need to learn theory to understand why )
     while lower <= upper:
 
+        # DECLARE mid: INTEGER
         # Calculating our mid value
         mid = (lower + upper) // 2
 
@@ -200,20 +170,24 @@ def binary_search_calc(array, lower, upper, user_find):
             return mid
 
         # If value at index "mid" is lower than search value ( user_find )
+        # If value is found in the upper part of array
         elif array[mid] < user_find:
 
-            # lower takes the index to the right of mid
+            # "lower" takes the index to the right of mid
+            # Remove the "lower" part of array
             lower = mid + 1
-
+            
+        # If value is found in the lower part of array 
         else:
-  
-            # upper takes the index to the left of mid
-            upper = mid - 1  
 
-    # If search value has not been found
+            # "upper" takes the index to the left of mid
+            # Remove the "upper" part of array
+            upper = mid - 1
+            
+    # If "user_find" is not found
     return -1
 
-# "result" will take the "answer" from the function "binary_search()"
+# Calling Function to `main` Program
 result = binary_search(array, user_find)
 
 print()
@@ -222,7 +196,7 @@ print()
 if result != -1:
 
     # Outputs this message
-    print(str(user_find) + " has been found at " + str(result))
+    print(f"{user_find} has been found at {result}")
 
 else:
 
@@ -232,6 +206,7 @@ else:
 
 print()
 
+# DECLARE i: INTEGER
 # Displaying values of array on separate lines
 for i in array:
 
@@ -247,30 +222,13 @@ This is only the [[Functions and Procedures - Python | function]], thus is will 
 
 ```python
 
-# Recursive Binary Search Function 1D-Array
-
-# We need to pass 2 arguments inside the function
-
-# We need to pass the array - In this case our array is called "array"
-# We need to pass our search value - In this case our array is called "user_find"
+# FUNCTION binary_search_recursive(DECLARE ARRAY array: INTEGER, DECLARE user_find: INTEGER)
 def binary_search_recursive(array, user_find):
 
     # Our function "binary_search_recursive_calc()" will perform the calculations
-    
-    # In this function we need to pass some values for;
-    # array
-    # Minimum size of array = 0
-    # length of array - 1
-    # search value ( user_find )
    return binary_search_recursive_calc(array, 0, len(array) -1, user_find)
    
-# Our function "binary_search_recursive_calc()" will perform the calculation
-
-# In this function we need to pass some values for;
-# array
-# Minimum size of array = 0 --> "lower"
-# length of array - 1 --> "upper"
-# search value ( user_find )
+# FUNCTION binary_search_recursive_calc(DECLARE ARRAY array: INTEGER, DECLARE lower: INTEGER, DECLARE upper: INTEGER, DECLARE user_find: INTEGER)
 def binary_search_recursive_calc(array, lower, upper, user_find):
 
    # Checks if lower is not equal to size of array
@@ -279,6 +237,7 @@ def binary_search_recursive_calc(array, lower, upper, user_find):
       # If lower > upper ==> values has NOT been found
       return False
 
+   # DECLARE mid: INTEGER
    # Calculating our mid value
    mid = (lower + upper) //2
 
@@ -301,53 +260,37 @@ def binary_search_recursive_calc(array, lower, upper, user_find):
 
 ```
 
-## Examples: 1D-Array ( Recursive )
+## Example: 1D-Array ( Recursive )
 
 ### Example 1: Complete Code 1D-Array
 
 ```python
 
-# Recursive Binary Search 1D-Array
-
 print()
 
-# Array with name "array" and values has already been added
+# DECLARE ARRAY array[5]: INTEGER
 array = [786, 23, 0, 25, 8, 17]
 
+# DECLARE user_find: INTEGER
 # Ask the user to input a value to find
 user_find = int(input("Please Enter A Number To Find: "))
 
-# We need to pass 2 arguments inside the function
-# We need to pass the array - In this case our array is called "array"
-# We need to pass our search value - In this case our array is called "user_find"
+# FUNCTION binary_search_recursive(DECLARE ARRAY array: INTEGER, DECLARE user_find: INTEGER)
 def binary_search_recursive(array, user_find):
 
     # Our function "binary_search_recursive_calc()" will perform the calculations
-    # In this function we need to pass some values for;
-    # array
-    # Minimum size of array = 0
-    # length of array - 1
-    # search value ( user_find )
    return binary_search_recursive_calc(array, 0, len(array) -1, user_find)
-
-# Our function "binary_search_recursive_calc()" will perform the calculation
-
-# In this function we need to pass some values for;
-# array
-# Minimum size of array = 0 --> "lower"
-# length of array - 1 --> "upper"
-# search value ( user_find )
+   
+# FUNCTION binary_search_recursive_calc(DECLARE ARRAY array: INTEGER, DECLARE lower: INTEGER, DECLARE upper: INTEGER, DECLARE user_find: INTEGER)
 def binary_search_recursive_calc(array, lower, upper, user_find):
 
    # Checks if lower is not equal to size of array
    if lower > upper:
    
       # If lower > upper ==> values has NOT been found
-      # If you are going to use the "if result != ..." code
-      # We need to return -1 instead of False
-      # This is due to reserved words in Python
-      return -1
+      return False
 
+   # DECLARE mid: INTEGER
    # Calculating our mid value
    mid = (lower + upper) //2
 
@@ -360,14 +303,14 @@ def binary_search_recursive_calc(array, lower, upper, user_find):
    elif array[mid] > user_find:
 
       # Similar to upper = mid - 1 ( Check "normal" binary search )
-      return binary_search_recursive_calc(array, lower, mid -1, user_find)
+      return binary_search_recursive_calc(array, lower, mid - 1, user_find)
 
    else:
 
       # Similar to lower = mid + 1 ( Check "normal" binary search )
       return binary_search_recursive_calc(array, mid + 1, upper, user_find)
 
-# "result" will take the "answer" from the function "binary_search()"
+# Calling Function to `main` Program
 result = binary_search_recursive(array, user_find)
 
 print()
@@ -376,7 +319,7 @@ print()
 if result != False:
 
   # Outputs this message
-  print(str(user_find) + " has been found at " + str(result))
+  print(f"{user_find} has been found at {result}")
 
 else:
 
@@ -386,6 +329,7 @@ else:
 
 print()
 
+# DECLARE i: INTEGER
 # Displaying values of array on separate lines
 for i in array:
 
@@ -403,40 +347,36 @@ This is only the [[Functions and Procedures - Python#Example 5 Binary Search| fu
 
 ```python
 
-# Function with identifier name "binary_search"
-
-# In this function we are passing our
-# array --> In this case "matrix"
-# value to be searched --> In this case "user_input"
+# FUNCTION binary_search(DECLARE ARRAY matrix: INTEGER, DECLARE user_input: INTEGER)
 def binary_search(matrix, user_input):
 
-    # DECLARE rows: OF INTEGER
+    # DECLARE rows: INTEGER
     # Variable "rows" will keep the number of rows
     rows = len(matrix)
 
-    # DECLARE cols: OF INTEGER
+    # DECLARE cols: INTEGER
     # Variable "cols" will keep the number of cols in a single row
     # "finds the length of the first row"
     cols = len(matrix[0])
 
-    # DECLARE left: OF INTEGER
+    # DECLARE left: INTEGER
     left = 0
 
-    # DECLARE right: OF INTEGER
+    # DECLARE right: INTEGER
     # Variable "right" will keep the "overall / linear" length of array
     right = rows * cols -1
 
     # Condition to enter "while" loop
     while left <= right:
 
-        # DECLARE mid: OF INTEGER
+        # DECLARE mid: INTEGER
         # Calculating the middle value of 2D-Array
         mid = (left + right) // 2
 
-        # DECLARE mid_value: OF INTEGER
+        # DECLARE mid_value: INTEGER
         # NOTE: "%" means MODULUS
         # This is used to convert a "flat index" back into 2D Array index
-            # => 1D --> 2D
+        # => 1D --> 2D
         mid_value = matrix[mid // cols][mid % cols]
 
         # If value at index "mid" is equal to search value
@@ -463,7 +403,7 @@ def binary_search(matrix, user_input):
 
 ```
 
-## Examples: 2D-Array
+## Example: 2D-Array
 
 ### Example: Complete Code 2D-Array
 
@@ -496,40 +436,36 @@ except ValueError:
     print("Please Enter Integer Values Only")
     print()
 
-# Function with identifier name "binary_search"
-
-# In this function we are passing our
-# array --> In this case "matrix"
-# value to be searched --> In this case "user_input"
+# FUNCTION binary_search(DECLARE ARRAY matrix: INTEGER, DECLARE user_input: INTEGER)
 def binary_search(matrix, user_input):
 
-    # DECLARE rows: OF INTEGER
+    # DECLARE rows: INTEGER
     # Variable "rows" will keep the number of rows
     rows = len(matrix)
 
-    # DECLARE cols: OF INTEGER
+    # DECLARE cols: INTEGER
     # Variable "cols" will keep the number of cols in a single row
     # "finds the length of the first row"
     cols = len(matrix[0])
 
-    # DECLARE left: OF INTEGER
+    # DECLARE left: INTEGER
     left = 0
 
-    # DECLARE right: OF INTEGER
+    # DECLARE right: INTEGER
     # Variable "right" will keep the "overall / linear" length of array
     right = rows * cols -1
 
     # Condition to enter "while" loop
     while left <= right:
 
-        # DECLARE mid: OF INTEGER
+        # DECLARE mid: INTEGER
         # Calculating the middle value of 2D-Array
         mid = (left + right) // 2
 
-        # DECLARE mid_value: OF INTEGER
+        # DECLARE mid_value: INTEGER
         # NOTE: "%" means MODULUS
         # This is used to convert a "flat index" back into 2D Array index
-            # => 1D --> 2D
+        # => 1D --> 2D
         mid_value = matrix[mid // cols][mid % cols]
 
         # If value at index "mid" is equal to search value
@@ -554,7 +490,7 @@ def binary_search(matrix, user_input):
     # If value has not been found
     return -1
 
-# Calling Function
+# Calling Function to `main` Program
 result = binary_search(array, user_input)
 
 print()
@@ -576,8 +512,9 @@ else:
 
 # Socials
 
-- [**Instagram:**](https://www.instagram.com/s.sunhaloo/)
-- [**YouTube:**](https://www.youtube.com/@s.sunhaloo539/streams)
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/@s.sunhaloo539/streams)
+- [**GitHub**](https://www.github.com/Sunhaloo)
 
 ---
 Thank You!

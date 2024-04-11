@@ -359,7 +359,7 @@ void output(char name[], char proffession[], int age)
 
 >[!note]
 >For now, just remember that `void` means that it has **no** specific *type*, *number of parameters*, etc.
->- Like take a look, we are passing `char` and also `int` in the same function
+>- Like take a look, we are passing `char` and also `int` in the same function.
 
 ### Example 2: ChatGPT's Code
 

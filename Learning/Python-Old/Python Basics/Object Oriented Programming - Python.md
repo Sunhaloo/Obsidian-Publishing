@@ -31,7 +31,7 @@ Status: In-Progress
 		- [[Object Oriented Programming - Python#Calling Methods / Getters / Functions| Calling Functions]]
 		- [[Object Oriented Programming - Python#Class Variables| Class Variables]]
 			- [[Object Oriented Programming - Python#Example Creating a Class Variable| Creating Class Variable Example]]
-		- [[Object Oriented Programming - Python#Inheritance| Inheritance]]
+		- [[Object Oriented Programming - Python#Inheritance - Code | Inheritance - Code]]
 			- [[Object Oriented Programming - Python#Example Inheriting Functions From Another Class ( Child Class $ Rightarrow$ Moto )| Examples of Inheritance]]
 		- [[Object Oriented Programming - Python#Multilevel Inheritance| Multilevel Inheritance]]
 			- [[Object Oriented Programming - Python#Example Inheriting Functions From Another Class ( Derived Class $ Rightarrow$ Small_Car )| Example of Multilevel Inheritance]]
@@ -93,7 +93,7 @@ It also allows different kinds of objects to interact with the same interface.
 # Computer Object Oriented Programming Codes
 
 >[!tip] Listen To Me
->I normally just write the part the we need; example in:
+>I normally just write the part thar we need; example in:
 >- [[Stack ADT - 1D Array ( Mine )#Functions| Stack Functions]]
 >- [[Insertion Sort - Python#Template 1D-Array | Insertion Sort Function]]
 >But as this is **Computer Object Oriented Programming**
@@ -107,21 +107,17 @@ To **create** a class in Python, you just need to type the following:
 >```python
 >class x:
 >```
->Where "*x*":
->- Is the class **name**
 
 ### Example: Create a class called "*Books*"
 
 ```python
 
-# Creating a class with identifier name "Books"
+# CLASS Books
 class Books:
 
 ```
 
 # Defining A Class
-
-There are many "*sub-topics*" in this section
 
 ## Constructor
 
@@ -133,20 +129,17 @@ A "*constructor*" is a **special** [[Functions and Procedures - Python| function
 >[!tip] Python's Constructor Usage
 >```python
 ># Constructor
+># FUNCTION __init__(DECLARE self: self, DECLARE x: STRING, DECLARE y: INTEGER, DECLARE z: REAL)
 >def __init__(self, x, y, z):
 >```
 >>[!note]
 >>"*x*", "*y*", "*z*" are the *[[Functions and Procedures - Python#Parameters | parameters]]* that the user creates
 >># But...
->>There is a special *parameter* that we need to pass
+>>There is a special *parameter* that we need to pass:
 >>```python
 >>self
 >>```
 >>- It is the **first** parameter that we need to pass into the *brackets*
->>	- But it could be named **anything**
->>	>I just check, **yes!**, it could be named anything
->
->>I will be writing an example below, dont' worry my dear!
 
 ### Example: Passing Values in Constructor
 
@@ -155,11 +148,10 @@ A "*constructor*" is a **special** [[Functions and Procedures - Python| function
 
 ```python
 
-# Creating a class with identifier name "Books"
+# CLASS Books
 class Books:
 
     # Constructor
-        # could have used another name for "self"
     def __init__(self, name, author, editor, date_published):
 
         # For now, we need to explain "attributes"
@@ -177,22 +169,14 @@ Attributes **represent** the *characteristics* / *properties* of **objects** in 
 	- Engine Type
 	- ...
 
->[!tip] Usage
->```python
->self.x = x
->```
->Where "*x*" is a:
->- *Parameter* ( Check [[Object Oriented Programming - Python#Constructor| constructor]] above ( $\uparrow$ ) )
-
 ### Example: Adding the Attributes ( *properties* ) of class "*Books*"
 
 ```python
 
-# Creating a class with identifier name "Books"
+# CLASS Books
 class Books:
 
     # Constructor
-        # could have used another name for "self"
     def __init__(self, name, author, editor, date_published):
 
         # Attributes / Properties / Instance Variable of Object
@@ -214,11 +198,10 @@ What can I say, they are just function inside the class.
 
 ```python
 
-# Creating a class with identifier name "Books"
+# CLASS Books
 class Books:
 
     # Constructor
-        # could have used another name for "self"
     def __init__(self, name, author, editor, date_published, cost):
 
         # Attributes / Properties of Object
@@ -230,7 +213,7 @@ class Books:
 
     # Getters / Methods / Functions
 
-    # Function with identifier name "display"
+    # FUNCTION display()
     def display(self):
 
         # Displaying the Attributes / Properties of objects
@@ -241,7 +224,7 @@ class Books:
         print(f"Date Published: {self.date_published}")
         print()
 
-    # Function with identifier name "price"
+    # FUNCTION price()
     def price(self):
 
         print()
@@ -257,27 +240,14 @@ There are 2 ( "*which I know right now*" ) ways of creating on object:
 1. Programmer creates object **inside** the code
 2. Programmer allows **user** create object
 
->[!tip] Usage ( How to Create an Object in General )
->```python
->x = Class_Name(y, z, ...)
->```
->Where "*x*" is:
->- Name of Object
->
->Where "*y*" and "*z*" are:
->- The parameter to be passed
->>[!note]
->>Check the Example below ( ** ) to see the differences
-
 ### Example: Creating Objects
 
 ```python
 
-# Creating a class with identifier name "Books"
+# CLASS Books
 class Books:
 
     # Constructor
-        # could have used another name for "self"
     def __init__(self, name, author, editor, date_published, cost):
 
         # Attributes / Properties of Object
@@ -289,7 +259,7 @@ class Books:
 
     # Getters / Methods / Functions
 
-    # Function with identifier name "display"
+    # FUNCTION display()
     def display(self):
 
         # Displaying the Attributes / Properties of objects
@@ -300,18 +270,17 @@ class Books:
         print(f"Date Published: {self.date_published}")
         print()
 
-    # Function with identifier name "price"
+    # FUNCTION price()
     def price(self):
 
         print()
         print(f"Cost of {self.name} : {self.cost}")
         print()
 
-# Creating an Object with identifier name "book_1"
+# DECLARE book_1: Books
 # "book_1" is "written" by the "programmer"
 book_1 = Books("How to Steal Like an Artist", "Austin Kleon", "Austin Kleon", "28 Febuary 2012", 21)
 
-# Creating another Object with identifier name "book_2"
 # "book_2" is "written" by the "user"
 print()
 print("Enter Book Details")
@@ -335,6 +304,7 @@ except ValueError:
     print("Please Enter Real Number Only For Cost Of Book!")
     print()
 
+# DECLARE book_2: Books
 # Creating "book_2"
 book_2 = Books(book_name, author_name, editor_name, date_published, book_cost)
 
@@ -342,27 +312,16 @@ book_2 = Books(book_name, author_name, editor_name, date_published, book_cost)
 
 ## Calling Methods /  Getters / Functions
 
-In a way, you could also think of **methods** or **getters** as *actions*
-
->[!tip] Usage
->```python
->x.y()
->```
->Where "*x*" is:
->- Object
->
->Where "*y*" is:
->- Method / Function
+In a way, you could also think of **methods** or **getters** as *actions*.
 
 ### Example: Calling our Functions
 
 ```python
 
-# Creating a class with identifier name "Books"
+# CLASS Books
 class Books:
 
     # Constructor
-        # could have used another name for "self"
     def __init__(self, name, author, editor, date_published, cost):
 
         # Attributes / Properties of Object
@@ -374,7 +333,7 @@ class Books:
 
     # Getters / Methods / Functions
 
-    # Function with identifier name "display"
+    # FUNCTION display()
     def display(self):
 
         # Displaying the Attributes / Properties of objects
@@ -385,14 +344,14 @@ class Books:
         print(f"Date Published: {self.date_published}")
         print()
 
-    # Function with identifier name "price"
+    # FUNCTION price()
     def price(self):
 
         print()
         print(f"Cost of {self.name} : {self.cost}")
         print()
 
-# Creating an Object with identifier name "book_1"
+# DECLARE book_1: Books
 # "book_1" is "written" by the "programmer"
 book_1 = Books("How to Steal Like an Artist", "Austin Kleon", "Austin Kleon", "28 Febuary 2012", 21)
 
@@ -420,12 +379,13 @@ except ValueError:
     print("Please Enter Real Number Only For Cost Of Book!")
     print()
 
+# DECLARE book_2: Books
 # Creating "book_2"
 book_2 = Books(book_name, author_name, editor_name, date_published, book_cost)
 
-# Calling our Functions
-# For "book_1"
 print()
+
+# Calling Methods / Functions
 
 book_1.display()
 book_1.price()
@@ -451,16 +411,17 @@ Unlike **[[Object Oriented Programming - Python#Attributes / Properties / Instan
 
 >[!note]
 >I will be using **another** example as from now
->This is so that I can explain you ( and myself ) better
+>This is so that I can explain you ( and myself ) better.
 
 ### Example: Creating a Class Variable
 
 ```python
 
-# Creating a class with identifier name "Car"
+# CLASS Car
 class Car:
 
     # Class Variable
+    # DECLARE wheels: INTEGER
     wheels = 4
 
 ```
@@ -476,30 +437,21 @@ To access the class variable, I will first complete the code, i.e;
 
 #### Accessing Class Variables
 
->[!tip] Usage ( How to Create an Object in General )
->```python
->print(x.y)
->```
->Where "*x*" is an:
->- Object
->
->Where "*y*" is the:
->- Class Variable
-
 ```python
 
-# Creating a class with identifier name "Car"
+# CLASS Car
 class Car:
 
     # Class Variable
+    # DECLARE wheels: INTEGER
     wheels = 4
 
     # Constructor
     def __init__(x, make, model, year, colour,):
 
     # Here the "self" has been replaced with "x"
-        # Attributes / Properties
 
+        # Attributes / Properties
         x.make = make
         x.model = model
         x.year = year
@@ -507,26 +459,25 @@ class Car:
 
     # Our Methods / Functions / Getters
 
-    # Function with identifier name "start"
+    # FUNCTION start()
     def start(x):
 
         print()
         print(f"{x.model} is starting its engine!")
 
-    # Function with identifier name "warming"
+    # FUNCTION warming()
     def warming(x):
 
         print()
         print(f"{x.model} is warming up")
 
-    # Function with identifier name "drive"
+    # FUNCTION drive()
     def drive(x):
 
         print()
         print(f"{x.model} is driving")
 
-    # Function with identifier name "zooming"
-
+    # FUNCTION zooming()
     def zooming(x):
 
         print()
@@ -534,13 +485,13 @@ class Car:
 
 # Creating Objects
 
-# Object with identifier name "car_1"
+# DECLARE car_1: Car
 car_1 = Car("Mazda", "RX-7 FD", 1998, "Yellow")
 
 # Displaying our "Class Variable"
 print(f"car_1 has {car_1.wheels} wheels!")
 
-# Changing the Class Variable "wheels" of the class "Car"
+# Changing the Class Variable "wheels" of the class `Car`
 Car.wheels = 2
 
 # Now, we have an updated class variable
@@ -548,30 +499,29 @@ print(f"car_1 has {car_1.wheels} wheels!")
 
 ```
 
-## Inheritance
+## Inheritance - Code
 
 We can make a class and create its [[Object Oriented Programming - Python#Method / Getters ( Basically Functions and Procedures - Python Functions )| methods]]. Now, what if we want to create **another** class that is **similar** to the class before.
 
 What do I mean by *similar* is... Its function ( "*actions*" ) are the same.
 
-## Examples: Inheritance
-
 ### Example: Inheriting Functions From Another Class ( Child Class $\Rightarrow$ Moto )
 
 ```python
 
-# Creating a class with identifier name "Car"
+# CLASS Car
 class Car:
 
     # Class Variable
+    # DECLARE wheels: INTEGER
     wheels = 4
 
     # Constructor
     def __init__(x, make, model, year, colour,):
 
     # Here the "self" has been replaced with "x"
-        # Attributes / Properties
 
+        # Attributes / Properties
         x.make = make
         x.model = model
         x.year = year
@@ -579,50 +529,46 @@ class Car:
 
     # Our Methods / Functions / Getters
 
-    # Function with identifier name "start"
+    # FUNCTION start()
     def start(x):
 
         print()
         print(f"{x.model} is starting its engine!")
 
-    # Function with identifier name "warming"
+    # FUNCTION warming()
     def warming(x):
 
         print()
         print(f"{x.model} is warming up")
 
-    # Function with identifier name "drive"
+    # FUNCTION running()
     def running(x):
 
         print()
         print(f"{x.model} is running")
 
-    # Function with identifier name "zooming"
+    # FUNCTION zooming()
     def zooming(x):
 
         print()
         print(f"{x.model} is going really fast")
 
-# Creating Objects for class "Car"
+# DECALRE car_1: Car
 # Object with identifier name "car_1"
 car_1 = Car("Mazda", "RX-7 FD", 1998, "Yellow")
 
 # Displaying our "Class Variable"
 print(f"car_1 has {car_1.wheels} wheels!")
 
-# Changing the Class Variable "wheels" of the class "Car"
-Car.wheels = 2
-
-# Now, we have an updated class variable
-print(f"car_1 has {car_1.wheels} wheels!")
-
+# CLASS Moto(CLASS Car)
 # Creating another class with the identifier name "Moto"
 class Moto(Car):
 
-    # Class Variable of class "Moto"
+    # Class Variable of class `Moto`
+    # DECLARE wheels: INTEGER
     wheels = 2
 
-    # Defining the class "Moto"
+    # Defining the class `Moto`
     # Constructor
     def __init_(self, make, model, engine_displacement, colour):
 
@@ -632,20 +578,21 @@ class Moto(Car):
         self.engine_displacement = engine_displacement
         self.colour = colour
 
-    # Functions will be inherited from the class "Car"
+    # Functions will be inherited from the class `Car`
 
-# Creating Objects for class "Moto"
-# Object with identifier name "moto_1"
+# DECLARE moto_1: Moto
+# Creating Objects for class `Moto`
 moto_1 = Moto("Kawasaki", "H2", 998, "Carbon Black")
 
-# Displaying the "Class Variable" of "Moto"
+# Displaying the "Class Variable" of `Moto`
 print(f"car_1 has {moto_1.wheels} wheels!")
 
-# Calling Function for class "Moto"
-    # Inherits its function from the class "Car"
+# Calling Function for class `Moto`
+# Inherits its function from the class `Car`
 
 print()
 print("Class Moto, Inherits Functions From Class Car")
+print()
 
 moto_1.start()
 moto_1.running()
@@ -662,72 +609,69 @@ print()
 
 ```python
 
-# Creating a class with identifier name "Car"
-# Parent Class
+# CLASS Car
+	# Parent Class
 class Car:
 
     # Class Variable
+    # DECLARE wheels: INTEGER
     wheels = 4
 
     # Constructor
     def __init__(x, make, model, year, colour,):
 
     # Here the "self" has been replaced with "x"
-        # Attributes / Properties
 
+        # Attributes / Properties
         x.make = make
         x.model = model
         x.year = year
         x.colour = colour
 
     # Our Methods / Functions / Getters
-    # Function with identifier name "start"
+
+    # FUNCTION start()
     def start(x):
 
         print()
         print(f"{x.model} is starting its engine!")
 
-    # Function with identifier name "warming"
+    # FUNCTION warming()
     def warming(x):
 
         print()
         print(f"{x.model} is warming up")
 
-    # Function with identifier name "drive"
+    # FUNCTION running()
     def running(x):
 
         print()
         print(f"{x.model} is running")
 
-    # Function with identifier name "zooming"
-
+    # FUNCTION zooming()
     def zooming(x):
 
         print()
         print(f"{x.model} is going really fast")
 
-# Creating Objects for class "Car"
-# Object with identifier name "car_1"
+# DECLARE car_1: Car
+# Creating Objects for class `Car`
 car_1 = Car("Mazda", "RX-7 FD", 1998, "Yellow")
 
 # Displaying our "Class Variable"
 print(f"car_1 has {car_1.wheels} wheels!")
 
-# Changing the Class Variable "wheels" of the class "Car"
-Car.wheels = 2
-
-# Now, we have an updated class variable
-print(f"car_1 has {car_1.wheels} wheels!")
-
-# Creating another class with the identifier name "Moto"
-# Child Class
-# ( Moto ---> Car )
+# CLASS Moto(CLASS Car)
+# Creating another class with the identifier name `Moto`
+	# Child Class
+# ( Moto <--- Car )
 class Moto(Car):
 
-    # Class Variable of class "Moto"
+    # Class Variable of class `Moto`
+    # DECLARE wheels: INTEGER
     wheels = 2
 
-    # Defining the class "Moto"
+    # Defining the class `Moto`
     # Constructor
     def __init_(self, make, model, engine_displacement, colour):
 
@@ -737,20 +681,22 @@ class Moto(Car):
         self.engine_displacement = engine_displacement
         self.colour = colour
 
-    # Functions will be inherited from the class "Car"
+    # Functions will be inherited from the class `Car`
 
-# Creating Objects for class "Moto"
-# Object with identifier name "moto_1"
+# DECLARE moto_1: Moto
+# Creating Objects for class `Moto`
 moto_1 = Moto("Kawasaki", "H2", 998, "Carbon Black")
 
-# Displaying the "Class Variable" of "Moto"
+# Displaying the "Class Variable" of `Moto`
 print()
 print(f"moto_1 has {moto_1.wheels} wheels!")
 
-# Calling Function for class "Moto"
-    # Inherits its function from the class "Car"
+# Calling Function for class `Moto`
+# Inherits its function from the class `Car`
+
 print()
 print("Class Moto, Inherits Functions From Class Car")
+print()
 
 moto_1.start()
 moto_1.running()
@@ -759,37 +705,43 @@ moto_1.zooming()
 
 print()
 
+# CLASS Small_Car(CLASS Moto)
 # Creating another class with the indentifier name "Small_Car"
-# Derived Class
-# ( Small_Car ---> Moto ---> Car )
+	# Derived Class
+# ( Small_Car <--- Moto <--- Car )
 class Small_Car(Moto):
 
-    # Class Variable
+    # Class Variable of `Small_Car`
+    # DECLARE wheel: INTEGER
     wheels = 4
+    # DECLARE doors: INTEGER
     doors = 2
 
-    # Constructor will be inherited from class "Moto" ( Moto ---> Car )
-    # Function / Methods / Getters will be also inherited from "Moto" ( Moto ---> Car )
-    # Making a Function specific to class "Small_Car"
+    # Constructor will be inherited from class "Moto" ( Moto <--- Car )
+    # Function / Methods / Getters will be also inherited from "Moto" ( Moto <--- Car )
+
+    # FUNCTION slow()
     def slow(self):
 
         print()
         print(f"{self.model} is going really slow")
 
-# Creating Object for class "Small_Car"
-# Object with identifier name "car_2"
+# DECLARE car_2: Small_Car
+# Creating Object for class `Small_Car`
 car_2 = Small_Car("Honda", "Beat", 656, "Grey")
 
 # Calling Function for class "Small_Car"
-    # Inherits its function from the class "Moto"
+# Inherits its function from the class "Moto"
 
-# Displaying the "Class Variable" of "Small_Car"
+# Displaying the "Class Variable" of `Small_Car`
 print(f"car_2 has {car_2.wheels} wheels!")
 print(f"car_2 has {car_2.doors} doors!")
 
 print()
 
 print("Class Small_Car, Inherits Functions From Class Moto")
+
+print()
 
 car_2.start()
 car_2.running()

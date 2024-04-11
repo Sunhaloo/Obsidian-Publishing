@@ -30,6 +30,12 @@ Status: HOLD
 - [[Arch Linux#Installing KDE Plasma ( Desktop Environment ) | Installing KDE Plasma ( Desktop Environment )]]
 - [[Arch Linux#Start Linux Desktop | Start Linux Desktop]]
 
+---
+
+### My Links
+
+- [[Arch Linux#Socials | Link to Socials]]
+
 ### Setting Up The Desktop Environment
 
 ---
@@ -560,4 +566,17 @@ sudo systemctl enable --now sddm
 >[!success]
 >It should be all working fine.
 
+>[!note] You Could Just Have Used `archinstall` 🤓
+
 ---
+
+# Socials
+
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**GitHub**](https://www.github.com/Sunhaloo)
+
+---
+
+S.Sunhaloo
+Thank You!

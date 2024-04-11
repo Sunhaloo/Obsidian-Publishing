@@ -31,7 +31,7 @@ Status: Completed
 >	- Can **comfortably** work in both *Front* and *Back* End
 
 >[!tip]- Some Tools we are going to be Using?
->1. Text Editors ( *VS Code*, *Neovim* )
+>1. Text Editors ( *VS Code*, *Neovim* / *Vim* )
 >2. Command Line Interface ( *Linux Based* )
 >3. Git
 >4. GitHub
@@ -41,13 +41,13 @@ Status: Completed
 >- Build Things
 >- Watch YouTube Videos!
 >- Google It!
->- Take Breaks; even if you have to take 1 days off
+>- Take Breaks; even if you have to take 1 day off
 >This will help you to motivate yourself and have a **Growth Mindset**
 >- This to this song if you need some motivation: [Click Here](https://www.youtube.com/watch?v=n1oUspMuUgk)
 >
 >>[!info] Brain Modes
 >>### Focus Mode
->>- Occurs when you are **actively** learning, reading, watching videos, working on projects and more
+>>- Occurs when you are **actively** learning, reading, watching videos, working on projects and more.
 >>### Diffuse Mode
 >>- Occurs when you are away from the Computer
 >>	- Bathing
@@ -99,7 +99,7 @@ OR
 
 It also recommends to use **Google Chrome**
 
->I am using a fork of Google Chrome $\Rightarrow$ Thorium $\rightarrow$ The World's Fastest Browser
+>I am using a fork of Google Chrome $\Rightarrow$ Thorium $\rightarrow$ The World's Fastest Browser!
 
 ## CLI
 
@@ -161,7 +161,10 @@ git config --global --list
 ```
 
 >[!note]
->All of the above $\uparrow$ is done in **GIT Bash**
+>All of the above $\uparrow$ is done in **GIT Bash** / **Terminal**
+
+>For more information on Git / GitHub
+>Visit the official documentations for full and complete understand or you can use my concise version [[Git Setup | here]]
 
 ---
 

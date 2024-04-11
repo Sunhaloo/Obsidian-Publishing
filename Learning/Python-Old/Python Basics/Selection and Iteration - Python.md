@@ -2,7 +2,7 @@
 Alias: IF-CASE-WHILE-REPEAT
 Tag: python, basics
 Author: S.Sunhaloo
-Type: Conditions/Statements
+Type: Conditions / Statements
 Date: 2023-10-01
 Status: Completed
 ---
@@ -50,7 +50,7 @@ We have 2 main type of "*selections*";
 - [[Selection and Iteration - Python#IF Statements | IF Statements]]
 - [[Selection and Iteration - Python#CASE Statements | CASE Statements]]
 
-We use *these* ( $\uparrow$ ) again, to make a decisions. For example: if we present someone with a "*Construct Your Own Burger*" screen. The program will have to make decision after the user chooses his type of "*bread*" or he *exits* the program entirely.
+We use *these* $\uparrow$ again, to make a decisions. For example: If we present someone with a "*Construct Your Own Burger*" screen. The program will have to make decision after the user chooses his type of "*bread*" or he *exits* the program entirely.
 
 # What is an Iteration?
 
@@ -84,9 +84,10 @@ I am going to be honest with you ( *yes, the one reading this* ). This is not so
 
 ```python
 
-#IF Statements
+# IF Statements
 
-#Asking the user to input his age
+# DECLARE user_age: INTEGER
+# Asking the user to input his age
 user_age = int(input("Please Enter Your Age: "))
 
 # If age is in equal and betwen 18 to 100
@@ -117,7 +118,8 @@ elif user_age >= 1 and user_age <= 18:
 
 # IF Statements
 
-#Asking the user to input the temperature
+# DECLARE temp: INTEGER
+# Asking the user to input the temperature
 temp = int(input("What is the temparature: "))
 
 # If temperature is equal to and between 0 to 40
@@ -135,7 +137,7 @@ elif temp < 0:
 
     print("Very Cold")  
 
-# # If temperature is less than 0 and/or greater than 100
+# If temperature is less than 0 and / or greater than 100
 else:
 
     print("Extreme Temperature")
@@ -221,13 +223,13 @@ match lang:
 
 print()
 
+# DECLARE lang: STRING
 # Asking the user to enter his language
 lang = input("Please Enter Your Programming Language: ")
 
 print()
 
-# Function with identifier name "switch"
-# Takes one parameter "lang"
+# FUNCTION switch(DECLARE lang: STRING)
 def switch(lang):
 
     # If user types JavaScript
@@ -260,7 +262,7 @@ def switch(lang):
 
         return "You could have picked a normal language, but that would make you an idiot"
 
-# Calling Function
+# Calling Function to `main` Program
 result = switch(lang)
 
 # Displaying Result
@@ -282,9 +284,9 @@ This program will **not stop** until user input his phone number
 
 # WHILE Loops
 
+# DECLARE tel_num: STRING
 # Initialising variable
 tel_num = ""
-#or tel_num = None
 
 # Condition to enter loop
 while len(tel_num) == 0:
@@ -294,7 +296,7 @@ while len(tel_num) == 0:
     tel_num = input("Please Enter A Telephone Number: ")
 
 # Prints phone number
-print("Your Telephone Number is " + tel_num)
+print(f"Your Telephone Number is {tel_num}")
 
 ```
 
@@ -304,7 +306,7 @@ print("Your Telephone Number is " + tel_num)
 
 # WHILE Loops
 
-# Variable "enter" of type Boolean and with the value "True"
+# DECLARE enter: BOOLEAN
 enter = True
 
 # Condition to enter "while" loop
@@ -336,13 +338,13 @@ So... What do I have to say; **for** loops are widely used in function such as [
 
 # FOR Loops
 
-# Array with identifier name "number" with size "3"
+# DECLARE ARRAY number[3]: INTEGER
 number = [0, 23, 69, 90]
 
 print()
 
+# DECLARE i: INTEGER
 # Displaying array "number" values on different lines
-
 for i in number:
 
     # Displays each value on separate lines
@@ -362,6 +364,7 @@ print()
 
 print()
 
+# DECLARE i: INTEGER
 # Remember in programming we start wih 0
 for i in range(11):
 
@@ -382,6 +385,7 @@ print()
 
 print()
 
+# DECLARE i: INTEGER
 # We now have 2 "arguments" in or "range" function
 for i in range(1, 11):
 
@@ -402,6 +406,7 @@ print()
 
 print()
 
+# DECLARE i: INTEGER
 # Starting from "2", ending with "10" in steps of "2"
 for i in range(2, 11, 2):
 
@@ -412,7 +417,22 @@ print()
 
 ```
 
-### Example 2.3: Making Art ( fucking see for yourself - I am too lazy to explain )
+### Example 2.3: Displaying from 10 to 1
+
+```python
+
+print()
+
+# DECLARE x: INTEGER
+for x in range(10, 0, -1):
+
+    print(x)
+
+print()
+
+```
+
+### Example 3: Making Art ( fucking see for yourself - I am too lazy to explain )
 
 ```python
 
@@ -421,21 +441,26 @@ print()
 #Asking the user to input the "parameters" ( trying to be fancy with it - fuck you )
 print()
 
+# DECLARE rows: INTEGER
 # User inputs the number of rows
 rows = int(input("Please Enter Number Of Rows: "))
 
+# DECLARE columns: INTEGER
 # User inputs the number of columns
 columns = int(input("Please Enter Number Of Columns "))
 
+# DECLARE symbols: INTEGER
 # User inputs the character to choose to make the grid
 symbol = input("Please Enter A Symbol To Use: ")
 
 print()
 
+# DECLARE x: INTEGER
 # Displays the row
 for x in range(rows):
 
     # Displays the columns
+    # DECLARE y: INTEGER
     for y in range(columns):
 
         # Displays the symbol we choose in a grid with the specific size we choose
@@ -469,6 +494,7 @@ print()
 # Repeat "enter user_name"
 while True:
 
+    # DECLARE user_name: STRING
     # User enters a name
     user_name = input("Please Enter A Name: ")
 
@@ -483,7 +509,7 @@ while True:
     else:
 
         print()
-        print("Wecome Back " + str(user_name))
+        print(f"Wecome Back {user_name}")
         print()
 
         # Does not stay in "while" loop
@@ -499,6 +525,7 @@ while True:
 
 print()
 
+# DECLARE i: INTEGER
 # Initialising "i" with the value 1
 i = 1
 
@@ -534,11 +561,12 @@ This is used to terminate a loop, when we know that the loop is going the contin
 # Enter loop and keeps entering loop
 while True:
 
+    # DECLARE name: STRING
     # Asking the user to enter his name
-    name10 = input("Please Enter Your Name: ")
+    name = input("Please Enter Your Name: ")
 
     # If users enter his name
-    if name10 != "":
+    if name != "":
 
         #Exits while loop
         break
@@ -557,20 +585,22 @@ This is something that I cannot really explain; but all I know is that it will *
 
 print()
 
+# DECLARE mobile_num: STRING
 # Variable "mobile_num" hold a string
 mobile_num = "1234-5678"
 
+# DECLARE i: INTEGER
 # Counter to find the required string
-for o in mobile_num:
+for i in mobile_num:
 
     # if variable "o" is equal to "-"
-    if o == "-":
+    if i == "-":
 
         # It will skip the symbol altogether
         continue
 
 # prints the new value of mobile_num
-print(o, end = "")
+print(i, end = "")
 
 ```
 
@@ -586,11 +616,12 @@ This is another way to skip something. The **pass** function also acts as a *pla
 
 print()
 
+# DECLARE i: INTEGER
 # Counter to output the number from 0 to 20
-for p in range(0, 21):
+for i in range(0, 21):
 
     # If the number "13" is found
-    if p == 13:
+    if i == 13:
 
         # It will skips the number "13"
         pass
@@ -599,7 +630,7 @@ for p in range(0, 21):
     else:
 
         # It will print the number 0 to 20 without displaying "13"
-        print(p)
+        print(i)
 
 #Displays numbers from 0 to 20; and does not display 13
 
@@ -613,6 +644,7 @@ This is normally used when in the process of programming
 
 # PASS
 
+# FUNCTION binary_search()
 # If the user has a function that has nothing in it
 def binary_search():
 
@@ -625,8 +657,9 @@ def binary_search():
 
 # Socials
 
-- [**Instagram:**](https://www.instagram.com/s.sunhaloo/)
-- [**YouTube:**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**GitHub**](https://www.github.com/Sunhaloo)
 ---
 
 S.Sunhaloo

@@ -16,7 +16,7 @@ Status: In-Progress / Check Transposed
 	- [[Insertion Sort - Python#Some Disadvantages | Disadvantages]]
 - [[Insertion Sort - Python#Insertion Sort Code - 1D Array | Insertion Sort Code - 1D Array]]
 	- [[Insertion Sort - Python#Template 1D-Array| Template]]
-- [[Insertion Sort - Python#Examples 1D-Array| Example]]
+- [[Insertion Sort - Python#Example 1D-Array| Example]]
 
 ---
 
@@ -26,7 +26,6 @@ Status: In-Progress / Check Transposed
 	- [[Insertion Sort - Python#Template 2D-Array | Template]]
 		- [[Insertion Sort - Python#Method 1 Sorting *rows* **only** | Sorting Rows Only]]
 		- [[Insertion Sort - Python#Method 2 Sorting **entire** array | Sorting All Values In Array]]
-	- ****
 
 ---
 
@@ -44,9 +43,9 @@ The *calculation* of Insertion Sort is as follow:
 
 1. It will find the **length** of array
 2. There is a variable which will hold:
-	- The **value** at *index* "*x*"
+	- The **value** at *index* `x`
 3. Another variable will hold the value at:
-	- "*x + 1*"
+	- `x + 1`
 4. It compares the second value to the first value
 	- Then swap accordingly ( ascending / descending order )
 
@@ -70,23 +69,22 @@ This is only the [[Functions and Procedures - Python#Example 2 Insertion Sort| f
 
 ```python
 
-# Insertion Sort Function 1D-Array
-
-# Function with identifier name "insertion_sort"
-
-# In this function. we need to pass:
-# array
+# FUNCTION insertion_sort(DECLARE ARRAY array: INTEGER)
 def insertion_sort(array):
 
+    # DECLARE length_array: INTEGER
     # Calculates length of array
     length_array = len(array)
 
+    # DECLARE i: INTEGER
     # "for" loop that starts at index 1 instead of 0
     for i in range(1, length_array):
 
+        # DECLARE values: INTEGER
         # Values at address "i"
         values = array[i]
 
+        # DECLARE j: INTEGER
         # Values to the left of "i" (  one before "i")
         j = i - 1
 
@@ -104,34 +102,33 @@ def insertion_sort(array):
 
 ```
 
->See it's really simple, that is why is is really easy to implement into code as the number of lines is oh so little
+>See it's really simple, that is why is is really easy to implement into code as the number of lines is oh so little.
 
-## Examples: 1D-Array
+## Example: 1D-Array
 
 ### Example 1: Complete Code 1D-Array
 
 ```python
 
-# Insertion Sort
-
-# Array with identifier name "array"
+# DECLARE ARRAY array[6]: INTEGER
 array = [11, 9, 29, 7, 2, 15, 28]
 
-# Function with identifier name "insertion_sort"
-
-# In this function. we need to pass:
-# array
+# FUNCTION insertion_sort(DECLARE ARRAY array: INTEGER)
 def insertion_sort(array):
 
+    # DECLARE length_array: INTEGER
     # Calculates length of array
     length_array = len(array)
 
+    # DECLARE i: INTEGER
     # "for" loop that starts at index 1 instead of 0
     for i in range(1, length_array):
 
+        # DECLARE values: INTEGER
         # Values at address "i"
         values = array[i]
 
+        # DECLARE j: INTEGER
         # Values to the left of "i" (  one before "i")
         j = i - 1
 
@@ -147,9 +144,10 @@ def insertion_sort(array):
         # If array is already sorted
         array[j + 1] = values
 
-# Calling Functions
+# Calling Function to `main` Program
 insertion_sort(array)
 
+# DECLARE count: INTEGER
 # Displaying Array
 for count in array:
 
@@ -160,7 +158,7 @@ for count in array:
 
 # [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Array]]
 
-What can I say, the *codes* below will show you how to make **insertion sort** for *2D-Arrays*
+What can I say, the *codes* below will show you how to make **insertion sort** for *2D-Arrays*.
 
 # Insertion Sort Code - 2D Array
 
@@ -175,25 +173,24 @@ This is only the [[Functions and Procedures - Python#Example 2 Insertion Sort| f
 
 ```python
 
-# Insertion Sort 2D-Array
-
 # Sorting ROWS Only
 
-# Function with identifier name "Insertion_Sort"
+# FUNCTIOn insertion_sort(DECLARE ARRAY grid: INTEGER)
+def insertion_sort(grid):
 
-# In this function, we could pass our
-# array --> In this case our parameter is called "grid"
-def Insertion_Sort(grid):
-
+    # DECLARE rows: INTEGER
     # Stepping through each row
     for rows in range(len(grid)):
 
+        # DECLARE cols: INTEGER
         # Stepping through each column
         for cols in range(1, len(grid[rows])):
 
+            # DECLARE value: INTEGER
             # Values at "first" address
             values = grid[rows][cols]
 
+            # DECLARE k: INTEGER
             # Value to the left of "first" address
             k = cols -1
 
@@ -211,55 +208,14 @@ def Insertion_Sort(grid):
 
 ```
 
-### Method 2: Sorting **entire** array
-
->[!warning]
->**NOT COMPLETED**
-
-```python
-
-def insertion_sort_2d_array(arr):
-
-    sorted_arr = [[0 for _ in range(len(arr[0]))] for _ in range(len(arr))]
-
-  
-
-    # Sort each row using insertion sort
-
-    for i in range(len(arr)):
-
-        sorted_row = sorted(arr[i])
-
-        sorted_arr[i] = sorted_row
-
-  
-
-    # Transpose the array to sort columns using insertion sort
-
-    transposed_arr = [[sorted_arr[j][i] for j in range(len(sorted_arr))] for i in range(len(sorted_arr[0]))]
-
-  
-
-    # Sort each column using insertion sort
-
-    for i in range(len(transposed_arr)):
-
-        transposed_arr[i] = sorted(transposed_arr[i])
-
-  
-
-    # Transpose back to the original array
-
-    arr[:] = [[transposed_arr[j][i] for j in range(len(transposed_arr))] for i in range(len(transposed_arr[0]))]
-
-```
-
 ---
 
 # Socials
 
-- [**Instagram:**](https://www.instagram.com/s.sunhaloo/)
-- [**YouTube:**](https://www.youtube.com/@s.sunhaloo539/streams)
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/@s.sunhaloo539/streams)
+- [**GitHub**](https://www.github.com/Sunhaloo)
 
 ---
+S.Sunhaloo
 Thank You!

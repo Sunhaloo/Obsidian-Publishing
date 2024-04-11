@@ -18,7 +18,7 @@ Status: Completed
 
 - [[Linear Search - Python#Linear Search Code - 1D Arrays | Linear Search Code]]
 	- [[Linear Search - Python#Template 1D-Array| Template Function]]
-	- [[Linear Search - Python#Examples 1D-Array| Examples]]
+	- [[Linear Search - Python#Example 1D-Array| Example]]
 
 ---
 
@@ -26,9 +26,9 @@ Status: Completed
 
 - [[Linear Search - Python#Linear Search Code - 2D Arrays | Linear Search Code]]
 	- [[Linear Search - Python#Template 2D-Array | Template Function]]
-		- [[Linear Search - Python#Method 1 Using *enumerate* function | Using Enumerate Function]]
-		- [[Linear Search - Python#Method 2 Using *range()* function | Using Range Function]]
-	- [[Linear Search - Python#Examples 2D-Array | Examples]]
+		- [[Linear Search - Python#Method 1 Using `enumerate` function | Using Enumerate Function]]
+		- [[Linear Search - Python#Method 2 Using `range()` function | Using Range Function]]
+	- [[Linear Search - Python#Example 2D-Array | Example]]
 
 ---
 
@@ -44,21 +44,21 @@ My Links
 
 This is one of the simplest [[Python Data View#Searching Algorithms| searching algorithm]]. This is because it searches the array **sequentially**. In fact, the another name for linear search is *sequential search*.
 
-In linear search the array **does not** need to be *sorted*.
+In linear search the array does **not** need to be *sorted*.
 
-The *calculation* of linear search is written below:
+The *calculations* of linear search is written below:
 
 1. We have to calculate the **length** of *array*
-2. There is a ( "*for*" )  loop which will step through the array
+2. There is a ( `for` )  loop which will step through the array
 	- If the **value** at that *address* is found
 		- It returns the **address** of the value
 3. If value has **not** been found it exits the loop
-	- By return *-1* or *False*
+	- By return `-1` or `False`
 
 # Some Advantages
 
 - Very easy to implement in code
-- Fast on ( and only one ) small arrays
+- Fast on ( and only on ) small arrays
 - The array does not need to be sorted
 - Linear Search if not affected by the data movement
 	- Data being:
@@ -82,15 +82,10 @@ This is only the [[Functions and Procedures - Python#Example 4 Linear Search| fu
 
 ```python
 
-# Linear Search Function 1D-Array
-
-# Function with identifier name "linear_search"
-
-# In this function we need to pass the:
-# array
-# search value ( user_find )
+# FUNCTION linear_search(DECLARE ARRAY array: INTEGER, DECLARE user_find: INTEGER)
 def linear_search(array, user_find):
 
+    # DECLARE i: INTEGER
     # Loop steps through array
     for i in range(0, len(array)):
 
@@ -105,40 +100,41 @@ def linear_search(array, user_find):
 
 ```
 
-## Examples: 1D-Array
+## Example: 1D-Array
 
 ### Example 1: Complete Code for 1D-Array
 
 ```python
 
-# Linear Search
-
 print()
 
-# Array with identifier name "numbers"
+# DECLARE ARRAY numbers: INTEGER
 numbers = []
-
-# Asking the user to enter the size of the array "numbers"
 
 # Exception Handling
 try:
 
-    # Variable "array_size" will hold the "size of the array"
     print()
+
+    # DECLARE array_size: INTEGER
+    # Variable "array_size" will hold the "size of the array"
     array_size = int(input("Please Enter Size Of Array: "))
+
     print()
 
 # If user enter any character other than Integers
 except ValueError:
 
-    # Outputs appropriate message
     print()
+    # Outputs appropriate message
     print("Please Enter Integer Values Only!")
     print()
 
+# DECLARE x: INTEGER
 # Asking the user to enter data into array
 for x in range(array_size):
 
+    # DECLARE user_input: STRING
     # Asking the user to enter a value
     user_input = input("Please Enter A Number: ")
 
@@ -159,9 +155,12 @@ for x in range(array_size):
     # Appends the value to the array
     numbers.append(user_input)
 
-# Variable "user_find" will hold serach value
 print()
+
+# DECLARE user_find: INTEGER
+# Variable "user_find" will hold serach value
 user_find = input("Please Enter A Number To Find: ")
+
 print()
 
 # If search value is an integer
@@ -176,14 +175,15 @@ else:
     # Outputs appropriate message
     print("Please Enter Whole Numbers Only!")
 
-# Linear Search Function:
-def linear_search(numbers, user_find):
+# FUNCTION linear_search(DECLARE ARRAY array: INTEGER, DECLARE user_find: INTEGER)
+def linear_search(array, user_find):
 
+    # DECLARE i: INTEGER
     # Loop steps through array
-    for i in range(0, len(numbers)):
+    for i in range(0, len(array)):
 
         # If value is found
-        if numbers[i] == user_find:
+        if array[i] == user_find:
 
             # Returns the address of "user_find"
             return i
@@ -191,7 +191,7 @@ def linear_search(numbers, user_find):
     # If search value has not been found
     return -1
 
-# Calling Function
+# Calling Function to `main` Program
 search_value = linear_search(numbers, user_find)
 
 # Displaying search_value
@@ -207,21 +207,17 @@ Again, it will be of the **same principle** as the *1D-Arrays*. But now, we will
 
 ## Template: 2D-Array
 
-### Method 1: Using *enumerate* function
+### Method 1: Using `enumerate` function
 
 >[!info]
 >Using the enumerate function will make it very easy to implement ( *write the code* )
 >But I am not accustomed to *enumerate* yet
->- So I it will also be providing [[Linear Search - Python#Method 2 Using *range()* function| using simple range function]] below.
+>- So I it will also be providing [[Linear Search - Python#Method 2 Using *range()* function| using simple range function]] below $\downarrow$.
 >- So that you can understand **Linear Search** better
 
 ```python
 
-# Linear Search Function 2D-Array
-
-# Using ENUMERATE Function
-
-# DECLARE array: ARRAY[2:2] OF INTEGER
+# DECLARE ARRAY array[2, 2]: INTEGER
 array = [
 
     [1, 2, 3],
@@ -235,6 +231,7 @@ print()
 # Exception Handling
 try:
 
+    # DECLARE user_input: INTEGER
     # Asking the user to enter a value to find
     user_input = int(input("Please Enter A Value To Find: "))
 
@@ -246,16 +243,14 @@ except ValueError:
     print("Please Enter Integer Values Only!")
     print()
 
-# Function with identifier name "Linear_Search"
+# FUNCTION linear_search(DECLARE ARRAY array: INTEGER, DECLARE value_to_search: INTEGER)
+def linear_search(array, value_to_search):
 
-# In this function we are passing our
-# array
-# value to search    
-def Linear_Search(array, value_to_search):
-
+    # DECLARE index_row, row: INTEGER
     # Steps through rows in array
     for index_row, row in enumerate(array):
 
+            # DECLARE index_cols, cols: INTEGER
             # Steps through cols in array
             for index_cols, cols in enumerate(row):
 
@@ -268,7 +263,7 @@ def Linear_Search(array, value_to_search):
     # If search value has not been found
     return -1
 
-# Calling Function
+# Calling Function to `main` Program
 result = Linear_Search(array, user_input)
 
 # Displaying result
@@ -286,6 +281,7 @@ print()
 print("Displaying Array")
 print()
 
+# DECLARE x: INTEGER
 # Displaying Array
 for x in array:
 
@@ -293,34 +289,32 @@ for x in array:
 
 ```
 
-### Method 2: Using *range()* function
+### Method 2: Using `range()` function
 
 This is the [[Functions and Procedures - Python|function]] only and it will **not** run on its own.
 
 ```python
 
-# Linear Search Function 2D-Array
-
-# Function with identifier name "linear_search"
-
-# In this function we are passing our
-# array
+# FUNCTION linear_search(DECLARE ARRAY array: INTEGER)
 def linear_search(array):
 
     # Exception Handling
     try:
 
-        # DECLARE array_length: OF INTEGER
+        # DECLARE array_length: INTEGER
         # Which will hold our length of array
         array_length = len(array)
 
+        # DECLARE user_search: INTEGER
         # Asking the user to input a value to search
         user_search = int(input("Please Enter A Value To Find: "))
 
+        # DECLARE row: INTEGER
         # Loop steps through rows
         for row in range(0, array_length):
 
             # Loop steps through columns
+            # DECLARE cols: INTEGER
             for cols in range(0, array_length):
 
                 # If value has been found
@@ -334,17 +328,13 @@ def linear_search(array):
 
 ```
 
-## Examples: 2D-Array
+## Example: 2D-Array
 
 ### Example 1: Complete Code for 2D-Array
 
 ```python
 
-# Linear Search Function 2D-Array
-
-# Using RANGE Function
-
-# DECLARE array: ARRAY OF INTEGER
+# DECLARE ARRAY array[2, 2]: INTEGER
 array = [
 
     [1, 2, 3],
@@ -355,27 +345,26 @@ array = [
 
 print()
 
-# Function with identifier name "linear_search"
-
-# In this function we are passing our
-# array
-
+# FUNCTION linear_search(DECLARE ARRAY array: INTEGER)
 def linear_search(array):
 
     # Exception Handling
     try:
 
-        # DECLARE array_length: OF INTEGER
+        # DECLARE array_length: INTEGER
         # Which will hold our length of array
         array_length = len(array)
 
+        # DECLARE user_search: INTEGER
         # Asking the user to input a value to search
         user_search = int(input("Please Enter A Value To Find: "))
 
+        # DECLARE row: INTEGER
         # Loop steps through rows
         for row in range(0, array_length):
 
             # Loop steps through columns
+            # DECLARE cols: INTEGER
             for cols in range(0, array_length):
 
                 # If value has been found
@@ -395,7 +384,7 @@ def linear_search(array):
         print("Please Enter Integer Values Only")
         print()
 
-# Calling Function
+# Calling Function to `main` Program
 result = linear_search(array)
 
 if result != -1:
@@ -412,6 +401,7 @@ print()
 print("Displaying Array")
 print()
 
+# DECLARE x: INTEGER
 # Displaying Array
 for x in array:
 
@@ -423,8 +413,10 @@ for x in array:
 
 # Socials
 
-- [**Instagram:**](https://www.instagram.com/s.sunhaloo/)
-- [**YouTube:**](https://www.youtube.com/@s.sunhaloo539/streams)
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/@s.sunhaloo539/streams)
+- [**GitHub**](https://www.github.com/Sunhaloo)
 
 ---
+S.Sunhaloo
 Thank You!

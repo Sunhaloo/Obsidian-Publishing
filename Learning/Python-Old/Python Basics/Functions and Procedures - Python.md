@@ -36,7 +36,7 @@ My Links
 
 # What is a Function / Procedure?
 
-My understand of function / procedure is that is a piece of code that has been written inside a main code.
+My understanding of functions / procedures is that it is a piece of code that has been written outside of a main code.
 
 Think of it this way; when we write notes ( general daily notes ), we have a:
 
@@ -51,7 +51,7 @@ In modern programming, it would be very **difficult** *without* using functions 
 Functions and Procedures can be **called** many times.
 
 - "*Calling*" means to use the "*sub-headers*" / functions / procedure into the main program
-	- Thus the **main program** can *execute* the function / procedure and output the necessary information.
+	- Thus the **main program** can *execute* the function / procedure and output / run the necessary information.
 
 ---
 
@@ -60,8 +60,9 @@ Functions and Procedures can be **called** many times.
 The built-in function are the functions that already exists in the Programming Language.
 Here are some examples of Built-In Function in Python:
 
-1. [[String Manipulation - Python#Capitalize Function | capitalize()]]
-2. [[Stack ADT - 1D Array ( Mine )#Pop Function| pop()]]
+1. `print()`
+2. [[String Manipulation - Python#Capitalize Function | capitalize()]]
+3. [[Stack ADT - 1D Array ( Mine )#Pop Function| pop()]]
 
 Here are all the Built-In Functions in Python, Click [Here](https://www.w3schools.com/python/python_ref_functions.asp)
 
@@ -73,12 +74,12 @@ Here are some advantages of **function** / **procedures**:
 
 1. Increases program readability
 
-- These ( $\downarrow$ ) ones are a bit similar to [[Subroutines]]
+- These below $\downarrow$ are a bit similar to [[Subroutines]]
 
 2. Reduces errors as each functions / procedure can be tested
 3. Increases productivity as many people can work on the same project at once
 	- Then the program can be created by adding all other functions into the main code
-4. Can use the functions / procedure more than once
+4. Re-usability
 
 >You can [google](https://www.google.com) other advantages. I did not wanted to include this part actually. But here I am, writing this part.
 
@@ -86,7 +87,7 @@ Here are some advantages of **function** / **procedures**:
 
 ## Functions
 
-A **function** / **subroutine** / **method**( in OOP ) is a *sequence of program instructions* that performs a **specific task**.
+A **function** / **subroutine** / **method** ( in OOP ) is a *sequence of program instructions* that performs a **specific task**.
 
 Again it can be [[Functions and Procedures - Python#Calling a Function / Procedure| called]] into the *main program* to be executed.
 
@@ -94,9 +95,9 @@ Again it can be [[Functions and Procedures - Python#Calling a Function / Procedu
 
 A procedure / subroutine is also defined as a *sequence of program instructions* that performs a **specific task**.
 
-Same as function; it can be [[Functions and Procedures - Python#Calling a Function / Procedure| called]] into the main program to executed. But it has some differences and some as wee say "*quirks and features*".
+Same as function; it can be [[Functions and Procedures - Python#Calling a Function / Procedure| called]] into the main program to executed. But it has some differences and some as we say "*quirks and features*".
 
-> See below ( $\downarrow$ )  for the differences between functions and procedures.
+> See below $\downarrow$ for the differences between functions and procedures.
 
 ### Arguments and Passing of Values ( see *[[Functions and Procedures - Python#Parameters | parameters]]* below )
 
@@ -118,7 +119,7 @@ Thus, to *use* the function / procedure properly, we need to **pass**
 
 # Parameters
 
-Parameters are very simple. The **purpose** of a parameter is to take a value from the *main* program and "*pass*" it into the function; so that the function can operate.
+Parameters are very simple. They are placeholders in the function. The **purpose** of a parameter is to take a value from the *main* program and "*pass*" it into the function; so that the function can operate.
 
 ## Examples: Passing our *parameters*
 
@@ -130,26 +131,22 @@ Parameters are very simple. The **purpose** of a parameter is to take a value fr
 
 print()
 
+# DECLARE user_name: STRING
 # Asking the user to input his name
 user_name = str(input("Please Enter Your Name: "))
 
-# Function with identifier name "display_name"
-
-# In this function we are passing our
-# user_name
-def display_name(user_name):
+# FUNCTION display_name(DECLARE name)
+# In this case, `name` is our Parameter / Placeholder
+def display_name(name):
 
     print()
-    print(f"Your Name: {user_name}")
+    print(f"Your Name: {name}")
     print()
 
 # Calling Function
 display_name(user_name)
 
 ```
-
->[!tip] Note
->The value inside the *brackets* of the **function** does not need to be the same as the **variable** or **constant** that we are using the the main program
 
 ### Example 2: Calculating the Volume of Cylinder
 
@@ -160,41 +157,38 @@ display_name(user_name)
 # Exception Handling
 try:
 
+    # DECLARE radius: REAL
     # Ask the user to input radius
     radius = float(input("Please Enter Radius: "))
 
+    # DECLARE height: REAL
     # Ask the user to input height
     height = float(input("Please Enter Height: "))
 
 # If user enter any other data types than "real" numbers
 except ValueError:
 
-    # Outputs the appropriate message
     print()
+    # Outputs the appropriate message
     print("Please Enter Real Numbers Only!")
     print()
 
-# Function with the identifier name "vol_calc"
-
-# In this function we pass our
-# Radius; in this case ---> x
-# Height; in this case  ---> y
+# FUNCTION vol_calc(DECLARE x: REAL, DECLARE y: REAL)
+# In this case `x` and `y` are our Parameters
 def vol_calc(x, y):
 
     # Calculating the volume of cylinder
+    # DECLARE volume: REAL
     volume = float((2 * (22 / 7)) * x * y)
 
     print()
     print(f"Volume Of Cylinder = {volume}")
     print()
 
-# Calling Function
+# Calling Function into `main` Program
 vol_calc(radius, height)
 
 ```
-
->[!info]
->See how the above ( $\uparrow$ ) code does have **different** "*variables*" inside the function's bracket.
 
 ---
 
@@ -239,8 +233,7 @@ As you know, Visual Basic is a fucked up language ( "*in my opinion*" ). Here th
 >```
 
 >[!warning]
->This document is only showing **Functions** and **Procedures** for *Python*. I have only wrote "*[[Functions and Procedures - Python#Visual Basic Data View Visual Basic| Visual Basic]]*"
->**This is to show you the difference between *functions* and *procedures***.
+>This document is only showing **Functions** and **Procedures** for *Python*. I have only wrote "*[[Functions and Procedures - Python#Visual Basic Data View Visual Basic| Visual Basic]]*" to show you the difference between *functions* and *procedures*.
 
 ---
 
@@ -249,18 +242,13 @@ As you know, Visual Basic is a fucked up language ( "*in my opinion*" ). Here th
 >[!info]
 >As as said again, in *Python*, both are written the same way. **Nevertheless**, you must know the [[Functions and Procedures - Python#Differences between Functions and Procedures| differences]] between the two. xD!
 
-## Simple Examples
-
 ### Example 1: Basic Function
 
 ```python
 
 # Functions / Procedures
 
-# Function with identifier name "hello"
-# Which takes 1 argument
-# We have not defined the datatype of "name"
-# But as you know, we can only concaternate data of the type "String"
+# FUNCTION hello(DECLARE name: STRING)
 def hello(name):
 
     print()
@@ -269,20 +257,22 @@ def hello(name):
     print("Have a nice day ahead!")
     print()
 
-# Calling Functionss
-# 1st Method:
-# Writing "name" DIRECTLY into Function
-
+# Call Function and passing "Mate"
 hello("Mate")
 
+# Call Function and passing "my friend"
 hello("my friend")
 
-# 2nd Method
-# Writing "name" in a variable
-# I recommend this one, then we could use the the "variable" again
+print()
+
+# DECLARE user_name: STRING
 user_name = str(input("Please Enter A Name: "))
 
-print("Displaying Name")
+print("Displaying Name:")
+
+print()
+
+# Call Function and passing "user_name"
 hello(user_name)
 
 ```
@@ -295,13 +285,11 @@ In this [[Functions and Procedures - Python#Example 1| example]], we see that th
 
 # Functions / Procedures
 
-# Function with identifier name "multiply"
-# This function will take 2 arguments
-# We could write it better by making the user enter "integer" values
-# Because if we input "strings", it will "glue" the text together
+# FUNCTION multiply(DECALRE number1: INTEGER, DECLARE number2: INTEGER)
 def multiply(number1, number2):
 
     # Multiplies the 2 numbers together
+    # DECLARE result: INTEGER
     result = number1 * number2
 
     # It will output the result of the multiplication
@@ -309,7 +297,7 @@ def multiply(number1, number2):
 
 # Calling the function and passing 2 values
 print()
-print("Calling Function | Note: Will NOT Display")
+print("Calling Function | Note: Will NOT Display Anything!")
 print()
 
 multiply(5, 5)
@@ -334,7 +322,6 @@ times_12_90 = multiply(12, 90)
 # Display the answer
 print()
 print(times_12_90)
-
 print()
 
 print("12 times 90 is: " + str(times_12_90))
@@ -350,9 +337,10 @@ The title I think is simple enough to understand. Like what can I say: It's just
 
 # Functions / Procedures
 
+# DECLARE ARRAY array: INTEGER
 array = []
 
-# Function with identifier name will "display" our array.
+# FUNCTION display()
 def display():
 
     # If there is nothing in the array
@@ -364,31 +352,35 @@ def display():
 
     else:
 
+        # DECLARE x: INTEGER
         # If there is something in the array
         for x in array:
 
             # Prints values inside array on separate lines
             print(x)
 
-# Function with idenfier name "main" that will allow us to use the program
+# FUNCTION main()
 def main():
 
-    # Calling Function "display"
+    # Calling Function `display`
     display()
 
-    # Exception Handling - Will Explain Later; It's the simplest thing
+    # Exception Handling
     try:
 
+        # DECLARE array_size: INTEGER
         # Asking the user to enter size of array
         array_size = int(input("Please Enter Size Of Array: "))
 
+        # DECLARE i: INTEGER
         # Asking the user to enter data into array of his specific size
         for i in range(array_size):
 
+            # DECALRE user_input: INTEGER
             # Prompts user to enter value
             user_input = int(input("Please Enter A Value: "))
 
-            # "Appends" data to array
+            # Appends data to array
             array.append(user_input)
 
     except ValueError:
@@ -399,12 +391,12 @@ def main():
 
     print()
 
-    # Calling Function "display" Again to see changes
+    # Calling Function `display` Again to see changes
     display()
 
     print()
 
-# Calling Main Function
+# Calling Main Function into `main` Program
 main()
 
 ```
@@ -422,7 +414,7 @@ What can I say about it, see yourself, the code is easy enough for a 2 year old 
 
 # Displaying An Array
 
-# Function with identifier name "display_anime" which will display array "anime"
+# FUNCTION
 def display_anime():
 
     # If array is empty
@@ -434,6 +426,7 @@ def display_anime():
 
     else:
 
+		# DECLARE x: INTEGER
         for x in anime:  
 
             # Outputs the value of array on separate lines
@@ -449,19 +442,22 @@ This [[Python Data View#Sorting Algorithms| sorting algorithm]] will sort an arr
 
 # Insertion Sort
 
-# Function with identifier name "insertion_sort"
-# It will take 1 argument, i.e our array
+# FUNCTION insertion_sort(DECLARE ARRARY array: INTEGER)
 def insertion_sort(array):
 
+    # DECLARE length_array: INTEGER
     # Calculate length of array
     length_array = len(array)
 
+    # DECLARE i: INTEGER
     # "for" loop that starts at index 1 instead of 0
     for i in range(1, length_array):
 
         # Values at address "i"
+        # DECLARE values: INTEGER
         values = array[i]
 
+        # DECLARE j: INTEGER
         # Values to the left of "i" (  one before "i")
         j = i - 1
 
@@ -482,21 +478,21 @@ def insertion_sort(array):
 
 ## Example 3: Bubble Sort
 
-This is another [[Python Data View#Sorting Algorithms| sorting algorithm]], it is also simple, but *I* think it works better compared to [[Functions and Procedures - Python#Example 2 Insertion Sort | insertion sort]]
+This is another [[Python Data View#Sorting Algorithms| sorting algorithm]], it is also simple. Nevertheless, this one's is **worst** than [[Functions and Procedures - Python#Example 2 Insertion Sort | insertion sort]].
 
 ```python
 
 # Bubble Sort
 
-# We have to pass the array into the procedure/function
-# Let our array be called "array" 
+# FUNCTION bubblesort_optimised(DECLARE ARRAY array: INTEGER)
 def bubblesort_optimised(array):
 
+	# DECLARE update: BOOLEAN
 	# We will have some other variables
 	# "update" will check if the value has moved from original place
     update = True
 
-	# "swaps" will keep track of the number of times that value has been swapped
+	# DECLARE swaps: INTEGER
     swaps = 0
 
 	# Conditin to enter while loop
@@ -505,14 +501,17 @@ def bubblesort_optimised(array):
 
         update = False
 
+		# DECLARE x: INTEGER
 		# Number of times it will sort the array
         for x in range(0, len(array) - 1):
 
+			# DECLARE y: INTEGER
 			# Checks every value in array
             for y in range(0, len(array) - 1):
 
                 if array[y] > array[y +1]:
 
+					# DECLARE temp: INTEGER
 					# Swapping part of algorithm
                     temp = array[y]
                     array[y] = array[y + 1]
@@ -520,6 +519,7 @@ def bubblesort_optimised(array):
                     
                     swaps += 1
                     update =True
+                    
     # This line of code below is NOT necessary to use, as it will still sort the array
     return array, swaps
 ```
@@ -532,11 +532,10 @@ def bubblesort_optimised(array):
 
 # Linear Search Function
 
-# Function with identifier name "linear_search"
-# 2 "Arguments" need to be passed in function
-# These arguments are: 1. Array and 2. Variable that hold the value to be searched
+# FUNCTION linear_search(DECLARE ARRAY array: INTEGER, DECLARE value_to_be_searched: INTEGER)
 def linear_search(array, value_to_be_searched):
 
+	# DECLARE i: INTEGER
 	# Stepping into array ( from 0 to end/length of array )
 	for i in range(0, len(array)):
 
@@ -553,15 +552,13 @@ def linear_search(array, value_to_be_searched):
 
 ## Example 5: Binary Search
 
-This [[Python Data View#Searching Algorithms| searching algorithm]] does need the array to be sorted before applying this function ( "*binary search*" ).
+This [[Python Data View#Searching Algorithms| searching algorithm]] needs the array to be **sorted** in order to work.
 
 ```python
 
 # Binary Search
 
-# We need to pass 2 arguments inside the function
-# We need to pass the array - In this case our array is called "array"
-# We need to pass our search value - In this case our array is called "user_find"
+# FUNCTION binary_search(DECLARE array: INTEGER, DECLARE user_find: INTEGER)
 def binary_search(array, user_find):
 
     # Another function what will perform the calculations for the binary search
@@ -570,17 +567,14 @@ def binary_search(array, user_find):
     # length of array - 1
     # search value ( user_find )
     return binary_search_calc(array, 0, len(array) - 1, user_find)
-  
-# Our function "binary_search_calc()" will perform the calculations
-# In this function we need to pass some values for;
-# array
-# length of array - 1
-# search value ( user_find )
+
+# DECLARE binary_search_calc(DECLARE ARRAY array: INTEGER, DECLARE lower: INTEGER, DECLARE upper: INTEGER, DECLARE user_find: INTEGER)
 def binary_search_calc(array, lower, upper, user_find):
 
     # Condition to enter loop ( need to learn theory to understand why )
     while lower <= upper:
 
+        # DECLARE mid: INTEGER
         # Calculating our mid value
         mid = (lower + upper) // 2
 
@@ -613,34 +607,40 @@ This function will allow the user to remove a value from an array
 
 # Removing selected value in array
 
+# FUNCTION remove_values
 def remove_values():
 
+    # DECLARE top: INTEGER
     # "top" calculates the length of array
     top = len(array)
 
+    # DECLARE array_length: INTEGER
     # "array_length" calculates the length of array
     array_length = len(array)
 
+    # DECLARE found: BOOLEAN
     # "found" will become "True" if value has been found
     found = False
 
     # Exception Handling
     try:
 
+        # DECLARE user_remove: INTEGER
         # Ask the user to enter a value to remove
         user_remove = int(input("Please Enter A Value To Remove: "))
 
     # If user enters a value other than integer values
     except ValueError:
 
-        # Outputs appropriate message
         print()
+        # Outputs appropriate message
         print("Please Enter Integer Values Only!")
         print()
 
     # Conditions to enter loop
     while not found:
 
+        # DECLARE count: INTEGER
         # Checks the value at every index ( address ) of array
         for count in range(array_length):
 
@@ -664,7 +664,7 @@ def remove_values():
 
         # Outputs appropriate message
         print()
-        print(str(user_remove) + " has not been found!")
+        print(f"{user_remove} has not been found!")
 
 ```
 

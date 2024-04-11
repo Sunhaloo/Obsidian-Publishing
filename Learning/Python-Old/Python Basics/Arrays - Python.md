@@ -22,7 +22,7 @@ Status: Completed
 ## One Dimensional Arrays
 
 - [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays ( 1D-Arrays )]]
-	- [[Arrays - Python#Creating A 1D-Array | Creating An  1D-Array]]
+	- [[Arrays - Python#Creating 1D-Arrays | Creating 1D-Arrays]]
 	- [[Arrays - Python#Displaying 1D-Array | Displaying 1D-Array]]
 		- [[Arrays - Python#Displaying Empty Arrays | Displaying Empty 1D-Arrays]]
 		- [[Arrays - Python#Displaying Non-Empty Arrays | Displaying Non-Empty 1D-Arrays]]
@@ -62,7 +62,7 @@ Status: Completed
 
 # What is an Array/List?
 
-An *array* or *list* is a data structure that can store **values** of the **same** *data type*
+An *array* or *list* is a data structure that can store **values** of the **same** *data type*.
 
 # What can Arrays Do?
 
@@ -119,33 +119,25 @@ There are many types of arrays:
 
 **Simplest** form of an array, in which *elements* are stored linearly. These *elements* can be accessed by specifying the **index value** ( *address* ) of each element.
 
-# Creating A 1D-Array
-
-This code will create arrays with identifier name:
-
-- "cars"
-- "numbers"
-- "float_numbers"
+# Creating 1D-Arrays
 
 ```python
 
 # Creating 1D-Arrays
 
-# DECLARE cars: ARRAY[0:8] OF STRING
+# DECLARE ARRAY cars[8]: STRING
 cars = ["Rx-7", "Supra", "AE-86","GT-86", "GTR-R32", "McLaren-P1", "Porsche-918-Spyder", "Koenisegg-Regera-R", "Lancer-MR9"]
 
-# DECLARE numbers: ARRAY[0:4] OF INTEGER
+# DECLARE ARRAY numbers[4]: INTEGER
 numbers = [1, 2, 3, 4, 5]
 
-# DECLARE float_numbers: ARRAY[0:4] OF REAL
+# DECLARE ARRAY float_numbers[4]: REAL
 float_numbers = [1.2, 2.3, 3.4, 4.5, 5.6]
 
 ```
 
 >[!note]
->This code will **not** *display* anything!
->
->Nevertheless, we could check the "type" ( data type ) of the arrays about by using the "type" function:
+>We could check the "type" ( data type ) of the arrays about by using the "type" function:
 >```python
 print(type(car))
 print(type(numbers))
@@ -163,19 +155,18 @@ What if we want to display the array. Thus, there are several methods that we co
 
 # Displaying Empty 1D-Arrays
 
-# DECLARE array: ARRAY[0:5] OF INTEGER
+# DECLARE ARRAY num[5]: INTEGER
 num = [None for x in range(6)]
 
-# DECLARE cars: ARRAY[0:3] OF STRING
+# DECLARE ARRAY cars[3]: STRING
 cars = [0 for i in range(4)]
 
-# DECLARE bikes: ARRAY[0:1] OF STRING
+# DECLARE ARRAY bikes[1]: STRING
 bikes = ["Kawasaki H2R", "Panigale V4R"]
 
 # Method 1:
 
 # Displaying Arrays
-
 print()
 print(num)
 print()
@@ -191,6 +182,7 @@ if not cars:
     print("Array is EMPTY!")
     print()
 
+# If array is not empty
 else:
 
     print(cars)
@@ -203,6 +195,7 @@ if not bikes:
     print("Array is EMPTY!")
     print()
 
+# If array is not empty
 else:
 
     print(bikes)
@@ -221,13 +214,13 @@ print()
 
 # Displaying 1D-Array
 
-# DECLARE cars: ARRAY[0:8] OF STRING
+# DECLARE ARRAY cars[8]: STRING
 cars = ["Rx-7", "Supra", "AE-86","GT-86", "GTR-R32", "McLaren-P1", "Porsche-918-Spyder", "Koenisegg-Regera-R", "Lancer-MR9"]
 
-# DECLARE numbers: ARRAY[0:4] OF INTEGER
+# DECLARE ARRAY numbers[4]: INTEGER
 numbers = [1, 2, 3, 4, 5]
 
-# DECLARE float_numbers: ARRAY[0:4] OF REAL
+# DECLARE ARRAY float_numbers[4]: REAL
 float_numbers = [1.2, 2.3, 3.4, 4.5, 5.6]
 
 print()
@@ -235,7 +228,6 @@ print()
 # Method 1:
 
 # Display with "[]"
-
 print(float_numbers)
   
 print()
@@ -245,7 +237,6 @@ print()
 # Method 2:
 
 # Displaying on Separate Lines:
-
 for x in cars:
 
     print(x)
@@ -257,7 +248,6 @@ print()
 # Method 3:
 
 # Displaying at Specific Locations:
-
 print("Number 1: " + str(numbers[0]))
 print("Number 1: " + str(numbers[2]))
 print("Number 1: " + str(numbers[4]))
@@ -270,13 +260,13 @@ print("Number 1: " + str(numbers[4]))
 
 # Displaying Arrays with Index
 
-# DECLARE motocycles: ARRAY[2] OF STRING
+# DECALRE ARRAY motocycles[2]: STRING
 motocycles = ["Kawsaki H2R", "Ducati Panigale V4R", "Yamaha M1"]
 
-# DECLARE numbers: ARRAY[4] OF INTEGER
+# DECLARE ARRAY numbers[4]: INTEGER
 numbers = [1, 2, 3, 4, 5]
 
-# DECLARE Boolean: ARRAY[1] OF BOOLEAN
+# DECLARE ARRAY Boolean[1]: BOOLEAN
 Boolean = [True, False]
 
 print()
@@ -284,6 +274,8 @@ print("Boolean Values in Array")
 print()
 
 # Method 1: No Index
+
+# DECLARE x: INTEGER
 for x in Boolean:
 
     print(x)
@@ -294,21 +286,23 @@ print()
 
 # Method 2: Index outside array
 
-# DECLARE index: OF INTEGER
+# DECLARE index: INTEGER
 index = 0
 
+# DECLARE y: INTEGER
 for y in motocycles:
 
     print(y, index)
+    # Increase `index` by '1'
     index += 1
 
 print()
 print("Displaying Numbers")
 print()
 
-# Method 3: Index inside array
+# Method 3: Index inside array ( Most Used )
 for index, numbers in enumerate(numbers, start = 0):
-    print(f"Index: {index} => {numbers}")
+    print(f"Index: {index} => Value = {numbers}")
 
 ```
 
@@ -317,22 +311,19 @@ for index, numbers in enumerate(numbers, start = 0):
 ## Inserting Elements in 1D-Array
 
 >[!warning]
->The "*.insert()*" function will add elements at **specific locations**
+>The `.insert()` function will add elements at **specific locations**
 
->[!info]
->To "insert" elements into array; we use:
+>[!tip] Usage
+>To "*insert*" elements into array; we use:
 >```python
 array.insert(index, value)
-># Where:
-># "array" is our array
-># "index" is the **index** at which element will be added
-># "value" is our **item** to add
+>```
 
 ```python
 
 # Inserting Elements at Specific Location
 
-# DECLARE f1_drivers: ARRAY[] OF STRING
+# DECLARE ARRAY f1_drivers[3]: STRING
 f1_drivers = ["Senna", "Hamilton", "Leclerc", "Bottas"]
 
 # Displaying Array
@@ -353,17 +344,15 @@ print()
 ## Appending Elements into 1D-Array
 
 >[!warning]
->The ".append()" function will add elements at the **end** of an array
+>The `.append()` function will add elements at the **end** of an array
 
 There are several methods we could go about. Below you will find these methods.
 
->[!info]
+>[!tip] Usage
 >To "append" elements into array; we use:
 >```python
 array.append(element)
-># Where:
-># "array" is our array
-># "element" is the value being added; it is passed inside the append function
+>```
 
 ### Method 1: Adding the element when writing the code.
 
@@ -371,11 +360,7 @@ array.append(element)
 
 # Appending Elements inside Code
 
-# DECLARE array: ARRAY[] OF INTEGER
-
-# Array with identifier name "array" with
-# 1. No Values
-# 2. Size = "Infinite" when we look at python code
+# DECLARE ARRAY array[]: INTEGER
 array = []
 
 # Displaying Array
@@ -388,7 +373,7 @@ print()
 array.append(1)
 print()
 
-# Display "array" After appending data
+# Display `array` After appending data
 print(array)
 
 ```
@@ -401,16 +386,17 @@ print(array)
 
 # Users Appends Elements into Array
 
-# DECLARE name: ARRAY[0:2] OF STRING
+# DECLARE ARRAY name[2]: STRING
 name = []
 
 print()
 
-# Appending Elements in "range"
+# DECLARE x: INTEGER
 for x in range(3):
 
-    # Ask User to enter a "string"
-    user_input = str(input("Please Enter A Name: "))
+    # DECLARE user_input: STRING
+    # Ask User to enter a name
+    user_input = input("Please Enter A Name: ")
     # Appends user input into "name"
     name.append(user_input)
 
@@ -418,6 +404,7 @@ print()
 print("Displaying Array After User Input")
 print()
 
+# Displaying result after appending into `name`
 print(name)
 
 print()
@@ -430,25 +417,29 @@ print()
 
 # Users Appends Elements into Array
 
-# DECLARE age: ARRAY[array_size] OF INTEGER
+# DECLARE array_size: INTEGER
+# Ask user to enter size of array
+array_size = int(input("Please Enter Size Of Array: "))
+
+# DECLARE ARRAY age[array_size]: INTEGER
 age = []
 
 print()
 
-# Ask user to enter size of array
-array_size = int(input("Please Enter Size Of Array: "))
-
+# DECLARE x: INTEGER
 # Appending Elements in "range ( array_size )"
 for x in range(array_size):
 
-    # Ask the user to enter a value ( "integer" )
-    user_value = int(input("Please Enter Age: "))
-    age.append(user_value)
+    # Ask the user to enter a value / age
+    # DECLARE user_age: INTEGER
+     = int(input("Please Enter Age: "))
+    age.append(user_age)
 
 print()
 print("Displaying Array After User Input")
 print()
 
+# DECLARE y: INTEGER
 # Displaying Elements On Separate Lines
 for y in age:
 
@@ -474,11 +465,10 @@ In the code below, the user will be able to:
 
 # Array does not have a size
 
-# Array with identifier name "list"
-# Array with no specific size
+# DECLARE ARRAY list: INTEGER
 list = []
 
-# Function "display" will allow us to display the array
+# FUNCTION display()
 def display():
 
     # If array is empty
@@ -491,6 +481,7 @@ def display():
     # If array is NOT empty
     else:
 
+        # DECLARE x: INTEGER
         # Print all values of array in separate lines
         for x in list:
 
@@ -499,7 +490,7 @@ def display():
 
         print()
 
-# Calling Function "display"
+# Calling Function `display` into `main` Program
 display()
 
 # Telling the user how to exit "while" loop
@@ -514,6 +505,7 @@ while True:
     # Exception Handling
     try:
 
+        # DECLARE user_input: INTEGER
         # Ask the user to enter a value in array "list"
         user_input = int(input("Please Enter A Value: "))
 
@@ -533,15 +525,15 @@ while True:
     # Or user want to exit the "while" loop
     except ValueError:
 
-        # Output appropriate message
         print()
+        # Output appropriate message
         print("Stopping Input")
         print()
         
         # Exits the program
         break
 
-# Calling function "display" to show changes
+# Calling function `display` into `main` to show changes
 display()
 
 ```
@@ -554,15 +546,15 @@ It is just the same as above, but now the array will have a **specific size**.
 
 # Array with specific size
 
-# Array with identifier name "list"
-# Array with no specific size
+# DECLARE ARRAY list: INTEGER
 list = []
 
+# DECLARE array_size: INTEGER
 # Variable to keep track of size of array
 # In this case the array size is 5
 array_size = 5
 
-# Function "display" will allow us to display the array
+# FUNCTION display()
 def display():
 
     # If array is empty
@@ -577,6 +569,7 @@ def display():
 
         print()
 
+        # DECLARE x: INTEGER
         # Print all values of array in separate lines
         for x in list:
 
@@ -585,7 +578,7 @@ def display():
 
         print()
 
-# Calling Function "display"
+# Calling Function `display` into `main` Program
 display()
 
 # Telling the user how to exit "while" loop
@@ -600,6 +593,7 @@ while len(list) < array_size:
     # Exception Handling
     try:
 
+        # DECLARE user_input: INTEGER
         # Ask the user to enter a value in array "list"
         user_input = int(input("Please Enter A Value: "))
 
@@ -627,7 +621,7 @@ while len(list) < array_size:
         # Exits the program
         break
 
-# Calling function "display" to show changes
+# Calling function `display` to show changes
 display()
 
 ```
@@ -641,21 +635,19 @@ display()
 ## Popping Element From 1D-Array
 
 >[!warning]
->The ".pop()" function will remove the last element
+>The `.pop()` function will remove the last element
 
->[!info]
+>[!tip] Usage
 >To "pop" an element from the array; we use:
 >```python
 >array.pop()
-># Where:
-># "array" is our array
-># NOTE: No values are passed into the function as it need remove the last item... Obviously!
+>```
 
 ```python
 
 # "Popping" Element From Array
 
-# DECLARE food: ARRAY[] OF STRING
+# DECLARE ARRAY food[3]: STRING
 food = ["Briani", "Sushi", "Pizza", "Bougir"]
 
 # Displaying Array
@@ -675,27 +667,24 @@ print()
 
 >[!note] We can remove any element
 >We can simply add the **index** of an element inside the function `pop()` like so:
->`pop(x)`, Where `x` is the **index**!
+>`pop(x)`; where `x` is the **index**!
 
 ## Removing Element From 1D-Array
 
 >[!warning]
->The ".remove()" function will remove elements found in an array at any location
+>The `.remove()` function will remove elements found in an array at any location
 
->[!info]
+>[!tip] Usage
 >To "remove" an element; we use:
 >```python
 >array.remove(element)
-># Where:
-># "array" is our array
-># "element" is the item need to be removed
-># NOTE: Our "element" can be a "string"/"integer"
+>```
 
 ```python
 
 # Removing Element From Array
 
-# DECLARE food: ARRAY[] OF STRING
+# DECLARE ARRAY food[3]: STRING
 food = ["Briani", "Sushi", "Pizza", "Bougir"]
 
 # Displaying Array
@@ -706,7 +695,7 @@ print(food)
 
 print()
 
-# Removing Last Element
+# Removing Element "Briani"
 food.remove("Briani")
 
 # Displaying Array After Changes
@@ -721,10 +710,11 @@ print()
 We have another way to delete an element at a **specific** *index*. This is done by using the `del` 
 "*function*".
 
->[!info]
->To "del" an element from the array; we use:
+>[!tip] Usage
+>To `del` an element from the array; we use:
 >```python
 >del array_name[index]
+>```
 
 >Its not really a function!
 
@@ -734,7 +724,7 @@ Check out the code below $\downarrow$
 
 # Deleting Elements From Array
 
-# DECLARE ARRAY numbers: INTEGER
+# DECLARE ARRAY numbers[4]: INTEGER
 numbers = [1, 2, 3, 4, 5]
 
 # Display Original Array
@@ -767,20 +757,19 @@ print()
 ## Clearing A 1D-Array
 
 >[!warning]
->The "*.clear()*" will remove **all** elements from array
+>The `.clear()` will remove **all** elements from array
 
->[!info]
+>[!tip] Usage
 >To "clear" an array; we use:
 >```python
 >array.clear()
-># Where:
-># "array" is our array
+>```
 
 ```python
 
 # Clearing An Array
 
-# DECLARE countries: ARRAY[0:2] OF STRING
+# DECLARE ARRAY countries[2]: STRING
 countries = ["America", "England", "Japan"]
 
 # Displaying Array
@@ -800,19 +789,25 @@ print()
 
 # Copy Contents of One 1D-Array to Another 1D-Array
 
+>[!tip] Usage
+>To "copy" the **contents** of an array; we use:
+>```python
+>array.copy()
+>```
+
 To copy the contents of one array to another; we need to use the function `copy()`. Check below $\downarrow$ for a sample code.
 
 ```python
 
-# Our Arrays
-# Array with items / things
+# DECLARE ... ==> This array is fucked
 array_full = [1, 2, 3, "car", 4, "yeet"]
+
+# DECLARE ...
 # Empty Array
 array_empty = []
 
 # Copy contents of `array_full` to `array_empty`
 array_empty = array_full.copy()
-
 
 ```
 
@@ -832,19 +827,13 @@ What I am trying to say is that, we need to use a **coordinate system** ($x,y$) 
 
 The code below will create arrays with the identifier name:
 
-- "*food*"
-- "*cars*"
-
->[!tip] Remember
->"*food*" and "*cars*" are **1D-Arrays**
-
 ## Method 1: Array have indefinite ( $\infty$ ) size
 
 ```python
 
 # Creating 2D-Arrays
 
-# DECLARE food: ARRAY[3, 20] OF STRING
+# DECLARE ARRAY food[3, 20]: OF STRING
 food = [
 
     ["Water", "Soda"],
@@ -858,7 +847,7 @@ print()
 print(food)
 print()
 
-#DECLARE cars: ARRAY[] OF STRING
+# DECLARE ARRAY cars[2, 5]: STRING
 cars = [
 
     ["Pagani", "Koenigsegg"]+
@@ -873,10 +862,6 @@ print()
 
 ```
 
->[!note]
->In **python**, array are kind of *infinite* or does not have a *"size"*.
->Example: "**cars**"
-
 ## Method 2: Array has a definite size
 
 I will be including all examples in a single *code box*
@@ -885,14 +870,15 @@ I will be including all examples in a single *code box*
 
 # Creating 2D-Arrays
 
-# DECLARE Numbers: ARRAY[4: 4] OF STRING
+# DECLARE ARRAY Numbers[4, 4]: STRING
 Numbers = [[0 for x in range(4)] for x in range(4)]
 
-# DECLARE analysis: ARRAY[25: 2] OF INTEGER
-cols = 2
+# DECLARE rows: INTEGER
 rows = 25
+# DECLARE cols: INTEGER
+cols = 2
 
-# Creating array "analysis"
+# DECLARE ARRAY analysis[25, 2]: INTEGER
 analysis = [[None for y in range(cols)] for y in range(rows)]
 
 ```
@@ -902,7 +888,7 @@ analysis = [[None for y in range(cols)] for y in range(rows)]
 
 >[!warning]
 >For example if we write
->"*ARRAY[25:2]*"; this means that:
+>`ARRAY[25, 2]`; this means that:
 >- The array "ARRAY" has 25 **rows** and 2 **cols**
 >
 >But in Python, it is the reversed; see example above $\uparrow$ for array "*analysis*"
@@ -919,7 +905,7 @@ There are several way that we can outputs the elements of a 2D-Array
 
 # Displaying Empty 2D-Array
 
-# DECLARE planes: ARRAY(2, 3) OF STRING
+# DECLARE ARRAY planes[2, 3]: STRING
 planes = [
 
     [],
@@ -927,7 +913,7 @@ planes = [
 
 ]
 
-# DECLARE road_names: ARRAY(3,2) OF STRING
+# DECLARE ARRAY road_names[3, 2]: STRING
 road_names = []
 
 # Displaying Array "planes"
@@ -935,15 +921,14 @@ print()
 print(planes)
 print()
 
-# Displaying Array "road_names"
-# Outputs "EMPTY" if array is empty
-# If "road_names" is empty
+# If array is empty
 if not road_names:
 
     #Outputs "EMPTY"
     print("EMPTY")
     print()
 
+# If array in not empty
 else:
 
     # Prints Array "road_names"
@@ -956,6 +941,7 @@ else:
 >Do not put **[]** inside an *empty* 2D-Array
 >**[]** $\rightarrow$ counts as an element
 >Example: "**road_names**"
+>>Why did I write this?
 
 ## Method 2: Array have a set size
 
@@ -965,13 +951,13 @@ I will be using the same example from [[Arrays - Python#Method 2 Array has a def
 
 # Displaying Empty Arrays
 
-# DECLARE Numbers: ARRAY[4: 4] OF STRING
+# DECLARE ARRAY Numbers[4, 4]: STRING
 Numbers = [[0 for x in range(4)] for x in range(4)]
 
-# Diplaying 2D-Array "Numbers"
-# Function with identifier name "display_numbers"
+# FUNCTION display_numbers()
 def display_numbers():
 
+    # DECLARE i: INTEGER
     for i in Numbers:
 
         # Displays values ( each 1D-Array ) of array "Numbers" on separate lines
@@ -979,17 +965,19 @@ def display_numbers():
 
     print()
 
-# DECLARE analysis: ARRAY[25: 2] OF INTEGER
-cols = 2
+# DECLARE rows: INTEGER
 rows = 25
+# DECLARE cols: INTEGER
+cols = 2
 
-# Creating array "analysis"
+# DECLARE ARRAY analysis[25, 2]: INTEGER
 analysis = [[None for y in range(cols)] for y in range(rows)]
 
-# Making a function to display array "analysis"
+# FUNCTION display_anal()
 # Name plays an important part ( remember boys ... and girls )
 def display_anal():
 
+    # DECLARE j: INTEGER
     for j in analysis:
 
         # Displays values ( each 1D-Array ) of array "analysis" on separate lines
@@ -1003,6 +991,7 @@ print("Example 1:")
 print()
 print("Displaying array Numbers!")
 
+# Calling Function `display_numbers` to `main` Program
 display_numbers()
 
 print()
@@ -1010,6 +999,7 @@ print("Example 2: I recommend using this one!")
 print()
 print("Displaying array analysis")
 
+# Calling Function `display_anal` to `main` Program
 display_anal()
 
 ```
@@ -1022,7 +1012,7 @@ display_anal()
 
 # Displaying Non-Empty Arrays
 
-# DECLARE smart_phones: ARRAY(2, 1) OF STRING
+# DECLARE ARRAY smart_phones[2, 1]: STRING
 smart_phones = [
 
     ["Pixel"],
@@ -1030,7 +1020,7 @@ smart_phones = [
 
 ]
 
-# DECLARE decimal_numbers: ARRAY(3, 2) OF REAL
+# DECLARE ARRAY decimal_numbers[3, 2]: REAL
 decimal_numbers = [
 
     [5.5, 2.0],
@@ -1039,7 +1029,7 @@ decimal_numbers = [
 
 ]
 
-# DECLARE marks: ARRAY(3, 3) OF INTEGER
+# DECLARE ARRAY marks[3, 3]: INTEGER
 marks = [
 
     [100, 88, 50],
@@ -1060,9 +1050,11 @@ print()
 
 # Method 2: Separate Lines
 
+# DECLARE rows: INTEGER
 # Displaying Array "decimal_numbers"
 for rows in decimal_numbers:
 
+    # DECLARE cols: INTEGER
     for cols in rows:
 
         print(cols)
@@ -1073,7 +1065,7 @@ print()
 
 # Method 3: Specific Location
 
-# Displaying Array "marks"
+# Displaying Array `marks`
 
 # NOTE: Remember Cartesian Map
 print("At Position (3,1): " + str(marks[0][2]))
@@ -1089,26 +1081,24 @@ print()
 ## Inserting Elements into 2D-Array
 
 >[!warning]
->The "*.insert()*" function will add elements at **specific locations**
+>The `.insert()` function will add elements at **specific locations**
 >
->In addition, this is **not** like a *1D-Array*; as it will be very **tricky** to insert an item at a **specific location** using the "*.insert()*" function
+>In addition, this is **not** like a *1D-Array*; as it will be very **tricky** to insert an item at a **specific location** using the `.insert()` function
 >
->Hence, we use **create** a function to use. But we **still use** the "*.insert()*" function
+>Hence, we use **create** a function to use. But we **still use** the `.insert()` function
 
 >[!info]
+>[!tip] Usage
 >To "insert" elements into array; we use:
 >```python
 array.insert(index, value)
-># Where:
-># "array" is our array
-># "index" is the **index** at which element will be added
-># "value" is our **item** to add
+>```
 
 ```python
 
 # Inserting Elements at Specific Location
 
-# DECLARE array: ARRAY[] OF INTEGER
+# DECLARE ARRAY array[2, 2]: INTEGER
 array = [
 
     [1, 2, 3],
@@ -1122,19 +1112,14 @@ print()
 print("Array BEFORE Insering New Item")
 print()
 
+# DECLARE x: INTEGER
 for x in array:
 
     print(x)
 
 print()
 
-# Function with identifier name "insert_elements"
-
-# In this function, we need to pass:
-# array,
-# index_row
-# index_col
-# the value
+# FUNCTION insert_element(DECLARE ARRAY array: INTEGER, DECLARE index_row: INTEGER, DECLARE index_col: INTEGER, DECLARE value_to_insert: INTEGER)
 def insert_element(array, index_row, index_col, value_to_insert):
 
     # We need to check the "index_row" is in range of "array"
@@ -1158,13 +1143,14 @@ def insert_element(array, index_row, index_col, value_to_insert):
         # For "rows"
         print("Invalid row index")
 
-# Calling Function
+# Calling Function into `main` Program
 insert_element(array, 1, 1, 99)
 
 # Displaying "array" after "inserting" element
 print("Array AFTER Inserting New Item")
 print()
 
+# DECLARE x: INTEGER
 for x in array:
 
     print(x)
@@ -1174,17 +1160,15 @@ for x in array:
 ## Appending ( adding ) Elements into 2D-Array
 
 >[!warning]
->The ".append()" function will add elements at the **end** of an array
+>The `.append()` function will add elements at the **end** of an array
 
 There are several methods we could go about. Below you will find these methods.
 
->[!info]
+>[!tip] Usage
 >To "append" elements into array; we use:
 >```python
 array.append(element)
-># Where:
-># "array" is our array
-># "element" is the value being added; it is passed inside the append function
+>```
 
 ### Method 1: Using a **function** to *append* data into the array
 
@@ -1197,7 +1181,7 @@ array.append(element)
 
 # Appending Elements into Array
 
-# DECLARE array: ARRAY[] OF INTEGER
+# DECLARE ARRAY array[2, 2]: INTEGER
 array = [
 
     [1, 2, 3],
@@ -1211,46 +1195,99 @@ print()
 print("Array BEFORE Appending New Item")
 print()
 
+# DECLARE x: INTEGER
 for x in array:
 
     print(x)
 
 print()
 
-# Function with identifier name "append_elements"
-
-# In this function, we need to pass:
-# array,
-# index_row
-# index_col
-# the value
+# FUNCTION append_element(DECLARE ARRAY array: INTEGER, DECLARE row_to_add: INTEGER)
 def append_element(array, row_to_add):
 
     array.append(row_to_add)
 
-# Making a new row
+# DECLARE ARRAY new_row[2]: INTEGER
 new_row = [10, 2, 1]
 
-# Calling Function
+# Calling Function to `main` Program
 append_element(array, new_row)
 
 # Displaying "array" after "appending" element
 print("Array AFTER Appending New Item")
 print()
 
+# DECLARE y: INTEGER
+for y in array:
+
+    print(y)
+
+```
+
+### Method 2: Another way to use the `.append()` function is to let the user enter data into the array.
+
+```python
+
+# User Appends Element into Array
+
+# DECLARE ARRAY array[2, 2]: INTEGER
+array = []
+
+# FUNCTION user_insert_value()
+def user_insert_value():
+
+    # DECALRE num_of_rows: INTEGER
+    # Ask the user to input the number of rows
+    num_of_rows = int(input("Please Enter Number Of Rows: "))
+
+    # DECALRE num_of_cols: INTEGER
+    # Ask the user to input the number of columns
+    num_of_cols = int(input("Please Enter Number Of Columns: "))
+
+    # DECALRE x: INTEGER
+    # Adding data into 2D-Array
+    for x in range(num_of_rows):
+
+        # DECLARE row: INTEGER
+        # Array "row" will keep the values in each row
+        row = []
+
+        # DECLARE y: INTEGER
+        # Steps through the number of columns
+        for y in range(num_of_cols):
+
+            # DECLARE value: INTEGER
+            # Asking the user to enter a value
+            value = int(input("Enter Value At Position [ " + str(x + 1) + " : " +  str(y + 1) + " ] : "))
+
+            # Adds the value to the array "row"
+            row.append(value)
+
+        # Adds the value to to original array "array"
+        array.append(row)
+
+# Calling Function to `main` Program
+user_insert_value()
+
+# Displaying Array
+print()
+print("Array AFTER Adding Values")
+print()
+
+# DECLARE x: INTEGER
 for x in array:
 
     print(x)
 
 ```
 
-#### Method 2.2: Using the "*.append()*" function at specific locations
+#### Method 2.2: Using the `.append()` function at specific locations
 
 ```python
 
 # Appending Elements at Specific Location
 
-# DECLARE array: ARRAY[] OF INTEGER
+# DECLARE ARRAY array[2, 2]: INTEGER
 array = [
 
     [1, 2, 3],
@@ -1264,6 +1301,7 @@ print()
 print("Array BEFORE Insering New Item")
 print()
 
+# DECLARE x: INTEGER
 for x in array:
 
     print(x)
@@ -1278,9 +1316,10 @@ array[0].append(99)
 print()
 print("Array AFTER Appending New Item")
 
-for x in array:
+# DECLARE y: INTEGER
+for y in array:
 
-    print(x)
+    print(y)
 
 ```
 
@@ -1290,76 +1329,24 @@ for x in array:
 >[!note]
 >Some of you might have noticed "*Array[]*" $\Rightarrow$ "*No Size*"
 >This is because the size is... "*dynamic*".
->- I do not know how to explain it but man, it changes the number of columns
-
-### Method 2: Another way to use the "*.append()*" function is to let the user enter data into the array.
-
-```python
-
-# User Appends Element into Array
-
-# DECLARE array: ARRAY[] OF STRING
-array = []
-
-# Function with identifier name "user_insert_value"
-def user_insert_value():
-
-    # Ask the user to input the number of rows
-    num_of_rows = int(input("Please Enter Number Of Rows: "))
-
-    # Ask the user to input the number of columns
-    num_of_cols = int(input("Please Enter Number Of Columns: "))
-
-    # Adding data into 2D-Array
-    for x in range(num_of_rows):
-
-        # Array "row" will keep the values in each row
-        row = []
-
-        # Steps through the number of columns
-        for y in range(num_of_cols):
-
-            # Asking the user to enter a value
-            value = input("Enter Value At Position [ " + str(x + 1) + " : " +  str(y + 1) + " ] : ")
-
-            # Adds the value to the array "row"
-            row.append(value)
-
-        # Adds the value to to original array "array"
-        array.append(row)
-
-# Calling Function
-user_insert_value()
-
-# Displaying Array
-print()
-print("Array AFTER Adding Values")
-print()
-
-for x in array:
-
-    print(x)
-
-```
+>- I do not know how to explain it but you just need to know that it changes the number of columns!
 
 # Deleting Elements From A 2D-Array
 
 ## Popping Elements From 2D-Array
 
 >[!warning]
->The "*.pop()*" function will remove the last element
+>The `.pop()` function will remove the last element
 
->[!info]
+>[!tip] Usage
 >To "*pop*" an element from the array; we use:
 >```python
 >array.pop()
-># Where:
-># "array" is our array
-># NOTE: No values are passed into the function as it needs to remove the last item... Obviously!
+>```
 
 ```python
 
-# DECLARE vehicles: ARRAY[3:2] OF STRING
+# DECLARE ARRAY vehicles[3:2]: STRING
 vehicles = [
 
     ["RX-7", "H2R"],
@@ -1373,6 +1360,7 @@ print()
 print("Array BEFORE Changes")
 print()
 
+# DECLARE x: INTEGER
 for x in vehicles:
 
     print(x)
@@ -1385,9 +1373,10 @@ print()
 print("Array AFTER Changes")
 print()
 
-for x in vehicles:
+# DECLARE y: INTEGER
+for y in vehicles:
 
-    print(x)
+    print(y)
 
 ```
 
@@ -1399,7 +1388,7 @@ for x in vehicles:
 
 # Removing a specific value from entire 2D-Array
 
-# DECLARE array: ARRAY[2:2] OF INTEGER
+# DECLARE ARRAY array[2:2]: INTEGER
 array = [
 
     [1, 2, 3],
@@ -1408,11 +1397,10 @@ array = [
 
 ]
 
-# Function with identifier name "remove_value"
+# FUNCTION remove_value(DECLARE ARRAY array: INTEGER, DECLARE value_to_remove: INTEGER)
 def remove_value(array, value_to_remove):
 
-    # Making Another Array
-
+    # DECLARE updated_array: INTEGER
     # new_array = [[checks each value in "one" row] check for every other row]
     updated_array = [[x for x in row if x != value_to_remove] for row in array]
 
@@ -1424,6 +1412,7 @@ print()
 print("Array BEFORE Removing Value")
 print()
 
+# DECLARE x: INTEGER
 for x in array:
 
     print(x)
@@ -1435,29 +1424,29 @@ print()
 print("Array AFTER Removing Value")
 print()
 
-for x in new_array:
+# DECLARE y: INTEGER
+for y in new_array:
 
-    print(x)
+    print(y)
 
 ```
 
 ## Clearing A 2D-Array
 
 >[!warning]
->The "*.clear()*" will remove **all** elements from array
+>The `.clear()` will remove **all** elements from array
 
 >[!info]
 >To "clear" an array; we use:
 >```python
 >array.clear()
-># Where:
-># "array" is our array
+>```
 
 ```python
 
 # Clearing A 2D-Array
 
-# DECLARE : ARRAY[3:3] OF STRING
+# DECLARE ARRAY brands[3:3]: STRING
 brands = [
 
     ["McDonalds", "KFC", "Pizza Hut"],
@@ -1469,6 +1458,7 @@ brands = [
 
 print()
 
+# DECLARE x: INTEGER
 # Displaying Array "brands"
 for x in brands:
 

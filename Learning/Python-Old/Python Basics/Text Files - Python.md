@@ -9,8 +9,8 @@ Status: Completed
 
 ## List of Contents
 
-- [[Text Files - Python#What is a Text File?| What is a Text File?]]
-- [[Text Files - Python#We need the OS Module| The Need For OS Module]]
+- [[Text Files - Python#What is a Text File? | What is a Text File?]]
+- [[Text Files - Python#We need the OS Module! | The Need For OS Module]]
 - [[Text Files - Python#Path of File| Path of File]]
 	- [[Text Files - Python#Example Path of a File| Example of Path]]
 - [[Text Files - Python#Checking if File / Directory Exists| Checking if File / Directory Exists]]
@@ -46,12 +46,14 @@ Man, look; if you are asking this question, maybe you have never used a computer
 
 I am not here to tell you what a text file is. But I am not that bad of a person. Thus I will give you the Wikipedia link; Click [here](https://en.wikipedia.org/wiki/Text_file) to go to website.
 
-## We need the OS Module
+## We need the OS Module!
 
 To be able to perform certain actions, we need to use the *OS Module*. Find more about module [[Modules - Python| here]]
 
->[!tip] Import the OS Module
->Even if you are *not* using the **OS Module**. I recommend importing it in every code in which you are dealing with text files.
+>[!tip] Usage
+>```python
+>import os
+>```
 
 ## Path of File
 
@@ -63,7 +65,7 @@ Nevertheless, if you do not want to learn it ( "*again why would you not learn i
 - Hit Properties
 - Copy the path
 
-After copying the path you could put it in a variable
+After copying the path you could put it in a variable.
 
 ### Example: Path of a File
 
@@ -74,6 +76,8 @@ After copying the path you could put it in a variable
 path = "C:/Users/F1/Smooth Operator.txt"
 
 ```
+
+>Just learn Bash!
 
 ---
 
@@ -89,8 +93,6 @@ This checks if the **location** of the file is stored.
 ## Example
 
 ```python
-
-# Checking if File / Directory Exists
 
 # Importing Module "os"
 import os
@@ -112,7 +114,7 @@ else:
 
 # Checking if "*path*" is a File or Directory
 
-This is a function in which it will try to find out whether that "*path*" actually a *text file* or *directory*
+This is a function in which it will find out whether that "*path*" actually a *text file* or *directory*.
 
 >[!tip] Usage
 >```python
@@ -125,8 +127,6 @@ This is a function in which it will try to find out whether that "*path*" actual
 ## Example: Checking if a *path* is a File
 
 ```python
-
-# Checking Path 
 
 # Importing Module "os"
 import os
@@ -149,8 +149,6 @@ else:
 ## Example: Checking if a *path* is a Directory
 
 ```python
-
-# Checking Path
 
 # Importing Module "os"
 import os

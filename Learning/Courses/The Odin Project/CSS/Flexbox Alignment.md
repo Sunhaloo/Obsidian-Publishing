@@ -2,6 +2,7 @@
 Alias: CSS Flexbox Alignment
 Tag: CSS, TheOdinProject, basics
 Author: S.Sunhaloo
+Type: CSS Flexbox
 Date: 2023-12-22
 Status: Completed
 ---

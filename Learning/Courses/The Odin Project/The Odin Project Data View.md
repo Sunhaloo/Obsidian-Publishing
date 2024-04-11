@@ -1,6 +1,6 @@
 ---
 Alias: HTML Road Map
-Tag: HTML, TheOdinProject, dataview
+Tag: HTML, CSS, TheOdinProject, dataview
 Author: S.Sunhaloo
 Type: Road-Map
 Date: 2023-11-06
@@ -11,6 +11,17 @@ Date: 2023-11-06
 ## Website
 
 The Odin Project Website: [Click Here](https://theodinproject.com) To go to the website
+
+# The Odin Project Folder
+
+```dataview
+
+TABLE Tag, Status, Type, Date
+FROM "Learning/Courses/The Odin Project"
+WHERE file.name != "The Odin Project Data View"
+SORT file.name ASC
+
+```
 
 # HTML Folder
 

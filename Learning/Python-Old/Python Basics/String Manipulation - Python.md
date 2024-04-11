@@ -33,11 +33,6 @@ Status: Completed
 	- [[String Manipulation - Python#Slice Function | Slice Function]]
 		- [[String Manipulation - Python#Example Slicing like a ninja | Example of Slice Function]]
 
-Probably the most important
-
-- [[String Manipulation - Python#Input Function | Input Function]]
-	- [[String Manipulation - Python#Example "*Casually inputting*" some data into program | Example of Input Function]]
-
 ---
 
 My Links
@@ -62,10 +57,7 @@ First up on our list is the mighty length function. There are many use cases whe
 >```python
 >len(x)
 >```
->Where "*x*" could be:
->- String
->- Constant
->- Array
+
 
 >[!warning]
 >" " ( **space** ) is also a *character*; Thus the function will count "*space*"
@@ -80,76 +72,57 @@ print()
 
 # String Data Types
 
-# DECLARE name: OF STRING
+# DECLARE name: STRING
 name = "Toto Woolff"
 
 # Outputs the length of "name"
-print("Length of Toto Woolff: " + str(len(name)))
+print(f"Length of Toto Woolff: {len(name)}")
 print()
 
-# DECLARE name_2: OF STRING
+# DECLARE name_2: STRING
 name_2 = "Lewis Hamilton"
 
-# DECLARE name_2_length: OF INTEGER
+# DECLARE name_2_length: INTEGER
 name_2_length = len(name_2)
 
 # Outputs the length of "name_2"
-print("Length of Lewis Hamilton: " + str(name_2_length))
+print("Length of Lewis Hamilton: {name_2_length}")
 print()
 
 # Arrays
 
-# DECLARE array: OF ARRAY[0:4] OF INTEGER
+# DECLARE ARRAY array: INTEGER
 array = [1, 2, 3, 4, 5]
 
 # Outputs the length of "array"
-print("Length of array: " + str(len(array)))
+print("Length of array: {len(array)}")
 print()
 
 # Integer Numbers
 
-# DECLARE number: OF INTEGER
+# DECLARE number: INTEGER
 number = 1234
 
 # Output the length of number
-print("Length of number:  " + str(len(str(number))))
+print(f"Length of number:  {len(number)}")
 print()
 
 ```
 
->[!note]
->Look at "*Integer Numbers*"
->The "*len()*" function will find the *length* of **integer numbers**
->Thus, we need to convert the **constant** *number* to *string*
->Then when we *print*, we need to convert the *len()* function to **string** as the data type of *len()* is **integer**
->Hence,
->```python
->str(len(str(number)))
->```
-
 ## Find Function
 
 So this is used to find the **address** of a *specific character* in a **string**.
-Remember that this function does **not** work on *integers* and *floating point numbers*.
+
+>[!note]-
+>Remember that this function does **not** work on *integers* / *floating point numbers* or *arrays*.
 
 >[!tip] Usage
 >```python
 >x.find("y")
 >```
->Where "*x*" is a:
->- String
->
->Where "y" is the:
->- Character that needs to be found ( *its address* )
 
 >[!warning]
->1. " " ( **space** ) is also a *character*; Thus the function can also find "*space*"
->2. The "*find*" function will only accept data of **string** data type
-
->[!note]
->The "*find*" function will **only** take *string* data types
->But it will return an *integer* data type
->This is why in the examples below, you will see that I have converted the "*find*" into **string** in the "*print*" function
+>" " ( **space** ) is also a *character*; Thus the function can also find "*space*"
 
 ### Example: Find the address of characters in these variables
 
@@ -157,27 +130,25 @@ Remember that this function does **not** work on *integers* and *floating point 
 
 # Find Function
 
-# DECLARE F1_Car: OF STRING
+# DECLARE F1_Car: STRING
 F1_Car = "W11"
 
 # Find "W" in "F1_Car"
 print()
 print("Find W in W11")
+print(f"Address: {F1_Car.find("W")}")
 
-print("Address: " + str(F1_Car.find("W")))
-
-# DECLARE name: OF STRING
+# DECLARE name: STRING
 name = "BONO"
 
-# Find "O" in "name"
+# Find "N" in "name"
 find_N = name.find("N")
 
 print()
 print("Find N in BONO")
+print(f"Address: {find_N}")
 
-print("Address: " + str(find_N))
-
-# DECLARE number: OF INTEGER
+# DECLARE number: INTEGER
 number = 1234
 
 # Find "3" in "number"
@@ -185,20 +156,15 @@ number = 1234
 
 print()
 print("Find 3 in 1234")
+print(f"Address: {str(number).find("3")}")
 
-print("Address: " + str(str(number).find("3")))
-
-# DECLARE cash: OF REAL
+# DECLARE cash: REAL
 cash = 100.78
-
-# Convert "cash" into string
-cash_str = str(cash)
 
 # Find "." in "cash.str"
 print()
-print("Find . in 100.78")
-
-print("Address: " + str(cash_str.find(".")))
+print("Find '.' in 100.78")
+print(f"Address: {str(cash).find(".")}")
 
 ```
 
@@ -210,8 +176,6 @@ What does the "*capitalize*" function do? Ohh Yes! It will capitalise **only one
 >```python
 >x.capitalize()
 >```
->Where "*x*" is a:
->- String
 
 ### Example: "*Capitalising*" the **first** letter of some strings
 
@@ -219,24 +183,23 @@ What does the "*capitalize*" function do? Ohh Yes! It will capitalise **only one
 
 # Capitalize Function
 
-# DECLARE name: OF STRING
+# DECLARE name: STRING
 name = "charles"
 
+# DECLARE full_name: STRING
 # Will "capitalise" the first letter of variable "name"
 full_name = name.capitalize()
 
 # Displaying full name
 print()
-# Not need to convert to "string" because it was already a "string"
-print("Full Name: " + full_name)
+print(f"Full Name: {full_name}")
 
-# DECLARE moto: OF STRING
+# DECLARE moto: STRING
 moto = "kawasaki"
 
 # Displaying variable "moto" with capital "k"
 print()
-# Not need to convert to "string" because it was already a "string"
-print("Make: " + moto.capitalize())
+print(f"Make: {moto.capitalize()}")
 
 ```
 
@@ -259,7 +222,7 @@ This function is not like the "*Capitalize*" function. Because this one is not a
 
 # Upper Function
 
-# DECLARE name: OF STRING
+# DECLARE name: STRING
 name = "Carlos Sainz"
 
 # Will "capitalise" the first letter of variable "name"
@@ -267,16 +230,14 @@ cap_name = name.capitalize()
 
 # Displaying capitalise name
 print()
-# Not need to convert to "string" because it was already a "string"
-print("Capitalised Name: " + cap_name)
+print(f"Capitalised Name: {cap_name}")
 
-# DECLARE moto: OF STRING
+# DECLARE moto: STRING
 moto = "kawasaki H2R"
 
 # Displaying the variable "moto" with every letter being CAPITAL letters
 print()
-# Not need to convert to "string" because it was already a "string"
-print("Make + Model: " + moto.upper())
+print(f"Make + Model: {moto.upper()}")
 
 ```
 
@@ -285,8 +246,7 @@ print("Make + Model: " + moto.upper())
 
 ## Lower Function
 
-This will take a "*capital string*" and turns it into a "*un-capital string*" \\
-\\_ _(^-^)_ _/
+This will take an **uppercase** string and turns it into a **lowercase** string.
 
 What else can I say... Nothing!
 
@@ -294,8 +254,6 @@ What else can I say... Nothing!
 >```python
 >x.lower()
 >```
->Where "*x*" is a:
->- String
 
 ### Example: "*Un-capitalising*" a string
 
@@ -303,24 +261,23 @@ What else can I say... Nothing!
 
 # Lower Function
 
-# DECLARE name: OF STRING
+# DECLARE name: STRING
 name = "NICHOLAS LATIFI"
 
-# "Un-capitalising" the variable "name"
+# DECLARE uncap_name: STRING
+# "Lowering" the variable "name"
 uncap_name = name.lower()
 
 # Displaying the varibale "uncap_name"
-# No need to convert to "string" as it is already a "string"
 print()
-print("Name: " + uncap_name)
+print(f"Name: {uncap_name}")
 
-# DECLARE ferrari: OF STRING
+# DECLARE ferrari: STRING
 ferrari = "SHITBOX"
 
-# "Un-capitalising" the variable "ferrari"
 print()
-# Displaying the variable "ferrari"
-print("Ferrari = " + ferrari)
+# "Lowering" and Displaying the variable "ferrari"
+print(f"Ferrari = {ferrai.lower()}")
 
 ```
 
@@ -334,8 +291,6 @@ Basically this is used to check a **string** contains *numbers* or *not*.
 >```python
 >x.isidigit()
 >```
->Where "*x*" is a:
->- String
 
 ### Example: Checking if a *string* is a digit
 
@@ -343,21 +298,22 @@ Basically this is used to check a **string** contains *numbers* or *not*.
 
 # Digit Function
 
-# DECLARE string: OF STRING
+# DECLARE string: STRING
 string = "Not A Number"
 
-# DECLARE number: OF STRING
+# DECLARE number: STRING
 number = "1234"
 
 print()
 
-# Checking if variable "string" is a digit
-# DECLARE is_string_digit: OF STRING
+# DECLARE is_string_digit: STRING
 is_string_digit = string.isdigit()
-print("Is string a Digit: " + str(is_string_digit))
+
+# Checking if variable "string" is a digit
+print(f"Is `string` a Digit? {is_string_digit}")
 
 # Checking if variable "number" is a digit
-print("Is number a Digit: " + str(number.isdigit()))
+print("Is `number` a Digit? {number.isdigit()}")
 
 ```
 
@@ -369,8 +325,6 @@ This function will check if the variable is a "*string*". But there are some exc
 >```python
 >x.isalpha()
 >```
->Where "*x*" is a:
->- String
 
 ### Example: Checking if *string* is an "*alphabet*"
 
@@ -378,38 +332,38 @@ This function will check if the variable is a "*string*". But there are some exc
 
 # Alpha Function
 
-# DECLARE num: OF STRING
+# DECLARE num: STRING
 num = "1234"
 
-# DECLARE is_alpha_num: OF STRING
+# DECLARE is_alpha_num: STRING
 is_alpha_num = num.isalpha()
 
 print()
 
 # Checking if variable "num" is an alphabet
-print("Is num Alphabet: " + str(is_alpha_num))
+print(f"Is `num` Alphabet: {is_alpha_num}")
 
-# DECLARE Ferrari_Principal: OF STRINg
+# DECLARE Ferrari_Principal: STRING
 Ferrari_Principal = "FrédéricVasseur"
 
 # Checking is variable "Ferrari_Principal" is an alphabet
-print("Is Ferrar_Principal: " + str(Ferrari_Principal.isalpha()))
+print(f"Is Ferrar_Principal: {Ferrari_Principal.isalpha()}")
 
 ```
 
 >[!warning] This does not count as "*Alphabet*"
 >```python
-># DECLARE Williams_Principal: OF STRING
+># DECLARE Williams_Principal: STRING
 >Williams_Principal = "James Vowles"
 >
-># DECLARE Alpine_Principal: OF STRING
+># DECLARE Alpine_Principal: STRING
 >Alpine_Pricipal = "Otmar.Szafnauer"
 >
 >print()
 >
 ># These will return "False"
->print("Williams_Principal: " + str(Williams_Principal.isalpha()))
->print("Williams_Principal: " + str(Alpine_Pricipal.isalpha()))
+>print(f"Williams_Principal: {Williams_Principal.isalpha()}")
+>print(f"Williams_Principal: {Alpine_Pricipal.isalpha()}")
 >```
 >These will return the Boolean Value "*False*" becasuse of:
 >1. There are **spaces**
@@ -417,17 +371,12 @@ print("Is Ferrar_Principal: " + str(Ferrari_Principal.isalpha()))
 
 ## Count Function
 
-"*Do you know how to count mate?*" Yes, this function will count a "*letter*" in a **string**.
+"*Do you know how to count mate?*" Yes, this function will return the number of times a *character* has appeared in a **string**.
 
 >[!tip] Usage
 >```python
 >x.count("y")
 >```
->Where "*x*" is a:
->- String
->
->Where "*y*" is a:
->- String
 
 ### Example: Counting a letter in a *string*
 
@@ -435,10 +384,10 @@ print("Is Ferrar_Principal: " + str(Ferrari_Principal.isalpha()))
 
 # Count Function
 
-# DECLARE name: OF STRING
+# DECLARE name: STRING
 name = "Alex Albon"
 
-# DECLARE Find_A: OF STRING
+# DECLARE Find_A: STRING
 Find_A = "A"
 
 print()
@@ -446,8 +395,10 @@ print()
 # Counting how many "A" are there in variable "name"
 print(name.count(Find_A))
 
-# DECLARE Air: OF STRING
+# DECLARE Air: STRING
 Air = "bubble"
+
+print()
 
 # Counting how many "b" are there in variable "Air"
 print(Air.count("b"))
@@ -456,30 +407,19 @@ print(Air.count("b"))
 
 ## Replace Function
 
-This is used to replace a **letter** that is found in a **string**. We will then replace *that* letter with another **letter**.
+This is used to replace a **letter** that is found in a **string**. We will then replace *that* letter with *another* letter.
 
 >[!tip] Usage
 >```python
 >x.count("y", "z")
 >```
->Where "*x*" is a:
->- String
->
->Where "*y*" is a:
->- String
->	- This is the letter found in the string ( needs to be replaced )
->
->Where "*z*" is a:
->- String
->	- This is the letter we will be replacing "*y*" with
-
 ### Example: Replacing some *letter* in some *string*
 
 ```python
 
 # Replace Function
 
-# DECLARE text: OF STRING
+# DECLARE text: STRING
 text = "Hell1 W1rld"
 
 print()
@@ -487,101 +427,66 @@ print()
 # Replacing "1" with "o" in variable "text"
 print(text.replace("1", "o"))
 
-# DECLARE car: OF STRING
+# DECLARE car: STRING
 car = "Rimoc"
+
+print()
 
 # Replacing "o" with "a" in variable "car"
 print(car.replace("o", "a"))
 
 ```
 
-## Input Function
-
-This is probably the most important function. Then why did I place it here; Cause I am dumb!
-
->[!tip] Usage
->```python
->x.input("y")
->```
->Where "*x*" is a:
->- String
->
->Where "*y*" is a:
->- Text Presented to user
-
-### Example: "*Casually inputting*" some data into program
-
-```python
-
-# Input Function
-
-# DECLARE name: OF STRING
-name = input("Please Enter Your Name: ")
-
-# DECLARE car: OF STRING
-car = input("Please Enter Your Favourite Car: ")
-
-print()
-
-# Displaying the Output
-print(name)
-print(car)
-
-```
-
->[!note]
->The **input function** will be of type string.
-
 ## Index Function
 
 This is to "*remove*"; to be able to get certain ( amount ) of letters in a string.
-Basically, we can do things like take a work in the middle of a sentence or even reverse the order of the words
+Basically, we can do things like take a word in the middle of a sentence or even reverse the order of the words
 
 >[!tip] Usage
 >```python
 >x[]
 >x[start:end:step]
 >```
->The **start**: starts with *0* ( **inclusive** )
->The **end**: starts with *1* ( **exclusive** )
->The **step** is the *funky one*
+>- The **start**: starts with *0* ( **inclusive** )
+>- The **end**: starts with *1* ( **exclusive** )
+>- The **step** is the *funky one*.
 
-### Example: Man handling some words
+### Example: "Man-handling" some words
 
 ```python
 
 # Index Function
 
-# DECLARE word: OF STRING
+# DECLARE word: STRING
 word = "Nothing Just Typing"
 
-# DECLARE first_word: Of STRING
+# DECLARE first_word: STRING
 first_word = word[0:8]
 
-# DECLARE last_word: OF STRING
+# DECLARE last_word: STRING
 last_word = word[13:19]
 
-# DECLARE funky_word: OF STRING
+# DECLARE funky_word: STRING
 funky_word = word[::2]
 
-# DECLARE reversed_word: OF STRING
+# DECLARE reversed_word: STRING
 reversed_word = word[::-1]
 
 print()
 
-print("First Word: " + first_word)
+print(f"First Word: {first_word}")
 
 print()
 
-print("Last Word: " + last_word)
+print(f"Last Word: {last_word}")
 
 print()
 
-print("Funky Word: " + funky_word)
+print(f"Funky Word: {funky_word}")
 
 print()
 
-print("Reversed Word: " + reversed_word)
+print(f"Reversed Word: {reversed_word}")
 
 ```
 
@@ -608,19 +513,19 @@ Also, as this is an actual function, we can re-use it somewhere else.
 
 # Slice Function
 
-# DECLARE website: OF STRING
+# DECLARE website: STRING
 website = "https://instagram.com/s.sunhaloo"
 
-# DECLARE car: OF STRING
-car = "Mazda RX-7"
+# DECLARE car: STRING
+car = "7XR-adzaM"
 
-# DECLARE reversed_car: OF STRING
-reversed_car = slice(0, 10)
+# DECLARE sliced_location: STRING
+sliced_location = slice(0, 10)
 
 # Displaying the results
-print("Instagram: " + website[slice(8, -11)])
+print(f"Instagram's URL: {website[slice(8, -11)]}")
 
-print("Car: " + car[reversed_car])
+print(f"Car: {car[sliced_location]}")
 
 ```
 
@@ -628,8 +533,9 @@ print("Car: " + car[reversed_car])
 
 # Socials
 
-- [**Instagram:**](https://www.instagram.com/s.sunhaloo/)
-- [**YouTube:**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**GitHub**](https://www.github.com/Sunhaloo)
 
 ---
 

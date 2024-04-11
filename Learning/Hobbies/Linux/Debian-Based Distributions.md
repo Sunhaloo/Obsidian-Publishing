@@ -1,17 +1,26 @@
 ---
 Alias: Pop_OS! / Ubuntu / Debian Based
-Tag: linux
+Tag: linux, debian
 Date: 2024-02-21
-Status: In-Progress
+Status: HOLD
 ---
 
 ## List of Contents
 
+- [[Debian-Based Distributions#[eza](https://github.com/eza-community/eza) | eza]]
+- [[Debian-Based Distributions#Neovim | Neovim]]
+- [[Debian-Based Distributions#Install `ripgrep` and `fd` | Ripgrep and FD]]
+- [[Debian-Based Distributions#Clone [dotfiles](https //www.github.com/Sunhaloo/dotfiles) Repository | My Dotfiles]]
 
+---
+
+### My Links
+
+- [[Debian-Based Distributions#Socials | Link to Socials]]
 
 # Installing Applications
 
-## [eza]()
+## [eza](https://github.com/eza-community/eza)
 
 >[!tip] Replacement for `ls`
 
@@ -134,3 +143,16 @@ To clone the repository, run the command below $\downarrow$:
 git clone https://www.github.com/dotfiles
 
 ```
+
+---
+
+# Socials
+
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**GitHub**](https://www.github.com/Sunhaloo)
+
+---
+
+S.Sunhaloo
+Thank You!

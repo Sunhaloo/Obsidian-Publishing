@@ -106,7 +106,7 @@ Every html file has a basic structure ( *the `<!DOCTYPE>` thing in VS Code* ). W
 
 If you are using **VS Code** ( "*which you should be using*" ). You can just type `!` followed by <kbd>Tab</kbd> or <kbd>Enter</kbd> it will then give you this:
 
-- I still do not know how to do that in Neovim / NVChad
+- I still do not know how to do that in Neovim ( *need to learn the fucking Lua Snip Plugin*! )
 
 ```html
 
