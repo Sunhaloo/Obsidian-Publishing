@@ -59,8 +59,6 @@ Some errors that usually happens in ( *vanilla* ) Python are:
 ```python
 
 # Exception Handling
-
-# Exception Handling
 try:
 
     # DECLARE numerator: REAL
@@ -91,7 +89,7 @@ def division(numerator, dinominator):
 
         # Displaying the value
         print()
-        print("The answer is: " + str(division))
+        print(f"The answer is: {division}")
         print()
 
     # If user divides by 0
@@ -110,8 +108,6 @@ division(numerator, dinominator)
 ### Example 2: Showing the error
 
 ```python
-
-# Exception Handling
 
 # Exception Handling
 try:
@@ -141,20 +137,19 @@ except NameError as e:
     print("Something went wrong")
     print()
 
-# Function with identifier name "add"
-
-# This function takes 2 arguments
+# FUCNTION add(DECLARE num1: INTEGER, DECLARE num2: INTEGER)
 def add(num1, num2):
 
     # Exception Handling
     try:
 
+        # DECLARE addition: INTEGER
         # Calculation
         addition = num1 + num2
 
         # Displaying the value
         print()
-        print("The answer is: " + str(addition))
+        print(f"The answer is: {addition}")
         print()
 
     # "as e" will output the type of error
@@ -179,11 +174,9 @@ add(num1, num2)
 
 ```
 
-### Example 3: Finally
+### Example 3: `finally`
 
 ```python
-
-# Exception Handling
 
 # Exception Handling
 try:

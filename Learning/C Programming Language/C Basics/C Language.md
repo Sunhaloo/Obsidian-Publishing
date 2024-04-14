@@ -492,6 +492,37 @@ If you try to change it to a different value like `PI = 69` ( *hehe* ). It will 
 >It is a good practice to write you *constants* **UPPERCASE**.
 >Nevertheless, it will work even if you do *not* write in UPPERCASE.
 
+## Multiple Assignment
+
+We knew that from [[Python Language#Multiple Assignments | Python's Multiple Assignment]] we can basically declare and initialise our values in a **single line**. This can also be done in C!
+
+```C
+
+// Include standard input / output header
+#include <stdio.h>
+
+int main()
+
+{
+
+  // DECLARE a, b, c: INTEGER
+  int a, b, c;
+
+  // Variables 'a', 'b' and 'c' will all have the value '1'
+  a = b = c = 1;
+
+  // Output the values of variables
+  printf("\nValue of 'a' = %d", a);
+  printf("\nValue of 'b' = %d", b);
+  printf("\nValue of 'c' = %d", c);
+
+  printf("\n\n");
+
+  return 0;
+
+}
+
+```
 
 # Arithmetic Operations
 
@@ -811,18 +842,21 @@ scanf("%s", name);
 >
 >```
 >As you can see, it completely **ignores**, the "*Bitch*" part!
->>[!tip] Here comes `fgets()` to the Rescue!
->> To make it read **after** the *whitespace* / `<Space>`, check the sample code below $\downarrow$
->> ```C
->> 
->> // Characters / Strings
->> char name[25];
->>
->>printf("Please Enter Your Name: ");
->>fgets(name, 25, stdin);
->> 
->> ```
->> We will be covering this in more details later!
+
+## `fgets()` Function
+
+>[!tip] Here comes `fgets()` to the Rescue!
+> To make it read **after** the *whitespace* / `<Space>`, check the sample code below $\downarrow$
+> ```C
+> 
+> // Characters / Strings
+> char name[25];
+>
+>printf("Please Enter Your Name: ");
+>fgets(name, 25, stdin);
+> 
+> ```
+>Where $1^{st}$ argument passed is variable, $2^{nd}$ argument passed is size of array ( *array of string* ).
 
 ## `getchar()` Function
 

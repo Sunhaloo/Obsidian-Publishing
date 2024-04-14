@@ -35,7 +35,7 @@ The random module ( part of the [[Modules - Python| module]] notes ); is used to
 ## Importing Random Module
 
 >[!warning]
->Here it is **necessary** to import the random module as we will be using it constantly
+>Here it is **necessary** to import the random module to be able to use the following functions below $\downarrow$.
 
 >Not like in [[Text Files - Python]], where even though we imported the OS Module. We did not use it every time.
 
@@ -60,7 +60,6 @@ Just as the title says, this function below will allow you to create a random nu
 
 ```python
 
-# Importing "random" Module
 import random
 
 print()
@@ -95,7 +94,6 @@ This function will allow the user to set a specific number in a range ( **inclus
 
 ```python
 
-# Importing "random" Module
 import random
 
 print()
@@ -124,7 +122,6 @@ This will allow us to display and item *randomly* found **inside** the array.
 
 ```python
 
-# Importing "random" Module
 import random
 
 print()
@@ -150,7 +147,6 @@ This will shuffle / move the contents **inside** an array *randomly*.
 
 ```python
 
-# Importing "random" Module
 import random
 
 print()

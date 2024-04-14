@@ -30,6 +30,25 @@ Think of it like we are **syncing** some files.
 >
 >```
 
+# How to switch Branches
+
+To be able to switch branches. We need to find out if / whether the repository has other branches except from `main` / `master`.
+
+We are going to run the command below $\downarrow$ to check if the repo has any other branches.
+
+```bash
+
+git branch -a
+
+```
+
+Switching to another branch
+
+```bash
+
+git checkout branch_name
+
+```
 
 ---
 

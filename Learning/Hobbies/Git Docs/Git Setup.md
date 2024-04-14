@@ -9,7 +9,7 @@ Status: HOLD
 >[!info] [Git Setup Website](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
 >[!note]
->I might use these shortcuts / acronyms
+>I might use these shortcuts / acronyms:
 >- Repository = Repo
 
 ## List of Contents

@@ -21,8 +21,7 @@ SORT Date ASC
 
 - [[Git Setup]]
 - [[Dotfiles]]
-- [[Change Branch Name]]
-- [[Create New Branch]]
+- [[Git Branches]]
 
 ### Random Git / GitHub Notes
 

@@ -106,34 +106,30 @@ For the moment, I will only write the [[Functions and Procedures - Python|functi
 
 ## Initialising our Queue
 
-For this, we need to make an array and **2** global variables
+For this, we need to make an array and **2** global variables.
 
 ```python
 
-# Queue Program Code
-
-# Array with identifier name "queue"
-# DECLARE queue: ARRAY[] OF INTEGER
+# DECLARE ARRAY queue: INTEGER
 queue = []
 
+# DECLARE front: INTEGER
 # Global variable "front" which will keep track of the last item inserted
-# DECLARE front: OF INTEGER
 global front
 
+# DECLARE rear: INTEGER
 # Global variable "rear" which will keep track of the newest item
-# DECLARE rear: OF INTEGER
 global rear
 
 ```
 
 ## Displaying Array
 
-This is a function that can be called to display the array
+This is a function that can be called to display the array.
 
 ```python
 
-# Queue Program Code
-
+# FUNCTION display_array()
 def display_array():
 
     # If array "queue" is empty
@@ -151,8 +147,8 @@ def display_array():
         print()
 
         # Displays the "front" and "rear" pointer
-        print("Front: " + str(front))
-        print("Rear: " + str(rear))
+        print(f"Front: {front}")
+        print(f"Rear: {rear}")
         print()
 
     # If NOT empty, prints values line by line
@@ -160,6 +156,7 @@ def display_array():
 
         print()
 
+        # DECLARE x: INTEGER
         # Prints elements line by line
         for x in queue:
 
@@ -169,8 +166,8 @@ def display_array():
         rear = 0
 
         print()
-        print("Front: " + str(front))
-        print("Rear: " + str(rear))
+        print(f"Front: {front}")
+        print(f"Rear: {rear}")
         print()
 
 ```
@@ -181,12 +178,11 @@ def display_array():
 
 ## Inserting Values
 
-This function will allow the user to enter value in array
+This function will allow the user to enter value in array.
 
 ```python
 
-# Queue Program Code
-
+# FUNCTION insert_values_insert()
 def insert_values_insert():
 
     # Exception Handling
@@ -198,14 +194,17 @@ def insert_values_insert():
         # Variable "rear" will be set to "-1"
         rear = -1
 
+        # DECLARE queue_size: INTEGER
         # Ask the user to enter size of array
         queue_size = int(input("Please Enter Size Of Array: "))
 
         print()
 
+        # DECLARE i: INTEGER
         # Entering Data into array
         for i in range(queue_size):
 
+            # DECLARE user_input: INTEGER
             # Ask the user to enter a value
             user_input = int(input("Please Enter A Value: "))
 
@@ -238,12 +237,11 @@ def insert_values_insert():
 
 ## Pop Function
 
-This is self-explanatory, though in this case it will be used to remove the **first** item *added*
+This is self-explanatory, though in this case it will be used to remove the **first** item *added*.
 
 ```python
 
-# Queue Program Code
-
+# DECLARE remove_pop_values()
 def remove_pop_values():
 
     # Removes the first value added to array ( "last" value )
@@ -260,13 +258,6 @@ def remove_pop_values():
 >```
 >But this one need to be used with *.append()* function when inserting values into array.
 
->[!info]
->```python
->pop()
->```
->- It can also remove an element at any address by passing the address inside the function
->- But in our use case, we only need to remove the first item, so no need to pass any values inside function.
-
 ## Delete Specific Element
 
 This function will allow a user to:
@@ -281,8 +272,7 @@ This function will allow a user to:
 
 ```python
 
-# Queue Program Code
-
+# FUNCTION  remove_user_values()
 def remove_user_values():
 
     # Exception Handling
@@ -307,8 +297,8 @@ def remove_user_values():
 
             # Displaying Pointers
             print()
-            print("Front: " + str(front))
-            print("Rear: " + str(rear))
+	        print(f"Front: {front}")
+	        print(f"Rear: {rear}")
             print()
 
         # If array "queue" is NOT empty
@@ -320,15 +310,19 @@ def remove_user_values():
             # Rear pointer "rear" becomes "0"
             rear = 0
 
+            # DECLARE array_length: INTEGER
             # Variable "array_length" will hold the length of array "queue"
             array_length = len(queue)
 
+            # DECLARE Found: BOOLEAN
             # Variable "Found" will keep track if the value to remove has been found
             Found = False
 
+            # DECLARE user_remove: INTEGER
             # Ask the user to enter a value to remove
             user_remove = int(input("Please Enter A Value To Remove: "))
 
+            # DECLARE i: INTEGER
             # Steps through the array
             for i in range(array_length):
 
@@ -338,7 +332,7 @@ def remove_user_values():
                     # Removes "user_remove"
                     queue.remove(user_remove)
                     Found = True
-                    print(str(user_remove) + " has been removed!")
+                    print(f"{user_remove} has been removed!")
                     
                     # Variable "front" decreases by 1
                     front -= 1
@@ -351,7 +345,7 @@ def remove_user_values():
 
                 # Output appropriate message
                 print()
-                print(str(user_remove) + " has NOT been found!")
+                print(f"{user_remove} has NOT been found!")
                 print()
 
     # If user inputs any other "character" other than Integer values
@@ -368,8 +362,7 @@ def remove_user_values():
 
 ```python
 
-# Queue Program Code
-
+# FUNCTION remove_value_while()
 def remove_value_while():
 
     # Exception Handling
@@ -394,8 +387,8 @@ def remove_value_while():
 
             # Displaying Pointers
             print()
-            print("Front: " + str(front))
-            print("Rear: " + str(rear))
+	        print(f"Front: {front}")
+	        print(f"Rear: {rear}")
             print()
 
         # If array "queue" is NOT empty
@@ -407,18 +400,22 @@ def remove_value_while():
             # Rear pointer "rear" becomes "0"
             rear = 0
 
+            # DECLARE array_length: INTEGER
             # Variable "array_length" will hold the length of array "queue"
             array_length = len(queue)
 
+            # DECLARE Found: BOOLEAN
             # Variable "Found" will keep track if the value to remove has been found
             Found = False
 
+            # DECLARE user_remove: INTEGER
             # Ask the user to enter a value to remove
             user_remove = int(input("Please Enter A Value To Remove: "))
 
             # Condition to enter array "queue"
             while not Found:
 
+                # DECLARE i: INTEGER
                 # Steps through array
                 for i in range(array_length):
 
@@ -440,8 +437,8 @@ def remove_value_while():
 
             # Displays pointers "front" and "rear"
             print()
-            print("Front: " + str(front))
-            print("Rear: " + str(rear))
+	        print(f"Front: {front}")
+	        print(f"Rear: {rear}")
             print()
 
             # When value had NOT been found
@@ -449,7 +446,7 @@ def remove_value_while():
 
                 # Outputs appropriate message
                 print()
-                print(" has Not been found!")
+                print(f"{user_remove} has Not been found!")
                 print()
 
     # If user inputs any other character other than integer values
@@ -470,45 +467,7 @@ def remove_value_while():
 
 This function will allow us to sort the array in ascending order; why *ascending order you make ask?*; This is because **binary search** requires the array to be sorted ( **ascending order** ).
 
-```python
-
-# Queue Program Code
-
-def bubble_sort():
-
-    # Variable "array_length" will hold the length of array
-    array_length = len(queue)
-
-    # Variable "swaps" will cound how many times, values have been swapped
-    swaps = 0
-
-    # Variable "update" will become "True" if array has been sorted
-    update = True
-
-    # Sorting part of algorithm ( bubble sort optimised )
-    while update == True and array_length > 1:
-
-        # Variable "update" becomes "False" as it need to become "updated" after swap
-        update = False
-
-        for x in range(0, array_length -1):
-            for y in range(0, array_length - 1):
-
-                # Ascending Order
-                # This is because "Binary Search" will need the array in ascending order
-                if queue[y] > queue[y + 1]:
-
-                    # Swapping Part
-                    temp = queue[y]
-                    queue[y] = queue[y + 1]
-                    queue[y + 1] = temp
-                    # "swaps" increments by 1
-
-                    swaps += 1
-                    # "update" becomes "True" as value has been swapped
-                    update = True
-
-```
+![[Bubble Sort - Python#Template - 1D Array]]
 
 ## Insertion Sort
 
@@ -516,40 +475,7 @@ Another method we could have use is ( *drum-roll* ) **insertion sort**. To be ho
 
 Nevertheless, here is the code.
 
-```python
-
-# Queue Program Code
-
-def insertion_sort():
-
-    # Variable "array_length" will hold the length of array
-    array_length = len(queue)
-
-    # Sorting part of algorithms
-    for i in range(1, array_length):
-
-        # Variable "values" will hold the values at address "i"
-        values = queue[i]
-
-        # Variable "j" will hold the value to the left of "values" or "i"
-        j = i - 1
-
-        # Condition to enter "while" loop
-        # The part "queue[j] > values" ( ascending order )
-        # It checks if for example: index 0's value is > than index 1's value
-        # If "yes" then it swaps
-        while j >= 0 and queue[j] > values:
-
-            # Swapping Part
-            queue[j + 1] = queue[j]
-
-            # Decreases "j" by one
-            j -= 1
-
-        # If array already sorted
-        queue[j + 1] = values
-
-```
+![[Insertion Sort - Python#Template 1D-Array]]
 
 ## Linear Search
 
@@ -557,57 +483,20 @@ This function is a nice and **simple** one; like a good old friend that will hel
 
 What else can I say, its just a [[Python Data View#Searching Algorithms| search algorithm]]
 
-```python
-
-# Queue Program Code
-
-def linear_search():
-
-    # Exception Handling
-    try:
-
-        # Variable "array_length" will hold the length of array
-        array_length = len(queue)
-
-        # Ask the user for a value to search
-        search_value = int(input("Please Enter A Value To Search: "))
-
-        # Searching Algorithm
-        # Steps through array "queue"
-        for i in range(0, array_length):
-
-            # If value to be searched has been found
-            if queue[i] == search_value:
-
-                # Returns the address of "search_value"
-                return i
-
-        # Else if NOT found
-        return - 1
-
-    # If user enter any other character except Integer values
-    except ValueError:
-
-        # Outputs appropriate message
-        print()
-        print("Please Enter Integer Values Only!")
-        print()
-
-```
+![[Linear Search - Python#Template 1D-Array]]
 
 ### Displaying the "*result*" of Linear Search
 
 ```python
 
-# Queue Program Code
-
+# Calling Function to `main` Program
 result_linear = linear_search()
 
 # If search value has been found
 if result_linear != -1:
 
     # Output appropriate message
-    print("Value has been found at address: " + str(result_linear))
+    print(f"Value has been found at address: {result_linear}")
 
 # If search value has NOT been found
 else:
@@ -622,52 +511,17 @@ else:
 This is another much better way of searching for an element/item. 
 This is because it cuts the array every time it does not find the "*value*".
 
-```python
-
-# Queue Program Code
-
-def binary_search(queue, search_value):
-
-    return binary_search_calc(queue, 0 , len(queue) -1, search_value)
-
-def binary_search_calc(queue, lower, upper, search_value):
-
-    # Condition to peform binary search
-    while lower <= upper:
-
-        # Calculates the mid-point of array
-        mid = (lower + upper) // 2
-
-        # If "search_value" is at midpoint; we return the address
-        if queue[mid] == search_value:
-
-            return mid
-
-        # If value at mid-point is < than search value; we cut bottom part of array
-        elif queue[mid] < search_value:
-
-            lower = mid + 1
-
-        else:
-
-            # If value at mid-point is > than search value; then we cut upper part of array
-            upper = mid - 1
-
-    # If value has NOT been found
-    return - 1
-
-```
+![[Binary Search - Python#Template - 1D Array ( Non-Recursive )]]
 
 ### Displaying the "*result*" of Binary Search
 
 ```python
 
-# Queue Program Code
 
-# Asking user to enter a value to search
-# Exception Handling
 try:
 
+	# DECLARE search_value: INTEGER
+	# Asking user to enter a value to search
     search_value = int(input("Please Enter A Value To Search: "))
 
 except ValueError:
@@ -676,13 +530,14 @@ except ValueError:
     print("Please Enter Integer Values Only!")
     print()
 
+# Calling Function `main` Program
 result_binary = binary_search(queue, search_value)
 
 if result_binary != -1:
 
     # Output appropriate message
 
-    print("Value has been found at address: " + str(result_binary))
+    print(f"Value has been found at address: {result_binary}")
 
 # If search value has NOT been found
 else:
@@ -700,19 +555,18 @@ else:
 
 ```python
 
-# Queue Program Code
-
-# Queue Program Code
-
-# Array with identifier name "queue"
+# DECLARE ARRAY queue: INTEGER
 queue = []
 
+# DECLARE front: INTEGER
 # Global variable "front" which will keep track of the last item inserted
 global front
 
+# DECLARE rear: INTEGER
 # Global variable "rear" which will keep track of the newest item added
 global rear
 
+# FUNCTION display_array()
 def display_array():
 
     # If array "queue" is empty
@@ -730,8 +584,8 @@ def display_array():
         print()
 
         # Displays the "front" and "rear" pointer
-        print("Front: " + str(front))
-        print("Rear: " + str(rear))
+        print(f"Front: {front}")
+        print(f"Rear: {rear}")
         print()
 
     # If NOT empty, prints values line by line
@@ -739,6 +593,7 @@ def display_array():
 
         print()
 
+        # DECLARE x: INTEGER
         # Prints elements line by line
         for x in queue:
 
@@ -748,10 +603,13 @@ def display_array():
         rear = 0
 
         print()
-        print("Front: " + str(front))
-        print("Rear: " + str(rear))
+
+        print(f"Front: {front}")
+        print(f"Rear: {rear}")
+
         print()
 
+# FUNCTION insert_values_insert()
 def insert_values_insert():
 
     # Exception Handling
@@ -763,14 +621,17 @@ def insert_values_insert():
         # Variable "rear" will be set to "-1"
         rear = -1
 
+        # DECLARE queue_size: INTEGER
         # Ask the user to enter size of array
         queue_size = int(input("Please Enter Size Of Array: "))
 
         print()
 
+        # DECLARE i: INTEGER
         # Entering Data into array
         for i in range(queue_size):
 
+            # DECLARE user_input: INTEGER
             # Ask the user to enter a value
             user_input = int(input("Please Enter A Value: "))
 
@@ -787,11 +648,12 @@ def insert_values_insert():
     # If user inputs any other character other than Integer values
     except ValueError:
 
-        # Outputs appropriate message
         print()
+        # Outputs appropriate message
         print("Please Enter Integer Values Only!")
         print()
 
+# FUNCTION remove_pop_values()
 def remove_pop_values():
 
     # Removes the first value added to array ( "last" value )
@@ -799,6 +661,7 @@ def remove_pop_values():
 
     print()
 
+# DECLARE remove_user_values()
 def remove_user_values():
 
     # Exception Handling
@@ -822,8 +685,8 @@ def remove_user_values():
 
             # Displaying Pointers
             print()
-            print("Front: " + str(front))
-            print("Rear: " + str(rear))
+            print(f"Front: {front}")
+            print(f"Rear: {rear}")
             print()
 
         # If array "queue" is NOT empty
@@ -835,16 +698,20 @@ def remove_user_values():
             # Rear pointer "rear" becomes "0"
             rear = 0
 
+            # DECLARE array_length: INTEGER
             # Variable "array_length" will hold the length of array "queue"
             array_length = len(queue)
 
+            # DECLARE Found: BOOLEAN
             # Variable "Found" will keep track if the value to remove has been found
             Found = False
 
+            # DECLARE user_remove: INTEGER
             # Ask the user to enter a value to remove
             user_remove = int(input("Please Enter A Value To Remove: "))
 
             # Steps through the array
+            # DECLARE i: INTEGER
             for i in range(array_length):
 
                 # If value to remove has been found
@@ -867,18 +734,19 @@ def remove_user_values():
 
                 # Output appropriate message
                 print()
-                print(str(user_remove) + " has NOT been found!")
+                print(f"{user_remove} has NOT been found!")
                 print()
 
     # If user inputs any other "character" other than Integer values
     except ValueError:
 
-        # Outputs appropriate message
 
         print()
+        # Outputs appropriate message
         print("Please Enter Integer Values Only!")
         print()
 
+# FUNCTION remove_value_while()
 def remove_value_while():
 
     # Exception Handling
@@ -902,8 +770,8 @@ def remove_value_while():
 
             # Displaying Pointers
             print()
-            print("Front: " + str(front))
-            print("Rear: " + str(rear))
+            print(f"Front: {front}")
+            print(f"Rear: {rear}")
             print()
 
         # If array "queue" is NOT empty
@@ -915,18 +783,22 @@ def remove_value_while():
             # Rear pointer "rear" becomes "0"
             rear = 0
 
+            # DECLARE array_length: INTEGER
             # Variable "array_length" will hold the length of array "queue"
             array_length = len(queue)
 
+            # DECLARE Found: BOOLEAN
             # Variable "Found" will keep track if the value to remove has been found
             Found = False
 
+            # DECLARE user_remove: INTEGER
             # Ask the user to enter a value to remove
             user_remove = int(input("Please Enter A Value To Remove: "))
 
             # Condition to enter array "queue"
             while not Found:
 
+                # DECLARE i: INTEGER
                 # Steps through array
                 for i in range(array_length):
 
@@ -948,8 +820,8 @@ def remove_value_while():
 
             # Displays pointers "front" and "rear"
             print()
-            print("Front: " + str(front))
-            print("Rear: " + str(rear))
+            print(f"Front: {front}")
+            print(f"Rear: {rear}")
             print()
 
             # When value had NOT been found
@@ -967,14 +839,18 @@ def remove_value_while():
         print("Please Enter Integer Values Only")
         print()
 
+# FUNCTION bubble_sort()
 def bubble_sort():
 
+    # DECLARE array_length: INTEGER
     # Variable "array_length" will hold the length of array
     array_length = len(queue)
 
+    # DECLARE swaps: INTEGER
     # Variable "swaps" will cound how many times, values have been swapped
     swaps = 0
 
+    # DECLARE update: BOOLEAN
     # Variable "update" will become "True" if array has been sorted
     update = True
 
@@ -984,7 +860,10 @@ def bubble_sort():
         # Variable "update" becomes "False" as it need to become "updated" after swap
         update = False
 
+        # DECLARE x: INTEGER
         for x in range(0, array_length -1):
+
+            # DECLARE y: INTEGER
             for y in range(0, array_length - 1):
 
                 # Ascending Order
@@ -992,6 +871,7 @@ def bubble_sort():
                 if queue[y] > queue[y + 1]:
 
                     # Swapping Part
+                    # DECLARE temp: INTEGER
                     temp = queue[y]
                     queue[y] = queue[y + 1]
                     queue[y + 1] = temp
@@ -1002,19 +882,22 @@ def bubble_sort():
                     # "update" becomes "True" as value has been swapped
                     update = True
 
-  
-
+# FUNCTION insertion_sort()
 def insertion_sort():
 
     # Variable "array_length" will hold the length of array
+    # DECLARE array_length: INTEGER
     array_length = len(queue)
 
+    # DECLARE i: INTEGER
     # Sorting part of algorithms
     for i in range(1, array_length):
 
+        # DECLARE values: INTEGER
         # Variable "values" will hold the values at address "i"
         values = queue[i]
 
+        # DECLARE j: INTEGER
         # Variable "j" will hold the value to the left of "values" or "i"
         j = i - 1
 
@@ -1033,17 +916,21 @@ def insertion_sort():
         # If array already sorted
         queue[j + 1] = values
 
+# FUNCTION linear_search()
 def linear_search():
 
     # Exception Handling
     try:
 
+        # DECLARE array_length: INTEGER
         # Variable "array_length" will hold the length of array
         array_length = len(queue)
 
+        # DECLARE search_value: INTEGER
         # Ask the user for a value to search
         search_value = int(input("Please Enter A Value To Search: "))
 
+        # DECLARE i: INTEGER
         # Searching Algorithm
         # Steps through array "queue"
         for i in range(0, array_length):
@@ -1065,15 +952,18 @@ def linear_search():
         print("Please Enter Integer Values Only!")
         print()
 
+# FUNCTION binary_search(DECLARE ARRAY queue: INTEGER, DECLARE search_value: INTEGER)
 def binary_search(queue, search_value):
 
     return binary_search_calc(queue, 0 , len(queue) -1, search_value)
 
+# FUNCTION binary_search_calc(DECLARE ARRAY queue: INTEGER, DECLARE lower: INTEGER, DECLARE upper: INTEGER, DECLARE search_value: INTEGER)
 def binary_search_calc(queue, lower, upper, search_value):
 
     # Condition to peform binary search
     while lower <= upper:
 
+        # DECLARE mid: INTEGER
         # Calculates the mid-point of array
         mid = (lower + upper) // 2
 
@@ -1095,9 +985,7 @@ def binary_search_calc(queue, lower, upper, search_value):
     # If value has NOT been found
     return - 1
 
-  
-
-# Calling Function
+# Calling Functions
 print()
 print("Displaying Array ( INITIALLY )")
 
@@ -1151,7 +1039,7 @@ result_linear = linear_search()
 if result_linear != -1:
 
     # Output appropriate message
-    print("Value has been found at address: " + str(result_linear))
+    print(f"Value has been found at address: {result_linear}")
 
 # If search value has NOT been found
 else:
@@ -1168,6 +1056,7 @@ print()
 # Exception Handling
 try:
 
+    # DECLARE search_value: INTEGER
     search_value = int(input("Please Enter A Value To Search: "))
 
 except ValueError:
@@ -1181,7 +1070,7 @@ result_binary = binary_search(queue, search_value)
 if result_binary != -1:
 
     # Output appropriate message
-    print("Value has been found at address: " + str(result_binary))
+    print(f"Value has been found at address: {result_binary}")
 
 # If search value has NOT been found
 else:
@@ -1199,8 +1088,9 @@ print()
 
 # Socials
 
-- [**Instagram:**](https://www.instagram.com/s.sunhaloo/)
-- [**YouTube:**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**Instagram**](https://www.instagram.com/s.sunhaloo/)
+- [**YouTube**](https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg)
+- [**GitHub**](https://www.github.com/Sunhaloo)
 
 ---
 

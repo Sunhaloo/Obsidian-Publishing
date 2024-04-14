@@ -64,6 +64,7 @@ Think of this like our package manager ( *similar to `apt` or `scoop` or `pacman
 # Notes on Modules
 
 1. [[Random Module - Python]]
+2. [[OS Module - Python]]
 
 
 ---
