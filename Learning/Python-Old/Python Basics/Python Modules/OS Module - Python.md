@@ -4,7 +4,7 @@ Tag: python, basics, python_module
 Author: S.Sunhaloo
 Type: Module
 Date: 2024-04-12
-Status: In-Progress
+Status: Completed
 ---
 
 ## List of Contents
@@ -14,6 +14,7 @@ Status: In-Progress
 - [[OS Module - Python#Find the OS Type | Find the OS Type]]
 - [[OS Module - Python#List Folders and Other Files in Directory | List Folders and Other Files in Directory]]
 - [[OS Module - Python#Directories | Directories]]
+- [[OS Module - Python#File Manipulation | File Manipulation]]
 
 ---
 
@@ -85,9 +86,9 @@ This can output 3 different things:
 3. `java` $\rightarrow$ JavaOS
 
 
-## Directories
+# Directories
 
-### Check if Directory Exists
+## Check if Directory Exists
 
 We can easily check if a directory exists by using the function `os.path.exists`. Here is a little code below $\downarrow$ to give you a little example:
 
@@ -111,7 +112,7 @@ print()
 ```
 
 
-### List Folders and Other Files in Directory
+## List Folders and Other Files in Directory
 
 This is simply the `ls` command but in Python.
 
@@ -132,7 +133,7 @@ print()
 >We can pass in a `path` in `os.listdir()` to list the folders and files in that **specific** directory.
 >The [[Python Language#Type Function | "type"]] of `os.listdir()` is of `list`!
 
-### Display Current Directory and Change Directory
+## Display Current Directory and Change Directory
 
 Here, we are going to learn about how to display the current working directory and change the working directory to another folder on the Computer.
 
@@ -162,6 +163,213 @@ print()
 
 ```
 
+## Walk Directories
+
+This is kinda weird and strange. So let me show you the code first and then we talk
+
+>[!tip] Usage
+>```python
+>os.walk(path)
+>```
+
+```python
+
+import os
+
+print()
+
+print(f"Current Directory: {os.getcwd()}")
+
+# DECLARE dir_path: STRING
+# DECLARE dir_names: STRING
+# DECLARE file_names: STRING
+
+for dir_path, folder_names, file_names in os.walk("/mnt/c/Users/Azmaan/Desktop"):
+
+    print(f"Directory Path: {dir_path}")
+    print()
+    print(f"Folder Name:  {folder_names}")
+    print()
+    print(f"File Names: {file_names}")
+
+print()
+
+```
+
+This is the output of the code above $\uparrow$:
+
+```console
+Current Directory: /mnt/c/Users/Azmaan/Desktop
+Directory Path: /mnt/c/Users/Azmaan/Desktop
+
+Folder Name:  ['c_programming', 'hacking', 'Ubuntu NeoVim']
+
+File Names: ['adil discord.png', 'archlinux-2024.04.01-x86_64.iso', 'BattleBit Remastered.url', 'desktop.ini', 'Discord.lnk', 'EndeavourOS_Galileo-Neo-2024.01.25.iso', 'fonts installed.txt', 'geek.exe', 'HudSight - custom crosshair overlay.url', "KovaaK's.url", 'Obsidian.lnk', 'output.txt', 'PowerShell-7.4.2-win-x64.msi', 'Prefetch.lnk', 'songs to download.txt', 'temp.lnk', 'test.py', 'time.py', 'todo.md', 'Unturned.url', 'VS Code.lnk']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/c_programming
+
+Folder Name:  []
+
+File Names: ['main.o', 'Makefile', 'Number_Guessing_Game.c', 'output.exe', 'run.c', 'test']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking
+
+Folder Name:  ['phone_infoga', 'pics', 'social-analyzer']
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/phone_infoga
+
+Folder Name:  []
+
+File Names: ['phoneinfoga']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/pics
+
+Folder Name:  []
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer
+
+Folder Name:  ['.git', '.github', 'data', 'logs', 'modules', 'public', 'readme', 'test']
+
+File Names: ['.dockerignore', '.editorconfig', '.gitattributes', '.gitignore', 'app.js', 'app.py', 'auto_pip.sh', 'clean-up.logs', 'docker-compose.yml', 'Dockerfile', 'info', 'LICENSE', 'package-lock.json', 'package.json', 'README.md', 'README.rst', 'requirements.txt', 'setup.py']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git
+
+Folder Name:  ['branches', 'hooks', 'info', 'logs', 'objects', 'refs']
+
+File Names: ['config', 'description', 'HEAD', 'index', 'packed-refs']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/branches
+
+Folder Name:  []
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/hooks
+
+Folder Name:  []
+
+File Names: ['applypatch-msg.sample', 'commit-msg.sample', 'fsmonitor-watchman.sample', 'post-update.sample', 'pre-applypatch.sample', 'pre-commit.sample', 'pre-merge-commit.sample', 'pre-push.sample', 'pre-rebase.sample', 'pre-receive.sample', 'prepare-commit-msg.sample', 'push-to-checkout.sample', 'update.sample']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/info
+
+Folder Name:  []
+
+File Names: ['exclude']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/logs
+
+Folder Name:  ['refs']
+
+File Names: ['HEAD']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/logs/refs
+
+Folder Name:  ['heads', 'remotes']
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/logs/refs/heads
+
+Folder Name:  []
+
+File Names: ['main']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/logs/refs/remotes
+
+Folder Name:  ['origin']
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/logs/refs/remotes/origin
+
+Folder Name:  []
+
+File Names: ['HEAD']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/objects
+
+Folder Name:  ['info', 'pack']
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/objects/info
+
+Folder Name:  []
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/objects/pack
+
+Folder Name:  []
+
+File Names: ['pack-51dcc713acba494badd1fc1a591e7da2a7159458.idx', 'pack-51dcc713acba494badd1fc1a591e7da2a7159458.pack']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/refs
+
+Folder Name:  ['heads', 'remotes', 'tags']
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/refs/heads
+
+Folder Name:  []
+
+File Names: ['main']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/refs/remotes
+
+Folder Name:  ['origin']
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/refs/remotes/origin
+
+Folder Name:  []
+
+File Names: ['HEAD']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.git/refs/tags
+
+Folder Name:  []
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.github
+
+Folder Name:  ['workflows']
+
+File Names: []
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/.github/workflows
+
+Folder Name:  []
+
+File Names: ['main.yml']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/data
+
+Folder Name:  []
+
+File Names: ['countries.json', 'dict.json', 'languages.json', 'names.json', 'sites.json', 'sites.json_new']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/logs
+
+Folder Name:  []
+
+File Names: ['xrtf49av1s_log.txt']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/modules
+
+Folder Name:  []
+
+File Names: ['engine.js', 'external-apis.js', 'extraction.js', 'fast-scan.js', 'helper.js', 'name-analysis.js', 'slow-scan.js', 'special-scan.js', 'stats.js', 'string-analysis.js', 'visualize.js']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/public
+
+Folder Name:  []
+
+File Names: ['app.html', 'graph.html']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/readme
+
+Folder Name:  []
+
+File Names: ['awesomeopensource.png', 'cli.gif', 'convertnumbers.png', 'findnumbers.png', 'finduserprofilesfast.png', 'finduserprofilesslow.png', 'finduserproflesfast.png', 'finduserproflesslow.png', 'intro_fast.gif', 'intro_slow.gif', 'model.jpg', 'modules.png', 'mostcommon.png', 'possible.png', 'profiles.png', 'showuserproflesslow.png', 'socialanalyzerlogo.png', 'socialanalyzerlogo_.png', 'splitwordsbyalphabet.png', 'splitwordsbyuppercase.png', 'structure.png', 'wordinfo.png']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/hacking/social-analyzer/test
+
+Folder Name:  []
+
+File Names: ['requirements.txt', 'test.sh']
+Directory Path: /mnt/c/Users/Azmaan/Desktop/Ubuntu NeoVim
+
+Folder Name:  []
+
+File Names: ['cargo install fnm.png', 'fnm install - version.png']
+```
+
+>[!note]
+>I had to do this on Linux / WSL. This is because we cannot do the following command in Powershell:
+>```bash
+>python a.py > output.txt
+>```
+>This command will redirect the output of `a.py` to `output.txt`.
+>*Heil Linux Heil Linux Heil Linux Heil Linux*!!!
+>>Fuck You Windows t(-_-t)!
 
 ## Current Base Name / Folder Name of Directory
 
@@ -494,7 +702,7 @@ In the code above $\uparrow$ you can see that we are making 2 sub-folders in the
 - `Sub_Folder1`
 - `Sub_Folder2`
 
-You would *think* that `os.removedirs("Test-Python/Sub_Folder1")` will remove **both** the sub-folder `Sub_Folder1` and `Sub_Folder2`. But think again! It cannot just simply remove any folders without permission!
+You would *think* that `os.removedirs("Test-Python/Sub_Folder1")` will remove **both** the sub-folder `Sub_Folder1`, `Sub_Folder2` and the *root* folder `Test-Python`. But think again! It cannot just simply remove any folders without permission!
 Thus, we simply need to add `os.removedirs("Test-Python/Sub_Folder2")` below the first `os.removedirs()` Function.
 
 ## Check if Path is a Directory
@@ -516,7 +724,6 @@ path1 = "C:/Users/Azmaan/Desktop"
 path2 = "C:/Users/Azmaan/Desktop/test.txt"
 
 # Check if whether or not path1 and path2 are directories
-
 print(f"Is '{path1}' a Directory? {os.path.isdir(path1)}")
 print(f"Is '{path2}' a Directory? {os.path.isdir(path2)}")
 
@@ -543,7 +750,6 @@ path1 = "C:/Users/Azmaan/Desktop/test.txt"
 path2 = "C:/Users/Azmaan/Desktop"
 
 # Check if whether or not path1 and path2 are text files
-
 print(f"Is '{path1}' a File? {os.path.isfile(path1)}")
 print(f"Is '{path2}' a File? {os.path.isfile(path2)}")
 
@@ -551,7 +757,7 @@ print()
 
 ```
 
-## os.path.ismount(path)
+## Check it Path is a Mount Point
 
 >[!tip] Usage
 >```python
@@ -574,7 +780,6 @@ path2 = "D:/"
 path3 = "C:/Users/Azmaan"
 
 # Check if whether or not path1 and path2 are text files
-
 print(f"Is '{path1}' a Mount Point? {os.path.ismount(path1)}")
 print(f"Is '{path2}' a Mount Point? {os.path.ismount(path2)}")
 print(f"Is '{path3}' a Mount Point? {os.path.ismount(path3)}")
@@ -583,9 +788,300 @@ print()
 
 ```
 
+# File Manipulation
+
+## Create Files
+
+>Not adding "*usage*"; because its better if you look at the code itself!
+
+>[!bug] We need to *close* the Files after Creation!!!
+
+```python
+
+import os
+
+print()
+
+print(f"Current Directory: {os.getcwd()}")
+
+# Create a Text File
+text_file = open("text.txt", 'x')
+# Create a Python File
+python_file = open("python.py", 'x')
+# Create a C File
+c_file = open("c.c", 'x')
+
+# Closing Files
+text_file.close()
+python_file.close()
+c_file.close()
+
+# Check if Files has been closed
+print()
+print(f"Is Text File Closed? {text_file.closed}")
+print(f"Is Python File Closed? {python_file.closed}")
+print(f"Is C File Closed? {c_file.closed}")
+print()
+
+```
+
+This function will allow us to create any file ( *examples `.txt`, `.py`, `.c` * ) in Python.
+
+The `x` in `open("...", 'x')` means that it will **create** the file if and only if there is **no** other file with the **same** *name*.
+
+## Remove any File
+
+>[!tip] Usage
+>```python
+>os.remove(path)
+>```
+
+```python
+
+import os
+
+# FUNCTION find_files()
+def find_files():
+
+    # DECALRE ARRAY files: STRING
+    files = os.listdir()
+
+    print('-'*30)
+
+    # DECLARE i: INTEGER
+    # DECLARE x: STRING
+    for i, x in enumerate(files):
+
+        # Finding Files
+        if x == "c.c":
+
+            print(f"Item {i + 1} = {x}")
+            continue
+
+        elif x == "python.py":
+
+            print(f"Item {i + 1} = {x}")
+            continue
+            
+
+        elif x == "text.txt":
+
+            print(f"Item {i + 1} = {x}")
+            break
+        
+    else:
+
+        print("Files Have NOT Been Found!")
+
+    print('-'*30)
+
+print()
+
+print(f"Current Directory: {os.getcwd()}")
+
+# Create a Text File
+text_file = open("text.txt", 'x')
+# Create a Python File
+python_file = open("python.py", 'x')
+# Create a C File
+c_file = open("c.c", 'x')
+
+# Closing Files
+text_file.close()
+python_file.close()
+c_file.close()
+
+# Check if Files has been closed
+print()
+print(f"Is Text File Closed? {text_file.closed}")
+print(f"Is Python File Closed? {python_file.closed}")
+print(f"Is C File Closed? {c_file.closed}")
+
+# Calling Function `find_files`
+print()
+find_files()
+print()
+
+# Remove All Files
+print("Removing All Files Created...")
+
+os.remove("text.txt")
+os.remove("python.py")
+os.remove("c.c")
+
+# Calling Function `find_files`
+print()
+find_files()
+
+print()
+
+```
+
+>[!note]
+>Take a look at the `if` statements in the function `find_files()` above $\uparrow$.
+>1. `for` loops can take `else` statements?!? ( *actually WTF*! ).
+>2. I had to write `c.c` then `python.py` and then `text.txt`
+>	- Basically in alphabetical order, else the `break` statements would have fucked it up.
+
+## Renaming Files
+
+>[!tip] Usage
+>```python
+>os.rename('original_name.ext', 'new_name.ext')
+>```
+
+This function will allow you to rename **any** file that is on the computer... If it was not on the computer; where the fuck will you rename something... *My ass*!
+
+>[!warning]
+>We need to also pass in the *extension* ( `.txt`,  `.png`, `.c`, `.py` ) of the file
+
+```python
+
+import os
+
+# FUNCTION list_directory()
+def list_directory():
+
+    print("-" * 40)
+
+    # DECLARE ARRAY objects: STRING
+    objects = os.listdir()
+    # DECLARE count: INTEGER
+    count = 0
+
+    # DECLARE i: INTEGER
+    # DECLARE x: STRING
+    for i, x in enumerate(objects):
+        print(f"Item {i + 1}: {x}")
+        count += 1
+
+    print("-" * 40)
+    print(f"Number of Files = {count}")
+    print("-" * 40)
+
+
+print()
+print(f"Current Directory: {os.getcwd()}")
+print()
+
+# Calling Funtion `list_directory`
+list_directory()
+
+# Create a Text File
+text_file = open("txt.txt", "x")
+# Create a Python File
+python_file = open("py.py", "x")
+# Create a C File
+c_file = open("c.c", "x")
+
+# Closing Files
+text_file.close()
+python_file.close()
+c_file.close()
+
+# Check if Files has been closed
+print()
+print(f"Is Text File Closed? {text_file.closed}")
+print(f"Is Python File Closed? {python_file.closed}")
+print(f"Is C File Closed? {c_file.closed}")
+
+# Renaming All Files Created
+print("Renaming All Files Created...")
+
+os.rename("txt.txt", "text-file.txt")
+os.rename("py.py", "python-file.py")
+os.rename("c.c", "c-file.c")
+
+# Calling Function `list_directory`
+list_directory()
+
+print()
+
+```
+
+The code above will create 3 files and then close it ( *because we are not using context manager* ). After closing these files that we just created; we are going to apply the function `os.rename(...)` and change their names respectively.
+
+## "Stats" of Files
+
+>[!tip] Usage
+>```python
+>os.stat('file.ext')
+>```
+
+This function above $\uparrow$ will allow you to show a variety ( *ahh! a word that I do not use often* ) of information about a file. Think of this in like [BattleBit Remastered](https://store.steampowered.com/app/671860/BattleBit_Remastered/) where you can see that *statistics* of you gun or character.
+But now, its going to be about files ( *this is not a game... I repeat... this is not a game $\rightarrow$ but you can treat it as one* )
+
+```python
+
+import os
+
+print()
+
+print(f"Current Directory: {os.getcwd()}")
+
+print()
+
+# Text File's "stats"
+print(f"Text File: {os.stat("C:/Users/Azmaan/Desktop/output.txt")}")
+print()
+
+# Python File's "stats"
+print(f"Python File: {os.stat("C:/Users/Azmaan/Desktop/test.py")}")
+print()
+
+# C File's "stats"
+print(f"C File: {os.stat("C:/Users/Azmaan/Desktop/c_programming/run.c")}")
+
+print()
+
+```
+
+I recommend check all the attributes / result of the `os.stat()` function. I suggest reading about on the [documenation](https://docs.python.org/3/library/os.html#os.stat_result)
+
+>[!info]
+>This function as its *own* data type called `os.stat_result`. Refer to the ( *website* ) link above $\uparrow$ for more information.
+
+### Accessing a Single Result of Function
+
+As you know if you run the function `os.stat()` it will output a lot of gibberish ( *ahh, another word that I never ever used... even though I just used it* ). Thus, we have a way of only accessing a **single** "*answer*" from the function.
+
+>Again, refer to the documentation link above $\uparrow$ for more information.
+
+>[!note]-
+>The module `datetime` is there so that we get a readable output of time.
+
+```python
+
+import os
+from datetime import datetime
+
+print()
+
+print(f"Current Directory: {os.getcwd()}")
+
+# Get the File Size of Text File
+print()
+print(f"File Size of 'hello_world.txt' = {os.stat("C:/Users/Azmaan/Desktop/hello_world.txt").st_size} Bytes")
+print()
+
+# Get the "Time Since Creation" of Markdown File
+print(f"Time since Creation of 'todo.md' = {os.stat("C:/Users/Azmaan/Desktop/todo.md").st_birthtime} Seconds")
+print(f"Another Date and Time Format of 'todo.md' = {datetime.fromtimestamp(os.stat("C:/Users/Azmaan/Desktop/todo.md").st_birthtime)}")
+
+# Get the "Most Recent Access Time" of Python File
+print()
+print(f"Most Recent Access Time of 'test.py' = {os.stat("C:/Users/Azmaan/Desktop/test.py").st_atime} Seconds")
+print(f"Another Date and Time Format of 'test.py' = {datetime.fromtimestamp(os.stat("C:/Users/Azmaan/Desktop/test.py").st_atime)}")
+print()
+
+
+print()
+
+```
+
 ## Opening and Writing into File
 
->[!bug]- We have Text Files Manipulation in Python. If you are working with `.txt` Files; I recommend looking at [[]].
+>[!bug]- We have Text Files Manipulation in Python. If you are working with `.txt` Files; I recommend looking at [[Text Files - Python v2]].
 >This is for Fun!
 
 This is a simple program what will open a text file in `write` mode and will enter `Written from Python` in it.
@@ -627,7 +1123,7 @@ The arguments passed into `os.open()` function might seems a bit scary... it is 
 - The argument `os.O_CREAT` will create the file if it does not find it.
 
 >[!note]
->In normal Text File operations such as in [[]]; we cannot use the arguments that are found above $\uparrow$ in the `os.open()` function.
+>In normal Text File operations such as in [[Text Files - Python v2]]; we cannot use the arguments that are found above $\uparrow$ in the `os.open()` function.
 
 ---
 

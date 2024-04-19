@@ -23,6 +23,38 @@ Status: HOLD
 
 ---
 
+# Makefile Example
+
+This is the makefile that I have been using to learn C Programming.
+
+To be able to compile the program using the make file just run the command
+
+```console
+
+make
+
+```
+
+## Here is the template:
+
+```make
+
+test: main.o
+	gcc main.o -o test -lm 
+
+main.o: main.c
+	gcc -c main.c
+
+clean:
+	rm *.o test
+
+# The -lm flag means it will compile math.h functions
+# No need for any flags for string.h functions
+
+```
+
+>Where `#` is a comment!
+
 # Print and Increment / Vice-Versa
 
 In the code below $\downarrow$, we are going to see that we can:
