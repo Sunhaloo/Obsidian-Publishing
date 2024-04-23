@@ -133,6 +133,74 @@ def binary_search_calc(array, lower, upper, user_find):
 
 ```
 
+## My Version of the Code Above
+
+>The current date is 23 of April of 2024!
+
+```python
+
+# FUNCTION binary_search
+def binary_search(user_value, array):
+    # DECLARE lower: INTEGER
+    lower = 0
+    # DECLARE lower: INTEGER
+    upper = len(array)
+
+    # condition to enter loop
+    while upper >= lower:
+        # DECLARE mid: INTEGER
+        mid = (lower + upper) // 2
+
+        # find user's input value
+        if array[mid] == user_value:
+            # returns the index of user_value / user's input value
+            return mid
+
+        # we can do this because array is already sorted
+        elif array[mid] < user_value:
+            # cuts the bottom part of array
+            lower = mid + 1
+
+        else:
+            # cuts the bottom part of array
+            upper = mid - 1
+
+    return -1
+
+
+# FUNCTION main()
+def main():
+    print()
+    print("Binary Search")
+    print()
+
+    # DECLARE ARRAY numbers[4]: INTEGER
+    numbers = [1, 2, 3, 4, 5]
+
+    # DECLARE user_find: INTEGER
+    # ask the user to enter value to find
+    user_find = int(input("Please Enter A Value To Find: "))
+
+    # ouptut the result ( calling function `binary_search` )
+    result = binary_search(user_find, numbers)
+
+    if result != -1:
+        # output the coconut oil good number
+        print(f"Value: '{user_find}' Found At Index {result}")
+
+    else:
+        # just get print the fucking line below
+        print(f"Value: '{user_find}' Has NOT Been Found")
+
+    print()
+
+# call to "main" program
+main()
+
+```
+
+In this case we have `lower` and `upper` **inside** the `binary_search` function... I have nothing more to say.
+
 ## Example: 1D-Array ( Non-Recursive )
 
 ### Example 1: Complete Code for 1D-Array

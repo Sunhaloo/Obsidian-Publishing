@@ -4,19 +4,19 @@ Tag: python, basics
 Author: S.Sunhaloo
 Type: File Manipulation
 Date: 2024-04-16
-Status: In-Progress
+Status: Completed
 ---
 
 ## List of Contents
 
-- [[Text Files - Python v2#Context Manager | Context Manager]]
-- [[Text Files - Python v2#Start Here | Text File]]
+- [[Text Files - Python#Context Manager| Context Manager]]
+- [[Text Files - Python#Start Here| Real Start of Notes]]
 
 ---
 
 ### My Links
 
-- [[Text Files - Python v2#Socials | Links to Social]]
+- [[Text Files - Python#Socials| Links to Social]]
 
 ---
 
@@ -100,6 +100,11 @@ It is an object that is use to manage *resources* within a `with` statement.
 
 # Start Here
 
+- [[Text Files - Python#Modes of Text Files| Modes of Text Files]]
+	- [[Text Files - Python#'r' Mode| Read Mode]]
+	- [[Text Files - Python#'w' Mode| Write Mode]]
+	- [[Text Files - Python#'a' Mode| Append Mode]]
+
 ## Check if Text File is a Text File
 
 Here we are going to be using the function from the [[OS Module - Python|OS Module]]
@@ -117,16 +122,96 @@ Here is a link to freecodecamp's [File Handling in Python](https://www.freecodec
 
 This ranges from creating a file to reading and writing into said text file. Refer to the link above for more precise explanation ( _whatever the fuck "**precise**" means here_ ).
 
->As from now on, I will be using the [[Text Files - Python v2#Context Manager | Context Manager]]
+>As from now on, I will be using the [[Text Files - Python#Context Manager| Context Manager]]
 >I will also be moving relatively fast for learning sake... I really want to start other Projects / Fun things like [Advent of Code](https://www.adventofcode.com)
 
 ## Output Mode of Text File
 
+As we have been talking about above $\uparrow$; we have a lot of *modes* that we can use to open, write or append into a text file.
+We can use the function below $\downarrow$ to find the *mode* of the file ( *like what the second argument is in the `open()` function* )
 
+>[!tip] Usage
+>```python
+>file.mode
+>```
+
+```python
+
+import os
+
+# FUNCTION read(DECLARE path: STRING)
+def read(path):
+
+    # Open the Text File for Read
+    with open(path, 'r') as file:
+
+        print()
+        print(f"Mode = '{file.mode}'")
+        print()
+
+        print("Closing File...")
+        file.close()
+        print(f"File Closed? {file.closed}")
+
+# FUNCTION append(DECLARE path: STRING)
+def append(path):
+
+    # Open the Text File for Read
+    with open(path, 'a') as file:
+
+        print()
+        print(f"Mode = '{file.mode}'")
+        print()
+
+        print("Closing File...")
+        file.close()
+        print(f"File Closed? {file.closed}")
+
+# FUNCTION write(DECLARE path: STRING)
+def write(path):
+
+    # Open the Text File for Read
+    with open(path, 'w') as file:
+
+        print()
+        print(f"Mode = '{file.mode}'")
+        print()
+
+        print("Closing File...")
+        file.close()
+        print(f"File Closed? {file.closed}")
+
+print()
+print(f"Current Directory: '{os.getcwd()}'")
+print()
+
+# DECLARE path: STRING
+path = "text.txt"
+
+print("Get Mode of File")
+print('-'*50)
+
+# Call Function `read()`
+read(path)
+
+# Call Function `append()`
+append(path)
+
+# Call Function `write()`
+write(path)
+
+print('-'*50)
+print()
+
+```
+
+>[!warning]
+>The text file in this code was not closing by itself even though we used a context manager to automatically close it for us.
+>In addition, even if we only run the `.mode` function in *mode* `w`. The text file will still be <span style="color: red"><strong>overwritten</strong></span>!!!
 
 ## 'r' Mode
 
->[!tip]- Usage
+>[!tip] Usage
 >```python
 >file.read()
 >```
@@ -134,6 +219,9 @@ This ranges from creating a file to reading and writing into said text file. Ref
 This "mode" will allow us to **only** and **only** read text files.
 
 In this example my text file that I want to read is found in `~/Desktop` and I am in `~` $\Rightarrow$ *Home Directory*. I will show you how to read the file from `~`.
+
+>[!note]
+>At the end of a file, the `read()` function will return an empty string.
 
 ```python
 
@@ -198,6 +286,61 @@ with open("songs to download.txt", 'r') as text_file:
 
 # Check if file had been closed
 print(f"Is Text File Closed? {text_file.closed}")
+
+print()
+
+```
+
+## Read 'x' Amount of Characters
+
+This is basically the same thing as the above code but instead, we are going to pass an **integer** value inside the `read()` function. The value that will be passed is $=$ number of characters to be read from text file.
+
+>[!tip] Usage
+>```python
+>file.read(x)
+>```
+>Where `x` is an **Integer** value.
+
+>Not writing code here because it the same fucking thing!
+
+## Efficient Way to Read File
+
+This is done using a `for` loop so that it iterates over the lines in the file.
+
+```python
+
+import os
+
+print()
+
+# Output current directory
+print(f"Current Directory: {os.getcwd()}")
+print()
+
+# DECLARE path: STRING
+path = "text.txt"
+
+# Open Text File for Read
+with open(path, 'r') as file:
+
+    print("Contents of File:")
+    print('-'*50)
+    print()
+
+    # DECLARE i: INTEGER
+    # DECLARE line: STRING
+    for i, line in enumerate(file):
+
+        # Outputs each line of file 'text.txt'
+        print(f"{i} {line}", end="")
+
+    print('-'*50)
+    print("Closing File...")
+
+    file.close()
+
+    print()
+    print(f"File has been Closed? {file.closed}")
 
 print()
 
@@ -380,6 +523,58 @@ print()
 >[!info]
 >Again, as I said; this is basically the same thing as `w` mode.
 >If you did not create the file before running it. It will **create** it for you. Be thankful!
+
+# Read and Append / Write At the Same Time
+
+I think you get the idea of the code below $\downarrow$.
+
+```python
+
+import os
+
+print()
+print(f"Current Directory: {os.getcwd()}")
+print()
+
+# DECLARE path: STRING
+path = "text.txt"
+
+# Read and Append Files at the Same Time
+with open(path, 'r') as read_file:
+
+    with open(path, 'a') as append_file:
+
+        append_file.write("\n")
+        append_file.write("This is written in Python\nThere should be a better way to do this!")
+
+        # Check if file has been closed
+        print(f"File Closed? {append_file.closed}")
+
+    # NOTE: Go to beginning of Line
+    read_file.seek(0)
+
+    # DECLARE line: STRING
+    # Read File
+    for line in read_file:
+
+        print(line, end="")
+
+        if line == "":
+
+            print('-'*50)
+            print("End of File")
+            print('-'*50)
+
+        else:
+
+            continue
+
+    print()
+
+    # Check if file has been closed
+    print(f"File Closed? {append_file.closed}")
+
+```
 
 ---
 

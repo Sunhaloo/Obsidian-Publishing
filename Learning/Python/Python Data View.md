@@ -9,7 +9,7 @@ Date: 2023-10-24
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/Python-Old"
+FROM "Learning/Python"
 WHERE file.name != "Python HSC Data View"
 SORT file.name ASC
 ```
@@ -20,7 +20,7 @@ SORT file.name ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/Python-Old/Python Basics"
+FROM "Learning/Python/Python Basics"
 SORT Date ASC
 ```
 
@@ -30,7 +30,17 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/Python-Old/Python Basics/Python Modules"
+FROM "Learning/Python/Python Basics/Python Modules"
+SORT Date ASC
+```
+
+---
+
+## Python APIs Folder
+
+```dataview
+TABLE Tag, Status, Type, Date
+FROM "Learning/Python/Python Basics/Python APIs"
 SORT Date ASC
 ```
 
@@ -40,7 +50,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/Python-Old/Sorting Algos - Python"
+FROM "Learning/Python/Sorting Algos - Python"
 SORT Date ASC
 ```
 
@@ -50,7 +60,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/Python-Old/Searching Algos - Python"
+FROM "Learning/Python/Searching Algos - Python"
 SORT Date ASC
 ```
 
@@ -62,7 +72,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/Python-Old/ADT ( 1D-Array )( Mine )"
+FROM "Learning/Python/ADT ( 1D-Array )( Mine )"
 SORT Date ASC
 ```
 
@@ -73,7 +83,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/Python-Old/ADT ( 1D-Array )( Cambridge )"
+FROM "Learning/Python/ADT ( 1D-Array )( Cambridge )"
 SORT Date ASC
 ```
 
@@ -85,7 +95,7 @@ SORT Date ASC
 
 ```dataview
 TABLE Tag, Status, Type, Date
-FROM "Learning/Python-Old/ADT ( 2D-Array )"
+FROM "Learning/Python/ADT ( 2D-Array )"
 SORT Date ASC
 SORT file.name ASC
 ```
@@ -111,6 +121,8 @@ SORT file.name ASC
 - [[Functions and Procedures - Python]]
 - [[Modules - Python]]
 	- [[Random Module - Python]]
+	- [[OS Module - Python]]
+	- [[Tkinter - CustomTkinter Module]]
 
 ## Sorting Algorithms
 

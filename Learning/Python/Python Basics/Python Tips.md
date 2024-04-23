@@ -52,6 +52,31 @@ print()
 
 ```
 
+## Getting 'x' Amount of Lines
+
+```python
+
+with open("text.txt", 'r') as file:
+
+    # DECLARE lines: INTEGER
+    # Outputs the first line
+    lines = file.readline()
+    print(lines, end="")
+
+    # Outputs the second line
+    lines = file.readline()
+    print(lines, end="")
+
+    # Outputs the third line
+    lines = file.readline()
+    print(lines, end="")
+
+    file.close()
+    # Check if File has been Closed
+    print(f"File Closed? {file.closed}")
+
+```
+
 ---
 
 # Socials

@@ -15,6 +15,7 @@ Status: Completed
 - [[OS Module - Python#List Folders and Other Files in Directory | List Folders and Other Files in Directory]]
 - [[OS Module - Python#Directories | Directories]]
 - [[OS Module - Python#File Manipulation | File Manipulation]]
+- [[OS Module - Python#Open System Applications | Open System Applications]]
 
 ---
 
@@ -1081,7 +1082,7 @@ print()
 
 ## Opening and Writing into File
 
->[!bug]- We have Text Files Manipulation in Python. If you are working with `.txt` Files; I recommend looking at [[Text Files - Python v2]].
+>[!bug]- We have Text Files Manipulation in Python. If you are working with `.txt` Files; I recommend looking at [[Text Files - Python]].
 >This is for Fun!
 
 This is a simple program what will open a text file in `write` mode and will enter `Written from Python` in it.
@@ -1123,7 +1124,48 @@ The arguments passed into `os.open()` function might seems a bit scary... it is 
 - The argument `os.O_CREAT` will create the file if it does not find it.
 
 >[!note]
->In normal Text File operations such as in [[Text Files - Python v2]]; we cannot use the arguments that are found above $\uparrow$ in the `os.open()` function.
+>In normal Text File operations such as in [[Text Files - Python]]; we cannot use the arguments that are found above $\uparrow$ in the `os.open()` function.
+
+# Open System Applications
+
+>[!tip] Usage
+>```python
+>os.system(...)
+>```
+
+## Opening Some OS Programs
+
+>[!note]-
+>This was done on Windows!!!
+>>Need to switch to Linux FULL TIME!!!
+
+```python
+
+import os
+
+print()
+print("Opening Notepad...")
+print()
+
+# opens notepad on windows
+os.system("notepad.exe")
+
+print("Opening Calculator...")
+
+# opens the windows calculator
+os.system("calc.exe")
+
+print()
+
+```
+
+>[!warning] BIG NOTE
+>You and I would think that this code above $\uparrow$ will firstly open up `notepad` and then open `calculator`.
+>But... this is not know it goes...
+>I will wait for you to close `notepad` and then open up the fucking `calculator` program.
+>>[!info]
+>>We can actually open both simultaneously, it will require us to ditch the `os` module completely; but that a topic for another day...
+>>>The module is called **subprocess**!!!
 
 ---
 
