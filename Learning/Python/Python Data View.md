@@ -1,5 +1,5 @@
 ---
-Alias: Python Programming Language
+Alias: Python Programming Language Overview
 Tag: python, dataview
 Author: S.Sunhaloo
 Date: 2023-10-24
@@ -114,7 +114,7 @@ SORT file.name ASC
 
 ## Arrays
 
-- [[Arrays - Python]]
+- [[Arrays, Tuples, Sets - Python]]
 
 ## Functions and Procedures
 

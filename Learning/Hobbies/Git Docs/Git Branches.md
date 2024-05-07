@@ -9,6 +9,7 @@ Status: Completed
 ## List of Contents
 
 - [[Git Branches#Create New Branch | Create New Branch]]
+- [[Git Branches#Delete a Branch | Delete a Branch]]
 - [[Git Branches#Change Branch Name| Change Branch]]
 
 ---
@@ -54,6 +55,56 @@ git checkout -b new_branch_name
 git push -u origin new_branch_name
 
 ```
+
+---
+
+# Delete a Branch
+
+Again we start with our little `git pull` command to sync everything up with our remote and local repository.
+
+>[!note]
+>Git will **not** let use *delete* a branch that we are currently on!
+>Make sure that you are **not** in that branch when deleting it.
+
+## Delete Branch Locally
+
+This one is also simple! To delete a branch **locally**, we use the command:
+
+```bash
+
+git branch -d branch_name
+
+```
+
+## Delete Branch Remotely / GitHub
+
+To remove that *branch* from GitHub / Remote "*thing*". We are going to run the command:
+
+```bash
+
+git push origin --delete branch_name
+
+```
+
+OR similarly, we can use:
+
+```bash
+
+git push origin :branch_name
+
+```
+
+>I prefer the first version of this command!
+
+>[!tip]
+>If you encounter an errors like:
+>```bash
+error: unable to push to unqualified destination: remoteBranchName The destination refspec neither matches an existing ref on the remote nor begins with refs/, and we are unable to guess a prefix based on the source ref. error: failed to push some refs to 'git@repository_name'
+>```
+>This means that someone has **already** removed / deleted the branch.
+>To synchronise your branch using `git fetch -p`
+
+---
 
 # Change Branch Name
 

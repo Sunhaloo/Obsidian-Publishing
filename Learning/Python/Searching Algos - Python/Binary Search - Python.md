@@ -13,7 +13,7 @@ Status: Completed
 
 ## Binary Search - 1D Arrays
 
- ## [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays]]
+ ## [[Arrays, Tuples, Sets - Python#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Arrays]]
 
 - [[Binary Search - Python#Binary Search Code - 1D Array| Binary Search Code - 1D Array]]
 	- [[Binary Search - Python#Template - 1D Array ( Non-Recursive )| Function Template ( Non-Recursive )]]
@@ -29,7 +29,7 @@ Status: Completed
 
 ## Binary Search - 2D Arrays
 
-## [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays]]
+## [[Arrays, Tuples, Sets - Python#Two Dimensional Arrays ( 2D-Arrays )| Two Dimensional Arrays]]
 
 - [[Binary Search - Python#Binary Search Code - 2D Array | Binary Search Code - 2D Array]]
 	- [[Binary Search - Python#Template - 2D Array | Function Template]]
@@ -42,7 +42,7 @@ Status: Completed
 
 ---
 
- # [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays]]
+ # [[Arrays, Tuples, Sets - Python#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Arrays]]
 
 # What is Binary Search?
 
@@ -405,7 +405,7 @@ for i in array:
 
 ```
 
-# [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays]]
+# [[Arrays, Tuples, Sets - Python#Two Dimensional Arrays ( 2D-Arrays )| Two Dimensional Arrays]]
 
 # Binary Search Code - 2D Array
 

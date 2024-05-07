@@ -9,7 +9,7 @@ Status: In-Progress / Check Transposed
 
 ## List of Contents
 
-## [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Array]]
+## [[Arrays, Tuples, Sets - Python#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Array]]
 
 - [[Insertion Sort - Python#What is Insertion Sort? | What is Insertion Sort?]]
 	- [[Insertion Sort - Python#Some advantages | Advantages]]
@@ -20,7 +20,7 @@ Status: In-Progress / Check Transposed
 
 ---
 
-## [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Array]]
+## [[Arrays, Tuples, Sets - Python#Two Dimensional Arrays ( 2D-Arrays )| Two Dimensional Array]]
 
 - [[Insertion Sort - Python#Insertion Sort Code - 2D Array | Insertion Sort Code - 2D Array]]
 	- [[Insertion Sort - Python#Template 2D-Array | Template]]
@@ -156,7 +156,7 @@ for count in array:
 
 ```
 
-# [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Array]]
+# [[Arrays, Tuples, Sets - Python#Two Dimensional Arrays ( 2D-Arrays )| Two Dimensional Array]]
 
 What can I say, the *codes* below will show you how to make **insertion sort** for *2D-Arrays*.
 

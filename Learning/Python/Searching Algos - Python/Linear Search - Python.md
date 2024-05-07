@@ -14,7 +14,7 @@ Status: Completed
 ---
 ## Linear Search
 
-## [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays]]
+## [[Arrays, Tuples, Sets - Python#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Arrays]]
 
 - [[Linear Search - Python#Linear Search Code - 1D Arrays | Linear Search Code]]
 	- [[Linear Search - Python#Template 1D-Array| Template Function]]
@@ -22,7 +22,7 @@ Status: Completed
 
 ---
 
-## [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays]]
+## [[Arrays, Tuples, Sets - Python#Two Dimensional Arrays ( 2D-Arrays )| Two Dimensional Arrays]]
 
 - [[Linear Search - Python#Linear Search Code - 2D Arrays | Linear Search Code]]
 	- [[Linear Search - Python#Template 2D-Array | Template Function]]
@@ -38,7 +38,7 @@ My Links
 
 ---
 
-# [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays]]
+# [[Arrays, Tuples, Sets - Python#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Arrays]]
 
 # What is a Linear Search?
 
@@ -199,7 +199,7 @@ print(search_value)
 
 ```
 
-# [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays]]
+# [[Arrays, Tuples, Sets - Python#Two Dimensional Arrays ( 2D-Arrays )| Two Dimensional Arrays]]
 
 Again, it will be of the **same principle** as the *1D-Arrays*. But now, we will have **2 loops** so that we can cycle through the whole *2D-Array*
 

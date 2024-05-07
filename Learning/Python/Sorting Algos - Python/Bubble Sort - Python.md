@@ -257,7 +257,7 @@ print(result)
 
 ---
 
-# [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays]]
+# [[Arrays, Tuples, Sets - Python#Two Dimensional Arrays ( 2D-Arrays )| Two Dimensional Arrays]]
 
 *Sorting* a **two** dimensional array means that we have to perform the sorting part **twice**.
 

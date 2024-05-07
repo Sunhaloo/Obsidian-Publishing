@@ -9,6 +9,7 @@ Status: HOLD
 ## List of Contents
 
 - [[Git Tips#What is `git pull`? | What is `git pull`?]]
+- [[Git Tips#How to switch Branches | How to switch Branches]]
 
 ### My Links
 
@@ -48,6 +49,15 @@ Switching to another branch
 
 git checkout branch_name
 
+```
+
+# What does `git fetch` do?
+
+The command `git fetch` will **download** commits, files and refs from a remote repository onto your local repository.
+
+```mermaid
+graph LR;
+	Remote-Repository --->|git fetch| Local-Repository
 ```
 
 ---

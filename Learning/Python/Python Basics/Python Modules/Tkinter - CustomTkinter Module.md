@@ -13,6 +13,8 @@ Status: In-Progress
 
 ## List of Contents
 
+### Tkinter
+
 - [[Tkinter - CustomTkinter Module#Install CustomTkinter | Install CustomTkinter]]
 - [[Tkinter - CustomTkinter Module#Hello World in Tkinter | Hello World]]
 - [[Tkinter - CustomTkinter Module#Buttons | Buttons]]
@@ -22,7 +24,9 @@ Status: In-Progress
 
 ---
 
-[[Tkinter - CustomTkinter Module#CustomTkinter | CustomTkinter]]
+### CustomTkinter
+
+- [[Tkinter - CustomTkinter Module#CustomTkinter | CustomTkinter]]
 
 ---
 
@@ -370,6 +374,9 @@ We normally use the `grid()` function to display the widgets on screen / applica
 ### Define Grid
 
 To define a grid, we normally use the functions `x.columnconfigure()` and `x.rowconfigure()`.
+
+>Where `x` is the `root` or `window`!
+>If you do <span style="color: red;">not</span> have `x`; the code will not work. I mean what the fuck are you doing with "*tkinter*" if you do not even have `root`!
 
 ```python
 
@@ -901,6 +908,103 @@ ctk.set_default_color_theme("dark-blue")
 >[!note]
 >You can create your own custom theme, but you need to create it using this template:
 >**URL:** https://github.com/TomSchimansky/CustomTkinter/blob/master/customtkinter/assets/themes/dark-blue.json
+
+## CustomTkinter Grid Layout
+
+Remember the notes for the [[Tkinter - CustomTkinter Module#Grid Layout | Tkinter Grid Layout]]...Basically in CustomTkinter, we use the same fucking function to define a grid layout.
+
+>At least something that is not new so that I can try to remember it!
+
+## Widgets
+
+To be honest, there are more options that are available in CustomTkinter that in Tkinter ( *vanilla* ); I suggest you take a look at the documentation for widgets [here](https://customtkinter.tomschimansky.com/documentation/widgets)
+
+
+## Hide Label After Certain Amount of Time
+
+### Method 1: Using `.grid_forget()` Function
+
+```python
+
+import customtkinter as ctk
+
+# FUNCTION hide_label()
+def hide_label():
+    # hide the label1
+    label1.grid_forget()
+
+ctk.set_appearance_mode("system")
+ctk.set_default_color_theme("green")
+
+root = ctk.CTk()
+root.geometry("1280x720")
+root.title("Hide Labels After 'x' Time")
+
+# create widgets
+
+# create a label
+label1 = ctk.CTkLabel(
+    root,
+    text="Will Disappear in 5 Second",
+)
+
+# define the grid layout
+root.rowconfigure(0, weight=1)
+root.columnconfigure(0, weight=1)
+
+# display widgets
+label1.grid(row=0, column=0)
+label1.after(5000, hide_label)
+
+root.mainloop()
+
+```
+
+### Method 2: Using `.configure(text="")` Function
+
+```python
+
+import customtkinter as ctk
+
+# FUNCTION hide_label()
+def hide_label():
+    # hide the label1
+    label1.configure(text="")
+
+ctk.set_appearance_mode("system")
+ctk.set_default_color_theme("green")
+
+root = ctk.CTk()
+root.geometry("1280x720")
+root.title("Hide Labels After 'x' Time")
+
+# create widgets
+
+# create a label
+label1 = ctk.CTkLabel(
+    root,
+    text="Will Disappear in 5 Second",
+)
+
+# define the grid layout
+root.rowconfigure(0, weight=1)
+root.columnconfigure(0, weight=1)
+
+# display widgets
+label1.grid(row=0, column=0)
+label1.after(5000, hide_label)
+
+root.mainloop()
+
+```
+
+### Example: Hide Label after Button Press
+
+```python
+
+
+
+```
 
 ---
 

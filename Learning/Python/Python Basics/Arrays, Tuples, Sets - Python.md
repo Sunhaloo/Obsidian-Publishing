@@ -1,5 +1,5 @@
 ---
-Alias: Arrays In Python
+Alias: Arrays, Tuples and Sets In Python
 Tag: python, basics, 1D-Array, 2D-Array
 Author: S.Sunhaloo
 Type: Arrays ( 1D / 2D )
@@ -9,54 +9,71 @@ Status: Completed
 
 ## List of Contents
 
-- [[Arrays - Python#What is an Array/List? | What is an Array/List?]]
-- [[Arrays - Python#What can Arrays Do? | What can Arrays Do?]]
-- [[Arrays - Python#What can we do with Arrays? | What can we do with Arrays?]]
+- [[Arrays, Tuples, Sets - Python#What is an Array/List?| What is an Array/List?]]
+- [[Arrays, Tuples, Sets - Python#What can Arrays Do?| What can Arrays Do?]]
+- [[Arrays, Tuples, Sets - Python#What can we do with Arrays?| What can we do with Arrays?]]
 
 ---
 
-- [[Arrays - Python#Arrays in Algorithms | Arrays in Algorithms]]
-- [[Arrays - Python#Arrays in Data Structures | Arrays in Data Structures]]
+- [[Arrays, Tuples, Sets - Python#Arrays in Algorithms| Arrays in Algorithms]]
+- [[Arrays, Tuples, Sets - Python#Arrays in Data Structures| Arrays in Data Structures]]
 ---
 
 ## One Dimensional Arrays
 
-- [[Arrays - Python#One Dimensional Arrays ( 1D-Arrays ) | One Dimensional Arrays ( 1D-Arrays )]]
-	- [[Arrays - Python#Creating 1D-Arrays | Creating 1D-Arrays]]
-	- [[Arrays - Python#Displaying 1D-Array | Displaying 1D-Array]]
-		- [[Arrays - Python#Displaying Empty Arrays | Displaying Empty 1D-Arrays]]
-		- [[Arrays - Python#Displaying Non-Empty Arrays | Displaying Non-Empty 1D-Arrays]]
-	- [[Arrays - Python#Adding Elements into 1D-Array | Adding Elements into 1D-Array]]
-		- [[Arrays - Python#Inserting Elements in 1D-Array | Inserting Elements in 1D-Array]]
-		- [[Arrays - Python#Appending Elements into 1D-Array | Appending Elements into 1D-Array]]
-	- [[Arrays - Python#Deleting Elements From 1D-Array | Deleting Elements From 1D-Array]]
-		- [[Arrays - Python#Popping Element From 1D-Array | Popping Element From 1D-Array]]
-		- [[Arrays - Python#Removing Element From 1D-Array | Removing Element From 1D-Array]]
-		- [[Arrays - Python#Deleting Element Using `del` | Deleting Element Using `del`]]
-		- [[Arrays - Python#Clearing  A 1D-Array | Clearing An 1D-Array]]
-	- [[Arrays - Python#Copy Contents of One 1D-Array to Another 1D-Array | Copying contents of Arrays]]
+- [[Arrays, Tuples, Sets - Python#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Arrays ( 1D-Arrays )]]
+	- [[Arrays, Tuples, Sets - Python#Creating 1D-Arrays| Creating 1D-Arrays]]
+	- [[Arrays, Tuples, Sets - Python#Displaying 1D-Array| Displaying 1D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Displaying Empty Arrays| Displaying Empty 1D-Arrays]]
+		- [[Arrays, Tuples, Sets - Python#Displaying Non-Empty Arrays| Displaying Non-Empty 1D-Arrays]]
+	- [[Arrays, Tuples, Sets - Python#Adding Elements into 1D-Array| Adding Elements into 1D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Inserting Elements in 1D-Array| Inserting Elements in 1D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Appending Elements into 1D-Array| Appending Elements into 1D-%%  %%Array]]
+	- [[Arrays, Tuples, Sets - Python#Deleting Elements From 1D-Array| Deleting Elements From 1D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Popping Element From 1D-Array| Popping Element From 1D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Removing Element From 1D-Array| Removing Element From 1D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Deleting Element Using `del`| Deleting Element Using `del`]]
+		- [[Arrays, Tuples, Sets - Python#Clearing  A 1D-Array| Clearing An 1D-Array]]
+	- [[Arrays, Tuples, Sets - Python#Copy Contents of One 1D-Array to Another 1D-Array| Copying contents of Arrays]]
 
 ---
 
 ## Two Dimensional Arrays
 
-- [[Arrays - Python#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays ( 2D-Arrays )]]
-	- [[Arrays - Python#Creating 2D-Arrays | Creating 2D-Arrays]]
-	- [[Arrays - Python#Displaying 2D-Arrays | Displaying 2D-Arrays]]
-		- [[Arrays - Python#Displaying Empty 2D-Arrays | Displaying Empty 2D-Arrays]]
-		- [[Arrays - Python#Displaying Non-Empty 2D-Array | Displaying Non-Empty 2D-Array]]
-	- [[Arrays - Python#Adding Elements Into 2D-Array | Adding Elements Into 2D-Array]]
-		- [[Arrays - Python#Inserting Elements into 2D-Array | Inserting Elements into 2D-Array]]
-		- [[Arrays - Python#Appending ( adding ) Elements into 2D-Array | Appending ( adding ) Elements into 2D-Array]]
-	- [[Arrays - Python#Deleting Elements From A 2D-Array | Deleting Elements From A 2D-Array]]
-		- [[Arrays - Python#Popping Elements From 2D-Array | Popping Element From 2D-Array]]
-		- [[Arrays - Python#Removing Element From 2D-Array | Removing Element From 2D-Array]]
+- [[Arrays, Tuples, Sets - Python#Two Dimensional Arrays ( 2D-Arrays )| Two Dimensional Arrays ( 2D-Arrays )]]
+	- [[Arrays, Tuples, Sets - Python#Creating 2D-Arrays| Creating 2D-Arrays]]
+	- [[Arrays, Tuples, Sets - Python#Displaying 2D-Arrays| Displaying 2D-Arrays]]
+		- [[Arrays, Tuples, Sets - Python#Displaying Empty 2D-Arrays| Displaying Empty 2D-Arrays]]
+		- [[Arrays, Tuples, Sets - Python#Displaying Non-Empty 2D-Array| Displaying Non-Empty 2D-Array]]
+	- [[Arrays, Tuples, Sets - Python#Adding Elements Into 2D-Array| Adding Elements Into 2D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Inserting Elements into 2D-Array| Inserting Elements into 2D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Appending ( adding ) Elements into 2D-Array| Appending ( adding ) Elements into 2D-Array]]
+	- [[Arrays, Tuples, Sets - Python#Deleting Elements From A 2D-Array| Deleting Elements From A 2D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Popping Elements From 2D-Array| Popping Element From 2D-Array]]
+		- [[Arrays, Tuples, Sets - Python#Removing Element From 2D-Array| Removing Element From 2D-Array]]
+
+---
+
+## Tuples in Python
+
+- [[Arrays, Tuples, Sets - Python#Tuples| Tuples]]
+
+---
+
+## Sets in Python
+
+- [[Arrays, Tuples, Sets - Python#Sets | Sets]]
+	- [[Arrays, Tuples, Sets - Python#Creating A Set | Creating A Set]]
+	- [[Arrays, Tuples, Sets - Python#Convert Arrays and Tuples into Sets | Converting Arrays and Tuples into Sets]]
+	- [[Arrays, Tuples, Sets - Python#Add Values / Items to Sets | Add Values / Items to Sets]]
+	- [[Arrays, Tuples, Sets - Python#Remove Values / Items from Sets | Remove Values / Items from Sets]]
+	- [[Arrays, Tuples, Sets - Python#Removing Duplicate Values | Removing Duplicate Values]]
 
 ---
 
 ### My Links
 
-- [[Arrays - Python#Socials | Links to Socials]]
+- [[Arrays, Tuples, Sets - Python#Socials| Links to Socials]]
 
 ---
 
@@ -884,7 +901,7 @@ analysis = [[None for y in range(cols)] for y in range(rows)]
 ```
 
 >[!note]
->The above array in [[Arrays - Python#Method 2 Array has a definite size | method 2]] has a definite size.
+>The above array in [[Arrays, Tuples, Sets - Python#Method 2 Array has a definite size| method 2]] has a definite size.
 
 >[!warning]
 >For example if we write
@@ -945,7 +962,7 @@ else:
 
 ## Method 2: Array have a set size
 
-I will be using the same example from [[Arrays - Python#Method 2 Array has a definite size | here]]
+I will be using the same example from [[Arrays, Tuples, Sets - Python#Method 2 Array has a definite size| here]]
 
 ```python
 
@@ -1475,6 +1492,457 @@ print("EMPTY ARRAY")
 print(brands)
 
 ```
+
+---
+
+# Tuples
+
+## What are Tuples?
+
+They are basically the same as **lists** / **arrays** in Python; but the main difference is that once a tuple has been set ( *values are added to tuple* ); the values <span style="color: red;">cannot</span> be changed!!!
+
+>[!note]
+>Its the fucking same thing as *Arrays*.
+>We can perform algorithms like:
+>1. [[Bubble Sort - Python | Bubble Sort]]
+>2. [[Binary Search - Python | Binary Search]]
+>>[!bug] But we CANNOT *change* its Values!!!
+
+# Create Tuples
+
+Below $\downarrow$ we are going to create some Tuples.
+
+```python
+
+# Create Tuples
+
+# DECLARE TUPLE NAMES[2]: STRING
+NAME = ("Charles Leclerc", "Lewis Hamilton", "Fred Vasseur")
+
+# DECLARE TUPLE NUMBERS[4]: STRING
+NUMBERS = (1, 2, 3, 4, 5)
+
+```
+
+>[!warning] NOTE
+>Except from **Adding** or **Removing** data from tuples; we can pretty to the same things as Arrays, so just scroll up if you need anything!
+
+---
+
+# Sets
+
+Similarly to Arrays and Tuples in Python; sets are another data type that ( *again* ) **_resembles_** like **lists**.
+
+## What are Sets?
+
+- It is a collection of data which is **unordered**, *unchangeable* and **unindexed** ( *meaning it is does not have index like arrays and tuples does*! )
+
+They are used to store a collection of data of similar data types or different data types ( *just like arrays and tuples* ).
+
+Even though, we wrote "*unchangeable*"; we **can** *add* or *remove* items from the set. But once a **set** has been "*set*" ( *haha* ); we **cannot** change it.
+
+>[!tip] Summary
+>We can add or remove items from a Set unlike Tuples.
+>But like Tuples, once the Set has been initialised; we cannot change the contents of it.
+>- <span style="color: green;">It does <em>not</em> contain <span style="color: red;">repeated</span> data</span>.
+
+### Creating A Set
+
+- To create an Array, we use square braces $\rightarrow$ `[]`
+- To create a Tuple, we use normal curved braces $\rightarrow$ `()`
+
+Then how do we create a Set? You ask... with *Curly Braces* $\rightarrow$ `{}` Yippee!
+
+There are several methods to create a set.
+
+1. Create a set with the Curly Braces `{}`
+2. Convert an Array into a Set
+3. Convert a Tuple into a Set
+
+```python
+
+# Sets
+
+# DECLARE SET numbers[4]: INTEGER
+numbers = {1, 2, 3, 4, 5}
+
+# DECLARE SET conditions[3]: BOOLEAN
+conditions = {True, False, True, False}
+
+# DECLARE SET names[3]: STRING
+names = {"Lewis Hamilton", "Valterri Bottas", "George Fucking Russell", "Toto Wolff"}
+
+# Output the contents of Sets
+print()
+print(numbers)
+print()
+print(conditions)
+print()
+
+for i, x in enumerate(names):
+    print(i,x)
+
+```
+
+>Even though Sets are **unindexed**; when we use the function `enumerate()`. It will automatically give it and index.
+>But sets do **not** have indices ( *index* ) in the traditional sense.
+
+#### Convert Arrays and Tuples into Sets
+
+To convert an Array or Tuple into a *Set*. We need to use the `set()` function.
+
+```python
+
+# Convert Arrays and Tuples into Sets
+
+# DECLARE ARRAY int_array[4]: INTEGER
+int_array = [1, 2, 3, 4, 5]
+# DECLARE TUPLE float_tuple[4]: REAL
+float_tuple = (1.2, 2.0, 4.3, 4.5, 5.0)
+
+# Convert Arrays into Sets
+int_set = set(int_array)
+print(int_set)
+
+# Convert Tuples into Sets
+float_set = set(float_tuple)
+print(float_set)
+
+```
+
+### Add Values / Items to Sets
+
+#### Add A Single Value
+
+>[!tip] Usage
+>```python
+>set.add(value)
+>```
+
+To add a value to a set; simple use the function above $\uparrow$ ( *it is similar to [[Arrays, Tuples, Sets - Python#Appending Elements into 1D-Array | append]] function* )
+
+```python
+
+# Add A Single Value to Set
+
+# DECLARE SET set_numbers[4]: INTEGER
+set_numbers = {1, 2, 3, 4, 5}
+
+print("\nOriginally:")
+print(set_numbers)
+
+# Add 6, 7 and 8 to set
+# DECLARE x: INTEGER
+x = 6
+
+while x > 5 and x < 9:
+    
+    # "Appends" the value to set
+    set_numbers.add(x)
+    # 'x' increases by 1
+    x += 1
+
+print("\nAfter Adding Values:")
+print(set_numbers)
+
+print()
+
+```
+
+In the code above $\uparrow$; we are still adding a single, **unique** value and the values are: 6, 7 and 8. But we are using a `while` loop to keep adding them, instead of writing like:
+
+```python
+
+set_number.add(6)
+set_number.add(7)
+set_number.add(8)
+
+```
+
+#### Add Multiple Values / Items to Sets
+
+>Let me show you the code first!
+
+```python
+
+# Add A Single Value to Set
+
+# DECLARE SET set_numbers[4]: INTEGER
+set_numbers = {1, 2, 3, 4, 5}
+# DECLARE ARRAY nums_to_add[2]: INTEGER
+nums_to_add = [6, 7, 8]
+
+print("\nOriginally:")
+print(set_numbers)
+
+# Add 6, 7 and 8 to set
+set_numbers.update(nums_to_add)
+
+
+print("\nAfter Adding Values:")
+print(set_numbers)
+
+print()
+
+```
+
+In this example, we have a set named `set_numbers` and we have an *array* in which we have the number to add to the set. We use the `.update()` function and pass in the array so that it can add them to the set!
+
+>We could have passed the array directly like so:
+>```python
+>set_numbers.update([6, 7, 8])
+>```
+
+### Remove Values / Items from Sets
+
+#### Remove a Single Value
+
+>[!tip] Usage
+>```python
+>set.remove(value)
+>```
+
+>[!tip] Usage
+>```python
+>set.discard(value)
+>```
+
+To remove values from a set; we can use 2 types of function as mentioned above $\uparrow$.
+
+>[!note]
+>The `.remove()` and `.discard()` function does the **same** thing!
+>But the `.discard()` function will **not** raise any *error* if it does **not** find the value that it needs to remove.
+
+```python
+
+# Remove Value From Set
+
+# DECLARE SET cars: STRING
+cars = {"AMG One", "R32 GTR", "RX-7", "Dacia Sandero", "Nissan Juke", "Lancer Evo 9"}
+
+print("\nOriginal Array:")
+print(cars)
+
+# "remove" 'Nissan Juke'
+cars.remove("Nissan Juke")
+
+# "discard" 'Dacia Sandero'
+cars.discard("Dacia Sandero")
+
+print("\nArray After Removing Values")
+print(cars)
+
+print()
+
+```
+
+#### Emulate the [[Arrays, Tuples, Sets - Python#Popping Element From 1D-Array| pop]] Function
+
+```python
+
+# What did you think that there would be code here...
+# Do not trust everything on the internet... why did I say that
+
+```
+
+**No**! You cannot `pop()` values from a Set. This is because the `pop` function requires an index to work and as Sets do not have indices; It simple does not work
+
+### Removing Duplicate Values
+
+>[!info]
+>Why the fuck am I saying that we need to remove duplicate values... First of all, go fuck yourself and secondly this is my fucking notes. But you can still use it... Please stay!!!
+>The reason that I am doing this is because if you are going to **remove** duplicate values / items / data from an array, we normally ( _by normally I am saying how **I** would normally do it_! ) have to
+>1. Create another array
+>2. Iterate through the array with duplicated values
+>3. Append the values of array ( *with duplicated value* ) into the new array while checking if its already in array
+>```python
+># Remove Duplicated Values
+>print()
+>
+># DECLARE ARRAY duplicated_values: INTEGER
+>duplicated_values = [1, 1, 2, 3, 3, 4]
+>
+># DECLARE ARRAY unique_values: INTEGER
+>unique_values = []
+>
+># Iterate through the array with duplicated values
+>
+># DECLARE x: INTEGER
+>for x in duplicated_values:
+>    # If value is NOT already in  'unique_values' add that value
+>    if x not in unique_values:
+>        # Add the value to the array 'unique_values"
+>        unique_values.append(x)
+>
+>    # If value exists in array 'unique_values'
+>    else:
+>        print(f"Value {x} is Already in Array\n")
+>
+># Output the contents of each Array
+>print("-"*25)
+>print("\nOriginal Array:")
+>print(duplicated_values)
+>
+>print("\nNew Array:")
+>print(unique_values)
+>print("-"*25)
+>
+>```
+
+#### Remove Duplicate Values from Array / Tuples
+
+```python
+
+# Remove Duplicate Values from Array
+
+# DECLARE ARRAY array: INTEGER
+array = [1, 2, 2, 3, 4, 5, 5]
+
+print("\nOriginal Array:")
+print(array)
+
+# Convert the Array into a Set
+# Array ---> Set
+array = set(array)
+
+# Convert that Set back into Array
+# Set ---> Array
+array = list(array)
+
+print("\nRemoved Duplicates:")
+print(array)
+print()
+
+```
+
+Or simply
+
+```python
+
+# Remove Duplicate Values from Array
+
+# DECLARE ARRAY array: INTEGER
+array = [1, 2, 2, 3, 4, 5, 5]
+
+print("\nOriginal Array:")
+print(array)
+
+# Convert the Array into a Set then into Array again
+# Array ---> Set
+array = list(set(array)) # ---> One Liner
+
+print("\nRemoved Duplicates:")
+print(array)
+print()
+
+```
+
+>Much much fucking simpler than that shitty code above $\uparrow$ Right? Right! Right!!!
+
+### Operations of Sets
+
+>[!info]
+>I have been writing a lot of things without telling you what Sets are!
+>### What are Sets?
+>Mathematics, Mathematics and Mathematics!
+>Remember the "*sets*" in maths that you did at your shitty school with your shitty school teacher... yeah, that the maths "*thing*" that we are talking about from the beginning.
+>
+>Normally, we use this with [Venn Diagrams](https://en.wikipedia.org/wiki/Venn_diagram) and hence, we get operations like:
+>1. Intersection
+>2. Union
+>This is what we are going to learn below $\downarrow$.
+
+#### Intersection
+
+We are going to find the "*intersection*" of some sets.
+
+>Returns everything that is in **common** from the sets.
+
+```python
+
+# DECLARE SET set1[2]: INTEGER
+set1 = {1, 2, 3}
+# DECLARE SET set2[2]: INTEGER
+set2 = {2, 3, 4}
+# DECLARE SET set3[2]: INTEGER
+set3 = {3, 4, 5}
+
+print("Display Sets\n")
+
+# output our sets
+print(f"Set 1 = {set1}")
+print(f"Set 2 = {set2}")
+print(f"Set 3 = {set3}")
+
+print("\nIntersection of `set1` with `set2`\n")
+print(f"Intersection: {set1.intersection(set2)}")
+
+print("\nIntersetion of `set1` with `set2` and `set3`\n")
+print(f"Intersection: {set1.intersection(set2, set3)} <--- Because we only have '3' that are common in both")
+
+```
+
+#### Difference
+
+Now we are going to find the difference between the sets given. In this scenario ( *ahh! a word that I do not use that often* ); we are going to get the "*items*" that are different from the sets
+
+```python
+
+# DECLARE SET set1[2]: INTEGER
+set1 = {1, 2, 3}
+# DECLARE SET set2[2]: INTEGER
+set2 = {2, 3, 4}
+# DECLARE SET set3[2]: INTEGER
+set3 = {3, 4, 5}
+
+print("Display Sets\n")
+
+# output our sets
+print(f"Set 1 = {set1}")
+print(f"Set 2 = {set2}")
+print(f"Set 3 = {set3}")
+
+# only returns 1
+print("\nDifference of `set1` with `set2`\n")
+print(f"Intersection: {set1.difference(set2)}")
+
+# not difference between `set2` with `set1` and `set3`
+print("\nDifference of `set2` with `set1` and `set3`\n")
+print(f"Intersection: {set2.difference(set1, set3)} <--- Should be Empty")
+
+```
+
+What the fuck! If I said that I will return the difference of the items in the set; i.e the items that are **not** found in *both* sets. Then why the fuck did it not output '*4*' also?
+
+This is because we used `set1.difference(set2)`. But if we would have used `set2.difference(set1)` then you will the '*4*' as output
+
+##### Solution to Problem Above $\uparrow$
+
+To not have to calculate if you get '*1*' or '*4*' as answer; we are going to use the function `symmetric_difference`.
+
+```python
+
+# DECLARE SET set1[2]: INTEGER
+set1 = {1, 2, 3}
+# DECLARE SET set2[2]: INTEGER
+set2 = {2, 3, 4}
+# DECLARE SET set3[2]: INTEGER
+set3 = {3, 4, 5}
+
+print("Display Sets\n")
+
+# output our sets
+print(f"Set 1 = {set1}")
+print(f"Set 2 = {set2}")
+print(f"Set 3 = {set3}")
+
+# only returns 1
+print("\nDifference of `set1` with `set2`\n")
+print(f"Intersection: {set1.symmetric_difference(set2)}")
+
+```
+
+>Now we are going to have '*1*' and '*4*' ( `{1, 4}` ) as output!
 
 ---
 

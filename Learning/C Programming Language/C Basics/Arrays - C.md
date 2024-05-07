@@ -54,7 +54,7 @@ Status: HOLD
 So arrays or *lists* are basically that: **lists** ( *formally known as Data Structures* 🤓 ) that holds the **same** data type.
 Think about a single row **or** / **and** columns in an Excel Documents.
 
-For more information about Arrays head over to [[Arrays - Python#What is an Array/List?| Arrays in Python]] or Google, YouTube University or even ChatGPT.
+For more information about Arrays head over to [[Arrays, Tuples, Sets - Python#What is an Array/List?| Arrays in Python]] or Google, YouTube University or even ChatGPT.
 
 >Remember Boys ( *and Girls* ), we use ChatGPT for information gathering / learning and **not** *cheating*!
 >No for real, I hate fucking cheaters, if there was a way to ban people like you ban them in games; I would gladly press the <button>Report</button> Button ( *$\Leftarrow$ an actually button - like the HTML button tag ).
@@ -530,7 +530,7 @@ for i, y in enumerate(array):
 
 ### "*Popping*" Element From 1D-Array
 
-The code below $\downarrow$ will remove the **last** element in the array ( *just like the [[Arrays - Python#Popping Element From 1D-Array | `pop()`]] Function* ).
+The code below $\downarrow$ will remove the **last** element in the array ( *just like the [[Arrays, Tuples, Sets - Python#Popping Element From 1D-Array| `pop()`]] Function* ).
 
 Little Explanation: because of *memory management*, and little to *no abstraction*, we need to remove the value ourselves.
 
@@ -705,7 +705,7 @@ int main()
 ```
 
 As you can see, we are asking the user to enter the **index** of the value that we want to delete.
-Compared to [[Arrays - Python#Removing Element From 1D-Array | `remove()`]] Function in Python which will delete the **value** entered by the user.
+Compared to [[Arrays, Tuples, Sets - Python#Removing Element From 1D-Array| `remove()`]] Function in Python which will delete the **value** entered by the user.
 
 The rest is similar to the code above; like we have a Function `display` that will display our array... I do not think I need to say more.
 
