@@ -6,9 +6,23 @@ Date: 2024-05-08
 Status: In-Progress
 ---
 
+<p align="center">Introduction to Databases<br>Lab 1<br>BCNS1103C / DBT1103C<br>SUNHALOO Shehzaad</p>
+
+<br>
+
+<p align="center">University of Technology, Mauritius</p>
+
 ## List of Contents
 
-
+- [[Microsoft Access ( 2007 )#Create a New Database File | Create a New Database File]]
+- [[Microsoft Access ( 2007 )#Switching Views | Switching Views]]
+- [[Microsoft Access ( 2007 )#Adding Data into Table | Adding Data into Table]]
+- [[Microsoft Access ( 2007 )#Primary Key | Primary Key]]
+- [[Microsoft Access ( 2007 )#Default Values, Field Validation Rules & Validation Text | Default Values, Field Validation Rules & Validation Text]]
+- [[Microsoft Access ( 2007 )#Relationships | Relationships]]
+- [[Microsoft Access ( 2007 )#Delete Relationships | Delete Relationships]]
+- [[Microsoft Access ( 2007 )#Delete Tables | Delete Tables]]
+- [[Microsoft Access ( 2007 )#Referential Integrity | Referential Integrity]]
 
 ---
 
@@ -27,7 +41,7 @@ Status: In-Progress
 >But should be the same for everything
 
 >[!info]
->Access is a **Relational Database Management System ( RDBMS or RDMS )**.
+>Access is a **[[Overview of Database Management System#Relational Model | Relational]] Database Management System ( RDBMS or RDMS )**.
 >This means that; all the data is organised into **two-dimensional** ( *2D-Relation* ) tables.
 >---
 >Rows $\Rightarrow$ Data Records / Records
@@ -238,7 +252,48 @@ In MS Access, *table* **relationships** are setup in the "**Relationships Window
 
 ## Delete Relationships
 
-Just simply click on the connecting arrow and press `Del` on the keybaord!
+Just simply click on the connecting arrow and press `Del` on the keyboard!
+
+## Delete Tables
+
+Sometimes you might accidentally add the **same** Table twice.
+
+- If the table does not have any relationships; then just **right**-click on the table, an option called `Hide Table` will appear
+- If the table **has** a / many relationships;
+	- We need to first, delete the relationships and then
+	- Proceed to `Hide Table`
+
+---
+
+# Referential Integrity
+
+## What is Referential Integrity?
+
+>Source: https://www.ibm.com/docs/en/informix-servers/14.10?topic=integrity-referential
+
+It refers to the relationships between **Tables**. As you know, every table in a *database* has a **primary key**. If you are going to link ( *add relationships* ) with / to other tables in that database. The primary key in one table can / must become a **foreign key** in another.
+
+>This was also explained above $\uparrow$
+
+When you **delete** a row that contains a *primary key* or **update** it with a different primary key. You essentially *destroy* the **meaning** of any rows that contain that value as a **foreign key**. Referential Integrity is the logical dependency of a foreign key on a primary key.
+
+>[!tip]- Definition Given By Lecturer
+>System of rules to ensure that relationships between records in related tables are valid.
+>Hence, the user cannot accidently change, update or delete any data.
+
+### Rules of Referential Integrity
+
+- Cannot enter a value in the foreign key field of the related table that does not exist in the primary key of the primary table
+	>You cannot add something ( *data* ) that does not exists in the primary table.
+- You cannot delete a record from a primary table if matching records exists in related table
+	>You cannot delete something in the primary table that also exists in another table.
+
+>[!info]
+>Hence, that is why we have $\checkmark$ the  `Enforce Referential Integrity` check box
+>- Prevents us from breaking these rules mentioned above $\uparrow$; else a warning / error message will appear
+>This option can be **over-written** by checking $\checkmark$ `Cascade Updated Related Fields` and `Cascade Delete Related Records`
+>- When `Cascade Updated Related Fields` are $\checkmark \ \Rightarrow$ changing a *primary key* **value** in the **primary** table will automatically update the matching values in all related records
+>- When `Cascade Delete Related Records` are $\checkmark \ \Rightarrow$ deleting a **record** in *primary table* **deletes** any related records in the related table.
 
 ---
 

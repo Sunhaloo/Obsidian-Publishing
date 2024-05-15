@@ -1,6 +1,6 @@
 ---
 Alias: Structs in C
-Tag: C, bascis,
+Tag: C, basics,
 Author: S.Sunhaloo
 Type: Classes
 Date: 2024-04-04

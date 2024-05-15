@@ -153,7 +153,7 @@ Here are some **Escape Sequence** characters:
 | \a | Alarm |
 | \b | Backspace |
 | \f | Form Feed |
-| \n | New Line |
+| \n or %n | New Line |
 | \r | Carriage Return |
 | \t | Tab |
 | \v | Vertical Tab |

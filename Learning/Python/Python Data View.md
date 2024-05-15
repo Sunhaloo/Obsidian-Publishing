@@ -1,5 +1,5 @@
 ---
-Alias: Python Programming Language Overview
+Alias: Python Programming Language Data View
 Tag: python, dataview
 Author: S.Sunhaloo
 Date: 2023-10-24

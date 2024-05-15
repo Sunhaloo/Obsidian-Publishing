@@ -72,7 +72,7 @@ Example includes:
 
 ---
 
-# How to comment in Python
+# How to Comment in Python
 
 To comment a line in Python, we need to use the symbol
 
@@ -127,8 +127,6 @@ To display "*things*" on the screen; its very simple look; you just need to pres
 >```python
 >print()
 
-## Example:
-
 ### Strings
 
 To outputs "*strings*" ( you naughty naughty 🤣 ). We need to place them in between **quotes**.
@@ -181,6 +179,19 @@ print(6.9) # Hmmm
 
 # Display "1.2200901267"
 print(1.2200901267)
+
+```
+
+### Booleans
+
+Displaying booleans $\downarrow$
+
+```python
+
+# boolean value 'True'
+print(True)
+# boolean value 'False'
+print(False)
 
 ```
 

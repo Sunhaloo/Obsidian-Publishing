@@ -1,6 +1,6 @@
 ---
 Alias: Arrays in C
-Tag: C, bascis, 1D-Array, 2D-Array
+Tag: C, basics, 1D-Array, 2D-Array
 Author: S.Sunhaloo
 Type: Arrays ( 1D / 2D )
 Date: 2024-03-19
