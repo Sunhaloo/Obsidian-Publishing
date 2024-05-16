@@ -6,12 +6,6 @@ Date: 2024-05-08
 Status: In-Progress
 ---
 
-<p align="center">Introduction to Databases<br>Lab 1<br>BCNS1103C / DBT1103C<br>SUNHALOO Shehzaad</p>
-
-<br>
-
-<p align="center">University of Technology, Mauritius</p>
-
 ## List of Contents
 
 - [[Microsoft Access ( 2007 )#Create a New Database File | Create a New Database File]]
