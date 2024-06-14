@@ -1,5 +1,5 @@
 ---
-Alias: Math Function in Python
+Alias: Math Module in Python
 Tag: python, basics
 Author: S.Sunhaloo
 Type: Math
@@ -9,23 +9,24 @@ Status: Completed
 
 ## List of Contents
 
-- [[Python Math Function#Math Functions | Math Functions]]
-	- [[Python Math Function#Round Function | Round Function]]
-	- [[Python Math Function#Power Function | Power Function]]
-	- [[Python Math Function#ABS Function | ABS Function]]
-	- [[Python Math Function#Max Function | Max Function]]
-	- [[Python Math Function#Min Function | Min Function]]
-- [[Python Math Function#Math Functions with `math` Module | Math Functions with `math` Module]]
-	- [[Python Math Function#Ceil Function | Ceil Function]]
-	- [[Python Math Function#Floor Function | Floor Function]]
-	- [[Python Math Function#Square Root Function | Square Root Function]]
-	- [[Python Math Function#Trigonometry Functions | Trigonometry Functions]]
+- [[Python Math Module#Math Functions| Math Functions]]
+	- [[Python Math Module#Round Function| Round Function]]
+	- [[Python Math Module#Power Function| Power Function]]
+	- [[Python Math Module#ABS Function| ABS Function]]
+	- [[Python Math Module#Max Function| Max Function]]
+	- [[Python Math Module#Min Function| Min Function]]
+- [[Python Math Module#Math Functions with `math` Module| Math Functions with `math` Module]]
+	- [[Python Math Module#PI in Python | PI in Python]]
+	- [[Python Math Module#Ceil Function| Ceil Function]]
+	- [[Python Math Module#Floor Function| Floor Function]]
+	- [[Python Math Module#Square Root Function| Square Root Function]]
+	- [[Python Math Module#Trigonometry Functions| Trigonometry Functions]]
 
 ---
 
 My Links
 
-- [[Python Math Function#Socials | Links to Socials]]
+- [[Python Math Module#Socials| Links to Socials]]
 
 ---
 
@@ -63,7 +64,7 @@ print()
 
 ## Power Function
 
->"Powwwaaahhh" [Jeremy Clarkson](https://en.wikipedia.org/wiki/Jeremy_Clarkson)
+>"Powwwaaahhh" [Jeremy Clarkson](https://www.youtube.com/watch?v=4n91tUoUWSo)
 
 So, in the earlier classes ( *like when you were younger* ); you learnt about *power of numbers* in math. So do I really need to explain it? Well, at least I am going to say that we have a **base** and an **index** / **exponent**. I will leave you to that.
 
@@ -144,7 +145,7 @@ print()
 
 ## Min Function
 
-The **opposite** of the `max` function. It works exactly the same as the [[Python Math Function#Max Function | Max Function]]. Hence, I will not be wasting my time writing the same fucking thing.
+The **opposite** of the `max` function. It works exactly the same as the [[Python Math Module#Max Function| Max Function]]. Hence, I will not be wasting my time writing the same fucking thing.
 
 >Just change `max` to `min` to use this function.
 
@@ -158,6 +159,28 @@ The **opposite** of the `max` function. It works exactly the same as the [[Pytho
 >>```python
 >>import math
 >>```
+
+## PI in Python
+
+We all love writing our $\pi$ like this $\downarrow$:
+
+```python
+
+PI = 3.142
+
+```
+
+What is I tell you there a more accurate version of our lovely *pie* ( *yes, the one you eat* )
+
+```python
+
+# import math module / library
+import math
+
+# more accurate `PI`
+PI = math.pi
+
+```
 
 ## Ceil Function
 
@@ -193,7 +216,6 @@ What I really mean is this; If you have `1.9`, when we apply the function, it wi
 >[!tip] Usage
 >```python
 >math.floor(x)
->
 >```
 
 ```python

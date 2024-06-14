@@ -158,9 +158,9 @@ Here are some **Escape Sequence** characters:
 | \t | Tab |
 | \v | Vertical Tab |
 | \\ | Backslash |
-| \' | Single Quote |
-| \" | Double Quote |
-| \? | Question Mark |
+| \\' | Single Quote |
+| \\" | Double Quote |
+| \\? | Question Mark |
 | \nnn | Octal Number |
 | \xhh | Hexadecimal Number |
 | \0 | Null |

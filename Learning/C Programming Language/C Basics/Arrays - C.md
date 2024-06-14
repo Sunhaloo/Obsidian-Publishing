@@ -91,12 +91,12 @@ int main()
 
   // First Method to Declare and Initialise an Array
     // Normally used when we know the values that will go into the array
-  // DECLARE ARRAY numbers[5]: INTEGER
+  // DECLARE ARRAY numbers[4]: INTEGER
   int numbers[] = {1, 2, 3, 4, 5};
   
   // Second Method to Declare and Initalise an Array
     // This method is used when we only know the Size of the array
-  // DECLARE ARRAY characters[5]: CHAR
+  // DECLARE ARRAY characters[4]: CHAR
   char characters[5];
 
   // We can then, later, come back to insert the values as so:
@@ -141,7 +141,7 @@ int main()
 
 {
 
-  // DECLARE ARRAY numbers[5]: INTEGER
+  // DECLARE ARRAY numbers[4]: INTEGER
   int numbers[] = {1, 2, 3, 4, 5};
 
   // Output the values of array `numbers` ( individually )
@@ -172,7 +172,7 @@ int main()
 
 {
 
-  // DECLARE ARRAY intials[5]: INTEGER
+  // DECLARE ARRAY intials[4]: INTEGER
   int initials[] = {'S', 'U', 'S', 'S', 'Y'};
 
   // Output the values of array `initials` ( using a `for` loop )
@@ -235,9 +235,9 @@ int main()
 
 {
 
-  // DECLARE ARRAY intials[5]: INTEGER
+  // DECLARE ARRAY intials[4]: INTEGER
   int initials[] = {'S', 'U', 'S', 'S', 'Y'};
-  // DECLARE ARRAY prices[4]: INTEGER
+  // DECLARE ARRAY prices[3]: INTEGER
   double prices[] = {12.50, 9.99, 449.99, 10.00};
 
   // Display the size ( like actual size in Bytes ) each array
@@ -281,14 +281,14 @@ int main()
 
 { 
 
-  // DECLARE ARRAY array[100]: INTEGER
+  // DECLARE ARRAY array[99]: INTEGER
   // Big Number; so that user can enter a lot of elements
   int array[100];
 
   // DECLARE array_size: INTEGER
   int total_values;
   // Ask the user to enter total amount of values that will be stored
-  printf("\nPlease Enter Size Of Array: ");
+  printf("\nPlease Enter Amount of Values to Store: ");
   scanf("%d", &total_values);
 
   // Ask the user to enter values into array
@@ -356,7 +356,7 @@ I am going to write it as similar to the above code.
 
 ```Python
 
-# DECLARE ARRAY array[100]: INTEGER
+# DECLARE ARRAY array[99]: INTEGER
 array = []
 
 print()
@@ -408,7 +408,7 @@ for j, z in enumerate(array):
 ```
 
 >Even though we just used the `insert()` function to insert the *user's value* at the correct position.
->There is not knowledge ( *say that like the meme* ) and we **just** use it without ever taking a guess how it works in the background.
+>There is no knowledge ( *say that like the meme* ) and we **just** use it without ever taking a guess how it works in the background.
 >Heck, even I do **not** know how it works!
 
 ### "*Appending*" Elements into 1D-Array
@@ -734,11 +734,11 @@ int main()
 {
 
   // First Method: Declare and Initialise 2D-Array
-  // DECLARE ARRAY numbers[2][5]: INTEGER
+  // DECLARE ARRAY numbers[1][4]: INTEGER
   int numbers[2][5] = {{1, 2, 3, 4, 5}, {6, 7, 8}};
   
   // Second Method: Declare 2D-Array ONLY
-  // DECLARE ARRAY id[5][5]: STRING
+  // DECLARE ARRAY id[4][4]: STRING
   char id[5][5];
 
   // We can then later populate the array like so:
@@ -772,7 +772,7 @@ int main()
 
 {
 
-  // DECLARE ARRAY id[5][5]: STRING
+  // DECLARE ARRAY id[4][4]: STRING
   char id[5][5];
 
   // Inserting Values inside array at First Row ONLY
@@ -813,7 +813,7 @@ int main()
 
 {
 
-  // DECLARE ARRAY numbers[2][3]: INTEGER
+  // DECLARE ARRAY numbers[1][2]: INTEGER
   int numbers[2][3] = {{1, 2, 3}, {5, 6, 7}};
 
   printf("\n Values of Array numbers\n");

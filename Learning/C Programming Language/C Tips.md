@@ -101,7 +101,6 @@ To get rid of new line character in the code below $\downarrow$, use:
 
 ```C
 
-
 // Getting Rid of `\n` ---> Newline Character
 scanf("%c");
 

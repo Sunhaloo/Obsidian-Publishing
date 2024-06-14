@@ -1,5 +1,5 @@
 ---
-Alias: Arrays, Tuples and Sets In Python
+Alias: Arrays - Tuples - Sets In Python
 Tag: python, basics, 1D-Array, 2D-Array
 Author: S.Sunhaloo
 Type: Arrays ( 1D / 2D )

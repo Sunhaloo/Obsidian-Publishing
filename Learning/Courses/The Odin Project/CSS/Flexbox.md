@@ -33,7 +33,6 @@ Flexbox is not just a **single** CSS *property* but a whole toolbox of propertie
 
 Some of these *properties* belong to the ***flex container*** while some belongs to the ***flex item***
 
-
 - A flex **container** is *any* element ( *i.e tags, etc* ) that has `display: flex` on it.
 - A flex **item** is any element that lives directly *inside* the flex container
 

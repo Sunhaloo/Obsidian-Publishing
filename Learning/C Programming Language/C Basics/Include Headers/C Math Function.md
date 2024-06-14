@@ -303,7 +303,7 @@ double_tan = tan(45);
 
 ```
 
-# [[Python Math Function | Math Functions in Python]]
+# [[Python Math Module| Math Functions in Python]]
 
 We know that Python is was made using **C**. This means that *most* of the things that we said here applies also for Python.
 

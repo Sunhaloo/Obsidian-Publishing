@@ -32,6 +32,10 @@ Status: In-Progress
 			- [[Microsoft Access ( 2007 )#Form Property Sheet | Form Property Sheet]]
 		- [[Microsoft Access ( 2007 )#Customer Entry Form | Customer Entry Form]]
 		- [[Microsoft Access ( 2007 )#Order Entry Form | Order Entry Form]]
+- [[Microsoft Access ( 2007 )#Master and Sub-Forms | Master and Sub-Forms]]
+	- [[Microsoft Access ( 2007 )#Steps | Steps]]
+- [[Microsoft Access ( 2007 )#Queries | Queries]]
+	- [[Microsoft Access ( 2007 )#Functions of Queries | Functions of Queries]]
 
 ---
 
@@ -42,7 +46,7 @@ Status: In-Progress
 ---
 
 >[!warning]
->This is part of an assignment given by our lecturer. Hence, this file can be related to [[University Data View#Database Folder | Database Design]] $\rightarrow$ Spring Double Glazing Company.
+>This is part of an assignment given by our lecturer. Hence, this file can be related to [[University Data View ( Level 1 Semester 1 )#Database Folder| Database Design]] $\rightarrow$ Spring Double Glazing Company.
 >Because I would have never learned MS Access and would have gone straight to **mySQL** or **Oracle**.
 
 >[!note]-
@@ -222,7 +226,7 @@ In HSC, we learnt about the ERD ( *Entity Relationship Diagram* ) Diagram; where
 2. Many to One ( m:1 ) OR One to Many ( 1:m )
 3. Many to Many ( m:n )
 
->Now we are going to learn how to actually do these things in Linux... WTF am I saying... In MS Access.
+>Now we are going to learn how to actually do these things in Linux... WTF am I saying... in MS Access.
 >I like Linux; I am sorry, I <span style="color: pink;">LOVE</span> Linux! But here I am on Windows using MS Access... WWWWHHHHHYYYYY!
 
 ## Setup Relationships in MS Access
@@ -288,6 +292,9 @@ It refers to the relationships between **Tables**. As you know, every table in a
 >This was also explained above $\uparrow$
 
 When you **delete** a row that contains a *primary key* or **update** it with a different primary key. You essentially *destroy* the **meaning** of any rows that contain that value as a **foreign key**. Referential Integrity is the logical dependency of a foreign key on a primary key.
+
+>[!tip]- Definition
+>Referential Integrity is the logical dependency of a **foreign** key on a **primary** key.
 
 >[!tip]- Definition Given By Lecturer
 >System of rules to ensure that relationships between records in related tables are valid.
@@ -686,7 +693,7 @@ Again, we are now going to create another Combo Box in the same `frmOrder` form 
 ### Customer Entry Form
 
 >[!note]-
->If you are following this tutorial from [sunhaloolearns.netlify.app](https://sunhaloolearns.netlify.app); you might now be wondering "*WTF is happening*"; this is because you do **not** have the teacher's 💩 PDF notes.
+>If you are following this tutorial from [sunhaloolearns.netlify.app](https://sunhaloolearns.netlify.app); you might now be wondering "*WTF is happening*"; this is because you do **not** have the teacher's PDF notes.
 
 We are now going to create a **form** for the `tblCustomer`, at the end it should look something similar to this $\downarrow$:
 
@@ -695,8 +702,6 @@ We are now going to create a **form** for the `tblCustomer`, at the end it shoul
 >Lets see if I can make it similar to this... see you in some minutes
 
 ![[Form - My Customer Table.png | 650]]
-
-<span style="color: orange;">Need to ask the teacher about the order table!!!</span>
 
 ### Order Entry Form
 
@@ -720,6 +725,135 @@ Similarly we need to make our Order Form look like this $\downarrow$:
 #### Order Entry Form ( Final Version )
 
 ![[Form - My Order Table ( Final Version ).png | 650]]
+
+>[!bug] Warning
+>I have a made slight error in the Forms above $\uparrow$; Microsoft Access will **automatically** add the Sub Form; what is the Sub Form? its the **table** that you see in the form below.
+>>[!info]
+>>I have talked to the professor and he said that I should remove it... But now we are going to add it back.
+>>>You can easily remove the Sub Form in the `Design View`
+
+# Master and Sub-Forms
+
+## Order Entry Form / Sub-Form
+
+![[Sub Form - Order Form Teacher Final Version.png | 650]]
+
+>[!info] What is this?
+>Now, on this form, the user can enter an *Order* and also its related *Order Lines*.
+>It involves creating another form to enter *Order Lines*, and making it a sub-form of the main Order Entry form.
+>>This is what the final *product* should look like.
+
+## Creating Order Lines Form
+
+>[!note]
+>We are **not** creating a Sub-Form Here!!!
+
+On the menu ribbon go to the `Create` Tab and press the <button>More Forms</button> button.
+
+A drop-down menu will appear and then select `Form Wizard`.
+
+After selection, a dialog box will appear.
+
+![[Form - Form Wizard.png | 400]]
+
+### Steps
+
+- Select the Table you want to add; in this case select `Table: tblOrderLine`
+- Select all the `Available Fields` and Put then into the `Selected Fields`
+	- I should look something like this $\downarrow$:
+	- ![[Form - Form Wizard ( Select Table + Field ).png | 400]]
+- When choosing the **layout**; please select the `Tabular` layout
+- When asking for "*What style would you like?*"; select `Access 2007` ( <span style="color: red;">NOTE</span>: This was **not** available in the Lecture Slides )
+- On the last *menu*; let it be default ( *there is a saying in the Linux / programming world... if you don't know what to do, let it be default* )
+
+### View of `frmOrderLines` Form
+
+![[Form - frmOrderLine Form.png | 650]]
+
+Now, we are going to delete **everything** like the *Text Labels* and *Text Boxes*.
+
+It should then become a **blank** form; again with the name of `frmOrderLine`
+
+#### Create a Combo Box to Populate the `Stock_ID` Field
+
+In the `Design View` head over to the **Design** tab ( *in the Ribbon Menu* ) and select <button>Combo Box</button> button.
+
+>As we have already done [[Microsoft Access ( 2007 )#Using Combo Boxes | Combo Boxes]] ( *check above $\uparrow$* ); I will just write done the *options* I choose.
+
+
+1. Select "*I want the combo box to look up values in a table / query*"
+2. Select the `tblStock` Table with the **View** set to *Tables*
+3. When choosing the Fields to display; select **Description** only
+4. As the teacher did not specify to use **Ascending** / **Descending** order on any fields; leave it as it is
+5. Check $\checkmark$ the "*Remember the value for later use*"
+6. Rename the **Label** of the Combo Box to $\rightarrow$ *Stock Item*
+7. Add a **Text Box** and name it *Quantity*
+
+It should look something like this $\downarrow$:
+
+![[Master + Subform - Creating OrderLines Form.png | 750]]
+
+## Adding Sub-Form to Order Form
+
+Go ahead and open the `frmOrder` form in `Design View`. We are now going to put the `frmOrderLine` form as a **Sub-Form** onto the *main* ( `frmOrder` ) form.
+
+![[Master + Subform - Sub Form Wizard ( Menu ).png | 400]]
+
+### Steps
+
+- Select "*Use an existing form*" and again; select `frmOrderLine` form
+	![[Master + Subform - Sub Form Wizard ( Select from List - Define Own ).png | 400]]
+	- Select "*Choose from a list*" and click on "*Show tblOrderLine for each record in tblOrder using Order_ID*"
+- When asking to choose a name; use the name `frmOrderLine` and the finish the setup
+
+It should look something like this $\downarrow$:
+
+>Note that this is in `Design View`!
+
+![[Master + Subform - Sub Form Wizard ( 'Final' Version ).png | 650]]
+
+### Check if Correct Link has been Made
+
+We are now going to bring up the **Property Sheet** for the Sub-Form.
+Simply right click on the Sub-Form and select *Properties*; the **Property Sheet** will appear
+
+>[!warning]
+>If you opened the **Property Sheet** like this ( *check the image below* )
+>![[Master + Subform - Sub Form ( Warning - Property Sheet ).png| 500]]
+>
+>Then you did it **correctly**; if <span style="color: red;">not</span>, then you opened the the **Property Sheet** for the **Form** itself ( *property* )
+
+Microsoft Access has automatically create the link between the *main* form and the *sub*-form.
+This is achieved through the <span style="color: green;">Link Child</span> Fields ( *based on Sub-Form* ) and <span style="color: green;">Link Master</span> Fields ( *based on Main Form* ) properties... Like so $\downarrow$:
+
+![[Master + Subform - Sub Form ( Property Sheet - Link Master + Link Child ).png]]
+
+>[!note]
+>If it did not automatically added the *Order_ID* from the `tblOrderLine` table, then you can **manually** add the `Order_ID` to both the *Link Master* and *Link Child* Field properties.
+
+>You can now use Order Form to add Orders and their associated Order Lines.
+
+It should look something like this in the end $\downarrow$:
+
+![[Master + Subform - Creating Order Form Final Version.png | 650]]
+
+# Queries
+
+## Functions of Queries
+
+>The lecturer called it "*Things you can do with queries*"
+
+- Bringing together the records from one or more tables
+- Sort data according to values of one or more fields
+- Select with fields to show
+- Select which records to show by specifying selection criteria
+- Perform Calculations
+- Performing actions on data
+	- Example: Updating tables, deleting records
+
+## Creating Simple Queries
+
+
 
 ---
 

@@ -108,9 +108,12 @@ SORT file.name ASC
 
 - [[Python Language]]
 - [[Selection and Iteration - Python]]
-- [[Python Math Function]]
 - [[String Manipulation - Python]]
 - [[Exception Handling - Python]]
+
+### Modules
+
+- [[Python Math Module]]
 
 ## Arrays
 

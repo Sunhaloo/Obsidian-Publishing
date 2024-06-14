@@ -363,15 +363,6 @@ Folder Name:  []
 File Names: ['cargo install fnm.png', 'fnm install - version.png']
 ```
 
->[!note]
->I had to do this on Linux / WSL. This is because we cannot do the following command in Powershell:
->```bash
->python a.py > output.txt
->```
->This command will redirect the output of `a.py` to `output.txt`.
->*Heil Linux Heil Linux Heil Linux Heil Linux*!!!
->>Fuck You Windows t(-_-t)!
-
 ## Current Base Name / Folder Name of Directory
 
 Pretend that you are working on the directory `~/.config/nvim`. This function will return the `nvim` part; basically the **last** things in the part / directory.

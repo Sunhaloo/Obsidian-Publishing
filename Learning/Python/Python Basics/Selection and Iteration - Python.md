@@ -1,5 +1,5 @@
 ---
-Alias: IF-CASE-WHILE-REPEAT
+Alias: IF-CASE-WHILE-REPEAT - Python
 Tag: python, basics
 Author: S.Sunhaloo
 Type: Conditions / Statements
@@ -78,7 +78,7 @@ This will be *executed* at **least once** and we use them when we do **not** *kn
 
 # IF Statements
 
-I am going to be honest with you ( *yes, the one reading this* ). This is not something that you grasp by reading; first of all you need to have your fundamentals. Thus, I will go directly to **simple** examples
+I am going to be honest with you ( *yes, the one reading this* ). This is not something that you grasp by reading; first of all you need to have your fundamentals. Thus, I will go directly to **simple** examples.
 
 ## Example 1: Displaying a message after entering age
 
@@ -173,7 +173,7 @@ match lang:
     case "JavaScript":
 
         print()
-        print("You can become a web developer.")
+        print("You can become a Web Developer.")
         print()
 
     # Python
@@ -187,21 +187,21 @@ match lang:
     case "PHP":
 
         print()
-        print("You can become a backend developer")
+        print("You can become a Backend Developer")
         print()
 
     # Solidity
     case "Solidity":
 
         print()
-        print("You can become a Blockchain developer")
+        print("You can become a Blockchain Developer")
         print()
 
     # Java
     case "Java":
 
         print()
-        print("You can become a mobile app developer")
+        print("You can become a Mobile App Developer")
         print()
 
     # If user anything else that is not part of the code
@@ -300,7 +300,7 @@ print(f"Your Telephone Number is {tel_num}")
 
 ```
 
-### Example 2: The program will enter the *while loop* **once**
+### Example 2: The program will enter the `while` loop **once**
 
 ```python
 
@@ -477,6 +477,10 @@ print()
 # Post-Condition Loops
 
 ## Repeat Until
+
+>[!note]
+>There are **no** `REPEAT... UNTIL` conditions in Python.
+>Hence, we make `while` conditions become a `REPEAT...UNTIL` by setting in to `True`
 
 This is unfortunately **not** available in [[Python Language| Python]]
 
