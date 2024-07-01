@@ -6,12 +6,6 @@ Date: 2024-05-08
 Status: In-Progress
 ---
 
-<p align="center">Introduction to Databases<br>Lab 2<br>BCNS1103C / DBT1103C<br>SUNHALOO Shehzaad</p>
-
-<br>
-
-<p align="center">University of Technology, Mauritius</p>
-
 ## List of Contents
 
 - [[Microsoft Access ( 2007 )#Create a New Database File | Create a New Database File]]
@@ -36,6 +30,9 @@ Status: In-Progress
 	- [[Microsoft Access ( 2007 )#Steps | Steps]]
 - [[Microsoft Access ( 2007 )#Queries | Queries]]
 	- [[Microsoft Access ( 2007 )#Functions of Queries | Functions of Queries]]
+	- [[Microsoft Access ( 2007 )#Creating Simple Queries | Creating Simple Queries]]
+	- [[Microsoft Access ( 2007 )#Create Another Query Connecting `tblOrderLine` and `tblStock` | Create Another Query]]
+	- [[Microsoft Access ( 2007 )#Calculated Values | Calculated Values]]
 
 ---
 
@@ -108,7 +105,6 @@ Add these following data:
 | ------ | --------- | ---------- |
 | Customer_ID | Autonumber | - |
 | Surname | Text | 30 |
-| Name | Text | 30 |
 | FirstName | Text | 30 |
 | Address 1 | Text | 30 |
 | Address 2 | Text | 30 |
@@ -150,6 +146,9 @@ We just need to simple **right**-click on the *field* that want to make primary 
 >[!warning]
 >As I said in the beginning; this Markdown Document is part of my Lecture assignment; hence I will be using this "*task*" given to us as an example.
 
+>[!tip]
+>Here is a link to "*Introduction to data types and field properties*" by Microsoft; Click [Here](https://support.microsoft.com/en-us/office/introduction-to-data-types-and-field-properties-30ad644f-946c-442e-8bd2-be067361987c#:~:text=Field%20Size,-Determines%20the%20amount&text=For%20AutoNumber%20fields%2C%20only%20two,creating%20a%20replication%20ID%20field)!
+
 ## Create More Tables
 
 <p align="center"><strong>Table:</strong> tblStock</p>
@@ -187,6 +186,8 @@ We can see that in this case; `Customer_ID` can be called a **Foreign Key**
 ---
 
 # Default Values, Field Validation Rules & Validation Text
+
+>Here is a good link from Microsoft themselves: https://support.microsoft.com/en-us/office/restrict-data-input-by-using-validation-rules-b91c6b15-bcd3-42c1-90bf-e3a0272e988d
 
 >[!tip] Data should be **validated** before it get *stored*!
 
@@ -661,7 +662,7 @@ Again, we are now going to create another Combo Box in the same `frmOrder` form 
 1. Open `tblOrder` in `Design View`
 2. Select the `Payement Method` Field and Below where we can change options like `Field Size`, etc
 	- There is a tab called `Lookup`, press it.
-3. Now change the Field Properties to match those options below $\donwarrow$
+3. Now change the Field Properties to match those options below $\downarrow$
 
 	| Property | Value |
 	| -------- | ----- |
@@ -688,7 +689,7 @@ Again, we are now going to create another Combo Box in the same `frmOrder` form 
 
 6. Double Click on the `PaymentMethod` and then it will appear on the form
 
->End Result should look something like [[Microsoft Access ( 2007 )#Order Entry Form]] ( *check the final version of Order Entry Form Below* )
+>End Result should look something like [[Microsoft Access ( 2007 )#Order Entry Form | this]]
 
 ### Customer Entry Form
 
@@ -770,16 +771,21 @@ After selection, a dialog box will appear.
 
 ![[Form - frmOrderLine Form.png | 650]]
 
-Now, we are going to delete **everything** like the *Text Labels* and *Text Boxes*.
-
 It should then become a **blank** form; again with the name of `frmOrderLine`
 
 #### Create a Combo Box to Populate the `Stock_ID` Field
 
+>[!note]
+>>20th June 2024
+>
+>I have not been doing the Microsoft Access Labs for some time now, because F the lecturer.
+>I asked a [[Database Administrator]] / Software Engineer to help me on how to move things like `Stock Item`, `Quantity` and so on.
+>The lecturer told me to just delete everything... *I really want to beat the shit out of him*.
+>Instead what you had to do is **right-click** on the form in `Design View` and Select Tab Order. Then and only then you can move the things $\uparrow$.
+
 In the `Design View` head over to the **Design** tab ( *in the Ribbon Menu* ) and select <button>Combo Box</button> button.
 
 >As we have already done [[Microsoft Access ( 2007 )#Using Combo Boxes | Combo Boxes]] ( *check above $\uparrow$* ); I will just write done the *options* I choose.
-
 
 1. Select "*I want the combo box to look up values in a table / query*"
 2. Select the `tblStock` Table with the **View** set to *Tables*
@@ -791,7 +797,13 @@ In the `Design View` head over to the **Design** tab ( *in the Ribbon Menu* ) an
 
 It should look something like this $\downarrow$:
 
-![[Master + Subform - Creating OrderLines Form.png | 750]]
+>Form View
+
+![[Master + Subform - Creating OrderLines Form ( Form View ).png | 750]]
+
+>Design View
+
+![[Master + Subform - Creating OrderLines Form ( Design View ).png | 400]]
 
 ## Adding Sub-Form to Order Form
 
@@ -835,7 +847,7 @@ This is achieved through the <span style="color: green;">Link Child</span> Field
 
 It should look something like this in the end $\downarrow$:
 
-![[Master + Subform - Creating Order Form Final Version.png | 650]]
+![[Master + Subform - Creating Order Form Final Good Version.png | 650]]
 
 # Queries
 
@@ -853,7 +865,109 @@ It should look something like this in the end $\downarrow$:
 
 ## Creating Simple Queries
 
+>Follow these **steps** below.
 
+Go ahead and click on `Create` in the Ribbon Menu.
+You will then see <button>Query Wizard</button> under the "*Other*" category. Hence when you press this button; the Query Wizard will pop up, prompting you to create your Query
+
+![[Query Wizard Dialog - Pop Up.png | 400]]
+
+- Go ahead and select "*Simple Query Wizard*"
+- On the next screen, select our table `tblCustomer` with all the fields **selected**
+- When it prompts you to name the Query, name it `qryCustomerBySurname` and select "*Open the query to view information*"
+
+You should arrive at this screen $\downarrow$
+
+![[Query Design View ( CustomerBySurname Query ).png | 750]]
+
+>[!note]-
+>It might open in `Datasheet View`... Just like put it back into `Design View`... *okay shit-head*
+
+### Create a Customer Order View Form
+
+>Basically what he is trying say to is place a **Sub-Form** ( *the sub-form in this case will be our `frmOrder`* ) in the `frmCustomer`!
+>This is going to be an inception of inception take a look at this $\downarrow$
+
+![[Form Inception ( Customer Form - Order Form - OrderLine Form ).png | 750]]
+
+Again, this is done using a **Sub-Form** and adding the from `frmOrder` ( *who BTW already has `frmOrderLine` Sub-Form* ) to the `frmCustomer`.
+It should look something like this $\downarrow$
+
+![[Form Inception ( Customer Form - Order Form - OrderLine Form ) - My Version.png | 550]]
+
+>What an Inception!!!
+>*Insert Mind Blown Meme Here... F my life!*
+
+### Create Another Query Connecting `tblOrderLine` and `tblStock`
+
+Same as above $\uparrow$ just now we will name it `qryOrderLineStock`. This *query* will show data from **both** `tblOrderLine` and `tblStock`.
+
+![[Query Wizard Dialog - Adding or Connecting Multiple Tables.png | 400]]
+
+>We can add as much tables as we want to!
+
+You should arrive to something like this $\downarrow$
+
+![[Query Design View ( OrderLineStock Query ).png | 750]]
+
+#### Calculated Values
+
+Lets go ahead an add another field called `Value`
+
+The `Value` is going to be the `Selling Price` $\times$ `Quantity` ( *fair enough* ).
+
+>[!note]
+>Just for example sake... just write `[Selling Price]*[Quantity]`. You will see that it autocorrects and becomes `Expr1: [Selling Price]*[Quantity]`
+>Then you rename it to `Value: ...`
+
+>Like just add this *field*.
+
+![[Query Design View - Adding Calculated Field.png]]
+
+### Create Form based on `qryOrderLineStock` Query
+
+>[!info]
+>- Use Tabular Form!
+>- The Form name is `frmOrderLineView` <span style="color: red;">not</span> `frmOrderView` ( *`frmOrderView` will be below $\downarrow$* )
+>
+>In addition only `Description`, `Quantity`, `Selling Price` and `Value` need to appear on the Form!
+>$\Rightarrow$ The rest you can set `Enabled` to `No` and `Locked` to `Yes` $\leftarrow$
+
+It should look something like this $\downarrow$:
+
+![[Form - frmOrderLineView.png]]
+
+### Create `OrderView` Form
+
+#### Create Query `qryOrderByDateDesc`
+
+This query will sort the table `tblOrder` by the "*Order Date*" in **descending** order.
+$\Rightarrow$ This shows the most recent orders first!
+
+>[!note]-
+>Select table `tblOrder` creating `qryOrderByDateDesc` in the Query Wizard
+
+Hence, we get this ( *remember to sort Order Date in `Descending`* )
+
+![[Query Design View ( OrderByDateDesc Query ).png | 550]]
+
+#### Creating `frmOrderView`
+
+Once again, we are going to be using the values from `qryOrderByDateDesc`
+
+>[!note]
+>Create the Form with the **Columnar** Layout!
+
+##### Change the Following Properties
+
+| Property | Value |
+| -------- | ----- |
+| Scroll bar | Vertical |
+| Allow additions | No |
+| Record Selectors | No |
+| Navigation Buttons | No |
+
+Where at the end we need to get something like this $\downarrow$
 
 ---
 

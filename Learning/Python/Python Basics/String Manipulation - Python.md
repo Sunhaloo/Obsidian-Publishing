@@ -29,7 +29,9 @@ Status: Completed
 	- [[String Manipulation - Python#Replace Function | Replace Function]]
 		- [[String Manipulation - Python#Example Replacing some *letter* in some *string* | Example of Replace Function]]
 	- [[String Manipulation - Python#Index Function | Index Function]]
-		- [[String Manipulation - Python#Example Man handling some words | Example of Index Function]]
+		- [[String Manipulation - Python#Example Index Function | Example of Index]]
+		- [[String Manipulation - Python#Another way to use Index Function | Another way to use Index Function]]
+			- [[String Manipulation - Python#Example "Man-handling" some words | Another way's Example]]
 	- [[String Manipulation - Python#Slice Function | Slice Function]]
 		- [[String Manipulation - Python#Example Slicing like a ninja | Example of Slice Function]]
 
@@ -439,6 +441,65 @@ print(car.replace("o", "a"))
 
 ## Index Function
 
+>This part of the note was updated on 18th of June 2024!
+>There was only the [[String Manipulation - Python#Another way to use Index Function | Another way to use Index Function]]
+
+This function is used to get the position of a character in a string.
+
+>[!tip] Usage
+>```python
+>x.index(character)
+>```
+
+### Example: Index Function
+
+```python
+
+# DECLARE word: STRING
+# yes I am extremely creative when it comes to
+# naming variables
+word = "word"
+# DECLARE email: STRING
+email = "username@email.com"
+# DECLARE find_dotnet: STRING
+find_dotnet = ".com"
+
+# DECLARE index_r: INTEGER
+index_r = word.index("r")
+print(f"The character 'r' is found at: {index_r}")
+
+# exception handling
+try:
+    # DECLARE index_a: INTEGER
+    index_a = word.index("a")
+    print(f"The character 'a' is found at: {index_a}")
+except ValueError:
+    print("Could not find the character 'a'")
+
+# DECLARE dot_net: INTEGER
+dot_net = email.index(find_dotnet)
+print(f"The string '{find_dotnet}' is found at: {dot_net}")
+
+```
+
+>[!note]
+>Why is there an `try... except...` exceptional handling?
+>This is because in Python, the `.index()` function will **not** return `-1` if the character has **not** been found!
+>Its not like the `.indexOf()` function from Java
+>If you want if to return `-1` instead of throwing an error; you the ( *see usage below $\downarrow$* )
+>>[!tip] Usage
+>>```python
+>>x.find(character)
+>>```
+
+### Find Function
+
+>[!warning]
+>I recommend to use the `.find()` function instead of using `.index()` function...
+>The usage is the same as `.index()` just it returns `-1` when it does **not** find the character / combination of characters.
+
+#### Another way to use Index Function
+
 This is to "*remove*"; to be able to get certain ( amount ) of letters in a string.
 Basically, we can do things like take a word in the middle of a sentence or even reverse the order of the words
 
@@ -451,7 +512,7 @@ Basically, we can do things like take a word in the middle of a sentence or even
 >- The **end**: starts with *1* ( **exclusive** )
 >- The **step** is the *funky one*.
 
-### Example: "Man-handling" some words
+#### Example: "Man-handling" some words
 
 ```python
 

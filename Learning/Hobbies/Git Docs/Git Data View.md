@@ -26,3 +26,4 @@ SORT Date ASC
 ### Random Git / GitHub Notes
 
 - [[Git Tips]]
+- [[The Odin Project Foundations]]

@@ -1,16 +1,18 @@
 {
   "accentColor": "",
   "theme": "obsidian",
-  "interfaceFontFamily": "Inter",
-  "textFontFamily": "3270 Nerd Font,JetBrainsMono Nerd Font,OperatorMono Nerd Font",
-  "monospaceFontFamily": "VictorMono Nerd Font,PlemolJP Console NF",
+  "interfaceFontFamily": "Helvetica",
+  "textFontFamily": "JetBrainsMono Nerd Font,SauceCodePro Nerd Font,CaskaydiaCove Nerd Font,3270 Nerd Font",
+  "monospaceFontFamily": "VictorMono Nerd Font Mono",
   "showViewHeader": false,
   "translucency": false,
   "nativeMenus": false,
-  "cssTheme": "GitHub Theme",
-  "baseFontSize": 16,
+  "cssTheme": "Catppuccin",
+  "baseFontSize": 14,
   "enabledCssSnippets": [
     "notes-pen",
-    "highlighters"
+    "highlighters",
+    "one-dark-theme",
+    "Notebook Backgrounds"
   ]
 }

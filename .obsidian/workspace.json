@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "cb005af9c69bc14d",
+        "id": "d6608f0dd6876b25",
         "type": "tabs",
         "children": [
           {
-            "id": "ea217511683798e2",
+            "id": "7eedfe7cab82ad7c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Learning/Hobbies/Git Docs/Create New Branch.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -32,7 +28,7 @@
       {
         "id": "e37db63afe5c0b66",
         "type": "tabs",
-        "dimension": 35.8,
+        "dimension": 38.668373879641486,
         "children": [
           {
             "id": "4cad13d082b07031",
@@ -50,7 +46,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Bubble Sort",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,7 +68,7 @@
       {
         "id": "96bd1d3477c2a727",
         "type": "tabs",
-        "dimension": 33.7,
+        "dimension": 33.41869398207427,
         "children": [
           {
             "id": "c86d2231862bfb35",
@@ -85,12 +81,12 @@
         ]
       },
       {
-        "id": "ebec414a2e184aa6",
+        "id": "a0652db995dd9e49",
         "type": "tabs",
-        "dimension": 30.5,
+        "dimension": 27.91293213828425,
         "children": [
           {
-            "id": "7cec6d1e6cfd1111",
+            "id": "3935c531efe252c3",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -101,8 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5,
-    "collapsed": true
+    "width": 301.5
   },
   "right": {
     "id": "91af16be4f3f8284",
@@ -111,7 +106,7 @@
       {
         "id": "fc96e01b13b76bbc",
         "type": "tabs",
-        "dimension": 32.21544715447154,
+        "dimension": 26.09223300970874,
         "children": [
           {
             "id": "c344ca13e4c25dfd",
@@ -119,7 +114,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Learning/Hobbies/Git Docs/Create New Branch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,7 +130,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Learning/Hobbies/Git Docs/Create New Branch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +141,7 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": true
               }
             }
@@ -159,7 +152,7 @@
       {
         "id": "18683896574bfddd",
         "type": "tabs",
-        "dimension": 35.670731707317074,
+        "dimension": 39.92718446601942,
         "children": [
           {
             "id": "768e9c25d1151c5d",
@@ -174,23 +167,30 @@
       {
         "id": "906dde9f0d046c09",
         "type": "tabs",
-        "dimension": 32.113821138211385,
+        "dimension": 33.980582524271846,
         "children": [
           {
             "id": "abd244413661c90a",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Learning/Hobbies/Git Docs/Create New Branch.md"
-              }
+              "state": {}
+            }
+          },
+          {
+            "id": "4146c3c65f9a40d2",
+            "type": "leaf",
+            "state": {
+              "type": "mathpad-view",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 290.5,
+    "width": 306,
     "collapsed": true
   },
   "left-ribbon": {
@@ -201,60 +201,63 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": true,
       "command-palette:Open command palette": true,
-      "templater-obsidian:Templater": false,
       "obsidian-book-search-plugin:Create new book note": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "templater-obsidian:Templater": false,
+      "obsidian-kanban:Create new board": false,
+      "excel:Create Excel File": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "mathpad:Open Mathpad": false
     }
   },
-  "active": "ea217511683798e2",
+  "active": "7eedfe7cab82ad7c",
   "lastOpenFiles": [
-    "Learning/Hobbies/Git Docs/Git Tips.md",
-    "Learning/C Programming Language/C Data View.md",
-    "Learning/Hobbies/Git Docs/Git Data View.md",
-    "Learning/Hobbies/Git Docs/Git Setup.md",
-    "Learning/C Programming Language/C Basics/Arrays - C.md",
-    "Learning/Hobbies/Git Docs/Dotfiles.md",
-    "Learning/School HSC/Python/Python HSC Data View.md",
-    "Learning/Hobbies/Git Docs/Create New Branch.md",
-    "Learning/C Programming Language/C Basics/C Language.md",
-    "Learning/Hobbies/Git Docs/Change Branch Name.md",
-    "Learning/C Programming Language/C Basics/Structs - C.md",
-    "Learning/School HSC/Python/Python Basics/Object Oriented Programming - Python.md",
-    "Learning/School HSC/Python/Sorting Algos - Python/Bubble Sort - Python.md",
-    "Learning/C Programming Language/Sorting Algos - C/Bubble Sort - C.md",
-    "Learning/School HSC/Python/Python Basics/Arrays - Python.md",
-    "Learning/C Programming Language/C Basics/Functions and Procedures - C.md",
-    "Learning/C Programming Language/C Basics/Selection and Iteration - C.md",
-    "Learning/C Programming Language/C Basics/Include Headers/C Math Function.md",
-    "Learning/School HSC/Python/Random Codes - Python/Random Python Codes.md",
-    "Learning/C Programming Language/Random C Program Codes.md",
-    "Learning/C Programming Language/Sorting Algos - C",
-    "Learning/C Programming Language/C Basics/C Tips.md",
-    "Learning/C Programming Language/C Basics/Include Headers/C String Functions.md",
-    "Learning/Courses/The Odin Project/HTML/HTML.md",
+    "Learning/Programs/Microsoft Access/Microsoft Access ( 2007 ).md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Permutations and Combinations.md",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 6 - 4 Boys and 3 Girls.jpg",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 5 - 3 Men and 2 Women.jpg",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 4 - DESIGN - D first letter.jpg",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 3 - ECONOMICS.jpg",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 2 - PARLOUR.jpg",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 2 - Digits Part 2.jpg",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 2 - Digits Part 1.jpg",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 1 - Books.jpg",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Permutations - Example 1 - BOOK - O consecutive.jpg",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 7/Permutations and Combination.pdf",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 7",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 6",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/New folder",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 1/Logic Proposition - Gates.pdf",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 1/MIP Maths for Computer Science.pdf",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 1/Logic Gates - Session 1.pdf",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 2/Sets, Functions and Relations.pdf",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 2/Session 2.pdf",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Week 3/Domain and Range in Set Relation.pdf",
     "1. Life/Swipe Folder/Media Swipe File.md",
-    "TO DO.md",
-    "1. Life/Swipe Folder/People Swipe File.md",
-    "Learning/Hobbies/Android",
+    "Obsidian Management/Media/Images/University/Maths for Computer Science BCNS1101C/Example 4 - DESIGN - D first letter.jpg",
+    "Excalidraw/Drawing 2024-06-29 09.56.20.excalidraw.md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Logic Gates.md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Boolean Algebra.md",
+    "Learning/Hobbies/Linux/Arch Linux.md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Domain and Range in Set Relation.md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Sets, Functions and Relations.md",
+    "University/Level 1 Semester 1/Maths for Computer Science ( BCNS1101C )/Notes/Logic Proposition ( Logic Gates - Truth Tables ).md",
+    "University/University Data View ( Level 1 Semester 1 ).md",
+    "Learning/Java/Java Basics/Selections and Iteration - Java.md",
+    "University/Level 1 Semester 1/Professional Communications ( BCNS1105C )/Assignment 1/Individual Presentation - Racing Cars for  Dummies.md",
+    "University/Level 1 Semester 1/Professional Communications ( BCNS1105C )/Assignment 1/Individual Presentation - Racing Cars for  Dummies ( Mine ).md",
+    "University/Level 1 Semester 1/Professional Communications ( BCNS1105C )/Assignment 1/Individual Presentation - Racing Cars for  Dummies - Copy.md",
+    "1. Do List.md",
+    "Data View.md",
+    "Learning/Web Development/Web Development Data view.md",
+    "Learning/Web Development/HTML/HTML - Tables.md",
+    "Learning/Web Development/HTML/HTML.md",
+    "University/Level 1 Semester 1/Programming/Programming Techniques 1 ( BCNS1102C )/Programming Notes/Analog - Digital.md",
+    "Learning/Web Development/CSS/CSS - Block and Inline.md",
+    "Learning/Web Development/CSS/CSS - The Box Model.md",
+    "Learning/Web Development/CSS/CSS - Flexbox Alignment.md",
+    "Learning/Web Development/CSS/CSS - Flexbox.md",
+    "Learning/Web Development/The Odin Project Data View.md",
     "Untitled.canvas",
-    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs/12+Rules+to+Learn+to+Code+[2nd+Edition]+2022.pdf",
-    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs/2023+Web+Dev+Syllabus.pdf",
-    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/PDFs",
-    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )/New folder",
-    "Learning/Courses/Udemy Courses/Web Development ( Angela Yu )",
-    "Learning/Courses/Udemy Courses/Web Development ( Angela",
-    "Learning/Courses/Udemy Courses/New folder",
-    "Learning/Courses/Udemy Courses",
-    "Obsidian Management/Media/Pasted Image 20240320163533_793.jpg",
-    "Obsidian Management/Media/Pasted Image 20240320113057_064.png",
-    "Obsidian Management/Media/Images/Programming Languages/C Language/C_Lang-tenary_operator-vs-if_else.png",
-    "Tree Diagram For Uni ( Files ).canvas",
-    "Obsidian Management/Media/Images/Random/HSC Nov-2023 Results.JPG",
-    "Obsidian Management/Media/Images/Programming Languages/C Language/ASCII Table.webp",
-    "Obsidian Management/Media/Images/Screenshots/gpu temp-desktop-pc.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/windows docs using obsidian.png",
-    "Obsidian Management/Media/Images/Microsoft Windows/Windows Features.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/hard drive-indexing.PNG",
-    "Obsidian Management/Media/Images/Microsoft Windows/windows update-advance options.PNG"
+    "Tree Diagram For Uni ( Files ).canvas"
   ]
 }
