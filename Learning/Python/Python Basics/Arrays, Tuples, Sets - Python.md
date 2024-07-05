@@ -328,12 +328,12 @@ for index, numbers in enumerate(numbers, start = 0):
 ## Inserting Elements in 1D-Array
 
 >[!warning]
->The `.insert()` function will add elements at **specific locations**
+>The `.insert()` function will add elements at **specific locations**.
 
 >[!tip] Usage
 >To "*insert*" elements into array; we use:
 >```python
-array.insert(index, value)
+array.insert(index, element)
 >```
 
 ```python

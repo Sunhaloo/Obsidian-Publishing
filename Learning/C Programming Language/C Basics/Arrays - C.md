@@ -19,7 +19,7 @@ Status: HOLD
 	- [[Arrays - C#Method 2 Displaying with a Loop | Displaying Array with Loops]]
 - [[Arrays - C#Adding Elements into 1D-Arrays | Adding Elements into 1D-Arrays]]
 	[[Arrays - C#"Inserting" Elements into 1D-Array | "Inserting" Elements into 1D-Array]]
-	[[Arrays - C#"*Appending*" Elements into 1D-Array | *Appending*" Elements into 1D-Array]]
+	[[Arrays - C#"*Appending*" Elements into 1D-Array | "Appending" Elements into 1D-Array]]
 - [[Arrays - C#Deleting Elements From 1D-Arrays | Deleting Elements From 1D-Arrays]]
 	- [[Arrays - C#"*Popping*" Element From 1D-Array | *Popping*" Element From 1D-Array]]
 	- [[Arrays - C#"*Removing*" Element From 1D-Array | *Removing*" Element From 1D-Array]]
