@@ -276,7 +276,7 @@ So you know that how I have been saying that *C is similar to Visual Basic* $\Ri
 
 >Insert "*so that was a fucking lie* meme here"
 
-I mean, not really, like the thing that I have been saying and *writing* / *coding* above definitely still apply. Nevertheless, for [[Functions and Procedures - C#Function Prototypes | this part]], I do not really know how to explain it. So I have gathered the help from [ChatGPT](chat.openai.com), in addition to [Bro Code's Video Explanation](https://www.youtube.com/watch?v=87SH2Cn0s9A&t=6083s)
+I mean, not really, like the thing that I have been saying and *writing* / *coding* above definitely still apply. Nevertheless, for [[Functions and Procedures - C#Function Prototypes | this part]], I do not really know how to explain it. So I have gathered the help from [ChatGPT](https://chat.openai.com), in addition to [Bro Code's Video Explanation](https://www.youtube.com/watch?v=87SH2Cn0s9A&t=6083s)
 
 ## Explanation on Function Prototypes
 

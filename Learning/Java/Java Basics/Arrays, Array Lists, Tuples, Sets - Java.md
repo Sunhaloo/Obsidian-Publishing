@@ -25,6 +25,8 @@ Status: In-Progress
 - [[Arrays, Array Lists, Tuples, Sets - Java#One Dimensional Arrays ( 1D-Arrays )| One Dimensional Arrays ( 1D-Arrays )]]
 	- [[Arrays, Array Lists, Tuples, Sets - Java#Creating 1D-Arrays| Creating 1D-Arrays]]
 	- [[Arrays, Array Lists, Tuples, Sets - Java#Displaying 1D-Arrays | Displaying 1D-Arrays]]
+	- [[Arrays, Array Lists, Tuples, Sets - Java#Adding Elements into 1D-Array | Adding Elements into 1D-Array]]
+		- [[Arrays, Array Lists, Tuples, Sets - Java#Inserting Elements in 1D-Array | Inserting Elements in 1D-Array]]
 
 ---
 
@@ -227,13 +229,166 @@ public class Main {
 >[!note]
 >This code is taken from [[Arrays - C#"Inserting" Elements into 1D-Array | C]]'s *insert value at specific location*.
 >I will ( *need to* ) be explaining it after writing the code.
+>>[!note] Another NOTE... What?!?
+>>Today is the 3rd of July 2024 @20:26.
+>>I have restarted the making of notes for [[Java Data View | Java]].
+>>I have updated that $\uparrow$ C code that I was talking about... This Java version is so much better.
 
 ```java
 
+// import Scanner Object
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
 
+        // create Scanner Object
+        Scanner user_input = new Scanner(System.in);
+
+        // DECLARE ARRAY numbers[99]: INTEGER
+            // set an abitary high number ( size of array )
+            // so that user will not get any problem inserting like 50 items
+        int[] numbers = new int[100];
+
+        // Exception Handling
+        try {
+
+            // ask the user to enter the amount of numbers he would like to input
+            System.out.print("\nPlease Enter Amount of Values to Store: ");
+            // DECLARE number_amount: INTEGER
+            int number_amount = user_input.nextInt();
+
+            // check if amount to be stored is in range
+            if(number_amount <= 0 || number_amount >= 101) {
+                // output appropriate message
+                System.out.printf("\nAmount to Input '%d' is Out of Bounds\n\n", number_amount);
+                // exit the program
+                    // this is similar to `exit()` in Python
+                System.exit(0);
+            }
+
+            System.out.println();
+
+            // ask the user to enter the values into array
+            // in the "range" that he specified ( `number_amount` )
+            // DECLARE i: INTEGER
+            for(int i = 0; i < number_amount; i++) {
+                System.out.print("Please Enter Value ( i = " + i + " ): ");
+                numbers[i] = user_input.nextInt();
+            }
+
+            System.out.println("\nContents of Array\n");
+
+            // output the content of the array
+            for(int i = 0; i < number_amount; i++) {
+                System.out.printf("Index = %d | Value = %d\n", i, numbers[i]);
+            }
+
+            System.out.println();
+
+            // ask the user to enter insert position
+            // DECLARE insert_position: INTEGER
+            System.out.print("Please Enter Insert Position for New Value: ");
+            int insert_position = user_input.nextInt();
+
+            // check if insert positio is in range
+            if(insert_position <= 0 || insert_position >= 101) {
+                // output appropriate message
+                System.out.printf("\n\nInsert Position '%d' is Out of Bounds!\n\n", insert_position);
+                // exit the program
+                System.exit(0);
+            }
+
+            // because user does not know about how arrays work
+            // we are going to decrement the value for `insert_position` by 1
+            insert_position--;
+
+            // ask the user to enter the actual value
+            // DECLARE insert_value: INTEGER
+            System.out.print("Please Enter Value to Insert: ");
+            int insert_value = user_input.nextInt();
+
+            // swapping values until desired input position is found
+            for(int x = number_amount; x > insert_position; x--) {
+                numbers[x] = numbers[x - 1];
+            }
+
+            // add the "new" value in that spot
+            numbers[insert_position] = insert_value;
+
+            // increase the bounds of array
+            number_amount++;
+
+            System.out.println("\nContents of Array After Insertion\n");
+
+            // outputs the content of the array
+            for(int i = 0; i < numbers.length; i++) {
+                // check if number at index `i` is NOT equal zero
+                if(numbers[i] != 0) {
+                    // if NOT equal to '0' then, output that value together with index
+                    System.out.printf("Index = %d | Value = %d\n", i, numbers[i]);
+                }
+            }
+
+        } catch (java.util.InputMismatchException e) {
+            // output suitable message
+            System.out.println("\nPlease Enter Integer Numbers Only!!!\n");
+        }
+
+        finally {
+            // close the Scanner Object
+            user_input.close();
+        }
+
+    }
+}
 
 ```
 
+### Explanation for "*Inserting*" Data into Array
+
+>BTW when I say inserting, I am referring to the [[Arrays, Tuples, Sets - Python#Inserting Elements in 1D-Array | `.insert()`]] function from Python. When the user will enter values in this format `.insert(index, value)`
+>As you know we do not have these function in C... yeah C, because when you are using **arrays**, they are from C while Python's arrays are actually **lists**.
+>>[!tip] Summary
+>>Java Arrays:
+>>- Size is Static
+>>- **Manual** management required for insertion, deletion and more
+>>
+>>Java Array Lists ( *similar to Python's Lists* ):
+>>- Dynamic Size
+>>- Uses built-in method for various operations
+>
+>Don't worry I did not forget about the Explanation, its below $\downarrow$
+
+So we created an Empty array called `numbers` where we have set the size to 100.
+Then we ask the user to enter the **amount** of *items* / values to enter. The program will check if the *amount* is in range. If so the program will allow the user to **input** the integer data that he wants.
+
+After that the program will ask the user to enter an `insert_position` and what `insert_value` to enter at *that* position. Then the program will swap all the value starting from the "*top*" going down. When the *input position* is reached, it will take that value and `number_amount` ( *array size* ) will increase
+
+>[!warning]
+>Java Array are **NOT** *empty*.
+>They have default values like `0`, `0.0` and null
+>Because if you run this code below $\downarrow$:
+>```java
+>int[] numbers = new int[5]
+>
+>for(int i : numbers) {
+>	System.out.println(i);
+>}
+>```
+>Its going to output:
+>```console
+>0
+>0
+>0
+>0
+>0
+>```
+
+Hence, we need to iterate through **every** value in `numbers` and then check if the value at the index is $\neq$ '0'. If so output the value with the index at which the value is stored.
+
+>Simple as that!!!
+
+---
 
 # Array Lists
 

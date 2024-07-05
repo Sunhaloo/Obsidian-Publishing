@@ -12,7 +12,6 @@ Status: In-Progress
 
 - [[HTML - Tables#Creating Tables | Creating Tables]]
 	- [[HTML - Tables#Create the following Table | Create the following Table]]
-	- [[HTML - Tables#Customisation of Tables | Customisation of Table]]
 - [[HTML - Tables#Row-Span and Col-Span | Rowspan and Colspan]]
 	- [[HTML - Tables#`rowspan` | Rowspan]]
 	- [[HTML - Tables#`colspan` | Colspan]]
@@ -115,13 +114,128 @@ To simple table in HTML, we are going to be mainly using these tree tags:
 >[!info]- Output
 >![[HTML Simple Table.png]]
 
-## Customisation of Tables
-
 # Row-Span and Col-Span
+
+This is basically configuring the cell so that it can be bigger or smaller.
 
 ## `rowspan`
 
+Makes the cell takes more space in the **row** *department* ( *whatever the fuck that means* ).
+Let me give you a simple example.
+
+### Example: Without Row-span
+
+![[HTML Table - No Rowspan Example.png]]
+
+### Example: With Row-span
+
+![[HTML Table - With Rowspan Example.png]]
+
+>As you can see, it will feel out **both** rows ( *row 1 and row 2* )
+>In our code we do not have a *data* for Column 2 - Row 2
+
+This is the code below $\downarrow$ for the example above $\uparrow$:
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables - Rowspan</title>
+</head>
+<body>
+
+    <!-- create a table -->
+     <table border="1" align="center">
+
+        <!-- create row for headings -->
+        <tr>
+            <!-- create the headings for the table -->
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+        </tr>
+
+        <!-- create row 1 for data -->
+        <tr align="center">
+            <!-- data in row 1 -->
+             <td>Col 1 Row 1</td>
+             <!-- `rowspan = 2` so that it can fill 2 rows -->
+             <td rowspan="2">Col 2 Row 1 - With Rowspan</td>
+        </tr>
+
+        <!-- create row 2 for data -->
+        <tr align="center">
+            <!-- data in row 2 -->
+             <td>Col 1 Row 2</td>
+        </tr>
+
+     </table>
+    
+</body>
+</html>
+
+```
+
 ## `colspan`
+
+Similar to [[HTML - Tables#`rowspan` | Row-span]]; but this one will fill out the columns instead of the rows.
+
+>[!note]-
+>I will be using the same code from above $\uparrow$.
+
+### Example: Without Col-span
+
+![[HTML Table - No Colspan Example.png]]
+
+### Example: With Col-span
+
+![[HTML Table - With Colspan Example.png]]
+
+This is the updated code below $\downarrow$:
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables - Rowspan</title>
+</head>
+<body>
+
+    <!-- create a table -->
+     <table border="1" align="center">
+
+        <!-- create row for headings -->
+        <tr>
+            <!-- create the headings for the table -->
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+        </tr>
+
+        <!-- create row 1 for data -->
+        <tr align="center">
+            <!-- data in row 1 -->
+             <td>Col 1 Row 1</td>
+             <!-- `rowspan = 2` so that it can fill 2 rows -->
+             <td>Col 2 Row 1</td>
+        </tr>
+
+        <!-- create row 2 for data -->
+        <tr align="center">
+             <!-- `colspan = 2` so that it can fill 2 columns -->
+             <td colspan="2">Col 1 Row 2 - No Colspan</td>
+        </tr>
+
+     </table>
+    
+</body>
+</html>
+
+```
 
 ---
 

@@ -6,6 +6,9 @@ Date: 2024-05-08
 Status: In-Progress
 ---
 
+>[!warning]
+>This is **not** my proudest documentation
+
 ## List of Contents
 
 - [[Microsoft Access ( 2007 )#Create a New Database File | Create a New Database File]]
@@ -33,6 +36,14 @@ Status: In-Progress
 	- [[Microsoft Access ( 2007 )#Creating Simple Queries | Creating Simple Queries]]
 	- [[Microsoft Access ( 2007 )#Create Another Query Connecting `tblOrderLine` and `tblStock` | Create Another Query]]
 	- [[Microsoft Access ( 2007 )#Calculated Values | Calculated Values]]
+	- [[Microsoft Access ( 2007 )#Combo Box to Select Specific Record | Select Specific Records with Combo Box]]
+- [[Microsoft Access ( 2007 )#More About Queries | More About Queries]]
+	- [[Microsoft Access ( 2007 )#Update Query | Update Query]]
+	- [[Microsoft Access ( 2007 )#Queries based on Data on a Form | Query based on Data on a Form]]
+		- [[Microsoft Access ( 2007 )#Writing Visual Basic Code | Writing Visual Basic Code]]
+- [[Microsoft Access ( 2007 )#More Totals | More Totals]]
+- [[Microsoft Access ( 2007 )#Creating Menus | Creating Menus]]
+	- [[Microsoft Access ( 2007 )#Auto Start Menu | Auto-Start Menu]]
 
 ---
 
@@ -793,7 +804,6 @@ In the `Design View` head over to the **Design** tab ( *in the Ribbon Menu* ) an
 4. As the teacher did not specify to use **Ascending** / **Descending** order on any fields; leave it as it is
 5. Check $\checkmark$ the "*Remember the value for later use*"
 6. Rename the **Label** of the Combo Box to $\rightarrow$ *Stock Item*
-7. Add a **Text Box** and name it *Quantity*
 
 It should look something like this $\downarrow$:
 
@@ -804,6 +814,16 @@ It should look something like this $\downarrow$:
 >Design View
 
 ![[Master + Subform - Creating OrderLines Form ( Design View ).png | 400]]
+
+>[!warning]
+>This is still not good; because the fucking documentation from the fucking lecturer is fucked up.
+>What you need to do it after creating everything; like the **Combo Box** and stuff for `Stock Item`. You need to head over to its property `Control Source` and select `Stock_ID`. Then instead of saying "*Unbound*". It will now say "*Stock_ID*"
+>It should look something like $\downarrow$:
+>![[Order Lines - Stock Combo Box - Stock_ID Control Source Problem.png | 400]]
+>>These blank rectangles I have added so that the Labels `Stock Item` and `Quantity` sit in the *middle*.
+>
+>>[!note]
+>>Do not forget to add the data for the `tblOrderLines`... Else our [[Microsoft Access ( 2007 )#Queries | queries]] will not work later!
 
 ## Adding Sub-Form to Order Form
 
@@ -968,6 +988,293 @@ Once again, we are going to be using the values from `qryOrderByDateDesc`
 | Navigation Buttons | No |
 
 Where at the end we need to get something like this $\downarrow$
+
+![[Form - Order View Form.png | 700]]
+
+### Combo Box to Select Specific Record
+
+Now go ahead and make a *copy* of the `frmCustomer` and rename it to `frmCustomerOrderView`.
+
+#### Steps
+
+- Delete the `Customer_ID` Text Box and Label; we are going to now create a Combo Box to replace it
+- Create a Combo Box
+	- When prompted select "*Find a record on my form based on the value I selected in my combo box*"
+	![[Form - Combo Box ( Find Specific Record - From Another Form ).png | 400]]
+	- Select on the fields
+		- Last Name
+		- First Name
+		- Customer_ID
+	- Rename the **Label** of the Combo Box to `Select Customer`
+	>No need to go to `Control Source` in the *property sheets*
+
+##### Concatenation of `Last Name` and `First Name`
+
+- Remove the Text Box for `Last Name` and `First Name`
+- Create another Text Box
+- Open it's property sheet
+- Type "*=[First Name] & " " & [Last Name]*" in its `Control Source`
+
+>This is literally Visual Basic
+
+The final product should look something like this $\downarrow$:
+
+![[Form - Final Form ( frmCustomerOrderView ).png | 500]]
+
+# More About Queries
+
+## Update Query
+
+>[!warning]
+>Before doing anything; create a copy of the `tblStock`.
+>Because when you are going to press the <button>Run</button>, it will **change** all the values in the column / field `Selling Price`.
+>Hence, we need to create a **copy** of `tblStock` and name it `tblStock-Original`
+
+Create new query and call it `qryStockUpdate`
+
+- Add the `tblStock`
+- Click on **Update Query**
+
+After selecting the big <button>Update</button>; which is found in `Design` Tab, under the section **Query Type**, you will find yourself in this "*screen*" $\downarrow$:
+
+![[Query Design View - Update Query 'Screen'.png | 350]]
+
+>Add the following conditions
+
+| Setting | Value |
+| ------- | ----- |
+| Update To | [Selling Price] * 1.1 |
+| Criteria | >=50 |
+
+### Original Selling Price
+
+![[Table Stock Original Selling Price.png]]
+
+### Updated Selling Price
+
+![[Table Stock Updated Selling Price.png]]
+
+## Summing Query
+
+We are now going to be making a query that will give the *total value for all order lines for each order*.
+
+Create the following query:
+
+![[Query Design View - Total Values from Orderlines Example.png]]
+
+>[!note]-
+>Name the query `qryOrderValue`.
+
+![[Query Design View - Total Values from Orderlines ( My Version ).png]]
+
+Now we are going to calculate the Totals by pressing the <button>Totals</button> which is found in the `Design` tab under the section **Show/Hide** ( *its the summation button $\sum$* )
+
+![[Query Design View - Total Values from Orderlines - Summation or Total ( My Version ).png]]
+
+### `qryOrderValue`
+
+At the end of all of this, we should get something like $\downarrow$:
+
+![[Order Value Query.png]]
+
+## Queries based on Data on a Form
+
+Create a tabular form that is based on `qryOrderValue` and call that form `frmOrderValue`.
+
+![[Query based on Date on a Form.png | 600]]
+
+>Our final form should look something like the this $\uparrow$
+
+### Steps
+
+- Create a `frmOrderValue` ( *tabular form* ) which is based on `qryOrderValue`
+- Create another blank form with the name `frmOrderQuery`
+	- This one will have the 2 Text Boxes ( `Start Date:` *and* `End Date:` )
+	- It will hold the form `frmOrderValue` ( *sub-form* )
+	>There should be not **Primary** / **Foreign** key *between* those 2 forms
+- Open `qryOrderValue` in `Design Mode`
+	- Right click in the *Criteria* field of the `OrderDate` column and press <button>Build</button>
+	>This will send you to the **Expression Build** which looks something like this $\downarrow$:
+	>![[Query Design View - Expression Builder.png | 300]]
+- Steps for using Expression Builder
+	1. Click on `Forms/All Forms/frmOrderQuery` ( _this is found in **left pane**_ )
+	2. Go ahead and find the **Text Box** for the `Start Date:` ( *in my case was `Text9`* ) and *Double Click on it*
+	>It should look something like this $\downarrow$:
+	>![[Query Design View - Expression Builder ( Start Date - Text Box ).png | 300]]
+	3. Remove `Forms![frmOrderQuery]![Text9]` and type in `>=[Forms]![frmOrderQuery]![StartDate] And <=[Forms]![frmOrderQuery]![EndDate]`
+		- *In my case `EndDate` $\rightarrow$ `Text11`*
+	4. Press <button>Ok</button>
+
+At then end we get something like $\downarrow$:
+
+![[Query Design View - Expression Builder ( Start Date - End Date Criteria ).png]]
+
+### Writing Visual Basic Code
+
+Now, we all know that the **query** will *run* when the User will open the form. But we also need to make it so that when the user will **change** the *date* it **updates**.
+
+#### Steps
+
+- Open the Property Sheet of `StartDate` ( *again in my case its `Text9`* ) and find the `After Update` property
+- Press this <button>...</button>; found here ( *check image below $\downarrow$* )
+	![[Query - Auto Update Event ( Start Date - VB Code ).png | 300]]
+- Then press on *Code Builder*, then another window will open up and will look like this $\downarrow$:
+	![[Query - Auto Update Event ( Start Date - VB Code Windows ).png | 700]]
+- Now write the following Code:
+	```vb
+	'As I said mine is not `StartDate`
+	Private Sub Text9_AfterUpdate()
+		Me.frmOrderValue.Requery
+	End Sub
+	```
+- Go ahead and write the same for the `EndDate` text box
+
+>[!bug]
+>This piece of shit code does not work!!!
+
+# More Totals
+
+## `frmOrderLinesView`
+
+### Footer
+
+| Property | Value |
+| -------- | ----- |
+| Height | 1.27 cm |
+
+Now we are going to add Text Boxes in the Footer
+
+| Property | Value | Text Box Label |
+| -------- | ----- | -------------- |
+| Control Source | =Sum([Value]) | Total Value: |
+| Control Source | =Count([Value]) | Number of Items: |
+| Control Source | =Count[(Order_ID)] | Number of Orders: |
+
+At the end it should look something like this $\downarrow$:
+
+![[Footer - Count and Value Function.png | 500]]
+
+# Creating Menus
+
+We are going to create a **menu** to be able to show the main options available to the user in the application.
+
+Create a **Blank Form**.
+
+To create a blank form; head over to the Ribbon Menu and on the `Create` tab. In the **Forms** section; you will find a button that says <button>Blank Form</button> just over <button>More Forms</button>!
+Click on it and you are going to have something like this $\downarrow$:
+
+![[Form - Blank Form.png | 1000]]
+
+As you can see we also have a "*Field List*"; just forget about it for now!
+
+>[!note]
+>This so called "*Field List*" is accessed by pressing the <button>Add Existing Fields</button> in the `Format` tab under the **Controls** section.
+
+Now save that blank form with the name `frmMenu`.
+
+## Design View
+
+>I also suggest watching this video!
+>The link is: https://www.youtube.com/watch?v=dzhBuPrabkY
+
+Go ahead and open that same form in `Design Mode` and then make sure that <button>Use Control Wizard</button> is selected and then select the button <button>Button</button> ( *fucking hell man* ).
+
+As you will see, this will open up $\downarrow$:
+
+![[Command - Button Control.png]]
+
+### Steps
+
+- On the first "*page*" of the Wizard
+	- Select:
+		1. Form Operations ( *`Categories` Section* )
+		2. Open Form ( *`Actions` Section* )
+	- Select `frmCustomer` when it prompts you to select what form would you like to open
+	- Select "*Open the form and show all the records.*"
+	- In the section "*Do you want text or a picture on the button?*"
+		- Select $\checkmark$ `Text:` and type "*Customer Entry*" in the input box
+	- Name that button `cmdCustomerEntry`
+
+>[!info]
+>Now go ahead a create a button called <button>Customer Orders</button>,  <button>Stock Entry</button>, <button>Order Entry</button>
+>>I think that you can follow the steps above $\uparrow$
+
+It should look something like this $\downarrow$:
+
+![[Form - Blank Form ( Menu Form - With Buttons ).png | 400]]
+
+## Auto Start Menu
+
+Click on the big, round, colourful and shitty Office button and you will see `Access Options`; click on it.
+
+This is where its located:
+
+![[Auto Start Form - Access Options.png | 350]]
+
+You will then find yourself in this menu $\downarrow$:
+
+![[Auto Start Form - Access Options Menu.png | 700]]
+
+### Steps
+
+- Head over to `Current Database`
+- Look for `Display Form`
+	![[Auto Start Form - Start Form.png]]
+- Select the Form that you want to *auto-start*
+	- In this case, we need to select `frmMenu`
+
+Hence, when you close out of the Database and re-open it; it will look something like this $\downarrow$:
+
+![[Auto Start Form - Open Database ( starts up frmMenu ).png | 1000]]
+
+# Tab Control
+
+>Use Tab Control to show Related Data.
+
+## `frmCustomerOrderView`
+
+Go ahead and open up the `frmCustomerOrderView` in `Design Mode`. Now select **Tab Control** from the Toolbox and place it on the form.
+
+>[!note]
+>The **Tab Control** button is found in the `Design Tab` in the **Controls** section. Refer to image below $\downarrow$ to find it.
+>![[Form - Tab Control Location.png]]
+
+After placing the Tab Control, change its name from `Page Something Something` to:
+
+| Property | Value |
+| -------- | ----- |
+| Name | Details |
+| Name | Order |
+
+It should end up looking similar to this $\downarrow$:
+
+![[Form - Tab Control ( Change Name - Name Property ).png]]
+
+### Placing Customer Details on Tab Control
+
+>We are now going to become Surgeons
+
+Now, just cut all the Customer Details like:
+
+- First Name
+- Last Name
+- Addresses
+- Phone Number
+- etc...
+
+and place it onto the Tab Control `Details` section.
+
+Do this again for the Sub Form that is in the `frmCustomerOrderView` but now place it inside the `Order` section.
+
+#### At the end, we get
+
+- Details Tab
+
+![[Form - Tab Control ( Details Tab - frmCustomerOrderView ).png | 650]]
+
+- Order Tab
+
+![[Form - Tab Control ( Order Tab - frmCustomerOrderView ).png | 650]]
 
 ---
 
