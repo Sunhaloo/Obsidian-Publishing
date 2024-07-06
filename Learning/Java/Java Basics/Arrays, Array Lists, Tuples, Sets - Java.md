@@ -673,6 +673,7 @@ int pop_value = numbers[array_size - 1]
 You are still going to get the output like you did <span style="color: red;"><strong>NOT</strong></span> modified the array!
 
 >[!success]- Code Ouput
+>
 >>[!info] Good Code Output
 >>```console
 >>Initial Contents of Array
