@@ -696,7 +696,9 @@ You are still going to get the output like you did <span style="color: red;"><st
 >>Index = 2 | Value: 3
 >>Index = 3 | Value: 4
 >>```
+>
 >---
+>
 >>[!info] Bad Code Output
 >>```console
 >>Initial Contents of Array
@@ -721,6 +723,7 @@ You are still going to get the output like you did <span style="color: red;"><st
 >>Index = 3 | Value: 4
 >>Index = 4 | Value: 5
 >>```
+>
 
 ### "*Removing* Elements From 1D-Arrays
 
@@ -1198,6 +1201,197 @@ user_input.nextLine()
 
 This is because of the `%n` / `\n` problem. If you do not remember head over to [[Java Language#User Inputs | User Inputs]], head over to the second <span style="color: orange;">Warning</span> call-out, you will get the explanation.
 Then again, the rest are pretty self-explanatory!
+
+## Deleting Elements from Array Lists
+
+### "*Popping*" Elements from Array Lists
+
+>Again, I lied ( *again, kind-of* ) there is not such thing as a `pop()` function in Java. We are going to be using the `.remove()` function!
+
+```java
+
+// import module / package for Array Lists
+import java.util.ArrayList;
+public class App {
+
+    public static void main(String[] args) throws Exception {
+
+
+        // create an Array List of type Object with identifier name 'array_list'
+        ArrayList<Object> array_list = new ArrayList<Object>();
+
+        // append elements into Array List with `.add()` function
+        array_list.add(5);
+        array_list.add(4);
+        array_list.add(3);
+        array_list.add(2);
+        array_list.add("fuck off");
+
+        System.out.println("\nContents of Array List\n");
+
+        // display the content of Array List
+        for(int i = 0; i < array_list.size(); i++) {
+            System.out.printf("Index = %d | Value: %s\n", i, array_list.get(i));
+        }
+
+        System.out.println();
+
+        // pop the last element from Array List
+        array_list.remove(array_list.size() - 1);
+
+        System.out.println("Updated Contents of Array List\n");
+
+        // display the content of Array List again
+        for(int i = 0; i < array_list.size(); i++) {
+            System.out.printf("Index = %d | Value: %s\n", i, array_list.get(i));
+        }
+
+        System.out.println();
+
+    }
+
+}
+
+```
+
+#### Explanation on *popping* Elements from Array Lists
+
+Here we only need to *remove* the **last** element. Hence, we get this one liner code:
+
+```java
+
+// pop the last element from Array List
+array_list.remove(array_list.size() - 1);
+
+```
+
+This `array_list.size() - 1` will calculate the **index** of the *last* element. *Wait a second*? *You might be asking but why, just pass in the last index directly*.
+This is where you are very very wrong boi!
+As you know the `.remove()` function can also *remove* an element by the *element* ( *like you input for example `shit ass`, it removes `shit ass`* ).
+Hence, if you have
+
+```console
+
+array_list = [0, 1, 2, 3, 4]
+
+Where:
+
+Index = 0 | Value: 1
+Index = 1 | Value: 2
+Index = 2 | Value: 0
+Index = 3 | Value: 6
+Index = 4 | Value: 4
+
+```
+
+If you are going remove the **element** ( *not index* ) `0` which is found at **index** `2` and you do `array_list.remove(0)`.
+Its going to remove the **element** `1`.
+>This is because, from I am seeing, the `.remove()` function prioritise the **index** first! ( *as an argument* )
+
+Hence, we need to do `array_list.size() - 1` to get the **index** of the last value and then it will _**pop**_ the last value out!
+
+### "*Removing*" Elements from Array Lists
+
+Similar to the [[Arrays, Tuples, Sets - Python#Removing Element From 1D-Array | `.remove()`]] function in Python. We can pass in the actual **element** as an *argument*!
+
+```java
+
+// import module / package for Array Lists
+import java.util.ArrayList;
+// import the Scanner Object
+import java.util.Scanner;
+public class App {
+
+    public static void main(String[] args) throws Exception {
+
+        // create Scanner Object
+        Scanner user_input = new Scanner(System.in);
+
+        // create an Array List of type Object with identifier name 'array_list'
+        ArrayList<Object> array_list = new ArrayList<Object>();
+
+        // ask the user to enter amount of element to add into Array List
+        System.out.print("\nPlease Enter the Amount of Elements to Add into Array List: ");
+        // DECLARE user_amount: INTEGER
+        int user_amount = user_input.nextInt();
+
+        // consume the new-line character 
+        // ---> again check Java Language; section User Input ( second Warning callout )
+        user_input.nextLine();
+
+        System.out.println();
+
+        // ask the user to enter data into array
+        // here we are going to be appending the data, because to the user it will be making more sense
+        // DECLARE i: INTEGER
+        for(int i = 0; i < user_amount; i++){
+            System.out.print("Please Enter an Element: ");
+            // DECLARE user_element: OBJECT
+            Object user_element = user_input.nextLine();
+            // append that element to the Array List
+            array_list.add(user_element);
+        }
+
+        System.out.println("\nContents of Array List\n");
+
+        // display the content of Array List
+        for(int i = 0; i < array_list.size(); i++) {
+            System.out.printf("Index = %d | Value: %s\n", i, array_list.get(i));
+        }
+
+        System.out.println();
+
+        // ask the user to enter a element to remove
+        System.out.print("Please Enter an Element to Remove: ");
+        // DECLARE remove_element: OBJECT
+        Object remove_element = user_input.nextLine();
+
+        // remove that element from Array List
+        array_list.remove(remove_element);
+
+        System.out.println("Updated Contents of Array List\n");
+
+        // display the content of Array List again
+        for(int i = 0; i < array_list.size(); i++) {
+            System.out.printf("Index = %d | Value: %s\n", i, array_list.get(i));
+        }
+
+        System.out.printf("\nElement Removed: %s", remove_element);
+
+		// close Scanner Object
+		user_input.close()
+
+    }
+
+}
+
+```
+
+#### Explanation on *removing* Elements from Array Lists
+
+The main thing to look at here is this $\downarrow$ code snippet:
+
+```java
+
+// ask the user to enter a element to remove
+System.out.print("Please Enter an Element to Remove: ");
+// DECLARE remove_element: OBJECT
+Object remove_element = user_input.nextLine();
+
+// remove that element from Array List
+array_list.remove(remove_element);
+
+```
+
+- Ask the user to enter an **element** to *remove* ( *yes... element and not index. I mean you could if you want to!* )
+- The *element* entered by the user goes into the variable `remove_element`
+- **Removes** the *element* from the Array List with `array_list.remove(remove_element)`
+
+>I wanted to skip this part, but because I am a good person ( *shut up... I am a good person* ), I decided to include something.
+
+>[!info]
+>Even if the user adds an element like... let's say `fuck you`. As you can see it has the `<Space>` in between. Now when the program / code will ask the user to enter an element to **remove**; it will actually **remove** the element `fuck you` if the user enters `fuck you`.
+>>Its not like in C, where we need to use the [[C Language#`fgets()` Function | `fgets()`]] function to be able to accept white spaces in between words.
 
 ---
 
