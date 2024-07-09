@@ -1,0 +1,319 @@
+1)Create index
+2)Create view
+3)Create sequence
+4)Drop index
+5)Drop table
+6)Drop view
+7)Drop sequence
+8)Check constraint
+9)List of other constraints
+10)Stop points
+11)Create new user
+
+
+SQL PRIMARY KEY Constraint
+
+The PRIMARY KEY constraint uniquely identifies each record in a database table.
+
+Primary keys must contain UNIQUE values.
+
+A primary key column cannot contain NULL values.
+
+Most tables should have a primary key, and each table can have only ONE primary key.
+
+
+CREATE TABLE Persons
+(
+P_Id int NOT NULL PRIMARY KEY,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+
+
+To allow naming of a PRIMARY KEY constraint, and for defining a PRIMARY KEY constraint on multiple columns, use the following SQL syntax:
+
+MySQL / SQL Server / Oracle / MS Access:
+CREATE TABLE Persons
+(
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+CONSTRAINT pk_PersonID PRIMARY KEY (P_Id,LastName)
+)
+
+SQL PRIMARY KEY Constraint on ALTER TABLE
+
+To create a PRIMARY KEY constraint on the "P_Id" column when the table is already created, use the following SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+
+ALTER TABLE Persons
+ADD PRIMARY KEY (P_Id)
+
+
+To DROP a PRIMARY KEY Constraint
+
+To drop a PRIMARY KEY constraint, use the following SQL:
+
+MySQL:
+ALTER TABLE Persons
+DROP PRIMARY KEY
+
+SQL Server / Oracle / MS Access:
+ALTER TABLE Persons
+DROP CONSTRAINT pk_PersonID
+
+SQL FOREIGN KEY Constraint on CREATE TABLE
+
+The following SQL creates a FOREIGN KEY on the "P_Id" column when the "Orders" table is created:
+
+MySQL:
+CREATE TABLE Orders
+(
+O_Id int NOT NULL,
+OrderNo int NOT NULL,
+P_Id int,
+PRIMARY KEY (O_Id),
+FOREIGN KEY (P_Id) REFERENCES Persons(P_Id)
+)
+
+SQL Server / Oracle / MS Access:
+CREATE TABLE Orders
+(
+O_Id int NOT NULL PRIMARY KEY,
+OrderNo int NOT NULL,
+P_Id int FOREIGN KEY REFERENCES Persons(P_Id)
+)
+
+
+SQL Server / Oracle / MS Access:
+CREATE TABLE Orders
+(
+O_Id int NOT NULL PRIMARY KEY,
+OrderNo int NOT NULL,
+P_Id int FOREIGN KEY REFERENCES Persons(P_Id)
+)
+
+
+To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
+
+MySQL / SQL Server / Oracle / MS Access:
+CREATE TABLE Orders
+(
+O_Id int NOT NULL,
+OrderNo int NOT NULL,
+P_Id int,
+PRIMARY KEY (O_Id),
+CONSTRAINT fk_PerOrders FOREIGN KEY (P_Id)
+REFERENCES Persons(P_Id)
+)
+
+SQL FOREIGN KEY Constraint on ALTER TABLE
+
+To create a FOREIGN KEY constraint on the "P_Id" column when the "Orders" table is already created, use the following SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+ALTER TABLE Orders
+ADD FOREIGN KEY (P_Id)
+REFERENCES Persons(P_Id)
+
+To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
+
+MySQL / SQL Server / Oracle / MS Access:
+ALTER TABLE Orders
+ADD CONSTRAINT fk_PerOrders
+FOREIGN KEY (P_Id)
+REFERENCES Persons(P_Id)
+
+
+
+To DROP a FOREIGN KEY Constraint
+
+To drop a FOREIGN KEY constraint, use the following SQL:
+
+MySQL:
+ALTER TABLE Orders
+DROP FOREIGN KEY fk_PerOrders
+
+SQL Server / Oracle / MS Access:
+ALTER TABLE Orders
+DROP CONSTRAINT fk_PerOrders
+
+
+To add a column in a table, use the following syntax:
+ALTER TABLE table_name
+ADD column_name datatype
+
+To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):
+ALTER TABLE table_name
+DROP COLUMN column_name
+
+
+To change the data type of a column in a table, use the following syntax:
+
+SQL Server / MS Access:
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype
+
+My SQL / Oracle (prior version 10G):
+ALTER TABLE table_name
+MODIFY COLUMN column_name datatype
+
+Oracle 10G and later:
+ALTER TABLE table_name
+MODIFY column_name datatype
+
+SQL CHECK Constraint
+
+The CHECK constraint is used to limit the value range that can be placed in a column.
+
+If you define a CHECK constraint on a single column it allows only certain values for this column.
+
+If you define a CHECK constraint on a table it can limit the values in certain columns based on values in other columns in the row.
+SQL CHECK Constraint on CREATE TABLE
+
+The following SQL creates a CHECK constraint on the "P_Id" column when the "Persons" table is created. The CHECK constraint specifies that the column "P_Id" must only include integers greater than 0.
+
+MySQL:
+CREATE TABLE Persons
+(
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+CHECK (P_Id>0)
+)
+
+
+SQL CHECK Constraint
+
+The CHECK constraint is used to limit the value range that can be placed in a column.
+
+If you define a CHECK constraint on a single column it allows only certain values for this column.
+
+If you define a CHECK constraint on a table it can limit the values in certain columns based on values in other columns in the row.
+SQL CHECK Constraint on CREATE TABLE
+
+The following SQL creates a CHECK constraint on the "P_Id" column when the "Persons" table is created. The CHECK constraint specifies that the column "P_Id" must only include integers greater than 0.
+
+MySQL:
+CREATE TABLE Persons
+(
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+CHECK (P_Id>0)
+)
+
+SQL Server / Oracle / MS Access:
+CREATE TABLE Persons
+(
+P_Id int NOT NULL CHECK (P_Id>0),
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+
+To allow naming of a CHECK constraint, and for defining a CHECK constraint on multiple columns, use the following SQL syntax:
+
+MySQL / SQL Server / Oracle / MS Access:
+CREATE TABLE Persons
+(
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+CONSTRAINT chk_Person CHECK (P_Id>0 AND City='Sandnes')
+)
+SQL CHECK Constraint on ALTER TABLE
+
+To create a CHECK constraint on the "P_Id" column when the table is already created, use the following SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+ALTER TABLE Persons
+ADD CHECK (P_Id>0)
+
+To allow naming of a CHECK constraint, and for defining a CHECK constraint on multiple columns, use the following SQL syntax:
+
+MySQL / SQL Server / Oracle / MS Access:
+ALTER TABLE Persons
+ADD CONSTRAINT chk_Person CHECK (P_Id>0 AND City='Sandnes')
+To DROP a CHECK Constraint
+
+To drop a CHECK constraint, use the following SQL:
+
+SQL Server / Oracle / MS Access:
+ALTER TABLE Persons
+DROP CONSTRAINT chk_Person
+
+MySQL:
+ALTER TABLE Persons
+DROP CHECK chk_Person
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Create user ajit_july2023 identified by ajit_1309;
+GRANT CONNECT , RESOURCE, UNLIMITED TABLESPACE TO ajit_july2023;
+
+(1)ALTER Username identified by new password
+
+(2)ALTER TABLE tablename ADD CONSTRAINT constraint name PRIMARY KEY(columnname); 
+
+(3)ALTER TABLE tablename ADD CONSTRAINT constraint name FOREIGN KEY (columnname)REFERENCES parent tablename(columnname);
+
+(4)ALTER TABLE tablename RENAME to new tablename;
+
+(5)ALTER TABLE tablename ADD columnname datatype <NOT NULL>;
+
+(6)ALTER TABLE tablename MODIFY columnname new datatype <NOT NULL>;
+
+(7)ALTER TABLE tablename DROP columnname;
+
+(8)CREATE TABLE AS <sql select statement>;
+
+(9)GRANT <action1>,<action2>...on tablename To subject (USER);
+
+(10)REVOKE <ACTION> on OBJECT FROM <subject>;
+
+(11)REVOKE ALL ON OBJECT FROM <subject>;
+
+(12)COLUMN columnname FORMAT <A10>;
+
+(13)SET Linesize 120;
+
+(14)SET Pagesize 24;
+
+(15)COMMIT;
+
+(16)ROLLBACK;
+
+(17)UPDATE tablename
+           SET columnname = expression
+	WHERE <where clause>;
+
+(18)SELECT tablename FROM USER_TABLES;
+
+(19)SELECT *FROM CAT;
+
+(20)SELECT *FROM TAB;
+
+(21)SELECT *FROM USER_TS_QUOTAS;
+
+(22)COLUMN object_name FORMAT A35
+         SELECT object_name, object type
+         FROM USER_OBJECTS;
+
+(23) CREATE USER USERNAME IDENTIFIED BY PWD;
+        GRANT CONNECT , RESOURCE, UNLIMITED TABLESPACE TO USERNAME;
+
+

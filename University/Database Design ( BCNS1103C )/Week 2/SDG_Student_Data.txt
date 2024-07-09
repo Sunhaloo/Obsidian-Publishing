@@ -1,0 +1,358 @@
+Customer Table
+------------------
+Customer_Id	Surmame	First Name	Address 1	Address 2	Address 3	Address 4	Postcode	Phone
+------------------------------------------------------------------------------------------------------------------------------
+1	Sinclair	Bob	128 Rue du Bourgotte P.Louis	
+
+
+			2066090
+
+
+2	Lafrance	Cecile	06 Ave Dalaya Bel Air					2524060
+3	Pede	Chritopher	66 Ave Jardin Botanique P Louis					2360666
+4	Jessi	Cheril	35 Rue Vallegee P.Louis					7929252
+5	Chloe	Helena	12 Rue Eau Coulee Curepipe					6759406
+6	Rodriquez	Jessica	19 Rue Joachim Curepipe					6747636
+7	Laposte	Evita	3 Rue Lariviere Vacoas					6865577
+
+
+
+8	Melchi	Ravi	7 Rue Caserne Q.Bornes					4656467
+9	Phoenix	Jessica	89 Rue Clairfond R.Hill					6771608
+10	Priyanka	Bachan	19 Ave Bollywood Rodrigues					8917174
+11	Mega	Construction	45 Route Royale Camp Diable	68 Ave Corner Roche Noir	6 Rue Genius B Bassin	52 Route du Champs Souillac
+
+1	Smith	Jonathan	Ruelle Dalais	Forest-side			110	6744489
+2	Thornes	Mary	Royal Road	Curepipe			10	6763465
+3	Perally	Fardeen	Icery	Road	Rose-Hill		130	7673287
+
+
+
+4	Doly	Nelson	Port-Louis				80	7345643
+5	Parsuramen	Niven	Alle-Brillant	Royal Road			150	2666586
+6	Justrat	Malika	Hollywood street	Vacoas			10	6782318
+7	Pascal	Nelly	Point-aux-sable				18	7869023
+8	Sue	maya	Beau Bassin				180	6724420
+
+
+9	Labonte	christa	Curepipe				190	6863917
+10	Perioch	Emmanuel	Simonent street	Bel Air			20	6735698
+11	Shobee	Ristha	Camp de Masque	Medine			45	2674981
+12	Tang	micheel	China Town	Port-Louis			50	2666897
+13	Batist	Bernard	Royal Road	Flacq			40	4582290
+
+14	Simth	Jonathan	Ruelle Dalais	Forest-Side			110	6744489
+15	Sue	Maya	Beau-Bassin				180	6744420
+16	Pascal	Ivo	Curepipe				10	6744421
+17	Pascal	Nelly	Icery	road			20	2666895
+18	Jusrat	Malika	Hollywood street	Vacoas			45	2586598
+19	sue	Ivo	Ruelle Dalais	Curepipe			20	6477858
+20	soowamber	milly	Royal Road	curepipe	Forest-side		13	4538790
+
+
+1	Ramburn	Shalini	Royal Road	Calebasses	Pamplemousses	Mauritius	230	7900744
+2	Boyroo	Preetee	Royal Road	Ville Bagues	Pamplemousses	Mauritius	160	4185363
+3	Chatooah	Namratta	Bank Road	Goodlands	Riv du Rampart	Mauritius	170	2832700
+4	Hurry	Ashra	Royal Road	Goodlands	Riv du Rempart	Mauritius	180	7995184
+5	Sang	Lai	Queen Street	Port Louis	Port Louis	Mauritius	185	2105784
+
+
+
+
+6	Fokeer	Natasha	Royal Road	Cottage	Riv du Rempart	Mauritius	210	2665545
+7	Chung	Cindy	Labourdonnais st	Port Louis	Port Louis	Mauritius	245	2145454
+8	Brown	John	Old Kent Road	Flacq	Flacq	Mauritius	214	4578454
+9	Smith	Kerry	Marseille Avenue	Reduit	Moka	Mauritius	325	4585666
+10	Smith	Georges	Houston Road	Riviere Noire	Black River	Mauritius	254	4578799
+
+
+11	Chatooah	Nilkant	Bank Road	Goodlands	Riv du Rempart	Mauritius	242	2834644
+
+
+12	Sang	Lila	Avenue Rosignol	Quatres Bornes	Plaines Wilhems	Mauritius	264	4884655
+13	Rama	Raj	Old market Road	Fond du sac	Pamplemousses	Mauritus	255	2665782
+14	Boyroo	Ashwin	Royal Road	Ville Bagues	Pamplemousses	Mauritius	215	2454154
+15	Fowdar	Adarsh	Royal Road	Vallees des Pretes	Port Louis	Mauritius	230	4187877
+16	Foondon	Shakeel	Royal Road	Bonaccueil	Flacq	Mauritius	230	4184564
+
+======================================================================================================================================================
+OrderTable
+-----------------
+Order_Id	Customer_Id	OrderDate	PaymentMethod
+-------------------------------------------------------------
+1		1	02/05/2006	C
+2		2	01/08/2006	F
+3	3	24/12/2005	F
+4	4	09/08/2005	C
+5	5	08/09/2005	C
+6	6	01/10/2005	C
+7	7	01/08/2005	C
+8	8	22/08/2006	C
+9	9	21/08/2006	C
+10	10	28/02/2006	F
+11	5	25/02/2001	C
+12	8	31/01/2001	C
+13	9	06/06/2002	F
+14	4	04/12/2005	C
+15	6	06/04/2006	C
+16	7	02/06/2006	C
+17	2	12/07/2009	C
+18	3	21/04/2009	C
+19	8	02/07/2006	F
+20	6	09/03/2006	F
+21	8	12/05/2006	F
+22	4	24/02/2006	F
+23	6	05/04/2008	F
+24	7	29/05/2007	C
+25	3	21/07/2006	C
+26	1	05/08/2006	C
+27	2	26/11/2005	C
+28	10	03/04/2006	F
+29	5	05/08/2006	C
+30	11	24/08/2006	C
+
+
+1	3	17/08/2006	c
+2	5	17/08/2002	c
+3	2	17/08/2002	f
+4	4	17/08/2006	f
+5	4	17/08/2009	f
+6	6	17/08/2006	c
+7	1	17/08/2008	f
+8	8	18/08/2008	f
+9	10	18/08/2008	c
+10	9	18/08/2004	c
+11	8	18/08/2001	f
+12	4	18/08/2001	c
+13	6	18/08/2001	c
+14	9	18/08/2006	c
+15	7	18/08/2006	c
+16	5	18/08/2006	c
+17	3	18/08/2009	c
+18	2	18/08/2009	c
+19	5	18/08/2006	f
+20	9	18/08/2006	c
+21	14	18/08/2006	c
+22	11	18/08/2005	f
+23	5	25/08/2006	c
+24	7	25/08/2006	c
+25	3	25/08/2005	c
+26	2	25/08/2006	c
+27	1	25/08/2006	c
+28	7	25/08/2005	c
+29	4	25/08/2006	c	
+
+
+1	11	15/08/2006	F
+2	4	12/08/2006	C
+3	1	13/08/2006	F
+5	5	10/08/2006	C
+6	6	08/08/2006	F
+7	3	04/05/2006	C
+8	10	04/06/2004	F
+9	12	10/08/2006	C
+10	13	05/12/2004	F
+11	15	02/10/2003	C
+12	8	04/12/2002	F
+13	7	08/06/2004	C
+14	11	24/09/2005	F
+15	5	26/10/2000	F
+16	4	15/12/2002	F
+17	6	01/11/2005	C
+18	4	05/05/2004	C
+20	9	25/08/2006	F
+21	2	05/12/2005	C
+22	14	12/10/2002	C	
+
+=================================================================
+Orderline Table
+-------------------
+OrderLine_Id	Order_Id	Stock_Id	Quantity
+----------------------------------------------------------
+1	1	1	1
+10	4	10	15
+11	30	3	50
+12	30	6	10
+13	15	4	2
+14	25	7	12
+15	7	14	6
+16	2	10	15
+17	5	15	6
+18	11	5	3
+19	12	8	14
+2	2	20	3
+20	12	15	2
+21	13	16	9
+22	14	9	15
+23	30	9	35
+24	30	19	10
+25	30	20	10
+26	30	9	10
+27	30	10	10
+28	15	14	9
+29	16	1	3
+3	2	8	6
+30	17	4	18
+31	18	9	25
+32	19	16	33
+33	20	3	8
+34	21	6	10
+35	21	2	15
+36	22	20	28
+37	24	18	1
+38	25	7	5
+39	23	8	10
+4	3	9	7
+40	23	18	10
+41	26	17	4
+42	26	18	4
+43	26	7	1
+44	26	8	1
+45	27	1	1
+46	27	2	1
+47	27	13	1
+48	27	14	1
+49	28	8	8
+5	10	19	5
+50	29	6	9
+6	5	1	2
+7	8	2	4
+8	9	17	6
+9	6	18	10
+
+
+2	5	14	21
+4	1	3	1
+8	6	5	6
+11	5	2	6
+13	6	5	1
+14	9	6	1
+16	4	7	1
+17	8	11	1
+19	2	5	7
+20	1	3	4
+21	5	3	1
+22	6	3	1
+23	4	5	1
+24	4	2	1
+25	5	5	1
+26	6	5	1
+27	7	4	9
+28	8	4	2
+29	9	7	5
+30	8	4	5
+31	3	2	7
+32	7	3	8
+33	5	3	6
+34	2	7	1
+35	4	9	1
+
+
+2	1	2	2
+3	3	3	2
+5	3	1	1
+8	14	12	2
+9	12	4	2
+10	15	5	2
+11	18	15	3
+12	12	8	1
+13	1	2	2
+14	1	3	2
+15	11	8	3
+17	20	7	5
+18	16	2	2
+19	8	8	2
+===================================================================================
+
+
+Stock table
+---------------------
+Stock_Id	Description	SellingPrice
+-----------------------------------------------------------------------------
+1	New Age Doors	$5,500.00
+2	Yellow Window double glazing	$4,500.00
+3	Green Window double glazing	$2,000.00
+4	Wooden-like Window double glazing	$6,000.00
+5	Aluminium grey Window double glazing	$7,500.00
+6	Simple Window double glazing	$1,000.00
+7	Special Window double glazing	$10,000.00
+8	5 stars Window double glazing	$15,000.00
+9	PVC Windows	$500.00
+10	Galvanised Windows	$750.00
+11	Red Doors double glazing	$2,500.00
+12	Yellow Doors double glazing	$2,250.00
+13	Green Doors double glazing	$1,000.00
+14	Wooden-like Doors double glazing	$3,000.00
+15	Aluminium grey Doors double glazing	$3,750.00
+16	Simple Doors double glazing	$500.00
+
+
+17	Special Doors double glazing	$5,000.00
+18	5 stars Doors double glazing	$7,500.00
+19	PVC Doors	$250.00
+20	Galvanised Doors	$375.00
+21	New Age Doors	$5,500.00
+22	Pine Door	$200.00
+
+
+
+
+
+2	Aluminum doors	$10.00
+3	Two frame windows	$25.00
+4	Aluminum windows	$28.00
+5	Window Glass	$56.00
+6	Pvc doors	$89.00
+7	Pvc windows	$569.00
+8	Double sided doors	$4,589.00
+9	Pvc doors slide	$23.00
+10	Non sliding door	$65.00
+11	Non sliding window	$56.00
+12	Double Frame window	$900.00
+13	Double Frame doors	$899.00
+14	Sliding window	$75.00
+15	Transperent Glass window	$190.00
+16	Transperent Glass door	$200.00
+17	Coloured Glass doors	$56.00
+18	Pvc two sided windows	$90.00
+19	Alumium coloured glass	$56.00
+20	metal frame window	$46.00
+21	Metal frame doors	$43.00
+22	Glass with printed pictures	$323.00
+23	Aluminum doors with printed desgin	$500.00
+24	Pvc slide with designe	$67.00
+25	Garage  specialdoor	$4,600.00
+26	Garage special window	$70.00
+27	shopping mall special doors	$300.00
+28	shopping mall special window	$45.00
+29	Shower Pvc box	$85.00
+30	shower pvc coloured box	$95.00
+
+1	Door- Double Sided	$1,000.00
+2	Window panes	$200.00
+3	Aluminium Door	$100.00
+4	Aluminium Window	$155.00
+5	One sided Door	$200.00
+6	One sided window	$450.00
+7	Window	$500.00
+8	Door knob	$150.00
+9	Door- Triple sided	$500.00
+10	Window-Triple sided	$200.00
+11	Glass Door	$200.00
+12	Glass Window	$150.00
+13	Wooden Door	$250.00
+14	Wooden window	$350.00
+15	Window knob	$100.00
+16	Blue Window	$1,000.00
+17	Grey Door	$1,500.00
+18	Blue Door	$1,500.00
+19	Green Door	$1,200.00
+20	Green Window	$1,000.00
+21	Simple Door	$500.00
+22	Sliding Door	$1,200.00
+23	PVC door frame	$500.00
+24	PVC Window frame	$400.00
+25	Galvanised door knob	$2,000.00
+26	Galvanised window knob	$1,500.00
+27	Galvanised frame	$1,200.00
+28	Sliding Window	$1,500.00
