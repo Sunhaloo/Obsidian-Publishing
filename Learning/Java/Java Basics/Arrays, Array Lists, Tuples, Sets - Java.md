@@ -34,6 +34,10 @@ Status: In-Progress
 
 ---
 
+- [[Arrays, Array Lists, Tuples, Sets - Java#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays ( 2D-Arrays )]]
+
+---
+
 ## List
 
 - [[Arrays, Array Lists, Tuples, Sets - Java#Array Lists | Array Lists]]
@@ -42,6 +46,9 @@ Status: In-Progress
 	- [[Arrays, Array Lists, Tuples, Sets - Java#Adding Elements into Arrays Lists | Adding Elements into Arrays Lists]]
 		- [[Arrays, Array Lists, Tuples, Sets - Java#"*Inserting*" Elements into Array Lists | "Inserting" Elements into Array Lists]]
 		- [[Arrays, Array Lists, Tuples, Sets - Java#"*Appending*" Elements in Array Lists | "Appending" Elements in Array Lists]]
+	- [[Arrays, Array Lists, Tuples, Sets - Java#Deleting Elements from Array Lists | Deleting Elements from Array Lists]]
+		- [[Arrays, Array Lists, Tuples, Sets - Java#"*Popping*" Elements from Array Lists | "Popping" Elements from Array Lists]]
+		- [[Arrays, Array Lists, Tuples, Sets - Java#"*Removing*" Elements from Array Lists | "Removing" Elements from Array Lists]]
 
 ---
 
@@ -864,6 +871,10 @@ After the next iteration the **value** at index 3 will be 5. Hence, we get an ar
 >>Where `total_values` is the `array_size`. As you can see we do **not** have `total_values - 1`... I need to ask someone about this! Because I do not know what magic C is doing while Java with its mega abstraction cannot do.
 >>But the *correct* way is the one that I wrote for **Java**!
 
+
+---
+
+# Two Dimensional Arrays ( 2D-Arrays )
 
 ---
 

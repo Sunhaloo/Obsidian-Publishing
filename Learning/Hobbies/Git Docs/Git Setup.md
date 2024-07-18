@@ -3,7 +3,7 @@ Alias: Git Setup Windows | Linux
 Tag: Git, GitHub
 Author: S.Sunhaloo
 Date: 2023-12-09
-Status: HOLD
+Status: Completed
 ---
 
 >[!info] [Git Setup Website](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)

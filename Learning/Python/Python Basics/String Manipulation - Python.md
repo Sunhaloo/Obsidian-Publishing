@@ -88,7 +88,7 @@ name_2 = "Lewis Hamilton"
 name_2_length = len(name_2)
 
 # Outputs the length of "name_2"
-print("Length of Lewis Hamilton: {name_2_length}")
+print(f"Length of Lewis Hamilton: {name_2_length}")
 print()
 
 # Arrays
@@ -97,7 +97,7 @@ print()
 array = [1, 2, 3, 4, 5]
 
 # Outputs the length of "array"
-print("Length of array: {len(array)}")
+print(f"Length of array: {len(array)}")
 print()
 
 # Integer Numbers
@@ -105,8 +105,8 @@ print()
 # DECLARE number: INTEGER
 number = 1234
 
-# Output the length of number
-print(f"Length of number:  {len(number)}")
+# Output the length of number by converting `number` into a String
+print(f"Length of number:  {len(str(number))}")
 print()
 
 ```
@@ -225,14 +225,11 @@ This function is not like the "*Capitalize*" function. Because this one is not a
 # Upper Function
 
 # DECLARE name: STRING
-name = "Carlos Sainz"
+name = "carlos Sainz"
 
 # Will "capitalise" the first letter of variable "name"
-cap_name = name.capitalize()
-
-# Displaying capitalise name
-print()
-print(f"Capitalised Name: {cap_name}")
+# NOTE: This will output "Carlos sainz" and NOT `Carlos Sainz`
+print(f"First Letter of the First Word Uppercased: {name.capitalize()}")
 
 # DECLARE moto: STRING
 moto = "kawasaki H2R"
@@ -266,20 +263,15 @@ What else can I say... Nothing!
 # DECLARE name: STRING
 name = "NICHOLAS LATIFI"
 
-# DECLARE uncap_name: STRING
-# "Lowering" the variable "name"
-uncap_name = name.lower()
-
-# Displaying the varibale "uncap_name"
-print()
-print(f"Name: {uncap_name}")
+# output the result of `name.lower()`
+print(name.lower())
 
 # DECLARE ferrari: STRING
 ferrari = "SHITBOX"
 
 print()
 # "Lowering" and Displaying the variable "ferrari"
-print(f"Ferrari = {ferrai.lower()}")
+print(f"Ferrari = {ferrari.lower()}")
 
 ```
 
