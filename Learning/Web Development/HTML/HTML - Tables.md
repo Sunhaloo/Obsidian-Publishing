@@ -5,7 +5,7 @@ Module: WAT1119C
 Author: S.Sunhaloo
 Type: Tables
 Date: 2024-06-27
-Status: In-Progress
+Status: Completed
 ---
 
 ## List of Contents

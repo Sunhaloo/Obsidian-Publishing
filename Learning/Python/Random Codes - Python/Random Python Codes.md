@@ -19,7 +19,8 @@ Status: HOLD
 - [[Random Python Codes#Code 8| Code 8]]
 	- [[Random Python Codes#Code 8 ( my shitty version )| Code 8 My Version]]
 - [[Random Python Codes#Code 9| Code 9]]
-- [[Random Python Codes#Code 9| Code 9]]
+- [[Random Python Codes#Code 10| Code 10]]
+- [[Random Python Codes#Code 11| Code 11]]
 
 ---
 
@@ -1554,6 +1555,28 @@ print()
 avg1()
 print()
 avg2()
+
+```
+
+# Code 11
+
+This program below $\downarrow$ will find the factor of a number which has been entered by the user
+
+```python
+
+# exception handling
+try:
+    # ask the user to enter an integer number
+    number = int(input("\nPlease Enter A Number: "))
+
+    # find the factors of variable `number`
+    for i in range(1, number + 1):
+        # check if value if a factor
+        if ( number % i ) == 0:
+            # number is a factors ==> output the value
+            print(i)
+except ValueError:
+        print("\nPlease Enter Integer Numbers Only!!!\n")
 
 ```
 

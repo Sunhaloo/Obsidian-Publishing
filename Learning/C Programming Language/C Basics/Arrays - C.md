@@ -29,8 +29,8 @@ Status: HOLD
 ## Two Dimensional Array
 
 - [[Arrays - C#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays ( 2D-Arrays )]]
-- [[Arrays - C#Creating 2D-Arrays | Creating 2D-Arrays]]
-- [[Arrays - C#Displaying 2D-Arrays | Displaying 2D-Arrays]]
+	- [[Arrays - C#Creating 2D-Arrays | Creating 2D-Arrays]]
+	- [[Arrays - C#Displaying 2D-Arrays | Displaying 2D-Arrays]]
 
 ---
 
@@ -836,6 +836,79 @@ int main()
 }
 
 ```
+
+### Method 3: Using `sizeof()` Function
+
+>[!tip] Updates!!!
+>Today is the 19 of June 2024 @ 10:36:15
+>I just learned about how to [[Arrays, Array Lists, Tuples, Sets - Java#Displaying 2D-Arrays | display 2D-Array]] in [[Java Language | Java]]
+>Hence, I thought that I might also update this note as I go!
+
+```c
+
+#include <stdio.h>
+
+int main() {
+
+  // DECLARE ARRAY numbers[4][4]: INTEGER
+  int numbers[5][5];
+
+  // store the length of row and column of array `numbers`
+  // DECARE length_row: INTEGER
+  int length_row = sizeof(numbers) / sizeof(numbers[0]);
+  // DECARE length_col: INTEGER
+  int length_col = sizeof(numbers[0]) / sizeof(numbers[0][0]);
+
+  /*
+   * this is the same as doing
+   * int length_row = numbers.length;
+   * and also
+   * int length_col = numbers[i].length;
+   * in JAVA
+   */
+
+  // populate the array numbers with integer even numbers
+  //  I am going to take '0' as an even number
+  //  PS: '0' can be both Odd or Even
+  int current_num = 0;
+
+  // iterate through rows
+  for (int i = 0; i < length_row; i++) {
+    // iterate through columns
+    for (int j = 0; j < length_col; j++) {
+      // add the value at that index
+      numbers[i][j] = current_num;
+      // increment the value of `current_num` by 2
+      current_num += 2;
+    }
+  }
+
+  // output the the values of array in a 2D-Grid format
+  for (int i = 0; i < length_row; i++) {
+    // iterate through columns
+    for (int j = 0; j < length_col; j++) {
+      // display the value in a 2D-Grid
+      printf("%d\t", numbers[i][j]);
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+```
+
+>I was trying to implement this code ( *check below $\swarrow$* ) in C ( *because who does not like C*! )
+>```java
+>
+>for(int i = 0; i < array.length; i++) {
+>	for(int j = 0; j < array[i].length; j++) {
+>		System.out.printf("%d\t", array[i][j]);
+>	}
+>	System.out.println();
+>}
+>
+>```
+>I managed to learn it with the GOAT [ChatGPT](https://chat.openai.com)
 
 ## Array of Strings ( 2D-Array )
 

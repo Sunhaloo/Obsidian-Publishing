@@ -10,9 +10,8 @@ Status: Completed
 ## List of Contents:
 
 - [[Exception Handling - Python#What is Exception Handling? | What is Exception Handling?]]
-	- [[Exception Handling - Python#Code | Code]]
-		- [[Exception Handling - Python#Python Language In Python | Python Language In Python]]
-	- [[Exception Handling - Python#Examples | Examples]]
+- [[Exception Handling - Python#Examples | Examples]]
+
 ---
 
 My Links

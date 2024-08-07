@@ -35,6 +35,10 @@ Status: In-Progress
 ---
 
 - [[Arrays, Array Lists, Tuples, Sets - Java#Two Dimensional Arrays ( 2D-Arrays ) | Two Dimensional Arrays ( 2D-Arrays )]]
+	- [[Arrays, Array Lists, Tuples, Sets - Java#Creating 2D-Arrays | Creating 2D-Arrays]]
+	- [[Arrays, Array Lists, Tuples, Sets - Java#Displaying 2D-Arrays | Displaying 2D-Arrays]]
+	- [[Arrays, Array Lists, Tuples, Sets - Java#Adding Elements into 2D-Array | Adding Elements into 2D-Array]]
+		- [[Arrays, Array Lists, Tuples, Sets - Java#"*Inserting*" Elements in 2D-Arrays | "Inserting" Elements in 2D-Arrays]]
 
 ---
 
@@ -62,7 +66,7 @@ Status: In-Progress
 
 ## Creating 1D-Arrays
 
-### Primitive Data Types ( Creating Arrays )
+### Primitive Data Types ( Creating 1D-Arrays )
 
 >Refer to the comments inside the `code block` for explanation!
 
@@ -105,7 +109,7 @@ public class Main {
 
 ```
 
-### Object / Wrapper / Referenced Data Types ( Creating Arrays )
+### Object / Wrapper / Referenced Data Types ( Creating 1D-Arrays )
 
 >I will be using the same code as above $\uparrow$, but this time with [[Java Language#Wrapper / Referenced Data Types | Object / Wrapper / Referenced]] datatypes.
 
@@ -156,10 +160,11 @@ public class Main {
 >System.out.println(strs.getClass().getSimpleName());
 >System.out.println(doubly_nums.getClass().getSimpleName());
 >```
+>>No need to use **Object / Wrapper** data types to be able to use these code as mentioned above $\nwarrow$!
 
 ## Displaying 1D-Arrays
 
-### Primitive Data Types ( Displaying Arrays )
+### Primitive Data Types ( Displaying 1D-Arrays )
 
 ```java
 
@@ -224,9 +229,9 @@ public class Main {
 >Because its easy and simple!
 >>But sometimes I like to do using the like `enumerate` function, I think its better if you use `printf` and `for` loop method.
 
-### Object / Wrapper / Referenced Data Types ( Displaying Arrays )
+### Object / Wrapper / Referenced Data Types ( Displaying 1D-Arrays )
 
->[!note]
+>[!info]
 >Its the **same** as above $\uparrow$; we are just going to be using:
 >```java
 >// Declaration ONLY
@@ -329,7 +334,7 @@ public class Main {
             // add the "new" value in that spot
             numbers[insert_position] = insert_value;
 
-            // increase the bounds of array
+            // increase the length of array ---> because we inserted a new value
             number_amount++;
 
             System.out.println("\nContents of Array After Insertion\n");
@@ -875,6 +880,239 @@ After the next iteration the **value** at index 3 will be 5. Hence, we get an ar
 ---
 
 # Two Dimensional Arrays ( 2D-Arrays )
+
+## Creating 2D-Arrays
+
+### Primitive Data Types ( Creating 2D-Arrays )
+
+The code block below will show you how to create a simple 2D-Array in Java.
+
+```java
+
+// Primitive 2D-Arrays
+
+public class App {
+    public static void main(String[] args) {
+
+        // First Method
+            // use this method:
+                // 1. You know the size of Array
+                // 2. You know what values are going to go into the Array
+        // DECLARE ARRAY numbers[1][1]: INTEGER
+            // in this case, we have DECLARED and also INITIALISED our Array
+        int[][] numbers = {
+            {1, 2},
+            {3, 4}
+        };
+
+        // Second Method
+            // What happens when you don't know the values that are going to go into the Array?
+            // But what you know is the size of the Array; hence, we can do:
+        // DECLARE ARRAY even_numbers[4][4]: INTEGER
+        int[][] even_numbers = new int[5][5];
+
+        // We are going to populate the array `even_numbers` with even numbers
+
+        // I am going to show you a little "population" trick
+        int current_num = 2;
+
+        // for the amount of "rows"
+        for(int i = 0; i < even_numbers.length; i++) {
+            // for the amount of "columns"
+            for(int j = 0; j < even_numbers[i].length; j++) {
+                // here is the actual values that we are adding
+                even_numbers[i][j] = current_num;
+                // as we are adding even numbers; we need to:
+                current_num += 2;
+            }
+        }
+
+    }
+}
+
+```
+
+>[!note]
+>You could have used:
+>```java
+>
+>// for the amount of "columns"
+>for(int i = 0; i < 5; i++) {
+>	// for the amount of "columns"
+>	for(int j = 0; j < 5; j++) {
+>		// here is the actual values that we are adding
+>		even_numbers[i][j] = current_num;
+>		// as we are adding even numbers; we need to:
+>		current_num += 2;
+>	}
+>}
+>
+>```
+>But what happens if you do **not** know that size of the 2D-Array?
+>Hence, it is a better approach to use `array.length` and `array[i].length` instead of using the actual *numbers*!
+
+### Object / Wrapper / Referenced Data Types ( Creating 2D-Arrays )
+
+>I will be using the same code as above
+
+```java
+
+// Object / Wrapper 2D-Arrays
+
+public class App {
+    public static void main(String[] args) {
+
+        // First Method
+            // use this method:
+                // 1. You know the size of Array
+                // 2. You know what values are going to go into the Array
+        // DECLARE ARRAY numbers[1][1]: INTEGER
+            // in this case, we have DECLARED and also INITIALISED our Array
+        Integer[][] numbers = {
+            {1, 2},
+            {3, 4}
+        };
+
+        // Second Method
+            // What happens when you don't know the values that are going to go into the Array?
+            // But what you know is the size of the Array; hence, we can do:
+        // DECLARE ARRAY even_numbers[4][4]: INTEGER
+        Integer[][] even_numbers = new Integer[5][5];
+
+        // We are going to populate the array `even_numbers` with even numbers
+
+        // I am going to show you a little "population" trick
+        int current_num = 2;
+
+        // for the amount of "rows"
+        for(int i = 0; i < even_numbers.length; i++) {
+            // for the amount of "columns"
+            for(int j = 0; j < even_numbers[i].length; j++) {
+                // here is the actual values that we are adding
+                even_numbers[i][j] = current_num;
+                // as we are adding even numbers; we need to:
+                current_num += 2;
+            }
+        }
+
+    }
+}
+
+```
+
+>[!note] Here we are able to find the [[Java Language#Equivalent of `type()` Function | `type()`]] of the Array <span style="color: green;">Without</span> converting it into Objects!!
+>Here is the code snippet:
+>```java
+>System.out.println(numbers.getClass().getSimpleName());
+>System.out.println(even_numbers.getClass().getSimpleName());
+>```
+
+## Displaying 2D-Arrays
+
+### Primitive Data Types ( Displaying 1D-Arrays )
+
+>I have included the most frequently used methods / ways to display a 2D-Array
+
+```java
+
+// Primitive 2D-Arrays
+
+public class App {
+    public static void main(String[] args) {
+
+        // DECLARE ARRAY numbers[1][1]: INTEGER
+        int[][] numbers = {
+            {1, 2},
+            {3, 4}
+        };
+
+        System.out.println("\nMethod 1: Values of 2D-Array `numbers`\n");
+
+        // I am not going to be wasting time like I did for "Displaying 1D-Arrays"
+
+        // this is done using 2 simple `for` loops
+        // the OUTER `for` loop will be responsible for displaying in terms of "rows"
+        // while the INNTER `for` loop will be responsible for displaying in terms of "columns"
+        // hence, we are going to get
+        for(int i = 0; i < 2; i++) {
+            for(int j = 0; j < 2; j++) {
+                System.out.println(numbers[i][j]);
+            }
+        }
+
+        // DECLARE ARRAY even_numbers[4][4]: INTEGER
+        int[][] odd_numbers = new int[5][5];
+
+        // We are going to populate the array `odd_numbers` with odd numbers
+
+        // I am going to show you a little "population" trick
+        int current_num = 1;
+
+        // for the amount of "rows"
+        for(int i = 0; i < 5; i++) {
+            // for the amount of "columns"
+            for(int j = 0; j < 5; j++) {
+                // here is the actual values that we are adding
+                odd_numbers[i][j] = current_num;
+                // as we are adding even numbers; we need to:
+                current_num += 2;
+            }
+
+        }
+
+        System.out.println("\nMethod 2 - Part 1: Values of 2D-Array `odd_numbers`\n");
+
+        // I personally like this one more!
+        // same principle with the 2 `for` loops
+        // but this time I am going to be using:
+        // `array.length` and `array[i].length` ===> This is so much better than guessing size of array!!!
+        for(int i = 0; i < odd_numbers.length; i++) {
+            for(int j = 0; j < odd_numbers[i].length; j++) {
+                System.out.printf("Row: %d - Column: %d | Value = %d\n", i, j, odd_numbers[i][j]);
+            }
+
+        }
+
+        System.out.println("\nMethod 2 - Part 2: Values of 2D-Array `odd_numbers`\n");
+
+        // I am now going to output the values in a 2D-Grid pattern
+        // this is done using the Escape Sequence `\t`
+        for(int i = 0; i < odd_numbers.length; i++) {
+            for(int j = 0; j < odd_numbers[i].length; j++) {
+                System.out.printf("%d\t", odd_numbers[i][j]);
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+```
+
+>[!info]
+>I **asked** [Codellama](https://ollama.com/) this question "*Normally `<Tab>` are either 2 `<Space>` or 4 `<Space>` character... In Java we**
+**... have the Escape Sequence `\t`... How many `<Space>` character is `\t`?*"
+>I gave me the **answer** of "*The escape sequence `\t` in Java represents a tab character, which is*
+*equivalent to 1 `<space>`*"
+
+### Object / Wrapper / Referenced Data Types ( Displaying 2D-Arrays )
+
+>[!info]
+>It is literally the <span style="color: green;">same</span> as the code above $\uparrow$, just instead of using `int` and other *primitive* datatypes; we are going to be using *referenced* datatypes!
+
+## Adding Elements into 2D-Array
+
+### "*Inserting*" Elements in 2D-Arrays
+
+>[!note]
+>I did not do "*Inserting Elements in 2D-Array*". Hence, you could that this is the "*first time*" that I made this note.
+>>I will be updating [[Arrays - C#Two Dimensional Arrays ( 2D-Arrays ) | C's 2D-Arrays]] later on.
+
+```java
+
+// INSERT CODE HERE!!!
+
+```
 
 ---
 

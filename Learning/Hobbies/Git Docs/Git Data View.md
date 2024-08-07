@@ -22,6 +22,7 @@ SORT Date ASC
 - [[Git Setup]]
 - [[Dotfiles]]
 - [[Git Branches]]
+- [[Commit Message]]
 
 ### Random Git / GitHub Notes
 
