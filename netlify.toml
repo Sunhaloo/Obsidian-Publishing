@@ -17,7 +17,7 @@ REPO_URL = "https://github.com/Sunhaloo/Obsidian-Publishing"
 # (Optional) Site title in navbar
 SITE_TITLE = "My Second 🧠 Cell"
 # (Optional) Site title in browser tab (leave blank to use SITE_TITLE)
-SITE_TITLE_TAB = ""
+SITE_TITLE_TAB = "S.Sunhaloo"
 # (REQUIRED) Netlify site URL
 SITE_URL = "https://sunhaloolearns.netlify.app"
 # (Optional) Site Timezone
@@ -32,9 +32,9 @@ SLUGIFY = "y"
 # (Optional, default true) Shows knowledge graph on home page. Put "" to disable.
 HOME_GRAPH = "true"
 # (Optional, default true) Shows knowledge graph on every page. Put "" to disable.
-PAGE_GRAPH = ""
+PAGE_GRAPH = "true"
 # (Optional, default false) Whether sidebar sections should be collapsed by default.
-SIDEBAR_COLLAPSED = ""
+SIDEBAR_COLLAPSED = "false"
 # (Optional, default blank) Additional footer content.
 FOOTER = ""
 # (Optional, default main) Root section name.
